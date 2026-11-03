@@ -386,6 +386,24 @@ function nameAcceptedAnswers(profileUnit) {
   return out;
 }
 
+// ---- 監査AU-04/AU-06（DECISIONS #54）: 問題文の引用語の写し・二者択一の判定
+// 問題文が「」で示した語（別名・英名など）をそのまま書けば正解になる許容回答は、
+// 知識を問わない（問題文の写しで正解できる）ため許容回答から外す。括弧注記を除いた
+// 基部が引用語と一致するもの（例: 「馬芹」に対する「馬芹(うまぜり/ばきん)」）も同じ扱い。
+function stripParenNote(s) { return s.replace(/[（(][^）)]*[）)]/g, ""); }
+function promptQuotedNorms(prompt) {
+  return new Set([...prompt.matchAll(/「([^」]+)」/g)].map((m) => normalizeText(m[1])).filter(Boolean));
+}
+function echoesPrompt(prompt, answer) {
+  const quoted = promptQuotedNorms(prompt);
+  return quoted.has(normalizeText(answer)) || quoted.has(normalizeText(stripParenNote(answer)));
+}
+function dropPromptEchoes(prompt, answers) { return answers.filter((a) => !echoesPrompt(prompt, a)); }
+function isBinaryPrompt(prompt) {
+  if (/どちら/.test(prompt)) return true;
+  return /か[?？]$/.test(prompt) && !/何|どこ|誰|いつ|どの|どれ|どう|いくつ/.test(prompt);
+}
+
 // ---- 監査B-08是正: 四択（q4）の誤答の次元型付け
 // フェーズ4の誤答生成は同一章の他問の正答を次元の照合なしに流用しており、人物を問う
 // 問題に食材名、数量を問う問題に別次元の値が並ぶ不良が標本監査で40%を占めた。
@@ -554,6 +572,10 @@ for (const unit of eligible) {
 
   // single-choice（四択）: 誤答が3つ確保できる場合のみ
   report.attempted["single-choice"]++;
+  // 監査AU-06（DECISIONS #54）: 二者択一（「AとBのどちら」）・可否（「〜か?」）の設問は
+  // 答えの候補が2つしかなく、他問の正答を誤答に流用すると意味の通らない四択になる。
+  // 一問一答・カードは従来どおり生成し、四択だけを作らない。
+  if (isBinaryPrompt(q)) { exclude("single-choice", unit.id, "二者択一・可否の設問は四択に適さない（監査AU-06、DECISIONS #54）"); continue; }
   const distractors = distractorsFor(unit);
   if (distractors.length < 3) { exclude("single-choice", unit.id, `誤答候補が3つ確保できない（ガード通過 ${distractors.length} 件）`); continue; }
   const choices = [a, ...distractors];
@@ -901,6 +923,17 @@ for (const [entries, kind, prefix] of [[f3Manual.longEssay, "long-essay", "qle"]
   }
 }
 
+// ---- 監査AU-04（DECISIONS #54）: 入力式の許容回答から問題文の引用語の写しを外す。
+// 対象は入力で答える3形式のみ（選択式は選択肢の表示が前提のため対象外）。
+report.promptEchoRemovals = [];
+for (const q of questions) {
+  if (!["one-answer", "fill-blank", "term-input"].includes(q.format)) continue;
+  const kept = dropPromptEchoes(q.prompt, q.acceptedAnswers);
+  if (kept.length === q.acceptedAnswers.length) continue;
+  report.promptEchoRemovals.push({ questionId: q.id, removed: q.acceptedAnswers.filter((a) => !kept.includes(a)) });
+  q.acceptedAnswers = kept;
+}
+
 // ---- 難易度較正D1の適用（DECISIONS #22）: 生成した全問題の difficulty を規則で一括で付け直す。
 // 較正できない問題は仮置きの2のまま据え置き、較正済みと区別して d1Report に記録する。
 const d1Report = { byDifficulty: {}, calibratedByDifficulty: {}, heldIds: [] };
@@ -924,6 +957,12 @@ function validateGenerated(qs, cs) {
     if (!q.sourceRefs.length) problems.push(`${q.id}: 出典なし`);
     if (!q.explanation.trim()) problems.push(`${q.id}: 解説が空`);
     if (![1, 2, 3, 4, 5].includes(q.difficulty)) problems.push(`${q.id}: 難易度が型の値域（1〜5）外`);
+    // 監査AU-04/AU-06（DECISIONS #54）
+    if (["one-answer", "fill-blank", "term-input"].includes(q.format)) {
+      if (!(q.acceptedAnswers ?? []).length) problems.push(`${q.id}: 許容回答が空`);
+      for (const a of q.acceptedAnswers ?? []) if (echoesPrompt(q.prompt, a)) problems.push(`${q.id}: 許容回答「${a}」が問題文の引用語の写し（AU-04）`);
+    }
+    if (q.id.startsWith("q4-") && isBinaryPrompt(q.prompt)) problems.push(`${q.id}: 二者択一・可否の設問の四択（AU-06）`);
     // D1較正の再計算一致（較正済みは規則どおり、据え置きは仮置きの2であること。DECISIONS #22）
     { const expectedD = calibrateDifficulty(q); if (expectedD === null ? q.difficulty !== 2 : q.difficulty !== expectedD) problems.push(`${q.id}: 難易度が較正D1の規則と不一致`); }
     const unit = unitById.get(q.knowledgeUnitIds[0]);
@@ -1065,7 +1104,7 @@ function validateGenerated(qs, cs) {
           if (aliasBaseCount.get(normalizeText(base)) !== 1) problems.push(`${q.id}: 別名「${base}」が全プロフィール中で一意でない（逆引きガード違反）`);
           if (allNameNorms.has(normalizeText(base))) problems.push(`${q.id}: 別名「${base}」がプロフィール名称と一致する（逆引きガード違反）`);
         }
-        if (!sameSet(q.acceptedAnswers ?? [], nameAcceptedAnswers(unit))) problems.push(`${q.id}: 許容回答がプロフィールの名称バリアント＋別名（監査B-07是正）と不一致`);
+        if (!sameSet(q.acceptedAnswers ?? [], dropPromptEchoes(q.prompt, nameAcceptedAnswers(unit)))) problems.push(`${q.id}: 許容回答がプロフィールの名称バリアント＋別名（監査B-07是正、問題文の別名の写しは除く: AU-04）と不一致`);
       }
     }
     // ---- F1（プロフィール属性由来の追加形式。DECISIONS #21）の根拠チェック
@@ -1333,7 +1372,7 @@ ${cImports.map((w) => `  ...(${w.ident} as unknown as Flashcard[]),`).join("\n")
 ];
 `;
 writeFileSync(join(repoRoot, "src", "data", "formal-questions.ts"), header);
-writeFileSync(join(repoRoot, "scripts", "question-generation-report.json"), JSON.stringify({ meta, attempted: report.attempted, passed: report.passed, q2ByKind: report.q2ByKind, f1ByKind: report.f1ByKind, f1Skipped: report.f1Skipped, f2ByKind: report.f2ByKind, f2Skipped: report.f2Skipped, f3ByKind: report.f3ByKind, f3Skipped: report.f3Skipped, q3Questions: report.q3Questions, fix1ByKind: report.fix1ByKind, fix1Skipped: report.fix1Skipped, aliasExpansions: report.aliasExpansions, d1: d1Report, excluded: report.excluded }, null, 2) + "\n");
+writeFileSync(join(repoRoot, "scripts", "question-generation-report.json"), JSON.stringify({ meta, attempted: report.attempted, passed: report.passed, q2ByKind: report.q2ByKind, f1ByKind: report.f1ByKind, f1Skipped: report.f1Skipped, f2ByKind: report.f2ByKind, f2Skipped: report.f2Skipped, f3ByKind: report.f3ByKind, f3Skipped: report.f3Skipped, q3Questions: report.q3Questions, fix1ByKind: report.fix1ByKind, fix1Skipped: report.fix1Skipped, aliasExpansions: report.aliasExpansions, promptEchoRemovals: report.promptEchoRemovals, d1: d1Report, excluded: report.excluded }, null, 2) + "\n");
 
 for (const w of written) console.log(`  ${w.rel}: ${w.count}件 / ${w.bytes} bytes`);
 console.log(`生成完了: 正式問題 ${questions.length}問（one-answer ${byFormat["one-answer"] ?? 0} / single-choice ${byFormat["single-choice"] ?? 0} / fill-blank ${byFormat["fill-blank"] ?? 0} / term-input ${byFormat["term-input"] ?? 0} / true-false ${byFormat["true-false"] ?? 0} / multiple-choice ${byFormat["multiple-choice"] ?? 0} / matching ${byFormat["matching"] ?? 0} / reverse-lookup ${byFormat["reverse-lookup"] ?? 0} / table-fill ${byFormat["table-fill"] ?? 0} / composite ${byFormat["composite"] ?? 0} / figure ${byFormat["figure"] ?? 0} / ordering ${byFormat["ordering"] ?? 0} / short-essay ${byFormat["short-essay"] ?? 0} / long-essay ${byFormat["long-essay"] ?? 0} / compare-essay ${byFormat["compare-essay"] ?? 0}）、正式カード ${cards.length}件。Q2内訳: ${JSON.stringify(report.q2ByKind)}、Q3一問一答: ${report.q3Questions}問、F1内訳: ${JSON.stringify(report.f1ByKind)}、F1スキップ: ${report.f1Skipped.length}件、F2内訳: ${JSON.stringify(report.f2ByKind)}、F2スキップ: ${report.f2Skipped.length}件、F3内訳: ${JSON.stringify(report.f3ByKind)}、F3スキップ: ${report.f3Skipped.length}件、除外（項目）${meta.excludedItems}件・除外（単位）${meta.excludedUnits}件。FIX1内訳: ${JSON.stringify(report.fix1ByKind)}、FIX1スキップ: ${report.fix1Skipped.length}件。難易度較正D1: 分布 ${JSON.stringify(d1Report.byDifficulty)}（うち較正済み ${questions.length - d1Report.heldIds.length}問、据え置き ${d1Report.heldIds.length}問）。詳細は scripts/question-generation-report.json`);

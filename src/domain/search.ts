@@ -175,7 +175,7 @@ export function filterSearchResults<
 /**
  * 形式フィルタの選択肢: 渡された問題群に実在する形式を、
  * QUESTION_FORMATS の定義順で返す。正式問題だけを渡せば正式15形式に、
- * サンプル込みで渡せばサンプル限定形式（写真識別・フラッシュカード）も含む。
+ * （サンプル問題は全削除済み。DECISIONS #52）
  */
 export function availableSearchFormats(
   questions: readonly SearchableQuestion[],
@@ -188,7 +188,6 @@ export function availableSearchFormats(
 const SEARCH_STATUS_ORDER: readonly QuestionStatus[] = [
   "verified",
   "unverified",
-  "sample",
   "excluded",
 ];
 

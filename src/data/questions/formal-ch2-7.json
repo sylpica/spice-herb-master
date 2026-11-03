@@ -3,54 +3,6 @@
   "version": 1,
   "status": "verified",
   "chapterId": "ch2",
-  "sectionId": "item-others",
-  "difficulty": 3,
-  "knowledgeUnitIds": [
-   "panchphoron-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9684",
-    "bookPage": 108,
-    "locationNote": "本書 p.108（原本画像 IMG_9684.PNG）。原文照合 batch10 で照合済みの知識単位 panchphoron-profile から生成"
-   }
-  ],
-  "id": "qfb-level-panchphoron-profile",
-  "format": "fill-blank",
-  "prompt": "パンチフォロンは検定（　）級の対象である。",
-  "acceptedAnswers": [
-   "1"
-  ],
-  "explanation": "パンチフォロン: ミックススパイス。検定1級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-others",
-  "difficulty": 3,
-  "knowledgeUnitIds": [
-   "rasalhanout-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9684",
-    "bookPage": 108,
-    "locationNote": "本書 p.108（原本画像 IMG_9684.PNG）。原文照合 batch10 で照合済みの知識単位 rasalhanout-profile から生成"
-   }
-  ],
-  "id": "qfb-level-rasalhanout-profile",
-  "format": "fill-blank",
-  "prompt": "ラセラヌーは検定（　）級の対象である。",
-  "acceptedAnswers": [
-   "1"
-  ],
-  "explanation": "ラセラヌー: ミックススパイス。検定1級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
   "sectionId": "item-anise",
   "difficulty": 2,
   "knowledgeUnitIds": [
@@ -1944,5 +1896,49 @@
    "マンゴーパウダー"
   ],
   "explanation": "マンゴーパウダーを基本に複数のスパイスと塩をミックスした、インドのシーズニングスパイス。生野菜や果物に振りかける。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-anise",
+  "difficulty": 2,
+  "knowledgeUnitIds": [
+   "anise-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9627",
+    "bookPage": 52,
+    "locationNote": "本書 p.52（原本画像 IMG_9627.PNG）。原文照合 batch17 で照合済みの知識単位 anise-profile から生成"
+   }
+  ],
+  "id": "qtf-family-anise-profile",
+  "format": "true-false",
+  "prompt": "アニスの科名はセリ科である。",
+  "correctBoolean": true,
+  "explanation": "アニス: 科名はセリ科。原産地は地中海東部沿岸、エジプト。利用部位は種子(植物学上は果実)。別名は茴芹(ういきん)。検定1・2級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-anise",
+  "difficulty": 2,
+  "knowledgeUnitIds": [
+   "anise-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9627",
+    "bookPage": 52,
+    "locationNote": "本書 p.52（原本画像 IMG_9627.PNG）。原文照合 batch17 で照合済みの知識単位 anise-profile から生成"
+   }
+  ],
+  "id": "qtf-family-false-anise-profile",
+  "format": "true-false",
+  "prompt": "アニスの科名はイネ科である。",
+  "correctBoolean": false,
+  "explanation": "アニス: 科名はセリ科。原産地は地中海東部沿岸、エジプト。利用部位は種子(植物学上は果実)。別名は茴芹(ういきん)。検定1・2級の対象。"
  }
 ]

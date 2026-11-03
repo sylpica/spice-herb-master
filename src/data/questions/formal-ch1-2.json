@@ -30,36 +30,6 @@
   "sectionId": "basic-compat",
   "difficulty": 1,
   "knowledgeUnitIds": [
-   "u-pairing"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9598",
-    "bookPage": 23,
-    "locationNote": "本書 p.23（原本画像 IMG_9598.PNG）。原文照合 batch26 で照合済みの知識単位 u-pairing から生成"
-   }
-  ],
-  "id": "q4-u-pairing",
-  "format": "single-choice",
-  "prompt": "スパイスの相性はメニューと素材のどちらとの相性で覚えるのがよい?",
-  "choices": [
-   "ステンレスやセラミック",
-   "必要",
-   "素材",
-   "少量ずつ味をみながら加える"
-  ],
-  "correctChoiceIndexes": [
-   2
-  ],
-  "explanation": "相性は料理メニューとではなく、各素材との相性で覚えるのがポイント。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch1",
-  "sectionId": "basic-compat",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
    "u-pair-beef"
   ],
   "sourceRefs": [
@@ -458,7 +428,7 @@
   "prompt": "レバノンのサラダ「タッブーレ」の決め手のハーブは?",
   "acceptedAnswers": [
    "パセリ",
-   "オランダ芹(モスカールド種をさすことが多い)",
+   "オランダ芹(モスカールド種を指すことが多い)",
    "オランダ芹"
   ],
   "explanation": "レバノンのタッブーレは刻んだパセリをオリーブオイルやレモン汁であえたサラダで、決め手はパセリ。"

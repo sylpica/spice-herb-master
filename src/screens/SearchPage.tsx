@@ -42,7 +42,6 @@ const STATUS_OPTIONS = availableSearchStatuses(ALL_QUESTIONS);
 const STATUS_LABELS: Record<QuestionStatus, string> = {
   verified: "正式",
   unverified: "未検証",
-  sample: "サンプル",
   excluded: "除外",
 };
 // 転記状態の選択肢は節データに実在する状態のみ（転記済み・未処理、#33）。

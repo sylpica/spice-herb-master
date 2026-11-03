@@ -75,7 +75,7 @@ describe("正式問題の生成（フェーズ4: scripts/generate-questions.mjs�
     const byFormat: Record<string, number> = {};
     for (const q of QUESTIONS) byFormat[q.format] = (byFormat[q.format] ?? 0) + 1;
     expect(byFormat).toEqual({ ...META.byFormat });
-    expect(byFormat).toEqual({ "one-answer": 465, "single-choice": 471, "fill-blank": 148, "term-input": 120, "true-false": 272, "multiple-choice": 32, "matching": 43, "reverse-lookup": 60, "table-fill": 68, "composite": 68, "figure": 17, "ordering": 17, "short-essay": 12, "long-essay": 4, "compare-essay": 7 });
+    expect(byFormat).toEqual({ "one-answer": 465, "single-choice": 462, "fill-blank": 148, "term-input": 120, "true-false": 272, "multiple-choice": 32, "matching": 43, "reverse-lookup": 60, "table-fill": 68, "composite": 68, "figure": 17, "ordering": 17, "short-essay": 12, "long-essay": 4, "compare-essay": 7 });
     // 機械検証できる変換のみ（第一弾: draftQa直接変換、Q2: プロフィール構造化属性、Q3: 転記支持文つき人手作成の一問一答、F1: プロフィール構造化属性から検証できる追加7形式。DECISIONS #21。F2: 転記の番号付き手順・支持文に基づく人手作成の並べ替え・短文記述。DECISIONS #26。F3: 転記の複数段落の支持文・明示的な対比に基づく人手作成の長文記述・比較記述。DECISIONS #27）
     expect(Object.keys(byFormat).sort()).toEqual(["compare-essay", "composite", "figure", "fill-blank", "long-essay", "matching", "multiple-choice", "one-answer", "ordering", "reverse-lookup", "short-essay", "single-choice", "table-fill", "term-input", "true-false"]);
   });
@@ -245,8 +245,8 @@ describe("正式問題の生成（フェーズ4: scripts/generate-questions.mjs�
     for (const u of U) expect(usedUnitIds.has(u.id), u.id).toBe(true);
     expect(META.excludedUnits).toBe(0);
     // 項目レベルの除外はプロフィールに属性の記載がない項目（科名12・利用部位12・原産地41・別名20・逆引き20）
-    // ＋監査B-08是正で同次元の誤答を3つ用意できず四択として成立しなくなった15項目
-    expect(META.excludedItems).toBe(120);
+    // ＋監査B-08是正で同次元の誤答を3つ用意できず四択として成立しなくなった15項目＋監査AU-06で二者択一・可否の設問の四択をやめた9項目（DECISIONS #54）
+    expect(META.excludedItems).toBe(129);
   });
   it("Q3: 散文単位の一問一答は手書きデータと一致し、正答が転記支持文に字句として含まれる（根拠の機械チェック）", () => {
     const manual = JSON.parse(readFileSync(new URL("../scripts/q3-manual-questions.json", import.meta.url), "utf8")) as {
@@ -587,16 +587,16 @@ describe("難易度較正D1（フェーズ6、DECISIONS #22）", () => {
     expect(held.sort()).toEqual([...HELD].sort());
     expect(META.d1HeldIds).toEqual(HELD); // 生成順のまま固定
     expect(META.d1HeldQuestions).toBe(8);
-    expect(META.d1CalibratedQuestions).toBe(1796); // F2の29問・F3の11問も全件較正済み（DECISIONS #26・#27。監査B-08是正の再生成で四択15問が減り較正済みも15問減）
+    expect(META.d1CalibratedQuestions).toBe(1787); // F2の29問・F3の11問も全件較正済み（DECISIONS #26・#27。監査B-08是正の再生成で四択15問が減り較正済みも15問減）
   });
 
   it("難易度分布の実測が固定値と一致する（較正前は全件2）", () => {
     const dist: Record<string, number> = {};
     for (const q of QUESTIONS) dist[q.difficulty] = (dist[q.difficulty] ?? 0) + 1;
-    expect(dist).toEqual({ 1: 742, 2: 477, 3: 415, 4: 170 });
-    expect(META.d1ByDifficulty).toEqual({ 1: 742, 2: 477, 3: 415, 4: 170 });
-    // 較正済みのみの分布（2の474問は較正済み、残り8問は据え置き）
-    expect(META.d1CalibratedByDifficulty).toEqual({ 1: 742, 2: 469, 3: 415, 4: 170 });
+    expect(dist).toEqual({ 1: 737, 2: 474, 3: 414, 4: 170 });
+    expect(META.d1ByDifficulty).toEqual({ 1: 737, 2: 474, 3: 414, 4: 170 });
+    // 較正済みのみの分布（2の474問のうち466問は較正済み、残り8問は据え置き）
+    expect(META.d1CalibratedByDifficulty).toEqual({ 1: 737, 2: 466, 3: 414, 4: 170 });
   });
 });
 
@@ -933,8 +933,33 @@ describe("監査是正: 別名許容（B-07）と四択の同次元化（B-08）
     const coriander = byId.get("qti-rev-coriander-profile");
     expect(coriander?.acceptedAnswers).toContain("パクチー");
     const garlic = byId.get("qti-rev-garlic-profile");
-    expect(garlic?.acceptedAnswers).toContain("にんにく");
+    expect(garlic?.prompt).toBe("別名「にんにく」と呼ばれるスパイス＆ハーブの名称を答えよ。");
     expect(garlic?.acceptedAnswers).toContain("大蒜");
+    // AU-04（DECISIONS #54）: 問題文に示した別名そのもの（にんにく）は、写せば正解になるため許容しない
+    expect(garlic?.acceptedAnswers).not.toContain("にんにく");
+  });
+  it("AU-04: 入力式の許容回答は、問題文の「」内の語（括弧注記を除いた基部を含む）の写しを含まない", () => {
+    const strip = (s: string) => s.replace(/[（(][^）)]*[）)]/g, "");
+    const offenders: string[] = [];
+    let checked = 0;
+    for (const q of QUESTIONS) {
+      if (!["one-answer", "fill-blank", "term-input"].includes(q.format)) continue;
+      const quoted = new Set([...q.prompt.matchAll(/「([^」]+)」/g)].map((m) => normalizeText(m[1]!)));
+      if (quoted.size) checked++;
+      for (const a of q.acceptedAnswers ?? []) if (quoted.has(normalizeText(a)) || quoted.has(normalizeText(strip(a)))) offenders.push(`${q.id}:${a}`);
+      expect((q.acceptedAnswers ?? []).length, q.id).toBeGreaterThan(0);
+    }
+    expect(checked).toBeGreaterThan(60); // 空集合で成功しないこと（引用語を持つ入力式問題が実在する）
+    expect(offenders).toEqual([]);
+    expect(byId.get("q1-cumin-4")?.acceptedAnswers).toEqual(["ニゲラ", "カロンジ"]);
+    expect(byId.get("q1-b-part-leaf")?.prompt).toBe("タイム、ローレル、セージ、バジルが分類される利用部位は?");
+  });
+  it("AU-06: 二者択一・可否の設問は四択にしない（一問一答としては残る）", () => {
+    for (const id of ["u-wash", "u-pairing", "cinnamon-1", "turmeric-3", "chp-2", "gal-1", "g-timing", "g-harvest-api", "b-cooking-care"]) {
+      expect(byId.has(`q4-${id}`), id).toBe(false);
+      expect(byId.has(`q1-${id}`), id).toBe(true);
+    }
+    for (const q of QUESTIONS) if (q.id.startsWith("q4-")) expect(/どちら/.test(q.prompt), q.id).toBe(false);
   });
   it("B-07: 一問一答の正答がスパイス名なら別名も許容する（ターメリック=うこん）", () => {
     const curry = byId.get("q1-r-curry");

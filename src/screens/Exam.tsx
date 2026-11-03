@@ -12,6 +12,7 @@ import { EXAM_MAX_QUESTIONS, buildExam, examPool, gradeExam, type ExamGradeSumma
 import { FORMAT_LABELS, type Question } from "../domain/types";
 import type { StoreData } from "../domain/store";
 import { initSrs, reviewSrs, qualityFromResult } from "../domain/srs";
+import { matchingOptions } from "../domain/grading";
 
 interface ExamDraftState { startedAt: string; mins: number; questionIds: string[]; answers: Record<string, unknown>; }
 
@@ -137,7 +138,7 @@ export default function Exam({store,update}:{store:StoreData;update:any}){
  {q.format==="true-false" && <div><button type="button" className={boolVal===true?"":"ghost"} onClick={()=>setAnswer(q.id, true)}>○ 正しい</button> <button type="button" className={boolVal===false?"":"ghost"} onClick={()=>setAnswer(q.id, false)}>× 誤り</button></div>}
  {(q.format==="fill-blank"||q.format==="term-input"||q.format==="one-answer") && <input aria-label="回答入力" value={textVal} onChange={e=>setAnswer(q.id, e.target.value)} />}
  {q.format==="ordering" && <div><p className="muted">上下ボタンで並べ替え</p>{orderVal.map((it,i)=><p key={it}>{it} <button type="button" className="ghost" disabled={i===0} onClick={()=>{const n=[...orderVal]; [n[i-1],n[i]]=[n[i]!,n[i-1]!]; setAnswer(q.id, n);}}>↑</button> <button type="button" className="ghost" disabled={i===orderVal.length-1} onClick={()=>{const n=[...orderVal]; [n[i+1],n[i]]=[n[i]!,n[i-1]!]; setAnswer(q.id, n);}}>↓</button></p>)}</div>}
- {q.format==="matching" && <div>{(q.matchingPairs??[]).map(p=><label key={p.left}>{p.left}<select aria-label={p.left} value={pairsVal[p.left]??""} onChange={e=>setAnswer(q.id, {...pairsVal,[p.left]:e.target.value})}><option value="">選択</option>{(q.matchingPairs??[]).map(x=><option key={x.right} value={x.right}>{x.right}</option>)}</select></label>)}</div>}
+ {q.format==="matching" && <div>{(q.matchingPairs??[]).map(p=><label key={p.left}>{p.left}<select aria-label={p.left} value={pairsVal[p.left]??""} onChange={e=>setAnswer(q.id, {...pairsVal,[p.left]:e.target.value})}><option value="">選択</option>{matchingOptions(q).map(x=><option key={x} value={x}>{x}</option>)}</select></label>)}</div>}
  {q.format==="table-fill" && <div>{Object.keys(q.blankCellAnswers??{}).map(k=><label key={k}>空欄{k}<input aria-label={"空欄"+k} value={cellsVal[k]??""} onChange={e=>setAnswer(q.id, {...cellsVal,[k]:e.target.value})}/></label>)}</div>}
  </div>
  <p><button className="ghost" disabled={idx<=0} onClick={()=>setIdx(idx-1)}>前の問題へ</button> <button className="ghost" disabled={idx>=questions.length-1} onClick={()=>setIdx(idx+1)}>次の問題へ</button></p>

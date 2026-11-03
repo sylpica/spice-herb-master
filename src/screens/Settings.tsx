@@ -22,6 +22,20 @@ export default function Settings({ store, update }: { store: StoreData; update: 
         </p>
       </section>
       <section className="card">
+        <h2>演習</h2>
+        <p>
+          <label style={{ display: "inline-flex", alignItems: "center", gap: ".5rem", minHeight: 44 }}>
+            <input
+              type="checkbox"
+              style={{ width: "auto" }}
+              checked={store.autoAdvance}
+              onChange={(e) => update((d: StoreData) => { d.autoAdvance = e.target.checked; return d; })}
+            />
+            正解したら自動で次の問題へ進む
+          </label>
+        </p>
+      </section>
+      <section className="card">
         <h2>学習の記録を見る</h2>
         <p>
           <Link className="btn" to="/stats">学習分析を開く</Link>{" "}

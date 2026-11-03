@@ -6,36 +6,6 @@
   "sectionId": "history-world",
   "difficulty": 1,
   "knowledgeUnitIds": [
-   "h-ancient-uses"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9582",
-    "bookPage": 7,
-    "locationNote": "本書 p.7（原本画像 IMG_9582.PNG）。原文照合 batch22 で照合済みの知識単位 h-ancient-uses から生成"
-   }
-  ],
-  "id": "q4-h-ancient-uses",
-  "format": "single-choice",
-  "prompt": "古代のスパイスやハーブの用途として挙げられるものを答えよ(薬事以外に3つ)。",
-  "choices": [
-   "祭事・媚薬・保存剤",
-   "肉の保存",
-   "大航海時代",
-   "世界の記述"
-  ],
-  "correctChoiceIndexes": [
-   0
-  ],
-  "explanation": "スパイスやハーブは古代から薬事・祭事・媚薬・保存剤などの目的で使われ、貴重品とされた。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "preface",
-  "sectionId": "history-world",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
    "h-medieval-price"
   ],
   "sourceRefs": [
@@ -432,9 +402,9 @@
    "唐辛子",
    "チリペッパー",
    "チリ",
-   "カイエンペッパー(品種の一部)",
+   "カイエンペッパー(栽培品種の一部)",
    "カイエンペッパー",
-   "鷹の爪(品種の一部)",
+   "鷹の爪(栽培品種の一部)",
    "鷹の爪"
   ],
   "explanation": "1492年、コロンブスはスペインのイサベル女王の支援で大西洋を渡り、東洋には到達できなかったが、アメリカ大陸固有のスパイスである唐辛子を発見した。"
@@ -1875,8 +1845,6 @@
    "クローブ",
    "丁子(ちょうじ)",
    "丁子",
-   "丁香(ちょうこう)",
-   "丁香",
    "百里香(ひゃくりこう)",
    "百里香"
   ],

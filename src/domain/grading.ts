@@ -8,10 +8,34 @@ export function gradeChoice(q: Question, selected: number[]): GradeResult {
   return { correct: ok, scoreRatio: ok?1:0, autoScoreRatio: ok?1:0, matchedPointIds: [], missedRequiredIds: [], note: ok?"正解":"不正解" };
 }
 export function gradeBoolean(q: Question, value: boolean): GradeResult { const ok = q.correctBoolean===value; return { correct: ok, scoreRatio: ok?1:0, autoScoreRatio: ok?1:0, matchedPointIds:[], missedRequiredIds:[], note: ok?"正解":"不正解" }; }
+/** 列挙の区切り（中黒・読点・カンマ・スラッシュ・空白）。normalizeText はこれらを消すため、分割は正規化前に行う。 */
+const LIST_SEPARATORS = /[・、，,\/／\s　]+/;
+/** 列挙を求める設問（「3つ挙げよ」「2つの〜」など、個数を指定するもの）か。 */
+export function asksForEnumeration(prompt: string): boolean {
+  return /([0-9０-９]+|[二三四五六七八九])つ/.test(prompt);
+}
+function listItems(s: string, splitParticles: boolean): string[] {
+  const parts = s.split(LIST_SEPARATORS).flatMap((p) => (splitParticles ? p.split(/と|や|および|及び/) : [p]));
+  return parts.map(normalizeText).filter(Boolean).sort();
+}
+/**
+ * 監査AU-05（DECISIONS #54）: 個数を指定した列挙の設問では、項目の順序を問わない。
+ * 正答の列挙（例「シナモン・カルダモン・クローブ」）と回答の項目が、正規化後に
+ * 多重集合として完全一致する場合だけ正解とする（項目の過不足・重複は不一致のまま）。
+ * 固有名詞（「バスコ・ダ・ガマ」「テクス・メクス」）は個数指定の設問でないため対象外。
+ */
+function enumerationMatches(accepted: string, answer: string): boolean {
+  const want = listItems(accepted, false);
+  if (want.length < 2) return false;
+  const got = listItems(answer, true);
+  return got.length === want.length && got.every((v, i) => v === want[i]);
+}
 export function gradeTextAnswer(q: Question, answer: string): GradeResult {
   const a = normalizeText(answer); if (!a) return { correct:false, scoreRatio:0, autoScoreRatio:0, matchedPointIds:[], missedRequiredIds:[], note:"空回答" };
-  const ok = (q.acceptedAnswers ?? []).some(x=> normalizeText(x)===a);
-  return { correct: ok, scoreRatio: ok?1:0, autoScoreRatio: ok?1:0, matchedPointIds:[], missedRequiredIds:[], note: ok?"正解（表記揺れ正規化後）":"不一致" };
+  const accepted = q.acceptedAnswers ?? [];
+  if (accepted.some(x=> normalizeText(x)===a)) return { correct: true, scoreRatio: 1, autoScoreRatio: 1, matchedPointIds:[], missedRequiredIds:[], note: "正解（表記揺れ正規化後）" };
+  const unordered = asksForEnumeration(q.prompt) && accepted.some((x) => enumerationMatches(x, answer));
+  return { correct: unordered, scoreRatio: unordered?1:0, autoScoreRatio: unordered?1:0, matchedPointIds:[], missedRequiredIds:[], note: unordered?"正解（列挙の順序は問わない）":"不一致" };
 }
 export function gradeOrdering(q: Question, order: string[]): GradeResult { const ok = JSON.stringify(order)===JSON.stringify(q.correctOrder ?? []); return { correct: ok, scoreRatio: ok?1:0, autoScoreRatio: ok?1:0, matchedPointIds:[], missedRequiredIds:[], note: ok?"正解":"順序が異なる" }; }
 export function gradeMatching(q: Question, pairs: Record<string,string>): GradeResult {
@@ -169,4 +193,13 @@ export function gradeQuestion(q: Question, answer: unknown): GradeResult {
     case "table-fill": return gradeTableFill(q, (answer as Record<string,string>) ?? {});
     default: return gradeEssayRubric(q.rubric ?? [], String(answer ?? ""));
   }
+}
+
+/**
+ * 監査AU-07（DECISIONS #54）: 対応付け問題のプルダウンに並べる候補。正解ペアの順のまま並べると
+ * 「上から1番目・2番目…」を選ぶだけで全問正解できるため、正解ペアの順序と無関係な
+ * 決定的な順（日本語の照合順）に並べ替える。
+ */
+export function matchingOptions(q: Question): string[] {
+  return [...new Set((q.matchingPairs ?? []).map((p) => p.right))].sort((a, b) => a.localeCompare(b, "ja"));
 }

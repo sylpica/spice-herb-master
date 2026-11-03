@@ -2310,36 +2310,6 @@
   "sectionId": "basic-compat",
   "difficulty": 1,
   "knowledgeUnitIds": [
-   "u-wash"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9598",
-    "bookPage": 23,
-    "locationNote": "本書 p.23（原本画像 IMG_9598.PNG）。原文照合 batch26 で照合済みの知識単位 u-wash から生成"
-   }
-  ],
-  "id": "q4-u-wash",
-  "format": "single-choice",
-  "prompt": "フレッシュハーブは調理前に水洗いが必要か?",
-  "choices": [
-   "少量ずつ味をみながら加える",
-   "素材",
-   "必要",
-   "ステンレスやセラミック"
-  ],
-  "correctChoiceIndexes": [
-   2
-  ],
-  "explanation": "フレッシュハーブは洗わずに販売されていることがほとんどなので調理前に水洗いし、水けをしっかりきる。使う分だけ洗う。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch1",
-  "sectionId": "basic-compat",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
    "u-knife"
   ],
   "sourceRefs": [

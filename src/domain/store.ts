@@ -1,6 +1,8 @@
 const KEY = "spice-herb-master:v1";
-export interface StoreData { records: import("./types").AnswerRecord[]; srs: Record<string, import("./types").SrsState>; favorites: string[]; goalPerDay: number; reader: import("./types").ReaderState; examDraft: unknown|null; }
-export const defaultStore: StoreData = { records: [], srs: {}, favorites: [], goalPerDay: 10, reader: { sectionId: "", fontSize: 16, dark: false, bookmarks: [], highlights: {}, notes: {} }, examDraft: null };
+export interface StoreData { records: import("./types").AnswerRecord[]; srs: Record<string, import("./types").SrsState>; favorites: string[]; goalPerDay: number; reader: import("./types").ReaderState; examDraft: unknown|null;
+  /** 演習で正解したとき自動で次の問題へ進む（既定はオフ＝手動進行。R27/R46、DECISIONS #54） */
+  autoAdvance: boolean; }
+export const defaultStore: StoreData = { records: [], srs: {}, favorites: [], goalPerDay: 10, reader: { sectionId: "", fontSize: 16, dark: false, bookmarks: [], highlights: {}, notes: {} }, examDraft: null, autoAdvance: false };
 
 const isPlainObject = (v: unknown): v is Record<string, unknown> => typeof v === "object" && v !== null && !Array.isArray(v);
 
@@ -32,6 +34,7 @@ export function sanitizeStore(parsed: unknown): StoreData {
     if (isPlainObject(r.notes)) d.reader.notes = r.notes as StoreData["reader"]["notes"];
   }
   d.examDraft = parsed.examDraft ?? null;
+  if (typeof parsed.autoAdvance === "boolean") d.autoAdvance = parsed.autoAdvance;
   return d;
 }
 

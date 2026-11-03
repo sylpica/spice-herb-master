@@ -840,7 +840,7 @@
   ],
   "id": "q1-b-part-leaf",
   "format": "one-answer",
-  "prompt": "利用部位「葉」に分類されるものはどれ? (例:タイム)",
+  "prompt": "タイム、ローレル、セージ、バジルが分類される利用部位は?",
   "acceptedAnswers": [
    "葉"
   ],
@@ -864,7 +864,7 @@
   ],
   "id": "q4-b-part-leaf",
   "format": "single-choice",
-  "prompt": "利用部位「葉」に分類されるものはどれ? (例:タイム)",
+  "prompt": "タイム、ローレル、セージ、バジルが分類される利用部位は?",
   "choices": [
    "鱗茎",
    "果実",
@@ -2040,36 +2040,6 @@
   "version": 1,
   "status": "verified",
   "chapterId": "preface",
-  "sectionId": "preservation",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "b-cooking-care"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9591",
-    "bookPage": 16,
-    "locationNote": "本書 p.16（原本画像 IMG_9591.PNG）。原文照合 batch24 で照合済みの知識単位 b-cooking-care から生成"
-   }
-  ],
-  "id": "q4-b-cooking-care",
-  "format": "single-choice",
-  "prompt": "調理中、スパイスの容器から鍋の上で直接振りかけてよいか?",
-  "choices": [
-   "盗木",
-   "立てて保存する",
-   "しない",
-   "新鮮な食材が手に入りやすかったため"
-  ],
-  "correctChoiceIndexes": [
-   2
-  ],
-  "explanation": "調理中は火のそばに置かず、小皿に必要量を出して使い、鍋の上で直接振りかけない。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "preface",
   "sectionId": "history-world",
   "difficulty": 1,
   "knowledgeUnitIds": [
@@ -2472,6 +2442,36 @@
   "prompt": "古代のスパイスやハーブの用途として挙げられるものを答えよ(薬事以外に3つ)。",
   "acceptedAnswers": [
    "祭事・媚薬・保存剤"
+  ],
+  "explanation": "スパイスやハーブは古代から薬事・祭事・媚薬・保存剤などの目的で使われ、貴重品とされた。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "preface",
+  "sectionId": "history-world",
+  "difficulty": 1,
+  "knowledgeUnitIds": [
+   "h-ancient-uses"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9582",
+    "bookPage": 7,
+    "locationNote": "本書 p.7（原本画像 IMG_9582.PNG）。原文照合 batch22 で照合済みの知識単位 h-ancient-uses から生成"
+   }
+  ],
+  "id": "q4-h-ancient-uses",
+  "format": "single-choice",
+  "prompt": "古代のスパイスやハーブの用途として挙げられるものを答えよ(薬事以外に3つ)。",
+  "choices": [
+   "祭事・媚薬・保存剤",
+   "肉の保存",
+   "大航海時代",
+   "世界の記述"
+  ],
+  "correctChoiceIndexes": [
+   0
   ],
   "explanation": "スパイスやハーブは古代から薬事・祭事・媚薬・保存剤などの目的で使われ、貴重品とされた。"
  }
