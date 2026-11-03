@@ -201,7 +201,7 @@ test.describe("横断検索の絞り込み", () => {
     await page.goto("#/search");
     await expect(page.getByRole("heading", { name: "横断検索" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "教材（節） 81件" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "問題 1804件" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "問題 1795件" })).toBeVisible();
 
     // 単独キーワード: 節と問題の両方が同時に絞られる（横断検索の実態）
     await page.getByLabel("キーワード").fill("歴史");
@@ -217,7 +217,7 @@ test.describe("横断検索の絞り込み", () => {
     // 条件を解除すると全件表示に戻る
     await page.getByLabel("キーワード").fill("");
     await expect(page.getByRole("heading", { name: "教材（節） 81件" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "問題 1804件" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "問題 1795件" })).toBeVisible();
   });
 
   test("該当しないキーワードでは節・問題とも0件の空状態になる", async ({ page }) => {
@@ -236,8 +236,8 @@ test.describe("横断検索の複合フィルタ（S1）", () => {
     await page.goto("#/search");
     await expect(page.getByRole("heading", { name: "横断検索" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "教材（節） 81件" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "問題 1804件" })).toBeVisible();
-    await expect(page.getByText(/検索結果 合計 1885件/)).toBeVisible();
+    await expect(page.getByRole("heading", { name: "問題 1795件" })).toBeVisible();
+    await expect(page.getByText(/検索結果 合計 1876件/)).toBeVisible();
 
     // キーワード単独: 節6件（タイトル2＋本文4）・問題4件
     await page.getByLabel("キーワード").fill("歴史");
@@ -280,8 +280,8 @@ test.describe("横断検索の複合フィルタ（S1）", () => {
     // すべての条件を解除すると全件表示に復帰し、入力値も初期状態に戻る
     await page.getByRole("button", { name: "すべての条件を解除" }).click();
     await expect(page.getByRole("heading", { name: "教材（節） 81件" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "問題 1804件" })).toBeVisible();
-    await expect(page.getByText(/検索結果 合計 1885件/)).toBeVisible();
+    await expect(page.getByRole("heading", { name: "問題 1795件" })).toBeVisible();
+    await expect(page.getByText(/検索結果 合計 1876件/)).toBeVisible();
     await expect(page.getByLabel("キーワード")).toHaveValue("");
     await expect(page.getByLabel("序章", { exact: true })).not.toBeChecked();
     await expect(page.getByLabel("一問一答", { exact: true })).not.toBeChecked();
@@ -295,10 +295,10 @@ test.describe("横断検索の複合フィルタ（S1）", () => {
     await expect(page.getByRole("heading", { name: "問題 0件" })).toBeVisible();
     await page.getByLabel("検索対象").selectOption("questions");
     await expect(page.getByRole("heading", { name: "教材（節） 0件" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "問題 1804件" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "問題 1795件" })).toBeVisible();
     await page.getByRole("button", { name: "対象: 問題のみ ×" }).click();
     await expect(page.getByRole("heading", { name: "教材（節） 81件" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "問題 1804件" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "問題 1795件" })).toBeVisible();
   });
 });
 
@@ -309,19 +309,19 @@ test.describe("横断検索の拡張フィルタ（S2）", () => {
     await page.goto("#/search");
     await expect(page.getByRole("heading", { name: "横断検索" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "教材（節） 81件" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "問題 1804件" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "問題 1795件" })).toBeVisible();
 
     // 章を1つ選択: 序章だけに絞られる
     await page.getByLabel("序章", { exact: true }).check();
     await expect(page.getByRole("heading", { name: "教材（節） 5件" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "問題 182件" })).toBeVisible();
-    await expect(page.getByText(/検索結果 合計 187件/)).toBeVisible();
+    await expect(page.getByRole("heading", { name: "問題 181件" })).toBeVisible();
+    await expect(page.getByText(/検索結果 合計 186件/)).toBeVisible();
 
     // 章をもう1つ足す（次元内 OR）: 第二章との合算に単調に広がる
     await page.getByLabel("第二章", { exact: true }).check();
     await expect(page.getByRole("heading", { name: "教材（節） 44件" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "問題 1474件" })).toBeVisible();
-    await expect(page.getByText(/検索結果 合計 1518件/)).toBeVisible();
+    await expect(page.getByRole("heading", { name: "問題 1469件" })).toBeVisible();
+    await expect(page.getByText(/検索結果 合計 1513件/)).toBeVisible();
 
     // 形式（一問一答）を重ねる（次元間 AND）: 2章の一問一答308件に絞られ、節は対象外になる
     await page.getByLabel("一問一答", { exact: true }).check();
@@ -333,16 +333,16 @@ test.describe("横断検索の拡張フィルタ（S2）", () => {
     await expect(page.getByRole("heading", { name: "問題 91件" })).toBeVisible();
     await expect(page.getByText(/検索結果 合計 91件/)).toBeVisible();
 
-    // 形式のチップを個別解除すると、序章のみの結果（節5件・問題182件）に戻る
+    // 形式のチップを個別解除すると、序章のみの結果（節5件・問題181件）に戻る
     await page.getByRole("button", { name: "形式: 一問一答 ×" }).click();
     await expect(page.getByRole("heading", { name: "教材（節） 5件" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "問題 182件" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "問題 181件" })).toBeVisible();
 
     // 序章のチェックを外すと全件に復帰する
     await page.getByLabel("序章", { exact: true }).uncheck();
     await expect(page.getByRole("heading", { name: "教材（節） 81件" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "問題 1804件" })).toBeVisible();
-    await expect(page.getByText(/検索結果 合計 1885件/)).toBeVisible();
+    await expect(page.getByRole("heading", { name: "問題 1795件" })).toBeVisible();
+    await expect(page.getByText(/検索結果 合計 1876件/)).toBeVisible();
   });
 
   test("節・問題の状態・転記状態で絞り込め、解除で全件に戻る", async ({ page }) => {
@@ -360,30 +360,30 @@ test.describe("横断検索の拡張フィルタ（S2）", () => {
     // 節のチップで個別解除すると全件に戻る
     await page.getByRole("button", { name: "節: 世界における歴史 ×" }).click();
     await expect(page.getByRole("heading", { name: "教材（節） 81件" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "問題 1804件" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "問題 1795件" })).toBeVisible();
 
     // 問題の状態（正式）: サンプル削除後は正式のみが選択肢にあり、問題固有の条件のため節は対象外になる
     await page.getByLabel("問題の状態").selectOption("verified");
     await expect(page.getByRole("heading", { name: "教材（節） 0件" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "問題 1804件" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "問題 1795件" })).toBeVisible();
 
     // 状態のチップで個別解除すると全件に戻る
     await page.getByRole("button", { name: "状態: 正式 ×" }).click();
     await expect(page.getByRole("heading", { name: "教材（節） 81件" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "問題 1804件" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "問題 1795件" })).toBeVisible();
 
     // 転記状態（転記済み）: T18 で全81節が転記済みになったため、選択肢は「転記済み」のみで
     // 絞り込んでも全件のまま（未処理の節は存在しない）
     await page.getByLabel("転記状態").selectOption("転記済み");
     await expect(page.getByRole("heading", { name: "教材（節） 81件" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "問題 1804件" })).toBeVisible();
-    await expect(page.getByText(/検索結果 合計 1885件/)).toBeVisible();
+    await expect(page.getByRole("heading", { name: "問題 1795件" })).toBeVisible();
+    await expect(page.getByText(/検索結果 合計 1876件/)).toBeVisible();
 
     // すべての条件を解除すると全件表示と入力初期値に復帰する
     await page.getByRole("button", { name: "すべての条件を解除" }).click();
     await expect(page.getByRole("heading", { name: "教材（節） 81件" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "問題 1804件" })).toBeVisible();
-    await expect(page.getByText(/検索結果 合計 1885件/)).toBeVisible();
+    await expect(page.getByRole("heading", { name: "問題 1795件" })).toBeVisible();
+    await expect(page.getByText(/検索結果 合計 1876件/)).toBeVisible();
     await expect(page.getByLabel("転記状態")).toHaveValue("");
   });
 });

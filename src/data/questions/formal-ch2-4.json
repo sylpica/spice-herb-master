@@ -4,95 +4,6 @@
   "status": "verified",
   "chapterId": "ch2",
   "sectionId": "item-clove",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "clove-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9635",
-    "bookPage": 60,
-    "locationNote": "本書 p.60（原本画像 IMG_9635.PNG）。原文照合 batch19 で照合済みの知識単位 clove-profile から生成"
-   }
-  ],
-  "id": "qsc-part-clove-profile",
-  "format": "single-choice",
-  "prompt": "クローブの利用部位はどれか。",
-  "choices": [
-   "葉",
-   "地上部",
-   "種子の仁(ナツメッグ)、仮種皮(メース)",
-   "蕾"
-  ],
-  "correctChoiceIndexes": [
-   3
-  ],
-  "explanation": "クローブ: 科名はフトモモ科。原産地はインドネシア(マルク諸島)。利用部位は蕾。別名は丁子(ちょうじ)、丁香(ちょうこう)、百里香(ひゃくりこう)。検定1・2・3級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-clove",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "clove-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9635",
-    "bookPage": 60,
-    "locationNote": "本書 p.60（原本画像 IMG_9635.PNG）。原文照合 batch19 で照合済みの知識単位 clove-profile から生成"
-   }
-  ],
-  "id": "qsc-origin-clove-profile",
-  "format": "single-choice",
-  "prompt": "クローブの原産地はどれか。",
-  "choices": [
-   "中国、ベトナム",
-   "アンティル諸島(西インド諸島)、中央アメリカ",
-   "インド(マラバル地方)",
-   "インドネシア(マルク諸島)"
-  ],
-  "correctChoiceIndexes": [
-   3
-  ],
-  "explanation": "クローブ: 科名はフトモモ科。原産地はインドネシア(マルク諸島)。利用部位は蕾。別名は丁子(ちょうじ)、丁香(ちょうこう)、百里香(ひゃくりこう)。検定1・2・3級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-clove",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "clove-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9635",
-    "bookPage": 60,
-    "locationNote": "本書 p.60（原本画像 IMG_9635.PNG）。原文照合 batch19 で照合済みの知識単位 clove-profile から生成"
-   }
-  ],
-  "id": "qti-alias-clove-profile",
-  "format": "term-input",
-  "prompt": "クローブの別名を1つ答えよ。",
-  "acceptedAnswers": [
-   "丁子(ちょうじ)",
-   "丁子",
-   "丁香(ちょうこう)",
-   "丁香",
-   "百里香(ひゃくりこう)",
-   "百里香"
-  ],
-  "explanation": "クローブ: 科名はフトモモ科。原産地はインドネシア(マルク諸島)。利用部位は蕾。別名は丁子(ちょうじ)、丁香(ちょうこう)、百里香(ひゃくりこう)。検定1・2・3級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-clove",
   "difficulty": 2,
   "knowledgeUnitIds": [
    "clove-profile"
@@ -109,8 +20,6 @@
   "prompt": "別名「丁子」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
    "クローブ",
-   "丁子(ちょうじ)",
-   "丁子",
    "丁香(ちょうこう)",
    "丁香",
    "百里香(ひゃくりこう)",
@@ -270,8 +179,7 @@
   "format": "term-input",
   "prompt": "別名「ペッパー」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
-   "こしょう",
-   "ペッパー"
+   "こしょう"
   ],
   "explanation": "こしょう: 科名はコショウ科。原産地はインド(マラバル地方)。利用部位は果実。別名はペッパー。検定1・2・3級の対象。"
  },
@@ -433,7 +341,6 @@
   "prompt": "別名「コエンドロ」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
    "コリアンダー",
-   "コエンドロ",
    "シラントロ",
    "香菜(シャンツァイ)",
    "香菜",
@@ -597,7 +504,6 @@
   "prompt": "別名「サフランクロッカス」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
    "サフラン",
-   "サフランクロッカス",
    "蕃紅花(ばんこうか)",
    "蕃紅花"
   ],
@@ -766,7 +672,6 @@
    "花椒",
    "はじかみ(山椒)",
    "はじかみ",
-   "中国山椒",
    "華北山椒",
    "ファガラ",
    "セシュアンペッパー(花椒)",
@@ -932,8 +837,6 @@
    "シナモン/カシア",
    "シナモン",
    "カシア",
-   "肉桂(にっけい)",
-   "肉桂",
    "桂皮(けいひ)",
    "桂皮"
   ],
@@ -1093,7 +996,6 @@
   "prompt": "別名「ジンジャー」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
    "しょうが",
-   "ジンジャー",
    "はじかみ"
   ],
   "explanation": "しょうが: 科名はショウガ科。原産地は熱帯アジア。利用部位は根茎。別名はジンジャー、はじかみ。検定1・2・3級の対象。"
@@ -1258,8 +1160,6 @@
   "prompt": "別名「八角」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
    "スターアニス",
-   "八角(はっかく)",
-   "八角",
    "大茴香(だいういきょう)",
    "大茴香",
    "パージャオ",
@@ -1423,7 +1323,6 @@
   "prompt": "別名「サルビア」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
    "セージ",
-   "サルビア",
    "薬用サルビア"
   ],
   "explanation": "セージ: 科名はシソ科。原産地は地中海沿岸。利用部位は葉および花穂。別名はサルビア、薬用サルビア。検定1・2・3級の対象。"
@@ -1583,7 +1482,6 @@
   "prompt": "別名「うこん」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
    "ターメリック",
-   "うこん",
    "秋うこん",
    "インディアンサフラン"
   ],
@@ -1742,9 +1640,7 @@
   "format": "term-input",
   "prompt": "別名「立麝香草」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
-   "タイム",
-   "立麝香草(たちじゃこうそう)",
-   "立麝香草"
+   "タイム"
   ],
   "explanation": "タイム: 科名はシソ科。原産地は南ヨーロッパ。利用部位は葉および花穂。別名は立麝香草(たちじゃこうそう)。検定1・2・3級の対象。"
  },
@@ -1900,8 +1796,7 @@
   "format": "term-input",
   "prompt": "別名「エストラゴン」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
-   "タラゴン",
-   "エストラゴン"
+   "タラゴン"
   ],
   "explanation": "タラゴン: 科名はキク科。原産地はロシア南部、西アジア。利用部位は葉。別名はエストラゴン。検定1・2級の対象。"
  },
@@ -2060,7 +1955,6 @@
   "prompt": "別名「セルフィーユ」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
    "チャービル",
-   "セルフィーユ",
    "茴香芹(ういきょうぜり)",
    "茴香芹"
   ],
@@ -2199,5 +2093,79 @@
    "えぞねぎ"
   ],
   "explanation": "チャイブ: 科名はヒガンバナ科。原産地は中央アジア、温帯地域。利用部位は花、葉。別名はシブレット、西洋あさつき、えぞねぎ。検定1・2級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-chive",
+  "difficulty": 3,
+  "knowledgeUnitIds": [
+   "chives-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9650",
+    "bookPage": 74,
+    "locationNote": "本書 p.74（原本画像 IMG_9650.PNG）。原文照合 batch2 で照合済みの知識単位 chives-profile から生成"
+   }
+  ],
+  "id": "qti-rev-chives-profile",
+  "format": "term-input",
+  "prompt": "別名「シブレット」と呼ばれるスパイス＆ハーブの名称を答えよ。",
+  "acceptedAnswers": [
+   "チャイブ",
+   "西洋あさつき",
+   "えぞねぎ"
+  ],
+  "explanation": "チャイブ: 科名はヒガンバナ科。原産地は中央アジア、温帯地域。利用部位は花、葉。別名はシブレット、西洋あさつき、えぞねぎ。検定1・2級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-dill",
+  "difficulty": 2,
+  "knowledgeUnitIds": [
+   "dill-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9651",
+    "bookPage": 75,
+    "locationNote": "本書 p.75（原本画像 IMG_9651.PNG）。原文照合 batch2 で照合済みの知識単位 dill-profile から生成"
+   }
+  ],
+  "id": "qfb-family-dill-profile",
+  "format": "fill-blank",
+  "prompt": "ディルの科名は（　）である。",
+  "acceptedAnswers": [
+   "セリ科"
+  ],
+  "explanation": "ディル: 科名はセリ科。原産地は南ヨーロッパ、西アジア。利用部位は種子(植物学上は果実)、葉、茎。別名はいのんど、ジル、サワ。検定1・2級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-dill",
+  "difficulty": 2,
+  "knowledgeUnitIds": [
+   "dill-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9651",
+    "bookPage": 75,
+    "locationNote": "本書 p.75（原本画像 IMG_9651.PNG）。原文照合 batch2 で照合済みの知識単位 dill-profile から生成"
+   }
+  ],
+  "id": "qfb-level-dill-profile",
+  "format": "fill-blank",
+  "prompt": "ディルは検定（　）級の対象である。",
+  "acceptedAnswers": [
+   "1・2"
+  ],
+  "explanation": "ディル: 科名はセリ科。原産地は南ヨーロッパ、西アジア。利用部位は種子(植物学上は果実)、葉、茎。別名はいのんど、ジル、サワ。検定1・2級の対象。"
  }
 ]

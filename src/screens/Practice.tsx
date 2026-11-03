@@ -10,7 +10,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router";
 import { QUESTIONS } from "../data/questions";
 import { CHAPTERS, ALL_SECTIONS } from "../data/structure";
-import QuestionRunner from "../components/QuestionRunner";
+import QuestionRunner, { type SavedAnswer } from "../components/QuestionRunner";
 import { FORMAT_LABELS, type Question, type QuestionFormat } from "../domain/types";
 import type { StoreData } from "../domain/store";
 import { initSrs, reviewSrs, qualityFromResult } from "../domain/srs";
@@ -29,6 +29,8 @@ import type { GradeResult } from "../domain/grading";
 
 const FORMAT_OPTIONS = availableSearchFormats(QUESTIONS);
 const SECTION_BY_ID = new Map(ALL_SECTIONS.map((s) => [s.id, s]));
+/** 正解時の自動進行までの待ち時間（正誤と正答を読む時間を残す） */
+const AUTO_ADVANCE_MS = 1500;
 
 interface PracticePreset {
   focus?: PracticeFocus;
@@ -68,6 +70,13 @@ export default function Practice({ store, update }: { store: StoreData; update: 
   const [quickStart, setQuickStart] = useState(preset.quickStart ?? false);
   const [idx, setIdx] = useState(0);
   const [results, setResults] = useState<{ questionId: string; correct: boolean | null }[]>([]);
+  // 監査AU-02（DECISIONS #54）: セッション内で確定した回答（「前の問題へ」で戻ったときに復元する）。
+  // 復元した問題は確定済みのまま表示し、再確定による記録・SRSの二重計上を起こさない。
+  const [answered, setAnswered] = useState<Record<string, SavedAnswer>>({});
+  // 正解時の自動進行（設定でオンにした場合のみ。R27/R46）。手動で移動したら取り消す。
+  const autoTimer = useRef<number | null>(null);
+  const cancelAuto = () => { if (autoTimer.current !== null) { window.clearTimeout(autoTimer.current); autoTimer.current = null; } };
+  useEffect(() => cancelAuto, []);
   const [done, setDone] = useState(false);
 
   const basePool = (m: string): Question[] => selectForPractice(QUESTIONS);
@@ -87,8 +96,10 @@ export default function Practice({ store, update }: { store: StoreData; update: 
     const o = next.orderMode ?? orderMode;
     const c = next.count ?? count;
     setSessionQs(buildSession(buildPracticePool(basePool(m), f, ctx), o, String(Date.now()), c));
+    cancelAuto();
     setIdx(0);
     setResults([]);
+    setAnswered({});
     setDone(false);
   };
   const applyFilters = (f: PracticeFilters) => { setFilters(f); restart({ filters: f }); };
@@ -164,7 +175,17 @@ export default function Practice({ store, update }: { store: StoreData; update: 
           <QuestionRunner
             key={q.id}
             q={q}
-            onGraded={(r: GradeResult, self, responseMs) => {
+            saved={answered[q.id]}
+            onGraded={(r: GradeResult, self, responseMs, answer) => {
+              setAnswered((m) => ({ ...m, [q.id]: { answer, result: r, selfRatio: self } }));
+              if (store.autoAdvance && r.correct === true) {
+                cancelAuto();
+                const at = idx;
+                autoTimer.current = window.setTimeout(() => {
+                  autoTimer.current = null;
+                  if (at + 1 >= sessionQs.length) setDone(true); else setIdx(at + 1);
+                }, AUTO_ADVANCE_MS);
+              }
               update((d: StoreData) => {
                 d.records.push({ questionId: q.id, answeredAt: new Date().toISOString(), correct: r.correct, scoreRatio: r.scoreRatio, autoScoreRatio: r.autoScoreRatio, selfScoreRatio: self, responseMs });
                 const cur = d.srs[q.id] ?? initSrs(q.id);
@@ -174,6 +195,7 @@ export default function Practice({ store, update }: { store: StoreData; update: 
               setResults((rs) => [...rs, { questionId: q.id, correct: r.correct }]);
             }}
             onSelfScore={(self) => {
+              setAnswered((m) => (m[q.id] ? { ...m, [q.id]: { ...m[q.id]!, selfRatio: self } } : m));
               update((d: StoreData) => {
                 const i = d.records.map((x, j) => (x.questionId === q.id ? j : -1)).filter((j) => j >= 0).pop();
                 if (i !== undefined) { const rec = d.records[i]; if (rec) rec.selfScoreRatio = self; }
@@ -186,10 +208,10 @@ export default function Practice({ store, update }: { store: StoreData; update: 
             }}
           />
           <p>
-            <button className="ghost" disabled={idx === 0} onClick={() => setIdx(idx - 1)}>
+            <button className="ghost" disabled={idx === 0} onClick={() => { cancelAuto(); setIdx(idx - 1); }}>
               前の問題へ
             </button>{" "}
-            <button className="ghost" onClick={() => (idx + 1 >= sessionQs.length ? setDone(true) : setIdx(idx + 1))}>
+            <button className="ghost" onClick={() => { cancelAuto(); if (idx + 1 >= sessionQs.length) setDone(true); else setIdx(idx + 1); }}>
               {idx + 1 >= sessionQs.length ? "セッションを終了する" : "次の問題へ"}
             </button>{" "}
             <button

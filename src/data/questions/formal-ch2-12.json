@@ -15,28 +15,6 @@
     "locationNote": "本書 p.100（原本画像 IMG_9676.PNG）。原文照合 batch8 で照合済みの知識単位 grainsofparadise-profile から生成"
    }
   ],
-  "id": "qtf-part-grainsofparadise-profile",
-  "format": "true-false",
-  "prompt": "グレインズオブパラダイスの利用部位は種子である。",
-  "correctBoolean": true,
-  "explanation": "グレインズオブパラダイス: 科名はショウガ科。利用部位は種子。検定1級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-others",
-  "difficulty": 3,
-  "knowledgeUnitIds": [
-   "grainsofparadise-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9676",
-    "bookPage": 100,
-    "locationNote": "本書 p.100（原本画像 IMG_9676.PNG）。原文照合 batch8 で照合済みの知識単位 grainsofparadise-profile から生成"
-   }
-  ],
   "id": "qtf-part-false-grainsofparadise-profile",
   "format": "true-false",
   "prompt": "グレインズオブパラダイスの利用部位は根茎である。",
@@ -1175,7 +1153,7 @@
   "format": "true-false",
   "prompt": "しそ(紫蘇)の科名はシソ科である。",
   "correctBoolean": true,
-  "explanation": "しそ(紫蘇): 科名はシソ科。利用部位は葉および花穂、種子。別名は大葉(青じその葉)。検定1級の対象。"
+  "explanation": "しそ(紫蘇): 科名はシソ科。利用部位は葉および花穂、種子。別名は大葉(青じその葉の部分を指す)。検定1級の対象。"
  },
  {
   "version": 1,
@@ -1197,7 +1175,7 @@
   "format": "true-false",
   "prompt": "しそ(紫蘇)の科名はフトモモ科である。",
   "correctBoolean": false,
-  "explanation": "しそ(紫蘇): 科名はシソ科。利用部位は葉および花穂、種子。別名は大葉(青じその葉)。検定1級の対象。"
+  "explanation": "しそ(紫蘇): 科名はシソ科。利用部位は葉および花穂、種子。別名は大葉(青じその葉の部分を指す)。検定1級の対象。"
  },
  {
   "version": 1,
@@ -1219,7 +1197,7 @@
   "format": "true-false",
   "prompt": "しそ(紫蘇)の利用部位は葉および花穂、種子である。",
   "correctBoolean": true,
-  "explanation": "しそ(紫蘇): 科名はシソ科。利用部位は葉および花穂、種子。別名は大葉(青じその葉)。検定1級の対象。"
+  "explanation": "しそ(紫蘇): 科名はシソ科。利用部位は葉および花穂、種子。別名は大葉(青じその葉の部分を指す)。検定1級の対象。"
  },
  {
   "version": 1,
@@ -1241,7 +1219,7 @@
   "format": "true-false",
   "prompt": "しそ(紫蘇)の利用部位は果実(種子を除いた果肉部)である。",
   "correctBoolean": false,
-  "explanation": "しそ(紫蘇): 科名はシソ科。利用部位は葉および花穂、種子。別名は大葉(青じその葉)。検定1級の対象。"
+  "explanation": "しそ(紫蘇): 科名はシソ科。利用部位は葉および花穂、種子。別名は大葉(青じその葉の部分を指す)。検定1級の対象。"
  },
  {
   "version": 1,
@@ -1286,7 +1264,7 @@
    "A": "シソ科",
    "B": "葉および花穂、種子"
   },
-  "explanation": "しそ(紫蘇): 科名はシソ科。利用部位は葉および花穂、種子。別名は大葉(青じその葉)。検定1級の対象。"
+  "explanation": "しそ(紫蘇): 科名はシソ科。利用部位は葉および花穂、種子。別名は大葉(青じその葉の部分を指す)。検定1級の対象。"
  },
  {
   "version": 1,
@@ -1328,7 +1306,7 @@
     "points": 1
    }
   ],
-  "explanation": "しそ(紫蘇): 科名はシソ科。利用部位は葉および花穂、種子。別名は大葉(青じその葉)。検定1級の対象。"
+  "explanation": "しそ(紫蘇): 科名はシソ科。利用部位は葉および花穂、種子。別名は大葉(青じその葉の部分を指す)。検定1級の対象。"
  },
  {
   "version": 1,
@@ -1358,7 +1336,7 @@
   "correctChoiceIndexes": [
    1
   ],
-  "explanation": "しそ(紫蘇): 科名はシソ科。利用部位は葉および花穂、種子。別名は大葉(青じその葉)。検定1級の対象。"
+  "explanation": "しそ(紫蘇): 科名はシソ科。利用部位は葉および花穂、種子。別名は大葉(青じその葉の部分を指す)。検定1級の対象。"
  },
  {
   "version": 1,

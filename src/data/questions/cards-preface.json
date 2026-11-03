@@ -302,7 +302,7 @@
  {
   "id": "card-b-part-leaf",
   "kind": "qa",
-  "front": "利用部位「葉」に分類されるものはどれ? (例:タイム)",
+  "front": "タイム、ローレル、セージ、バジルが分類される利用部位は?",
   "back": "葉",
   "reverseOf": null,
   "chapterId": "preface",

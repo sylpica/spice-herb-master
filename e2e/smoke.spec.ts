@@ -25,7 +25,7 @@ test.describe("ホームとナビゲーション", () => {
   test("ホームが表示され、教材の主要指標が見える", async ({ page }) => {
     await openHome(page);
     // 軽量サマリ経由の件数表示（tests/summary.test.ts が実データ一致を固定）
-    await expect(page.getByText("正式問題 1804問").first()).toBeVisible();
+    await expect(page.getByText("正式問題 1795問").first()).toBeVisible();
     await expect(page.getByText(/取り込み済み知識単位: 545件/)).toBeVisible();
     await expect(page.getByText(/全文転記: 140ページ/)).toBeVisible();
     await expect(page.getByText("教材の状態（正直な表示）")).toBeVisible();
@@ -236,8 +236,14 @@ test.describe("暗記モード（UX5）", () => {
     await page.getByRole("link", { name: "暗記を始める" }).click();
     await expect(page.getByRole("heading", { name: "暗記モード（全80種）" })).toBeVisible();
     await expect(page.getByText("1 / 80種")).toBeVisible();
+    // 出題順は毎回シャッフル（Date.now() シード）で、先頭がミックススパイス等の「科名」を
+    // 持たない種類になることがある（CI e2e 失敗 run 41159001533 の原因、監査AU-01）。
+    // 特定の属性語ではなく「表示中の種類のプロフィール（名称: …）が出ること」を検証する。
+    const name = (await page.locator("main h2").textContent())?.trim();
+    expect(name).toBeTruthy();
     await page.getByRole("button", { name: "プロフィールを表示（答え合わせ）" }).click();
-    await expect(page.locator("main")).toContainText("科名は");
+    await expect(page.locator("main section.card")).toContainText(`${name}: `);
+    await expect(page.locator("main section.card")).toContainText("検定");
     await page.getByRole("button", { name: "覚えた", exact: true }).click();
     await expect(page.getByText("2 / 80種")).toBeVisible();
     await expect(page.getByText(/この周の「覚えた」: 1種/)).toBeVisible();
@@ -505,7 +511,7 @@ test.describe("模擬試験", () => {
   test("設定画面から模試を開始し、未回答のまま終了すると一括採点され記録が保存される（FIX1）", async ({ page }) => {
     await page.goto("#/exam");
     await expect(page.getByRole("heading", { name: "模擬試験（練習用）" })).toBeVisible();
-    await expect(page.getByText("出題候補（検証済み）: 1804問")).toBeVisible();
+    await expect(page.getByText("出題候補（検証済み）: 1795問")).toBeVisible();
     await page.getByLabel("制限時間（分）").fill("1");
     await page.getByRole("button", { name: "開始（途中状態を保存）" }).click();
     // 出題中: 進捗と残り時間が見え、正解・解説は表示されない（制限時間1分=2問）
@@ -542,9 +548,9 @@ test.describe("分析・検索・品質管理", () => {
   test("横断検索: 件数が見え、キーワードで絞り込める", async ({ page }) => {
     await page.goto("#/search");
     await expect(page.getByRole("heading", { name: "横断検索" })).toBeVisible();
-    // 初期状態は全件: 節 81 件・問題 1804 件（正式のみ。サンプルは全削除済み、#52）
+    // 初期状態は全件: 節 81 件・問題 1795 件（正式のみ。サンプルは全削除済み、#52）
     await expect(page.getByRole("heading", { name: "教材（節） 81件" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "問題 1804件" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "問題 1795件" })).toBeVisible();
     await page.getByLabel("キーワード").fill("歴史");
     await expect(page.getByRole("heading", { name: "教材（節） 6件" })).toBeVisible();
     await expect(page.getByText("世界における歴史（p.6・転記済み）")).toBeVisible();

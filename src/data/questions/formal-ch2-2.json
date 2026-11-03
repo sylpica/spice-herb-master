@@ -15,33 +15,6 @@
     "locationNote": "本書 p.85（原本画像 IMG_9661.PNG）。原文照合 batch4 で照合済みの知識単位 marjoram-1 から生成"
    }
   ],
-  "id": "q1-marjoram-1",
-  "format": "one-answer",
-  "prompt": "オレガノに似ているが、より甘く繊細な香りのハーブは?",
-  "acceptedAnswers": [
-   "マジョラム",
-   "マヨラナ",
-   "花薄荷(はなはっか)",
-   "花薄荷"
-  ],
-  "explanation": "オレガノに似るが、より甘く繊細な香り。羊肉や魚、レバーなどの臭み消しに下ごしらえで使われる。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-marjoram-mustard",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "marjoram-1"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9661",
-    "bookPage": 85,
-    "locationNote": "本書 p.85（原本画像 IMG_9661.PNG）。原文照合 batch4 で照合済みの知識単位 marjoram-1 から生成"
-   }
-  ],
   "id": "q4-marjoram-1",
   "format": "single-choice",
   "prompt": "オレガノに似ているが、より甘く繊細な香りのハーブは?",
@@ -1412,36 +1385,6 @@
   "version": 1,
   "status": "verified",
   "chapterId": "ch2",
-  "sectionId": "item-mix",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "chp-2"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9673",
-    "bookPage": 97,
-    "locationNote": "本書 p.97（原本画像 IMG_9673.PNG）。原文照合 batch7 で照合済みの知識単位 chp-2 から生成"
-   }
-  ],
-  "id": "q4-chp-2",
-  "format": "single-choice",
-  "prompt": "唐辛子単体をさすのはチリパウダーとチリペッパーのどちら?",
-  "choices": [
-   "ロングペッパー",
-   "こしょう",
-   "チャービル",
-   "チリペッパー"
-  ],
-  "correctChoiceIndexes": [
-   3
-  ],
-  "explanation": "チリパウダーはミックススパイス、チリペッパーは唐辛子単体をさす。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
   "sectionId": "item-others",
   "difficulty": 3,
   "knowledgeUnitIds": [
@@ -1458,8 +1401,7 @@
   "format": "one-answer",
   "prompt": "インド名を「ヒング」といい、加熱で玉ねぎのようなコクを出すスパイスは?",
   "acceptedAnswers": [
-   "アサフェティダ",
-   "ヒング"
+   "アサフェティダ"
   ],
   "explanation": "強烈なにおいがあるが油で加熱すると気にならなくなり、インドでは豆や野菜料理に玉ねぎのようなコクを与えるスタータースパイスとして使う。"
  },
@@ -1635,36 +1577,6 @@
   "sectionId": "item-others",
   "difficulty": 3,
   "knowledgeUnitIds": [
-   "gal-1"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9675",
-    "bookPage": 99,
-    "locationNote": "本書 p.99（原本画像 IMG_9675.PNG）。原文照合 batch8 で照合済みの知識単位 gal-1 から生成"
-   }
-  ],
-  "id": "q4-gal-1",
-  "format": "single-choice",
-  "prompt": "ガランガルの2種類のうち、辛みが強いのはどちら?",
-  "choices": [
-   "ハバネロ",
-   "小ガランガル",
-   "ナンヨウザンショウ",
-   "グリチルリチン"
-  ],
-  "correctChoiceIndexes": [
-   1
-  ],
-  "explanation": "ジンジャーに似た爽やかな香りと刺激があり、小ガランガルと大ガランガルの2種類のうち小ガランガルのほうが辛い。タイ名はカー。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-others",
-  "difficulty": 3,
-  "knowledgeUnitIds": [
    "cl-1"
   ],
   "sourceRefs": [
@@ -1789,8 +1701,7 @@
    "クベバ",
    "畢澄茄(ひっちょうか)",
    "畢澄茄",
-   "キュベブ",
-   "テイルドペッパー"
+   "キュベブ"
   ],
   "explanation": "しっぽのような短い茎がついた未熟果を天日乾燥したもので、刺激的な香りと辛み・苦みを持つ。中国では古くから薬用。"
  },
@@ -2206,5 +2117,83 @@
    3
   ],
   "explanation": "ウッディーでスパイシーな香りで、ジビエ料理の臭み消しや蒸留酒ジンの香りづけに使われる。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-others",
+  "difficulty": 3,
+  "knowledgeUnitIds": [
+   "sum-1"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9679",
+    "bookPage": 103,
+    "locationNote": "本書 p.103（原本画像 IMG_9679.PNG）。原文照合 batch9 で照合済みの知識単位 sum-1 から生成"
+   }
+  ],
+  "id": "q1-sum-1",
+  "format": "one-answer",
+  "prompt": "ミックススパイス「ザーター」の原料で、酸味と渋みのある赤いスパイスは?",
+  "acceptedAnswers": [
+   "スマック"
+  ],
+  "explanation": "酸味と渋みのある赤いスパイスで、中近東で酸味づけに使う。赤じそふりかけを思わせる色と味で、ザーターの原料。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-others",
+  "difficulty": 3,
+  "knowledgeUnitIds": [
+   "sum-1"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9679",
+    "bookPage": 103,
+    "locationNote": "本書 p.103（原本画像 IMG_9679.PNG）。原文照合 batch9 で照合済みの知識単位 sum-1 から生成"
+   }
+  ],
+  "id": "q4-sum-1",
+  "format": "single-choice",
+  "prompt": "ミックススパイス「ザーター」の原料で、酸味と渋みのある赤いスパイスは?",
+  "choices": [
+   "アニス",
+   "ソレル",
+   "スマック",
+   "アサフェティダ"
+  ],
+  "correctChoiceIndexes": [
+   2
+  ],
+  "explanation": "酸味と渋みのある赤いスパイスで、中近東で酸味づけに使う。赤じそふりかけを思わせる色と味で、ザーターの原料。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-others",
+  "difficulty": 3,
+  "knowledgeUnitIds": [
+   "cel-1"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9679",
+    "bookPage": 103,
+    "locationNote": "本書 p.103（原本画像 IMG_9679.PNG）。原文照合 batch9 で照合済みの知識単位 cel-1 から生成"
+   }
+  ],
+  "id": "q1-cel-1",
+  "format": "one-answer",
+  "prompt": "スパイスとして用いられるセロリーの種子は何という種のもの?",
+  "acceptedAnswers": [
+   "スモーリッジ"
+  ],
+  "explanation": "強い爽やかな香りとほろ苦さがあり、野菜の青臭さを抑える。スパイスに使うのは野生種スモーリッジの種子。"
  }
 ]

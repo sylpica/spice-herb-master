@@ -15,50 +15,6 @@
     "locationNote": "本書 p.52（原本画像 IMG_9627.PNG）。原文照合 batch17 で照合済みの知識単位 anise-profile から生成"
    }
   ],
-  "id": "qtf-family-anise-profile",
-  "format": "true-false",
-  "prompt": "アニスの科名はセリ科である。",
-  "correctBoolean": true,
-  "explanation": "アニス: 科名はセリ科。原産地は地中海東部沿岸、エジプト。利用部位は種子(植物学上は果実)。別名は茴芹(ういきん)。検定1・2級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-anise",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "anise-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9627",
-    "bookPage": 52,
-    "locationNote": "本書 p.52（原本画像 IMG_9627.PNG）。原文照合 batch17 で照合済みの知識単位 anise-profile から生成"
-   }
-  ],
-  "id": "qtf-family-false-anise-profile",
-  "format": "true-false",
-  "prompt": "アニスの科名はイネ科である。",
-  "correctBoolean": false,
-  "explanation": "アニス: 科名はセリ科。原産地は地中海東部沿岸、エジプト。利用部位は種子(植物学上は果実)。別名は茴芹(ういきん)。検定1・2級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-anise",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "anise-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9627",
-    "bookPage": 52,
-    "locationNote": "本書 p.52（原本画像 IMG_9627.PNG）。原文照合 batch17 で照合済みの知識単位 anise-profile から生成"
-   }
-  ],
   "id": "qtf-part-anise-profile",
   "format": "true-false",
   "prompt": "アニスの利用部位は種子(植物学上は果実)である。",
@@ -2340,6 +2296,51 @@
   "format": "true-false",
   "prompt": "サフランの利用部位は根茎である。",
   "correctBoolean": false,
+  "explanation": "サフラン: 科名はアヤメ科。原産地は南ヨーロッパ、西アジア。利用部位は花の雌しべ。別名はサフランクロッカス、蕃紅花(ばんこうか)。検定1・2・3級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-saffron",
+  "difficulty": 2,
+  "knowledgeUnitIds": [
+   "saffron-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9639",
+    "bookPage": 64,
+    "locationNote": "本書 p.64（原本画像 IMG_9639.PNG）。原文照合 batch20 で照合済みの知識単位 saffron-profile から生成"
+   }
+  ],
+  "id": "qtable-saffron-profile",
+  "format": "table-fill",
+  "prompt": "サフランのプロフィール表の空欄を埋めよ。",
+  "table": {
+   "headers": [
+    "項目",
+    "内容"
+   ],
+   "rows": [
+    [
+     "名称",
+     "サフラン"
+    ],
+    [
+     "科名",
+     "（空欄A）"
+    ],
+    [
+     "利用部位",
+     "（空欄B）"
+    ]
+   ]
+  },
+  "blankCellAnswers": {
+   "A": "アヤメ科",
+   "B": "花の雌しべ"
+  },
   "explanation": "サフラン: 科名はアヤメ科。原産地は南ヨーロッパ、西アジア。利用部位は花の雌しべ。別名はサフランクロッカス、蕃紅花(ばんこうか)。検定1・2・3級の対象。"
  }
 ]

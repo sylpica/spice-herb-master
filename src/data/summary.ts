@@ -13,7 +13,7 @@
  */
 export const APP_DATA_SUMMARY = {
   /** 正式問題数（QUESTIONS.length） */
-  formalQuestions: 1804,
+  formalQuestions: 1795,
   /** 正式カード数（CARDS.length） */
   formalCards: 602,
   /** 取り込み済み知識単位数（IMPORTED_KNOWLEDGE_UNITS.length） */

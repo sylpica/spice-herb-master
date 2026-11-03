@@ -15,51 +15,6 @@
     "locationNote": "本書 p.64（原本画像 IMG_9639.PNG）。原文照合 batch20 で照合済みの知識単位 saffron-profile から生成"
    }
   ],
-  "id": "qtable-saffron-profile",
-  "format": "table-fill",
-  "prompt": "サフランのプロフィール表の空欄を埋めよ。",
-  "table": {
-   "headers": [
-    "項目",
-    "内容"
-   ],
-   "rows": [
-    [
-     "名称",
-     "サフラン"
-    ],
-    [
-     "科名",
-     "（空欄A）"
-    ],
-    [
-     "利用部位",
-     "（空欄B）"
-    ]
-   ]
-  },
-  "blankCellAnswers": {
-   "A": "アヤメ科",
-   "B": "花の雌しべ"
-  },
-  "explanation": "サフラン: 科名はアヤメ科。原産地は南ヨーロッパ、西アジア。利用部位は花の雌しべ。別名はサフランクロッカス、蕃紅花(ばんこうか)。検定1・2・3級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-saffron",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "saffron-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9639",
-    "bookPage": 64,
-    "locationNote": "本書 p.64（原本画像 IMG_9639.PNG）。原文照合 batch20 で照合済みの知識単位 saffron-profile から生成"
-   }
-  ],
   "id": "qcomp-saffron-profile",
   "format": "composite",
   "prompt": "サフランについて、科名と利用部位をそれぞれ挙げて説明せよ。",
@@ -2391,6 +2346,28 @@
   "format": "true-false",
   "prompt": "唐辛子の科名はナス科である。",
   "correctBoolean": true,
-  "explanation": "唐辛子: 科名はナス科。原産地は熱帯アメリカ。利用部位は果実、葉。別名はチリペッパー、チリ、カイエンペッパー(品種の一部)、鷹の爪(品種の一部)。検定1・2・3級の対象。"
+  "explanation": "唐辛子: 科名はナス科。原産地は熱帯アメリカ。利用部位は果実、葉。別名はチリペッパー、チリ、カイエンペッパー(栽培品種の一部)、鷹の爪(栽培品種の一部)。検定1・2・3級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-chili",
+  "difficulty": 1,
+  "knowledgeUnitIds": [
+   "chili-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9652",
+    "bookPage": 76,
+    "locationNote": "本書 p.76（原本画像 IMG_9652.PNG）。原文照合 batch2 で照合済みの知識単位 chili-profile から生成"
+   }
+  ],
+  "id": "qtf-family-false-chili-profile",
+  "format": "true-false",
+  "prompt": "唐辛子の科名はキク科である。",
+  "correctBoolean": false,
+  "explanation": "唐辛子: 科名はナス科。原産地は熱帯アメリカ。利用部位は果実、葉。別名はチリペッパー、チリ、カイエンペッパー(栽培品種の一部)、鷹の爪(栽培品種の一部)。検定1・2・3級の対象。"
  }
 ]

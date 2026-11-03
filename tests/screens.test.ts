@@ -26,7 +26,7 @@ describe("画面スモーク（E1: 分割後の画面。UX2で設定、UX5で暗
   it("ホーム: 件数表示が軽量サマリ経由で描画される", () => {
     const html = render(createElement(Home, { store, update }));
     expect(html).toContain("スパイス＆ハーブ検定1級 学習アプリ");
-    expect(html).toContain("1804"); // 正式問題数
+    expect(html).toContain("1795"); // 正式問題数
     expect(html).toContain("545"); // 取り込み済み知識単位数
     expect(html).toContain("140"); // 転記済みページ数
   });
@@ -60,7 +60,7 @@ describe("画面スモーク（E1: 分割後の画面。UX2で設定、UX5で暗
   it("模試: 出題候補数がサマリ経由で描画される", () => {
     const html = render(createElement(Exam, { store, update }));
     expect(html).toContain("模擬試験");
-    expect(html).toContain("1804");
+    expect(html).toContain("1795");
   });
   it("分析: 網羅率の5指標が描画される", () => {
     const html = render(createElement(Stats, { store }));
@@ -76,7 +76,7 @@ describe("画面スモーク（E1: 分割後の画面。UX2で設定、UX5で暗
     expect(html).toContain("検索対象");
     expect(html).toContain("検索結果 合計");
     // SSR では数値と「件」の間に React のコメントマーカーが挟まるため数値で固定する
-    expect(html).toContain("1885");
+    expect(html).toContain("1876");
   });
   it("品質管理: 検証集計が描画される", () => {
     const html = render(createElement(QaPage));

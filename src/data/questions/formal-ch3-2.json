@@ -3,6 +3,36 @@
   "version": 1,
   "status": "verified",
   "chapterId": "ch3",
+  "sectionId": "life-house",
+  "difficulty": 1,
+  "knowledgeUnitIds": [
+   "l-rice"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9694",
+    "bookPage": 118,
+    "locationNote": "本書 p.118（原本画像 IMG_9694.PNG）。原文照合 batch12 で照合済みの知識単位 l-rice から生成"
+   }
+  ],
+  "id": "q4-l-rice",
+  "format": "single-choice",
+  "prompt": "米びつに入れて虫よけにするとされるスパイス・ハーブを1つ挙げよ。",
+  "choices": [
+   "ロングペッパー",
+   "タイム",
+   "唐辛子",
+   "ローズマリー"
+  ],
+  "correctChoiceIndexes": [
+   2
+  ],
+  "explanation": "米びつに唐辛子(2〜3本)やローレル(3〜4枚)を入れておくと虫がつかないとされる。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch3",
   "sectionId": "life-handmade",
   "difficulty": 1,
   "knowledgeUnitIds": [
@@ -298,36 +328,6 @@
   "prompt": "バジルなど耐寒性のない一年草のハーブの定植は、春と秋のどちらが基本?",
   "acceptedAnswers": [
    "春"
-  ],
-  "explanation": "定植の時期は春(4月下旬以降)か秋(9月下旬〜10月上旬)が適する。耐寒性のない一年草(バジルなど)は春植えが基本。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch3",
-  "sectionId": "life-grow",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "g-timing"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9698",
-    "bookPage": 122,
-    "locationNote": "本書 p.122（原本画像 IMG_9698.PNG）。原文照合 batch13 で照合済みの知識単位 g-timing から生成"
-   }
-  ],
-  "id": "q4-g-timing",
-  "format": "single-choice",
-  "prompt": "バジルなど耐寒性のない一年草のハーブの定植は、春と秋のどちらが基本?",
-  "choices": [
-   "常緑植物",
-   "午前中",
-   "春",
-   "開花直前"
-  ],
-  "correctChoiceIndexes": [
-   2
   ],
   "explanation": "定植の時期は春(4月下旬以降)か秋(9月下旬〜10月上旬)が適する。耐寒性のない一年草(バジルなど)は春植えが基本。"
  },
@@ -892,36 +892,6 @@
   "prompt": "セリ科ハーブの葉は、内側と外側のどちらから収穫する?",
   "acceptedAnswers": [
    "外側"
-  ],
-  "explanation": "セリ科の大部分のハーブは内側から新芽が出るので、中心部を残して外側の葉から収穫する。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch3",
-  "sectionId": "life-grow",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "g-harvest-api"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9703",
-    "bookPage": 127,
-    "locationNote": "本書 p.127（原本画像 IMG_9703.PNG）。原文照合 batch14 で照合済みの知識単位 g-harvest-api から生成"
-   }
-  ],
-  "id": "q4-g-harvest-api",
-  "format": "single-choice",
-  "prompt": "セリ科ハーブの葉は、内側と外側のどちらから収穫する?",
-  "choices": [
-   "木本性",
-   "揮発性の香りを逃がさないため",
-   "外側",
-   "挿し木"
-  ],
-  "correctChoiceIndexes": [
-   2
   ],
   "explanation": "セリ科の大部分のハーブは内側から新芽が出るので、中心部を残して外側の葉から収穫する。"
  },

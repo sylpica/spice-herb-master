@@ -15,66 +15,6 @@
     "locationNote": "本書 p.89（原本画像 IMG_9665.PNG）。原文照合 batch5 で照合済みの知識単位 lemongrass-profile から生成"
    }
   ],
-  "id": "qsc-part-lemongrass-profile",
-  "format": "single-choice",
-  "prompt": "レモングラスの利用部位はどれか。",
-  "choices": [
-   "果実、果皮、葉",
-   "地上部",
-   "葉および花穂",
-   "鱗茎"
-  ],
-  "correctChoiceIndexes": [
-   1
-  ],
-  "explanation": "レモングラス: 科名はイネ科。原産地はインド、熱帯アジア。利用部位は地上部。別名はレモンガヤ、レモンソウ、タクライ、セイラ。検定1・2級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-lemongrass",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "lemongrass-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9665",
-    "bookPage": 89,
-    "locationNote": "本書 p.89（原本画像 IMG_9665.PNG）。原文照合 batch5 で照合済みの知識単位 lemongrass-profile から生成"
-   }
-  ],
-  "id": "qsc-origin-lemongrass-profile",
-  "format": "single-choice",
-  "prompt": "レモングラスの原産地はどれか。",
-  "choices": [
-   "インド、熱帯アジア",
-   "スリランカ、インド(シナモン)/ベトナム、中国、タイ(カシア)",
-   "中央アジア、温帯地域",
-   "南ヨーロッパ"
-  ],
-  "correctChoiceIndexes": [
-   0
-  ],
-  "explanation": "レモングラス: 科名はイネ科。原産地はインド、熱帯アジア。利用部位は地上部。別名はレモンガヤ、レモンソウ、タクライ、セイラ。検定1・2級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-lemongrass",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "lemongrass-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9665",
-    "bookPage": 89,
-    "locationNote": "本書 p.89（原本画像 IMG_9665.PNG）。原文照合 batch5 で照合済みの知識単位 lemongrass-profile から生成"
-   }
-  ],
   "id": "qti-alias-lemongrass-profile",
   "format": "term-input",
   "prompt": "レモングラスの別名を1つ答えよ。",
@@ -107,7 +47,6 @@
   "prompt": "別名「レモンガヤ」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
    "レモングラス",
-   "レモンガヤ",
    "レモンソウ",
    "タクライ",
    "セイラ"
@@ -266,8 +205,7 @@
   "format": "term-input",
   "prompt": "別名「まんねんろう」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
-   "ローズマリー",
-   "まんねんろう"
+   "ローズマリー"
   ],
   "explanation": "ローズマリー: 科名はシソ科。原産地は地中海沿岸。利用部位は葉および花穂。別名はまんねんろう。検定1・2・3級の対象。"
  },
@@ -426,7 +364,6 @@
   "prompt": "別名「月桂樹」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
    "ローレル",
-   "月桂樹",
    "ベイリーブス",
    "ローリエ"
   ],
@@ -588,8 +525,6 @@
   "prompt": "別名「山葵」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
    "わさび",
-   "山葵(わさび)",
-   "山葵",
    "日本わさび",
    "沢わさび"
   ],
@@ -861,8 +796,7 @@
   "format": "term-input",
   "prompt": "別名「ヒング」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
-   "アサフェティダ",
-   "ヒング"
+   "アサフェティダ"
   ],
   "explanation": "アサフェティダ: 科名はセリ科。利用部位は根茎。別名はヒング。検定1級の対象。"
  },
@@ -1069,7 +1003,6 @@
   "prompt": "別名「こぶみかん」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
    "カフェライム",
-   "こぶみかん",
    "マックルー",
    "マクルットライム"
   ],
@@ -1197,8 +1130,7 @@
   "format": "term-input",
   "prompt": "別名「カー」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
-   "ガランガル",
-   "カー"
+   "ガランガル"
   ],
   "explanation": "ガランガル: 科名はショウガ科。利用部位は根茎。別名はカー。検定1級の対象。"
  },
@@ -1324,8 +1256,7 @@
   "format": "term-input",
   "prompt": "別名「カリーパッタ」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
-   "カレーリーフ",
-   "カリーパッタ"
+   "カレーリーフ"
   ],
   "explanation": "カレーリーフ: 科名はミカン科。利用部位は葉。別名はカリーパッタ。検定1級の対象。"
  },
@@ -1455,7 +1386,6 @@
    "かんぞう(甘草)",
    "かんぞう",
    "甘草",
-   "リコリス",
    "リカリス"
   ],
   "explanation": "かんぞう(甘草): 科名はマメ科。利用部位は根、走根。別名はリコリス、リカリス。検定1級の対象。"
@@ -1586,8 +1516,6 @@
   "prompt": "別名「畢澄茄」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
    "クベバ",
-   "畢澄茄(ひっちょうか)",
-   "畢澄茄",
    "キュベブ",
    "テイルドペッパー"
   ],
@@ -1793,8 +1721,7 @@
   "format": "term-input",
   "prompt": "別名「ウォータークレス」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
-   "クレソン",
-   "ウォータークレス"
+   "クレソン"
   ],
   "explanation": "クレソン: 科名はアブラナ科。利用部位は葉、茎。別名はウォータークレス。検定1級の対象。"
  },
@@ -1924,8 +1851,6 @@
   "prompt": "別名「風鳥木」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
    "ケイパー",
-   "風鳥木(ふうちょうぼく)",
-   "風鳥木",
    "ケーパー",
    "ケッパー"
   ],
@@ -2053,8 +1978,7 @@
   "format": "term-input",
   "prompt": "別名「ポピーシード」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
-   "けしの実",
-   "ポピーシード"
+   "けしの実"
   ],
   "explanation": "けしの実: 科名はケシ科。利用部位は種子。別名はポピーシード。検定1級の対象。"
  },
@@ -2180,8 +2104,7 @@
   "format": "term-input",
   "prompt": "別名「べにばな」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
-   "サフラワー",
-   "べにばな"
+   "サフラワー"
   ],
   "explanation": "サフラワー: 科名はキク科。利用部位は花弁、種子。別名はべにばな。検定1級の対象。"
  },
@@ -2307,8 +2230,7 @@
   "format": "term-input",
   "prompt": "別名「セイボリー」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
-   "サボリー",
-   "セイボリー"
+   "サボリー"
   ],
   "explanation": "サボリー: 科名はシソ科。利用部位は葉および花穂。別名はセイボリー。検定1級の対象。"
  },
@@ -2334,7 +2256,7 @@
   "acceptedAnswers": [
    "シソ科"
   ],
-  "explanation": "しそ(紫蘇): 科名はシソ科。利用部位は葉および花穂、種子。別名は大葉(青じその葉)。検定1級の対象。"
+  "explanation": "しそ(紫蘇): 科名はシソ科。利用部位は葉および花穂、種子。別名は大葉(青じその葉の部分を指す)。検定1級の対象。"
  },
  {
   "version": 1,
@@ -2358,7 +2280,7 @@
   "acceptedAnswers": [
    "1"
   ],
-  "explanation": "しそ(紫蘇): 科名はシソ科。利用部位は葉および花穂、種子。別名は大葉(青じその葉)。検定1級の対象。"
+  "explanation": "しそ(紫蘇): 科名はシソ科。利用部位は葉および花穂、種子。別名は大葉(青じその葉の部分を指す)。検定1級の対象。"
  },
  {
   "version": 1,
@@ -2388,7 +2310,7 @@
   "correctChoiceIndexes": [
    1
   ],
-  "explanation": "しそ(紫蘇): 科名はシソ科。利用部位は葉および花穂、種子。別名は大葉(青じその葉)。検定1級の対象。"
+  "explanation": "しそ(紫蘇): 科名はシソ科。利用部位は葉および花穂、種子。別名は大葉(青じその葉の部分を指す)。検定1級の対象。"
  },
  {
   "version": 1,
@@ -2410,10 +2332,10 @@
   "format": "term-input",
   "prompt": "しそ(紫蘇)の別名を1つ答えよ。",
   "acceptedAnswers": [
-   "大葉(青じその葉)",
+   "大葉(青じその葉の部分を指す)",
    "大葉"
   ],
-  "explanation": "しそ(紫蘇): 科名はシソ科。利用部位は葉および花穂、種子。別名は大葉(青じその葉)。検定1級の対象。"
+  "explanation": "しそ(紫蘇): 科名はシソ科。利用部位は葉および花穂、種子。別名は大葉(青じその葉の部分を指す)。検定1級の対象。"
  },
  {
   "version": 1,
@@ -2437,11 +2359,9 @@
   "acceptedAnswers": [
    "しそ(紫蘇)",
    "しそ",
-   "紫蘇",
-   "大葉(青じその葉)",
-   "大葉"
+   "紫蘇"
   ],
-  "explanation": "しそ(紫蘇): 科名はシソ科。利用部位は葉および花穂、種子。別名は大葉(青じその葉)。検定1級の対象。"
+  "explanation": "しそ(紫蘇): 科名はシソ科。利用部位は葉および花穂、種子。別名は大葉(青じその葉の部分を指す)。検定1級の対象。"
  },
  {
   "version": 1,
@@ -2568,7 +2488,6 @@
   "prompt": "別名「西洋ねず」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
    "ジュニパーベリー",
-   "西洋ねず",
    "杜松(としょう)",
    "杜松"
   ],
@@ -2852,8 +2771,7 @@
   "format": "term-input",
   "prompt": "別名「オゼイユ」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
-   "ソレル",
-   "オゼイユ"
+   "ソレル"
   ],
   "explanation": "ソレル: 科名はタデ科。利用部位は葉。別名はオゼイユ。検定1級の対象。"
  },
@@ -3215,7 +3133,6 @@
   "prompt": "別名「ブラッククミン」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
    "ニゲラ",
-   "ブラッククミン",
    "カロンジ"
   ],
   "explanation": "ニゲラ: 科名はキンポウゲ科。利用部位は種子。別名はブラッククミン、カロンジ。検定1級の対象。"
@@ -3345,7 +3262,6 @@
   "prompt": "別名「ニオイタコノキ」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
    "パンダンリーフ",
-   "ニオイタコノキ",
    "ニオイアダン",
    "ランペ"
   ],
@@ -3474,9 +3390,7 @@
   "format": "term-input",
   "prompt": "別名「メティ」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
-   "フェネグリーク",
-   "メティ(メッチ)",
-   "メティ"
+   "フェネグリーク"
   ],
   "explanation": "フェネグリーク: 科名はマメ科。利用部位は種子、葉。別名はメティ(メッチ)。検定1級の対象。"
  },
@@ -3602,8 +3516,7 @@
   "format": "term-input",
   "prompt": "別名「コーンサラダ」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
-   "マーシュ",
-   "コーンサラダ"
+   "マーシュ"
   ],
   "explanation": "マーシュ: 科名はスイカズラ科。利用部位は葉、茎。別名はコーンサラダ。検定1級の対象。"
  },
@@ -3729,8 +3642,7 @@
   "format": "term-input",
   "prompt": "別名「アムチュール」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
-   "マンゴーパウダー",
-   "アムチュール"
+   "マンゴーパウダー"
   ],
   "explanation": "マンゴーパウダー: 科名はウルシ科。利用部位は果実。別名はアムチュール。検定1級の対象。"
  },
@@ -3934,8 +3846,7 @@
   "format": "term-input",
   "prompt": "別名「メリッサ」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
-   "レモンバーム",
-   "メリッサ"
+   "レモンバーム"
   ],
   "explanation": "レモンバーム: 科名はシソ科。利用部位は葉。別名はメリッサ。検定1級の対象。"
  },
@@ -4064,7 +3975,6 @@
   "prompt": "別名「ヒハツ」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
    "ロングペッパー",
-   "ヒハツ",
    "ヒバーチ",
    "ピバーチ"
   ],
@@ -4165,5 +4075,53 @@
    "1"
   ],
   "explanation": "チャートマサラ: ミックススパイス。検定1級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-others",
+  "difficulty": 3,
+  "knowledgeUnitIds": [
+   "panchphoron-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9684",
+    "bookPage": 108,
+    "locationNote": "本書 p.108（原本画像 IMG_9684.PNG）。原文照合 batch10 で照合済みの知識単位 panchphoron-profile から生成"
+   }
+  ],
+  "id": "qfb-level-panchphoron-profile",
+  "format": "fill-blank",
+  "prompt": "パンチフォロンは検定（　）級の対象である。",
+  "acceptedAnswers": [
+   "1"
+  ],
+  "explanation": "パンチフォロン: ミックススパイス。検定1級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-others",
+  "difficulty": 3,
+  "knowledgeUnitIds": [
+   "rasalhanout-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9684",
+    "bookPage": 108,
+    "locationNote": "本書 p.108（原本画像 IMG_9684.PNG）。原文照合 batch10 で照合済みの知識単位 rasalhanout-profile から生成"
+   }
+  ],
+  "id": "qfb-level-rasalhanout-profile",
+  "format": "fill-blank",
+  "prompt": "ラセラヌーは検定（　）級の対象である。",
+  "acceptedAnswers": [
+   "1"
+  ],
+  "explanation": "ラセラヌー: ミックススパイス。検定1級の対象。"
  }
 ]

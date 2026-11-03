@@ -986,7 +986,6 @@
   "prompt": "「ブラッククミン」と呼ばれる黒い種子は、一般に何という植物のもの?",
   "acceptedAnswers": [
    "ニゲラ",
-   "ブラッククミン",
    "カロンジ"
   ],
   "explanation": "「ブラッククミン」と呼ばれるのは一般にキンポウゲ科のニゲラの種子で、クミンの一種ではない。インドではカロンジとも呼ぶ。"
@@ -2079,36 +2078,6 @@
   "sectionId": "item-cinnamon",
   "difficulty": 1,
   "knowledgeUnitIds": [
-   "cinnamon-1"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9642",
-    "bookPage": 67,
-    "locationNote": "本書 p.67（原本画像 IMG_9642.PNG）。原文照合 batch20 で照合済みの知識単位 cinnamon-1 から生成"
-   }
-  ],
-  "id": "q4-cinnamon-1",
-  "format": "single-choice",
-  "prompt": "シナモンとカシアのうち、樹皮が厚いのはどちら?",
-  "choices": [
-   "カシア",
-   "カトルエピス",
-   "サボリー",
-   "アジョワン"
-  ],
-  "correctChoiceIndexes": [
-   0
-  ],
-  "explanation": "狭義のシナモン(セイロンシナモン)は主にスリランカ産で樹皮が薄く、カシアは主にベトナム・中国産で樹皮が厚い。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-cinnamon",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
    "cinnamon-4"
   ],
   "sourceRefs": [
@@ -2560,36 +2529,6 @@
   "prompt": "ターメリックの色素クルクミンは水溶性と油溶性のどちら?",
   "acceptedAnswers": [
    "油溶性"
-  ],
-  "explanation": "クルクミンは油溶性なので、油といっしょに使うときれいに色づく。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-sage-turmeric",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "turmeric-3"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9645",
-    "bookPage": 70,
-    "locationNote": "本書 p.70（原本画像 IMG_9645.PNG）。原文照合 batch1 で照合済みの知識単位 turmeric-3 から生成"
-   }
-  ],
-  "id": "q4-turmeric-3",
-  "format": "single-choice",
-  "prompt": "ターメリックの色素クルクミンは水溶性と油溶性のどちら?",
-  "choices": [
-   "チモール",
-   "ブーケガルニ",
-   "アネトール",
-   "油溶性"
-  ],
-  "correctChoiceIndexes": [
-   3
   ],
   "explanation": "クルクミンは油溶性なので、油といっしょに使うときれいに色づく。"
  },
@@ -4441,5 +4380,32 @@
    0
   ],
   "explanation": "中世ドイツで盛んに使われたことから、フランスでは「ドイツ人のからし」と呼ばれたという。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-marjoram-mustard",
+  "difficulty": 2,
+  "knowledgeUnitIds": [
+   "marjoram-1"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9661",
+    "bookPage": 85,
+    "locationNote": "本書 p.85（原本画像 IMG_9661.PNG）。原文照合 batch4 で照合済みの知識単位 marjoram-1 から生成"
+   }
+  ],
+  "id": "q1-marjoram-1",
+  "format": "one-answer",
+  "prompt": "オレガノに似ているが、より甘く繊細な香りのハーブは?",
+  "acceptedAnswers": [
+   "マジョラム",
+   "マヨラナ",
+   "花薄荷(はなはっか)",
+   "花薄荷"
+  ],
+  "explanation": "オレガノに似るが、より甘く繊細な香り。羊肉や魚、レバーなどの臭み消しに下ごしらえで使われる。"
  }
 ]

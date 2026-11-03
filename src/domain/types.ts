@@ -3,7 +3,8 @@ export const QUESTION_FORMATS = ["single-choice","multiple-choice","true-false",
 export type QuestionFormat = typeof QUESTION_FORMATS[number];
 export const FORMAT_LABELS: Record<QuestionFormat,string> = {"single-choice":"四択","multiple-choice":"多択","true-false":"正誤判定","fill-blank":"穴埋め","term-input":"用語入力","one-answer":"一問一答","short-essay":"短文記述","long-essay":"長文記述","compare-essay":"比較記述","ordering":"順序並べ替え","matching":"組み合わせ","reverse-lookup":"逆引き","photo-id":"写真を用いた識別","figure":"図表を用いた問題","table-fill":"表の穴埋め","composite":"複数知識の組み合わせ","flashcard":"フラッシュカード"};
 export type VerificationStatus = "unprocessed"|"extracted"|"needs-check"|"collated"|"unclear"|"missing";
-export type QuestionStatus = "verified"|"unverified"|"sample"|"excluded";
+/** 問題・カードの状態。エンジン検証用サンプルの状態 "sample" は、サンプルの全削除（DECISIONS #52）に伴い型からも削除した（監査AU-10、#54）。 */
+export type QuestionStatus = "verified"|"unverified"|"excluded";
 export interface SourceRef { manifestImageId: string; bookPage: number|null; locationNote: string; }
 export interface KnowledgeUnit { id: string; materialId: string; materialVersion: string; chapterId: string; sectionId: string; bookPage: number|null; sourceRefs: SourceRef[]; content: string; category: string; relatedTerms: string[]; relatedUnitIds: string[]; verificationStatus: VerificationStatus; questionIds: string[]; cardIds: string[]; }
 export interface RubricPoint {

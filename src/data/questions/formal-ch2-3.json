@@ -6,84 +6,6 @@
   "sectionId": "item-others",
   "difficulty": 3,
   "knowledgeUnitIds": [
-   "sum-1"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9679",
-    "bookPage": 103,
-    "locationNote": "本書 p.103（原本画像 IMG_9679.PNG）。原文照合 batch9 で照合済みの知識単位 sum-1 から生成"
-   }
-  ],
-  "id": "q1-sum-1",
-  "format": "one-answer",
-  "prompt": "ミックススパイス「ザーター」の原料で、酸味と渋みのある赤いスパイスは?",
-  "acceptedAnswers": [
-   "スマック"
-  ],
-  "explanation": "酸味と渋みのある赤いスパイスで、中近東で酸味づけに使う。赤じそふりかけを思わせる色と味で、ザーターの原料。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-others",
-  "difficulty": 3,
-  "knowledgeUnitIds": [
-   "sum-1"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9679",
-    "bookPage": 103,
-    "locationNote": "本書 p.103（原本画像 IMG_9679.PNG）。原文照合 batch9 で照合済みの知識単位 sum-1 から生成"
-   }
-  ],
-  "id": "q4-sum-1",
-  "format": "single-choice",
-  "prompt": "ミックススパイス「ザーター」の原料で、酸味と渋みのある赤いスパイスは?",
-  "choices": [
-   "アニス",
-   "ソレル",
-   "スマック",
-   "アサフェティダ"
-  ],
-  "correctChoiceIndexes": [
-   2
-  ],
-  "explanation": "酸味と渋みのある赤いスパイスで、中近東で酸味づけに使う。赤じそふりかけを思わせる色と味で、ザーターの原料。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-others",
-  "difficulty": 3,
-  "knowledgeUnitIds": [
-   "cel-1"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9679",
-    "bookPage": 103,
-    "locationNote": "本書 p.103（原本画像 IMG_9679.PNG）。原文照合 batch9 で照合済みの知識単位 cel-1 から生成"
-   }
-  ],
-  "id": "q1-cel-1",
-  "format": "one-answer",
-  "prompt": "スパイスとして用いられるセロリーの種子は何という種のもの?",
-  "acceptedAnswers": [
-   "スモーリッジ"
-  ],
-  "explanation": "強い爽やかな香りとほろ苦さがあり、野菜の青臭さを抑える。スパイスに使うのは野生種スモーリッジの種子。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-others",
-  "difficulty": 3,
-  "knowledgeUnitIds": [
    "cel-1"
   ],
   "sourceRefs": [
@@ -457,8 +379,7 @@
   "format": "one-answer",
   "prompt": "英名を「コーンサラダ」というハーブは?",
   "acceptedAnswers": [
-   "マーシュ",
-   "コーンサラダ"
+   "マーシュ"
   ],
   "explanation": "丸い卵形の葉とクセのない風味。英名コーンサラダはトウモロコシ畑近くに自生したことに由来する。"
  },
@@ -973,9 +894,7 @@
   "format": "term-input",
   "prompt": "別名「茴芹」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
-   "アニス",
-   "茴芹(ういきん)",
-   "茴芹"
+   "アニス"
   ],
   "explanation": "アニス: 科名はセリ科。原産地は地中海東部沿岸、エジプト。利用部位は種子(植物学上は果実)。別名は茴芹(ういきん)。検定1・2級の対象。"
  },
@@ -1136,7 +1055,6 @@
   "prompt": "別名「百味こしょう」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
    "オールスパイス",
-   "百味こしょう",
    "三香子(さんこうし)",
    "三香子",
    "ジャマイカンペッパー",
@@ -1300,8 +1218,7 @@
   "acceptedAnswers": [
    "オレガノ",
    "花薄荷(はなはっか)",
-   "花薄荷",
-   "ワイルドマジョラム"
+   "花薄荷"
   ],
   "explanation": "オレガノ: 科名はシソ科。原産地は地中海沿岸。利用部位は葉および花穂。別名は花薄荷(はなはっか)、ワイルドマジョラム。検定1・2・3級の対象。"
  },
@@ -1460,7 +1377,6 @@
   "prompt": "別名「にんにく」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
    "ガーリック",
-   "にんにく",
    "大蒜(おおひる)",
    "大蒜"
   ],
@@ -1621,8 +1537,6 @@
   "prompt": "別名「小豆蔲」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
    "カルダモン",
-   "小豆蔲(しょうずく)",
-   "小豆蔲",
    "グリーンカルダモン"
   ],
   "explanation": "カルダモン: 科名はショウガ科。原産地はインド。利用部位は果実。別名は小豆蔲(しょうずく)、グリーンカルダモン。検定1・2級の対象。"
@@ -1783,8 +1697,6 @@
   "prompt": "別名「姫茴香」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
    "キャラウェイ",
-   "姫茴香(ひめういきょう)",
-   "姫茴香",
    "キュンメル",
    "カルワイシード"
   ],
@@ -1943,9 +1855,7 @@
   "format": "term-input",
   "prompt": "別名「山梔子」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
-   "くちなし",
-   "山梔子(さんしし)",
-   "山梔子"
+   "くちなし"
   ],
   "explanation": "くちなし: 科名はアカネ科。原産地は中国、日本、台湾。利用部位は果実。別名は山梔子(さんしし)。検定1・2級の対象。"
  },
@@ -2105,8 +2015,6 @@
   "prompt": "別名「馬芹」と呼ばれるスパイス＆ハーブの名称を答えよ。",
   "acceptedAnswers": [
    "クミン",
-   "馬芹(うまぜり/ばきん)",
-   "馬芹",
    "ジーラ(ジェーラ)",
    "ジーラ"
   ],
@@ -2157,6 +2065,95 @@
   "prompt": "クローブは検定（　）級の対象である。",
   "acceptedAnswers": [
    "1・2・3"
+  ],
+  "explanation": "クローブ: 科名はフトモモ科。原産地はインドネシア(マルク諸島)。利用部位は蕾。別名は丁子(ちょうじ)、丁香(ちょうこう)、百里香(ひゃくりこう)。検定1・2・3級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-clove",
+  "difficulty": 1,
+  "knowledgeUnitIds": [
+   "clove-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9635",
+    "bookPage": 60,
+    "locationNote": "本書 p.60（原本画像 IMG_9635.PNG）。原文照合 batch19 で照合済みの知識単位 clove-profile から生成"
+   }
+  ],
+  "id": "qsc-part-clove-profile",
+  "format": "single-choice",
+  "prompt": "クローブの利用部位はどれか。",
+  "choices": [
+   "葉",
+   "地上部",
+   "種子の仁(ナツメッグ)、仮種皮(メース)",
+   "蕾"
+  ],
+  "correctChoiceIndexes": [
+   3
+  ],
+  "explanation": "クローブ: 科名はフトモモ科。原産地はインドネシア(マルク諸島)。利用部位は蕾。別名は丁子(ちょうじ)、丁香(ちょうこう)、百里香(ひゃくりこう)。検定1・2・3級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-clove",
+  "difficulty": 1,
+  "knowledgeUnitIds": [
+   "clove-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9635",
+    "bookPage": 60,
+    "locationNote": "本書 p.60（原本画像 IMG_9635.PNG）。原文照合 batch19 で照合済みの知識単位 clove-profile から生成"
+   }
+  ],
+  "id": "qsc-origin-clove-profile",
+  "format": "single-choice",
+  "prompt": "クローブの原産地はどれか。",
+  "choices": [
+   "中国、ベトナム",
+   "アンティル諸島(西インド諸島)、中央アメリカ",
+   "インド(マラバル地方)",
+   "インドネシア(マルク諸島)"
+  ],
+  "correctChoiceIndexes": [
+   3
+  ],
+  "explanation": "クローブ: 科名はフトモモ科。原産地はインドネシア(マルク諸島)。利用部位は蕾。別名は丁子(ちょうじ)、丁香(ちょうこう)、百里香(ひゃくりこう)。検定1・2・3級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-clove",
+  "difficulty": 1,
+  "knowledgeUnitIds": [
+   "clove-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9635",
+    "bookPage": 60,
+    "locationNote": "本書 p.60（原本画像 IMG_9635.PNG）。原文照合 batch19 で照合済みの知識単位 clove-profile から生成"
+   }
+  ],
+  "id": "qti-alias-clove-profile",
+  "format": "term-input",
+  "prompt": "クローブの別名を1つ答えよ。",
+  "acceptedAnswers": [
+   "丁子(ちょうじ)",
+   "丁子",
+   "丁香(ちょうこう)",
+   "丁香",
+   "百里香(ひゃくりこう)",
+   "百里香"
   ],
   "explanation": "クローブ: 科名はフトモモ科。原産地はインドネシア(マルク諸島)。利用部位は蕾。別名は丁子(ちょうじ)、丁香(ちょうこう)、百里香(ひゃくりこう)。検定1・2・3級の対象。"
  }

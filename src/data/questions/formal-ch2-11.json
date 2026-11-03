@@ -15,51 +15,6 @@
     "locationNote": "本書 p.88（原本画像 IMG_9664.PNG）。原文照合 batch5 で照合済みの知識単位 rucola-profile から生成"
    }
   ],
-  "id": "qtable-rucola-profile",
-  "format": "table-fill",
-  "prompt": "ルッコラのプロフィール表の空欄を埋めよ。",
-  "table": {
-   "headers": [
-    "項目",
-    "内容"
-   ],
-   "rows": [
-    [
-     "名称",
-     "ルッコラ"
-    ],
-    [
-     "科名",
-     "（空欄A）"
-    ],
-    [
-     "利用部位",
-     "（空欄B）"
-    ]
-   ]
-  },
-  "blankCellAnswers": {
-   "A": "アブラナ科",
-   "B": "地上部"
-  },
-  "explanation": "ルッコラ: 科名はアブラナ科。原産地は地中海沿岸、西アジア。利用部位は地上部。別名はロケット、アルグラ、きばなすずしろ。検定1・2級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-rucola",
-  "difficulty": 3,
-  "knowledgeUnitIds": [
-   "rucola-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9664",
-    "bookPage": 88,
-    "locationNote": "本書 p.88（原本画像 IMG_9664.PNG）。原文照合 batch5 で照合済みの知識単位 rucola-profile から生成"
-   }
-  ],
   "id": "qcomp-rucola-profile",
   "format": "composite",
   "prompt": "ルッコラについて、科名と利用部位をそれぞれ挙げて説明せよ。",
@@ -2383,6 +2338,28 @@
   "format": "true-false",
   "prompt": "グレインズオブパラダイスの科名はフウチョウボク科である。",
   "correctBoolean": false,
+  "explanation": "グレインズオブパラダイス: 科名はショウガ科。利用部位は種子。検定1級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-others",
+  "difficulty": 3,
+  "knowledgeUnitIds": [
+   "grainsofparadise-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9676",
+    "bookPage": 100,
+    "locationNote": "本書 p.100（原本画像 IMG_9676.PNG）。原文照合 batch8 で照合済みの知識単位 grainsofparadise-profile から生成"
+   }
+  ],
+  "id": "qtf-part-grainsofparadise-profile",
+  "format": "true-false",
+  "prompt": "グレインズオブパラダイスの利用部位は種子である。",
+  "correctBoolean": true,
   "explanation": "グレインズオブパラダイス: 科名はショウガ科。利用部位は種子。検定1級の対象。"
  }
 ]

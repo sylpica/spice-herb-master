@@ -46,10 +46,10 @@
       "profile-card": 80
     },
     "q2Questions": 375,
-    "formalQuestions": 1804,
+    "formalQuestions": 1795,
     "byFormat": {
       "one-answer": 465,
-      "single-choice": 471,
+      "single-choice": 462,
       "fill-blank": 148,
       "term-input": 120,
       "true-false": 272,
@@ -65,18 +65,18 @@
       "compare-essay": 7
     },
     "d1ByDifficulty": {
-      "1": 742,
-      "2": 477,
-      "3": 415,
+      "1": 737,
+      "2": 474,
+      "3": 414,
       "4": 170
     },
     "d1CalibratedByDifficulty": {
-      "1": 742,
-      "2": 469,
-      "3": 415,
+      "1": 737,
+      "2": 466,
+      "3": 414,
       "4": 170
     },
-    "d1CalibratedQuestions": 1796,
+    "d1CalibratedQuestions": 1787,
     "d1HeldQuestions": 8,
     "d1HeldIds": [
       "q1-e-org",
@@ -96,7 +96,7 @@
     },
     "fix1Cards": 143,
     "fix1SkippedItems": 17,
-    "excludedItems": 120,
+    "excludedItems": 129,
     "excludedUnits": 0,
     "files": [
       "formal-preface-1.json",
@@ -149,7 +149,7 @@
   },
   "passed": {
     "one-answer": 465,
-    "single-choice": 471,
+    "single-choice": 462,
     "flashcard": 602,
     "fill-blank": 148,
     "term-input": 120,
@@ -968,9 +968,9 @@
       "added": [
         "チリペッパー",
         "チリ",
-        "カイエンペッパー(品種の一部)",
+        "カイエンペッパー(栽培品種の一部)",
         "カイエンペッパー",
-        "鷹の爪(品種の一部)",
+        "鷹の爪(栽培品種の一部)",
         "鷹の爪"
       ]
     },
@@ -1065,7 +1065,7 @@
     {
       "questionId": "q1-w-tabbouleh",
       "added": [
-        "オランダ芹(モスカールド種をさすことが多い)",
+        "オランダ芹(モスカールド種を指すことが多い)",
         "オランダ芹"
       ]
     },
@@ -1216,9 +1216,9 @@
       "added": [
         "チリペッパー",
         "チリ",
-        "カイエンペッパー(品種の一部)",
+        "カイエンペッパー(栽培品種の一部)",
         "カイエンペッパー",
-        "鷹の爪(品種の一部)",
+        "鷹の爪(栽培品種の一部)",
         "鷹の爪"
       ]
     },
@@ -1433,9 +1433,9 @@
       "added": [
         "チリペッパー",
         "チリ",
-        "カイエンペッパー(品種の一部)",
+        "カイエンペッパー(栽培品種の一部)",
         "カイエンペッパー",
-        "鷹の爪(品種の一部)",
+        "鷹の爪(栽培品種の一部)",
         "鷹の爪"
       ]
     },
@@ -1458,7 +1458,7 @@
     {
       "questionId": "qti-rev-parsley-profile",
       "added": [
-        "オランダ芹(モスカールド種をさすことが多い)",
+        "オランダ芹(モスカールド種を指すことが多い)",
         "オランダ芹"
       ]
     },
@@ -1633,7 +1633,7 @@
     {
       "questionId": "qti-rev-shiso-profile",
       "added": [
-        "大葉(青じその葉)",
+        "大葉(青じその葉の部分を指す)",
         "大葉"
       ]
     },
@@ -1700,17 +1700,428 @@
       ]
     }
   ],
+  "promptEchoRemovals": [
+    {
+      "questionId": "q1-cumin-4",
+      "removed": [
+        "ブラッククミン"
+      ]
+    },
+    {
+      "questionId": "q1-asa-1",
+      "removed": [
+        "ヒング"
+      ]
+    },
+    {
+      "questionId": "q1-cub-1",
+      "removed": [
+        "テイルドペッパー"
+      ]
+    },
+    {
+      "questionId": "q1-mac-1",
+      "removed": [
+        "コーンサラダ"
+      ]
+    },
+    {
+      "questionId": "q1-j-shosoin-chouko",
+      "removed": [
+        "丁香(ちょうこう)",
+        "丁香"
+      ]
+    },
+    {
+      "questionId": "qti-rev-anise-profile",
+      "removed": [
+        "茴芹(ういきん)",
+        "茴芹"
+      ]
+    },
+    {
+      "questionId": "qti-rev-allspice-profile",
+      "removed": [
+        "百味こしょう"
+      ]
+    },
+    {
+      "questionId": "qti-rev-oregano-profile",
+      "removed": [
+        "ワイルドマジョラム"
+      ]
+    },
+    {
+      "questionId": "qti-rev-garlic-profile",
+      "removed": [
+        "にんにく"
+      ]
+    },
+    {
+      "questionId": "qti-rev-cardamom-profile",
+      "removed": [
+        "小豆蔲(しょうずく)",
+        "小豆蔲"
+      ]
+    },
+    {
+      "questionId": "qti-rev-caraway-profile",
+      "removed": [
+        "姫茴香(ひめういきょう)",
+        "姫茴香"
+      ]
+    },
+    {
+      "questionId": "qti-rev-gardenia-profile",
+      "removed": [
+        "山梔子(さんしし)",
+        "山梔子"
+      ]
+    },
+    {
+      "questionId": "qti-rev-cumin-profile",
+      "removed": [
+        "馬芹(うまぜり/ばきん)",
+        "馬芹"
+      ]
+    },
+    {
+      "questionId": "qti-rev-clove-profile",
+      "removed": [
+        "丁子(ちょうじ)",
+        "丁子"
+      ]
+    },
+    {
+      "questionId": "qti-rev-pepper-profile",
+      "removed": [
+        "ペッパー"
+      ]
+    },
+    {
+      "questionId": "qti-rev-coriander-profile",
+      "removed": [
+        "コエンドロ"
+      ]
+    },
+    {
+      "questionId": "qti-rev-saffron-profile",
+      "removed": [
+        "サフランクロッカス"
+      ]
+    },
+    {
+      "questionId": "qti-rev-sansho-profile",
+      "removed": [
+        "中国山椒"
+      ]
+    },
+    {
+      "questionId": "qti-rev-cinnamon-profile",
+      "removed": [
+        "肉桂(にっけい)",
+        "肉桂"
+      ]
+    },
+    {
+      "questionId": "qti-rev-ginger-profile",
+      "removed": [
+        "ジンジャー"
+      ]
+    },
+    {
+      "questionId": "qti-rev-staranise-profile",
+      "removed": [
+        "八角(はっかく)",
+        "八角"
+      ]
+    },
+    {
+      "questionId": "qti-rev-sage-profile",
+      "removed": [
+        "サルビア"
+      ]
+    },
+    {
+      "questionId": "qti-rev-turmeric-profile",
+      "removed": [
+        "うこん"
+      ]
+    },
+    {
+      "questionId": "qti-rev-thyme-profile",
+      "removed": [
+        "立麝香草(たちじゃこうそう)",
+        "立麝香草"
+      ]
+    },
+    {
+      "questionId": "qti-rev-tarragon-profile",
+      "removed": [
+        "エストラゴン"
+      ]
+    },
+    {
+      "questionId": "qti-rev-chervil-profile",
+      "removed": [
+        "セルフィーユ"
+      ]
+    },
+    {
+      "questionId": "qti-rev-chives-profile",
+      "removed": [
+        "シブレット"
+      ]
+    },
+    {
+      "questionId": "qti-rev-dill-profile",
+      "removed": [
+        "いのんど"
+      ]
+    },
+    {
+      "questionId": "qti-rev-chili-profile",
+      "removed": [
+        "チリペッパー"
+      ]
+    },
+    {
+      "questionId": "qti-rev-nutmeg-profile",
+      "removed": [
+        "にくずく(ナツメッグ)",
+        "にくずく"
+      ]
+    },
+    {
+      "questionId": "qti-rev-basil-profile",
+      "removed": [
+        "めぼうき"
+      ]
+    },
+    {
+      "questionId": "qti-rev-parsley-profile",
+      "removed": [
+        "オランダ芹(モスカールド種を指すことが多い)",
+        "オランダ芹"
+      ]
+    },
+    {
+      "questionId": "qti-rev-vanilla-profile",
+      "removed": [
+        "ワニラ"
+      ]
+    },
+    {
+      "questionId": "qti-rev-paprika-profile",
+      "removed": [
+        "ハンガリアンペッパー"
+      ]
+    },
+    {
+      "questionId": "qti-rev-fennel-profile",
+      "removed": [
+        "茴香(ういきょう)",
+        "茴香"
+      ]
+    },
+    {
+      "questionId": "qti-rev-horseradish-profile",
+      "removed": [
+        "西洋わさび"
+      ]
+    },
+    {
+      "questionId": "qti-rev-marjoram-profile",
+      "removed": [
+        "マヨラナ"
+      ]
+    },
+    {
+      "questionId": "qti-rev-mustard-profile",
+      "removed": [
+        "からし"
+      ]
+    },
+    {
+      "questionId": "qti-rev-mint-profile",
+      "removed": [
+        "薄荷(はっか)",
+        "薄荷"
+      ]
+    },
+    {
+      "questionId": "qti-rev-rucola-profile",
+      "removed": [
+        "ロケット"
+      ]
+    },
+    {
+      "questionId": "qti-rev-lemongrass-profile",
+      "removed": [
+        "レモンガヤ"
+      ]
+    },
+    {
+      "questionId": "qti-rev-rosemary-profile",
+      "removed": [
+        "まんねんろう"
+      ]
+    },
+    {
+      "questionId": "qti-rev-laurel-profile",
+      "removed": [
+        "月桂樹"
+      ]
+    },
+    {
+      "questionId": "qti-rev-wasabi-profile",
+      "removed": [
+        "山葵(わさび)",
+        "山葵"
+      ]
+    },
+    {
+      "questionId": "qti-rev-asafoetida-profile",
+      "removed": [
+        "ヒング"
+      ]
+    },
+    {
+      "questionId": "qti-rev-kaffirlime-profile",
+      "removed": [
+        "こぶみかん"
+      ]
+    },
+    {
+      "questionId": "qti-rev-galangal-profile",
+      "removed": [
+        "カー"
+      ]
+    },
+    {
+      "questionId": "qti-rev-curryleaf-profile",
+      "removed": [
+        "カリーパッタ"
+      ]
+    },
+    {
+      "questionId": "qti-rev-licorice-profile",
+      "removed": [
+        "リコリス"
+      ]
+    },
+    {
+      "questionId": "qti-rev-cubeb-profile",
+      "removed": [
+        "畢澄茄(ひっちょうか)",
+        "畢澄茄"
+      ]
+    },
+    {
+      "questionId": "qti-rev-cresson-profile",
+      "removed": [
+        "ウォータークレス"
+      ]
+    },
+    {
+      "questionId": "qti-rev-caper-profile",
+      "removed": [
+        "風鳥木(ふうちょうぼく)",
+        "風鳥木"
+      ]
+    },
+    {
+      "questionId": "qti-rev-poppyseed-profile",
+      "removed": [
+        "ポピーシード"
+      ]
+    },
+    {
+      "questionId": "qti-rev-safflower-profile",
+      "removed": [
+        "べにばな"
+      ]
+    },
+    {
+      "questionId": "qti-rev-savory-profile",
+      "removed": [
+        "セイボリー"
+      ]
+    },
+    {
+      "questionId": "qti-rev-shiso-profile",
+      "removed": [
+        "大葉(青じその葉の部分を指す)",
+        "大葉"
+      ]
+    },
+    {
+      "questionId": "qti-rev-juniper-profile",
+      "removed": [
+        "西洋ねず"
+      ]
+    },
+    {
+      "questionId": "qti-rev-sorrel-profile",
+      "removed": [
+        "オゼイユ"
+      ]
+    },
+    {
+      "questionId": "qti-rev-nigella-profile",
+      "removed": [
+        "ブラッククミン"
+      ]
+    },
+    {
+      "questionId": "qti-rev-pandan-profile",
+      "removed": [
+        "ニオイタコノキ"
+      ]
+    },
+    {
+      "questionId": "qti-rev-fenugreek-profile",
+      "removed": [
+        "メティ(メッチ)",
+        "メティ"
+      ]
+    },
+    {
+      "questionId": "qti-rev-mache-profile",
+      "removed": [
+        "コーンサラダ"
+      ]
+    },
+    {
+      "questionId": "qti-rev-amchur-profile",
+      "removed": [
+        "アムチュール"
+      ]
+    },
+    {
+      "questionId": "qti-rev-lemonbalm-profile",
+      "removed": [
+        "メリッサ"
+      ]
+    },
+    {
+      "questionId": "qti-rev-longpepper-profile",
+      "removed": [
+        "ヒハツ"
+      ]
+    }
+  ],
   "d1": {
     "byDifficulty": {
-      "1": 742,
-      "2": 477,
-      "3": 415,
+      "1": 737,
+      "2": 474,
+      "3": 414,
       "4": 170
     },
     "calibratedByDifficulty": {
-      "1": 742,
-      "2": 469,
-      "3": 415,
+      "1": 737,
+      "2": 466,
+      "3": 414,
       "4": 170
     },
     "heldIds": [
@@ -1737,8 +2148,33 @@
     },
     {
       "kind": "single-choice",
+      "unitId": "cinnamon-1",
+      "reason": "二者択一・可否の設問は四択に適さない（監査AU-06、DECISIONS #54）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "turmeric-3",
+      "reason": "二者択一・可否の設問は四択に適さない（監査AU-06、DECISIONS #54）"
+    },
+    {
+      "kind": "single-choice",
       "unitId": "shichimi-2",
       "reason": "誤答候補が3つ確保できない（ガード通過 2 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "chp-2",
+      "reason": "二者択一・可否の設問は四択に適さない（監査AU-06、DECISIONS #54）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "gal-1",
+      "reason": "二者択一・可否の設問は四択に適さない（監査AU-06、DECISIONS #54）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "b-cooking-care",
+      "reason": "二者択一・可否の設問は四択に適さない（監査AU-06、DECISIONS #54）"
     },
     {
       "kind": "single-choice",
@@ -1764,6 +2200,16 @@
       "kind": "single-choice",
       "unitId": "u-fresh-3x",
       "reason": "誤答候補が3つ確保できない（ガード通過 2 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "u-wash",
+      "reason": "二者択一・可否の設問は四択に適さない（監査AU-06、DECISIONS #54）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "u-pairing",
+      "reason": "二者択一・可否の設問は四択に適さない（監査AU-06、DECISIONS #54）"
     },
     {
       "kind": "single-choice",
@@ -1799,6 +2245,16 @@
       "kind": "single-choice",
       "unitId": "l-bath",
       "reason": "誤答候補が3つ確保できない（ガード通過 2 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "g-timing",
+      "reason": "二者択一・可否の設問は四択に適さない（監査AU-06、DECISIONS #54）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "g-harvest-api",
+      "reason": "二者択一・可否の設問は四択に適さない（監査AU-06、DECISIONS #54）"
     },
     {
       "kind": "family-fill",

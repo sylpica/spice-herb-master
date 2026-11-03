@@ -18,4 +18,4 @@ export function validateQuestion(q: Question, units: readonly { id: string }[]):
 export function validateCard(c: Flashcard): ValidationIssue[] { const i:ValidationIssue[]=[]; if(c.status==="verified" && !c.sourceRefs.length) i.push({severity:"error",code:"no-source",targetId:c.id,message:"検証済みカードに出典がない"}); return i; }
 export function findDuplicateCandidates(qs: Question[]): [string,string][] { const out:[string,string][]=[]; for(let a=0;a<qs.length;a++) for(let b=a+1;b<qs.length;b++){ const x=qs[a]!,y=qs[b]!; if(x.format===y.format && x.prompt.trim()===y.prompt.trim()) out.push([x.id,y.id]); } return out; }
 export function isPublishable(q: Question): boolean { return q.status==="verified"; }
-export function selectForPractice(qs: Question[], opts: {includeSamples?: boolean} = {}): Question[] { return qs.filter(q=> q.status==="verified" || (opts.includeSamples && q.status==="sample")); }
+export function selectForPractice(qs: Question[]): Question[] { return qs.filter(q=> q.status==="verified"); }
