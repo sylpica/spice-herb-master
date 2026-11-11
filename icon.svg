@@ -1,1 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="#3f6212"/><text x="50" y="62" font-size="42" text-anchor="middle" fill="#fff">🌿</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" fill="#3f6212"/>
+<g>
+  <path d="M96 218 h320 l-38 130 a60 60 0 0 1 -58 44 H192 a60 60 0 0 1 -58 -44 Z" fill="#faf9f4"/>
+  <rect x="84" y="188" width="344" height="34" rx="17" fill="#faf9f4"/>
+  <rect x="196" y="404" width="120" height="26" rx="13" fill="#faf9f4"/>
+  <path d="M330 84 l26 -18 a20 20 0 0 1 28 6 l6 10 a20 20 0 0 1 -6 26 l-118 84 -30 -42 Z" fill="#e7e5e4"/>
+  <circle cx="168" cy="168" r="17" fill="#dc2626"/>
+  <circle cx="222" cy="156" r="14" fill="#f59e0b"/>
+  <circle cx="272" cy="168" r="15" fill="#92400e"/>
+  <path d="M128 128 q-8 -34 18 -54 q22 26 8 56 q-14 8 -26 -2Z" fill="#84cc16"/>
+  <path d="M384 128 q8 -34 -18 -54 q-22 26 -8 56 q14 8 26 -2Z" fill="#84cc16"/>
+</g>
+</svg>
