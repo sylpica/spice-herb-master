@@ -48,18 +48,6 @@ export default function Revision({ update }: { store: StoreData; update: any }) 
       <h1>改訂ポイント（4訂版）</h1>
 
       <section className="card">
-        <h2>試験への対応</h2>
-        <ul>
-          {REVISION_EXAM_SCOPE.map((r) => (
-            <li key={r.round}>
-              <strong>{r.round}</strong>: {r.scope}
-            </li>
-          ))}
-        </ul>
-        <p className="muted">{REVISION_EXAM_NOTE}</p>
-      </section>
-
-      <section className="card">
         <h2>1級対象スパイスの変更・見出し名称変更</h2>
         <h3>新規対象品目（新規掲載）</h3>
         <ul>
@@ -89,13 +77,10 @@ export default function Revision({ update }: { store: StoreData; update: any }) 
       </section>
 
       <section className="card">
-        <h2>主な変更箇所一覧（抜粋）</h2>
-        <p className="muted">
-          資料の「主な変更箇所一覧」から読み取れた項目を抜粋しています。旧版の記載 → 4訂版の記載の形で示します。
-        </p>
+        <h2>主な変更箇所（旧版 → 4訂版）</h2>
         {REVISION_AREAS.map((area) => (
-          <div key={area}>
-            <h3>{area}</h3>
+          <details key={area} className="fold">
+            <summary>{area}（{REVISION_ENTRIES.filter((e) => e.area === area).length}件）</summary>
             <ul>
               {REVISION_ENTRIES.filter((e) => e.area === area).map((e) => (
                 <li key={e.id}>
@@ -104,16 +89,13 @@ export default function Revision({ update }: { store: StoreData; update: any }) 
                 </li>
               ))}
             </ul>
-          </div>
+          </details>
         ))}
       </section>
 
       <section className="card">
-        <h2>全面見直し・全面改訂</h2>
-        <p className="muted">
-          次の項目は資料で全体の見直し・改訂が示されていますが、個々の修正内容の記載は省略されています。
-          学習時は4訂版の該当ページをそのまま確認してください。
-        </p>
+        <details className="fold">
+        <summary>全面見直し・全面改訂（{REVISION_BROAD.length}件）</summary>
         <ul>
           {REVISION_BROAD.map((b) => (
             <li key={b.item}>
@@ -121,7 +103,20 @@ export default function Revision({ update }: { store: StoreData; update: any }) 
             </li>
           ))}
         </ul>
+        </details>
       </section>
+      <section className="card">
+        <h2>試験への対応</h2>
+        <ul>
+          {REVISION_EXAM_SCOPE.map((r) => (
+            <li key={r.round}>
+              <strong>{r.round}</strong>: {r.scope}
+            </li>
+          ))}
+        </ul>
+        <p className="muted">{REVISION_EXAM_NOTE}</p>
+      </section>
+
 
       <section className="card">
         <h2>出典と注記</h2>
@@ -129,7 +124,7 @@ export default function Revision({ update }: { store: StoreData; update: any }) 
         <p>
           出典: {REVISION_SOURCE.publisher}「{REVISION_SOURCE.title}」（{REVISION_SOURCE.date}）
           <br />
-          <a href={REVISION_SOURCE.url} target="_blank" rel="noreferrer">
+          <a className="btn ghost" href={REVISION_SOURCE.url} target="_blank" rel="noreferrer">
             資料PDF（公式サイト）
           </a>
         </p>
@@ -139,7 +134,7 @@ export default function Revision({ update }: { store: StoreData; update: any }) 
       <p className="badge">
         このアプリの教材である公式テキスト「4訂版」で、旧版（2020年発行「最新版」）から変わった点を、
         {REVISION_SOURCE.publisher}の公式資料（{REVISION_SOURCE.date}）から抜粋してまとめました。
-        2027年以降の検定は4訂版からのみ出題されるため、旧版で学んだ人は特に確認してください。
+        「全面見直し・全面改訂」の項目は、資料に個々の修正内容の記載がないため、4訂版の該当ページをそのまま確認してください。
       </p>
     </main>
   );

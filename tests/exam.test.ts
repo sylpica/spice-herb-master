@@ -7,9 +7,9 @@ import type { Question } from "../src/domain/types";
 // 修正バッチFIX1（DECISIONS #34）: 模擬試験の純粋ロジック。
 // 対象は verified 正式問題から記述系4形式を除いたプールで、問題数は制限時間×2問（上限100）。
 describe("模擬試験（FIX1、DECISIONS #34）: domain/exam", () => {
-  it("対象プールは verified のみで、記述系4形式を含まない（実測1,704問）", () => {
+  it("対象プールは verified のみで、記述系4形式を含まない（実測1,641問）", () => {
     const pool = examPool(QUESTIONS);
-    expect(pool.length).toBe(1704);
+    expect(pool.length).toBe(1641);
     for (const q of pool) {
       expect(q.status, q.id).toBe("verified");
       expect(EXAM_EXCLUDED_FORMATS, q.id).not.toContain(q.format);

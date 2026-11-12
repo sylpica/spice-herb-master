@@ -6,13 +6,13 @@
 // 仕様（DECISIONS #6）のため対象外（対象範囲は domain/exam.ts の EXAM_EXCLUDED_FORMATS）。
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router";
-import { APP_DATA_SUMMARY } from "../data/summary";
 import { QUESTIONS } from "../data/questions";
-import { EXAM_MAX_QUESTIONS, buildExam, examPool, gradeExam, type ExamGradeSummary } from "../domain/exam";
+import { EXAM_MAX_QUESTIONS, buildExam, examPool, examQuestionCount, gradeExam, type ExamGradeSummary } from "../domain/exam";
 import { FORMAT_LABELS, type Question } from "../domain/types";
 import type { StoreData } from "../domain/store";
 import { initSrs, reviewSrs, qualityFromResult } from "../domain/srs";
 import { matchingOptions } from "../domain/grading";
+import { moveItem } from "../components/QuestionRunner";
 
 interface ExamDraftState { startedAt: string; mins: number; questionIds: string[]; answers: Record<string, unknown>; }
 
@@ -97,7 +97,8 @@ export default function Exam({store,update}:{store:StoreData;update:any}){
  }, [draft?.startedAt, draft?.mins, result]);
 
  const start = () => {
-   const picked = buildExam(QUESTIONS, mins, new Date().toISOString());
+   // 利用者が除外した問題（R18）は模試にも出さない。
+   const picked = buildExam(QUESTIONS.filter((x)=>!store.excluded.includes(x.id)), mins, new Date().toISOString());
    setResult(null); setIdx(0); finishedRef.current = false; dwellRef.current = {}; viewRef.current = null;
    update((d:StoreData)=>({ ...d, examDraft: { startedAt: new Date().toISOString(), mins, questionIds: picked.map((q)=>q.id), answers: {} } }));
  };
@@ -116,8 +117,10 @@ export default function Exam({store,update}:{store:StoreData;update:any}){
  }
 
  if (!draft || !current) {
-   return <main><h1>模擬試験（練習用）</h1><p className="muted">実際の試験制度の公式形式を再現したと断定するものではありません。独自の練習用試験です。解答確定まで教科書本文・正解は表示されません。</p>
-   <div className="card"><label>制限時間（分）<input type="number" value={mins} onChange={e=>setMins(Number(e.target.value)||10)}/></label><p>出題候補（検証済み）: {APP_DATA_SUMMARY.formalQuestions}問</p><p className="muted">模試の対象は記述系4形式（短文・長文・比較・複合）を除く {examPool(QUESTIONS).length} 問で、制限時間×2問（上限{EXAM_MAX_QUESTIONS}問）を抽出します。記述式は自己採点と分離する仕様のため模試には含めません。</p><button onClick={start}>開始（途中状態を保存）</button></div></main>;
+   const pool = examPool(QUESTIONS.filter((x)=>!store.excluded.includes(x.id)));
+   return <main><h1>模擬試験（練習用）</h1>
+   <div className="card"><label>制限時間（分）<input type="number" min={1} max={120} inputMode="numeric" value={mins} onChange={e=>setMins(Math.max(1, Math.min(120, Math.floor(Number(e.target.value)) || 10)))}/></label><p>{examQuestionCount(mins, pool.length)}問を出題（対象 {pool.length}問）</p><p className="actions"><button onClick={start}>開始</button></p></div>
+   <p className="foot-note">実際の試験制度の公式形式を再現したものではなく、独自の練習用試験です。制限時間×2問（上限{EXAM_MAX_QUESTIONS}問）を抽出します。記述系4形式（短文・長文・比較・複合）は自己採点と分離する仕様のため含めません。途中状態は保存され、解答確定まで教科書本文・正解は表示されません。</p></main>;
  }
 
  const q = current;
@@ -129,19 +132,20 @@ export default function Exam({store,update}:{store:StoreData;update:any}){
  const cellsVal = (answers[q.id] as Record<string, string> | undefined) ?? {};
  const answeredCount = questions.filter((x)=> answers[x.id] !== undefined).length;
  return <main><h1>模擬試験（練習用）</h1>
- <p className="muted">問題 {Math.min(idx + 1, questions.length)} / {questions.length} ・ 残り時間 {remaining === null ? "--:--" : formatClock(remaining)} ・ 回答済み {answeredCount} 問（途中状態は保存されています。解答中は正解・解説を表示しません）</p>
+ <p className="muted" style={{ margin: "0 0 .3rem" }}>問題 {Math.min(idx + 1, questions.length)} / {questions.length} ・ 残り時間 {remaining === null ? "--:--" : formatClock(remaining)} ・ 回答済み {answeredCount} 問</p>
  <div className="card" aria-label="問題">
  <p><span className="badge">{FORMAT_LABELS[q.format]}</span> <span className="muted">難易度 {q.difficulty}</span></p>
  <h2 style={{fontSize:"1.1rem"}}>{q.prompt}</h2>
  {q.table && <table><thead><tr>{q.table.headers.map(h=><th key={h}>{h}</th>)}</tr></thead><tbody>{q.table.rows.map((r,i)=><tr key={i}>{r.map((c,j)=><td key={j}>{c}</td>)}</tr>)}</tbody></table>}
- {q.choices && <div role="group" aria-label="選択肢">{q.choices.map((c,i)=>{ const multi = q.format==="multiple-choice"; return <label key={i} style={{display:"block",padding:".4rem"}}><input style={{width:"auto"}} type={multi?"checkbox":"radio"} name={q.id} checked={selected.includes(i)} onChange={()=> setAnswer(q.id, multi? (selected.includes(i)? selected.filter(x=>x!==i): [...selected,i]) : [i])}/> {c}</label>;})}</div>}
+ {q.choices && <div role="group" aria-label="選択肢">{q.choices.map((c,i)=>{ const multi = q.format==="multiple-choice"; return <label key={i} className="choice"><input type={multi?"checkbox":"radio"} name={q.id} checked={selected.includes(i)} onChange={()=> setAnswer(q.id, multi? (selected.includes(i)? selected.filter(x=>x!==i): [...selected,i]) : [i])}/><span>{c}</span></label>;})}</div>}
  {q.format==="true-false" && <div><button type="button" className={boolVal===true?"":"ghost"} onClick={()=>setAnswer(q.id, true)}>○ 正しい</button> <button type="button" className={boolVal===false?"":"ghost"} onClick={()=>setAnswer(q.id, false)}>× 誤り</button></div>}
  {(q.format==="fill-blank"||q.format==="term-input"||q.format==="one-answer") && <input aria-label="回答入力" value={textVal} onChange={e=>setAnswer(q.id, e.target.value)} />}
- {q.format==="ordering" && <div><p className="muted">上下ボタンで並べ替え</p>{orderVal.map((it,i)=><p key={it}>{it} <button type="button" className="ghost" disabled={i===0} onClick={()=>{const n=[...orderVal]; [n[i-1],n[i]]=[n[i]!,n[i-1]!]; setAnswer(q.id, n);}}>↑</button> <button type="button" className="ghost" disabled={i===orderVal.length-1} onClick={()=>{const n=[...orderVal]; [n[i+1],n[i]]=[n[i]!,n[i-1]!]; setAnswer(q.id, n);}}>↓</button></p>)}</div>}
+ {q.format==="ordering" && <div><p className="muted">上下ボタンで並べ替え</p>{orderVal.map((it,i)=><p key={it} className="inline-field"><span style={{flex:1}}>{i+1}. {it}</span> <button type="button" className="ghost" disabled={i===0} onClick={()=>setAnswer(q.id, moveItem(orderVal, i, -1))}>↑</button> <button type="button" className="ghost" disabled={i===orderVal.length-1} onClick={()=>setAnswer(q.id, moveItem(orderVal, i, 1))}>↓</button></p>)}</div>}
  {q.format==="matching" && <div>{(q.matchingPairs??[]).map(p=><label key={p.left}>{p.left}<select aria-label={p.left} value={pairsVal[p.left]??""} onChange={e=>setAnswer(q.id, {...pairsVal,[p.left]:e.target.value})}><option value="">選択</option>{matchingOptions(q).map(x=><option key={x} value={x}>{x}</option>)}</select></label>)}</div>}
  {q.format==="table-fill" && <div>{Object.keys(q.blankCellAnswers??{}).map(k=><label key={k}>空欄{k}<input aria-label={"空欄"+k} value={cellsVal[k]??""} onChange={e=>setAnswer(q.id, {...cellsVal,[k]:e.target.value})}/></label>)}</div>}
  </div>
- <p><button className="ghost" disabled={idx<=0} onClick={()=>setIdx(idx-1)}>前の問題へ</button> <button className="ghost" disabled={idx>=questions.length-1} onClick={()=>setIdx(idx+1)}>次の問題へ</button></p>
- <p><button onClick={finish}>終了して一括採点する</button> <button className="ghost" onClick={abort}>模試を中止する（記録しません）</button></p>
+ <p className="actions"><button className="ghost" disabled={idx<=0} onClick={()=>setIdx(idx-1)}>前の問題へ</button><button className="ghost" disabled={idx>=questions.length-1} onClick={()=>setIdx(idx+1)}>次の問題へ</button></p>
+ <p className="actions"><button onClick={finish}>終了して一括採点する</button><button className="ghost" onClick={abort}>模試を中止する（記録しません）</button></p>
+ <p className="foot-note">途中状態は保存されています。解答中は正解・解説を表示しません。</p>
  </main>;
 }

@@ -3,342 +3,6 @@
   "version": 1,
   "status": "verified",
   "chapterId": "ch2",
-  "sectionId": "item-anise",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "anise-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9627",
-    "bookPage": 52,
-    "locationNote": "本書 p.52（原本画像 IMG_9627.PNG）。原文照合 batch17 で照合済みの知識単位 anise-profile から生成"
-   }
-  ],
-  "id": "qtf-part-anise-profile",
-  "format": "true-false",
-  "prompt": "アニスの利用部位は種子(植物学上は果実)である。",
-  "correctBoolean": true,
-  "explanation": "アニス: 科名はセリ科。原産地は地中海東部沿岸、エジプト。利用部位は種子(植物学上は果実)。別名は茴芹(ういきん)。検定1・2級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-anise",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "anise-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9627",
-    "bookPage": 52,
-    "locationNote": "本書 p.52（原本画像 IMG_9627.PNG）。原文照合 batch17 で照合済みの知識単位 anise-profile から生成"
-   }
-  ],
-  "id": "qtf-part-false-anise-profile",
-  "format": "true-false",
-  "prompt": "アニスの利用部位は果実、果皮、葉である。",
-  "correctBoolean": false,
-  "explanation": "アニス: 科名はセリ科。原産地は地中海東部沿岸、エジプト。利用部位は種子(植物学上は果実)。別名は茴芹(ういきん)。検定1・2級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-anise",
-  "difficulty": 3,
-  "knowledgeUnitIds": [
-   "anise-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9627",
-    "bookPage": 52,
-    "locationNote": "本書 p.52（原本画像 IMG_9627.PNG）。原文照合 batch17 で照合済みの知識単位 anise-profile から生成"
-   }
-  ],
-  "id": "qtable-anise-profile",
-  "format": "table-fill",
-  "prompt": "アニスのプロフィール表の空欄を埋めよ。",
-  "table": {
-   "headers": [
-    "項目",
-    "内容"
-   ],
-   "rows": [
-    [
-     "名称",
-     "アニス"
-    ],
-    [
-     "科名",
-     "（空欄A）"
-    ],
-    [
-     "利用部位",
-     "（空欄B）"
-    ]
-   ]
-  },
-  "blankCellAnswers": {
-   "A": "セリ科",
-   "B": "種子(植物学上は果実)"
-  },
-  "explanation": "アニス: 科名はセリ科。原産地は地中海東部沿岸、エジプト。利用部位は種子(植物学上は果実)。別名は茴芹(ういきん)。検定1・2級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-anise",
-  "difficulty": 3,
-  "knowledgeUnitIds": [
-   "anise-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9627",
-    "bookPage": 52,
-    "locationNote": "本書 p.52（原本画像 IMG_9627.PNG）。原文照合 batch17 で照合済みの知識単位 anise-profile から生成"
-   }
-  ],
-  "id": "qcomp-anise-profile",
-  "format": "composite",
-  "prompt": "アニスについて、科名と利用部位をそれぞれ挙げて説明せよ。",
-  "modelAnswer": "科名はセリ科。利用部位は種子(植物学上は果実)。",
-  "rubric": [
-   {
-    "id": "family",
-    "label": "科名を正しく挙げる",
-    "keywords": [
-     "セリ科"
-    ],
-    "required": true,
-    "points": 1
-   },
-   {
-    "id": "part",
-    "label": "利用部位を正しく挙げる",
-    "keywords": [
-     "種子(植物学上は果実)"
-    ],
-    "required": true,
-    "points": 1
-   }
-  ],
-  "explanation": "アニス: 科名はセリ科。原産地は地中海東部沿岸、エジプト。利用部位は種子(植物学上は果実)。別名は茴芹(ういきん)。検定1・2級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-anise",
-  "difficulty": 3,
-  "knowledgeUnitIds": [
-   "anise-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9627",
-    "bookPage": 52,
-    "locationNote": "本書 p.52（原本画像 IMG_9627.PNG）。原文照合 batch17 で照合済みの知識単位 anise-profile から生成"
-   }
-  ],
-  "id": "qrev-anise-profile",
-  "format": "reverse-lookup",
-  "prompt": "別名「茴芹」と呼ばれるスパイス＆ハーブはどれか。",
-  "choices": [
-   "ガランガル",
-   "どくだみ",
-   "アニス",
-   "カレーリーフ"
-  ],
-  "correctChoiceIndexes": [
-   2
-  ],
-  "explanation": "アニス: 科名はセリ科。原産地は地中海東部沿岸、エジプト。利用部位は種子(植物学上は果実)。別名は茴芹(ういきん)。検定1・2級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-allspice",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "allspice-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9628",
-    "bookPage": 53,
-    "locationNote": "本書 p.53（原本画像 IMG_9628.PNG）。原文照合 batch17 で照合済みの知識単位 allspice-profile から生成"
-   }
-  ],
-  "id": "qtf-family-allspice-profile",
-  "format": "true-false",
-  "prompt": "オールスパイスの科名はフトモモ科である。",
-  "correctBoolean": true,
-  "explanation": "オールスパイス: 科名はフトモモ科。原産地はアンティル諸島(西インド諸島)、中央アメリカ。利用部位は未熟な果実。別名は百味こしょう、三香子(さんこうし)、ジャマイカンペッパー、ピメント。検定1・2級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-allspice",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "allspice-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9628",
-    "bookPage": 53,
-    "locationNote": "本書 p.53（原本画像 IMG_9628.PNG）。原文照合 batch17 で照合済みの知識単位 allspice-profile から生成"
-   }
-  ],
-  "id": "qtf-family-false-allspice-profile",
-  "format": "true-false",
-  "prompt": "オールスパイスの科名はイネ科である。",
-  "correctBoolean": false,
-  "explanation": "オールスパイス: 科名はフトモモ科。原産地はアンティル諸島(西インド諸島)、中央アメリカ。利用部位は未熟な果実。別名は百味こしょう、三香子(さんこうし)、ジャマイカンペッパー、ピメント。検定1・2級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-allspice",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "allspice-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9628",
-    "bookPage": 53,
-    "locationNote": "本書 p.53（原本画像 IMG_9628.PNG）。原文照合 batch17 で照合済みの知識単位 allspice-profile から生成"
-   }
-  ],
-  "id": "qtf-part-allspice-profile",
-  "format": "true-false",
-  "prompt": "オールスパイスの利用部位は未熟な果実である。",
-  "correctBoolean": true,
-  "explanation": "オールスパイス: 科名はフトモモ科。原産地はアンティル諸島(西インド諸島)、中央アメリカ。利用部位は未熟な果実。別名は百味こしょう、三香子(さんこうし)、ジャマイカンペッパー、ピメント。検定1・2級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-allspice",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "allspice-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9628",
-    "bookPage": 53,
-    "locationNote": "本書 p.53（原本画像 IMG_9628.PNG）。原文照合 batch17 で照合済みの知識単位 allspice-profile から生成"
-   }
-  ],
-  "id": "qtf-part-false-allspice-profile",
-  "format": "true-false",
-  "prompt": "オールスパイスの利用部位は蕾である。",
-  "correctBoolean": false,
-  "explanation": "オールスパイス: 科名はフトモモ科。原産地はアンティル諸島(西インド諸島)、中央アメリカ。利用部位は未熟な果実。別名は百味こしょう、三香子(さんこうし)、ジャマイカンペッパー、ピメント。検定1・2級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-allspice",
-  "difficulty": 3,
-  "knowledgeUnitIds": [
-   "allspice-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9628",
-    "bookPage": 53,
-    "locationNote": "本書 p.53（原本画像 IMG_9628.PNG）。原文照合 batch17 で照合済みの知識単位 allspice-profile から生成"
-   }
-  ],
-  "id": "qtable-allspice-profile",
-  "format": "table-fill",
-  "prompt": "オールスパイスのプロフィール表の空欄を埋めよ。",
-  "table": {
-   "headers": [
-    "項目",
-    "内容"
-   ],
-   "rows": [
-    [
-     "名称",
-     "オールスパイス"
-    ],
-    [
-     "科名",
-     "（空欄A）"
-    ],
-    [
-     "利用部位",
-     "（空欄B）"
-    ]
-   ]
-  },
-  "blankCellAnswers": {
-   "A": "フトモモ科",
-   "B": "未熟な果実"
-  },
-  "explanation": "オールスパイス: 科名はフトモモ科。原産地はアンティル諸島(西インド諸島)、中央アメリカ。利用部位は未熟な果実。別名は百味こしょう、三香子(さんこうし)、ジャマイカンペッパー、ピメント。検定1・2級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-allspice",
-  "difficulty": 3,
-  "knowledgeUnitIds": [
-   "allspice-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9628",
-    "bookPage": 53,
-    "locationNote": "本書 p.53（原本画像 IMG_9628.PNG）。原文照合 batch17 で照合済みの知識単位 allspice-profile から生成"
-   }
-  ],
-  "id": "qcomp-allspice-profile",
-  "format": "composite",
-  "prompt": "オールスパイスについて、科名と利用部位をそれぞれ挙げて説明せよ。",
-  "modelAnswer": "科名はフトモモ科。利用部位は未熟な果実。",
-  "rubric": [
-   {
-    "id": "family",
-    "label": "科名を正しく挙げる",
-    "keywords": [
-     "フトモモ科"
-    ],
-    "required": true,
-    "points": 1
-   },
-   {
-    "id": "part",
-    "label": "利用部位を正しく挙げる",
-    "keywords": [
-     "未熟な果実"
-    ],
-    "required": true,
-    "points": 1
-   }
-  ],
-  "explanation": "オールスパイス: 科名はフトモモ科。原産地はアンティル諸島(西インド諸島)、中央アメリカ。利用部位は未熟な果実。別名は百味こしょう、三香子(さんこうし)、ジャマイカンペッパー、ピメント。検定1・2級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
   "sectionId": "item-allspice",
   "difficulty": 3,
   "knowledgeUnitIds": [
@@ -2342,5 +2006,304 @@
    "B": "花の雌しべ"
   },
   "explanation": "サフラン: 科名はアヤメ科。原産地は南ヨーロッパ、西アジア。利用部位は花の雌しべ。別名はサフランクロッカス、蕃紅花(ばんこうか)。検定1・2・3級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-saffron",
+  "difficulty": 2,
+  "knowledgeUnitIds": [
+   "saffron-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9639",
+    "bookPage": 64,
+    "locationNote": "本書 p.64（原本画像 IMG_9639.PNG）。原文照合 batch20 で照合済みの知識単位 saffron-profile から生成"
+   }
+  ],
+  "id": "qcomp-saffron-profile",
+  "format": "composite",
+  "prompt": "サフランについて、科名と利用部位をそれぞれ挙げて説明せよ。",
+  "modelAnswer": "科名はアヤメ科。利用部位は花の雌しべ。",
+  "rubric": [
+   {
+    "id": "family",
+    "label": "科名を正しく挙げる",
+    "keywords": [
+     "アヤメ科"
+    ],
+    "required": true,
+    "points": 1
+   },
+   {
+    "id": "part",
+    "label": "利用部位を正しく挙げる",
+    "keywords": [
+     "花の雌しべ"
+    ],
+    "required": true,
+    "points": 1
+   }
+  ],
+  "explanation": "サフラン: 科名はアヤメ科。原産地は南ヨーロッパ、西アジア。利用部位は花の雌しべ。別名はサフランクロッカス、蕃紅花(ばんこうか)。検定1・2・3級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-saffron",
+  "difficulty": 2,
+  "knowledgeUnitIds": [
+   "saffron-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9639",
+    "bookPage": 64,
+    "locationNote": "本書 p.64（原本画像 IMG_9639.PNG）。原文照合 batch20 で照合済みの知識単位 saffron-profile から生成"
+   }
+  ],
+  "id": "qrev-saffron-profile",
+  "format": "reverse-lookup",
+  "prompt": "別名「サフランクロッカス」と呼ばれるスパイス＆ハーブはどれか。",
+  "choices": [
+   "タラゴン",
+   "スターアニス",
+   "サフラン",
+   "スマック"
+  ],
+  "correctChoiceIndexes": [
+   2
+  ],
+  "explanation": "サフラン: 科名はアヤメ科。原産地は南ヨーロッパ、西アジア。利用部位は花の雌しべ。別名はサフランクロッカス、蕃紅花(ばんこうか)。検定1・2・3級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-sansho",
+  "difficulty": 1,
+  "knowledgeUnitIds": [
+   "sansho-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9640",
+    "bookPage": 65,
+    "locationNote": "本書 p.65（原本画像 IMG_9640.PNG）。原文照合 batch20 で照合済みの知識単位 sansho-profile から生成"
+   }
+  ],
+  "id": "qtf-family-sansho-profile",
+  "format": "true-false",
+  "prompt": "山椒/花椒の科名はミカン科である。",
+  "correctBoolean": true,
+  "explanation": "山椒/花椒: 科名はミカン科。原産地は中国、日本、朝鮮半島。利用部位は果実、果皮、葉。別名ははじかみ(山椒)、中国山椒、華北山椒、ファガラ、セシュアンペッパー(花椒)。検定1・2・3級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-sansho",
+  "difficulty": 1,
+  "knowledgeUnitIds": [
+   "sansho-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9640",
+    "bookPage": 65,
+    "locationNote": "本書 p.65（原本画像 IMG_9640.PNG）。原文照合 batch20 で照合済みの知識単位 sansho-profile から生成"
+   }
+  ],
+  "id": "qtf-family-false-sansho-profile",
+  "format": "true-false",
+  "prompt": "山椒/花椒の科名はタコノキ科である。",
+  "correctBoolean": false,
+  "explanation": "山椒/花椒: 科名はミカン科。原産地は中国、日本、朝鮮半島。利用部位は果実、果皮、葉。別名ははじかみ(山椒)、中国山椒、華北山椒、ファガラ、セシュアンペッパー(花椒)。検定1・2・3級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-sansho",
+  "difficulty": 1,
+  "knowledgeUnitIds": [
+   "sansho-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9640",
+    "bookPage": 65,
+    "locationNote": "本書 p.65（原本画像 IMG_9640.PNG）。原文照合 batch20 で照合済みの知識単位 sansho-profile から生成"
+   }
+  ],
+  "id": "qtf-part-sansho-profile",
+  "format": "true-false",
+  "prompt": "山椒/花椒の利用部位は果実、果皮、葉である。",
+  "correctBoolean": true,
+  "explanation": "山椒/花椒: 科名はミカン科。原産地は中国、日本、朝鮮半島。利用部位は果実、果皮、葉。別名ははじかみ(山椒)、中国山椒、華北山椒、ファガラ、セシュアンペッパー(花椒)。検定1・2・3級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-sansho",
+  "difficulty": 1,
+  "knowledgeUnitIds": [
+   "sansho-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9640",
+    "bookPage": 65,
+    "locationNote": "本書 p.65（原本画像 IMG_9640.PNG）。原文照合 batch20 で照合済みの知識単位 sansho-profile から生成"
+   }
+  ],
+  "id": "qtf-part-false-sansho-profile",
+  "format": "true-false",
+  "prompt": "山椒/花椒の利用部位は種子である。",
+  "correctBoolean": false,
+  "explanation": "山椒/花椒: 科名はミカン科。原産地は中国、日本、朝鮮半島。利用部位は果実、果皮、葉。別名ははじかみ(山椒)、中国山椒、華北山椒、ファガラ、セシュアンペッパー(花椒)。検定1・2・3級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-sansho",
+  "difficulty": 2,
+  "knowledgeUnitIds": [
+   "sansho-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9640",
+    "bookPage": 65,
+    "locationNote": "本書 p.65（原本画像 IMG_9640.PNG）。原文照合 batch20 で照合済みの知識単位 sansho-profile から生成"
+   }
+  ],
+  "id": "qtable-sansho-profile",
+  "format": "table-fill",
+  "prompt": "山椒/花椒のプロフィール表の空欄を埋めよ。",
+  "table": {
+   "headers": [
+    "項目",
+    "内容"
+   ],
+   "rows": [
+    [
+     "名称",
+     "山椒/花椒"
+    ],
+    [
+     "科名",
+     "（空欄A）"
+    ],
+    [
+     "利用部位",
+     "（空欄B）"
+    ]
+   ]
+  },
+  "blankCellAnswers": {
+   "A": "ミカン科",
+   "B": "果実、果皮、葉"
+  },
+  "explanation": "山椒/花椒: 科名はミカン科。原産地は中国、日本、朝鮮半島。利用部位は果実、果皮、葉。別名ははじかみ(山椒)、中国山椒、華北山椒、ファガラ、セシュアンペッパー(花椒)。検定1・2・3級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-sansho",
+  "difficulty": 2,
+  "knowledgeUnitIds": [
+   "sansho-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9640",
+    "bookPage": 65,
+    "locationNote": "本書 p.65（原本画像 IMG_9640.PNG）。原文照合 batch20 で照合済みの知識単位 sansho-profile から生成"
+   }
+  ],
+  "id": "qcomp-sansho-profile",
+  "format": "composite",
+  "prompt": "山椒/花椒について、科名と利用部位をそれぞれ挙げて説明せよ。",
+  "modelAnswer": "科名はミカン科。利用部位は果実、果皮、葉。",
+  "rubric": [
+   {
+    "id": "family",
+    "label": "科名を正しく挙げる",
+    "keywords": [
+     "ミカン科"
+    ],
+    "required": true,
+    "points": 1
+   },
+   {
+    "id": "part",
+    "label": "利用部位を正しく挙げる",
+    "keywords": [
+     "果実、果皮、葉"
+    ],
+    "required": true,
+    "points": 1
+   }
+  ],
+  "explanation": "山椒/花椒: 科名はミカン科。原産地は中国、日本、朝鮮半島。利用部位は果実、果皮、葉。別名ははじかみ(山椒)、中国山椒、華北山椒、ファガラ、セシュアンペッパー(花椒)。検定1・2・3級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-sansho",
+  "difficulty": 2,
+  "knowledgeUnitIds": [
+   "sansho-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9640",
+    "bookPage": 65,
+    "locationNote": "本書 p.65（原本画像 IMG_9640.PNG）。原文照合 batch20 で照合済みの知識単位 sansho-profile から生成"
+   }
+  ],
+  "id": "qrev-sansho-profile",
+  "format": "reverse-lookup",
+  "prompt": "別名「中国山椒」と呼ばれるスパイス＆ハーブはどれか。",
+  "choices": [
+   "マスタード",
+   "グレインズオブパラダイス",
+   "オレガノ",
+   "山椒/花椒"
+  ],
+  "correctChoiceIndexes": [
+   3
+  ],
+  "explanation": "山椒/花椒: 科名はミカン科。原産地は中国、日本、朝鮮半島。利用部位は果実、果皮、葉。別名ははじかみ(山椒)、中国山椒、華北山椒、ファガラ、セシュアンペッパー(花椒)。検定1・2・3級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-cinnamon",
+  "difficulty": 1,
+  "knowledgeUnitIds": [
+   "cinnamon-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9642",
+    "bookPage": 67,
+    "locationNote": "本書 p.67（原本画像 IMG_9642.PNG）。原文照合 batch20 で照合済みの知識単位 cinnamon-profile から生成"
+   }
+  ],
+  "id": "qtf-family-cinnamon-profile",
+  "format": "true-false",
+  "prompt": "シナモン/カシアの科名はクスノキ科である。",
+  "correctBoolean": true,
+  "explanation": "シナモン/カシア: 科名はクスノキ科。原産地はスリランカ、インド(シナモン)/ベトナム、中国、タイ(カシア)。利用部位は樹皮。別名は肉桂(にっけい)、桂皮(けいひ)。検定1・2・3級の対象。"
  }
 ]

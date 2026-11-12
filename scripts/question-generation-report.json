@@ -46,10 +46,10 @@
       "profile-card": 80
     },
     "q2Questions": 375,
-    "formalQuestions": 1795,
+    "formalQuestions": 1732,
     "byFormat": {
       "one-answer": 465,
-      "single-choice": 462,
+      "single-choice": 399,
       "fill-blank": 148,
       "term-input": 120,
       "true-false": 272,
@@ -65,22 +65,21 @@
       "compare-essay": 7
     },
     "d1ByDifficulty": {
-      "1": 737,
-      "2": 474,
-      "3": 414,
+      "1": 697,
+      "2": 456,
+      "3": 409,
       "4": 170
     },
     "d1CalibratedByDifficulty": {
-      "1": 737,
-      "2": 466,
-      "3": 414,
+      "1": 697,
+      "2": 449,
+      "3": 409,
       "4": 170
     },
-    "d1CalibratedQuestions": 1787,
-    "d1HeldQuestions": 8,
+    "d1CalibratedQuestions": 1725,
+    "d1HeldQuestions": 7,
     "d1HeldIds": [
       "q1-e-org",
-      "q4-e-org",
       "q1-e-start",
       "q4-e-start",
       "q1-e-scope",
@@ -96,7 +95,7 @@
     },
     "fix1Cards": 143,
     "fix1SkippedItems": 17,
-    "excludedItems": 129,
+    "excludedItems": 192,
     "excludedUnits": 0,
     "files": [
       "formal-preface-1.json",
@@ -149,7 +148,7 @@
   },
   "passed": {
     "one-answer": 465,
-    "single-choice": 462,
+    "single-choice": 399,
     "flashcard": 602,
     "fill-blank": 148,
     "term-input": 120,
@@ -2113,20 +2112,19 @@
   ],
   "d1": {
     "byDifficulty": {
-      "1": 737,
-      "2": 474,
-      "3": 414,
+      "1": 697,
+      "2": 456,
+      "3": 409,
       "4": 170
     },
     "calibratedByDifficulty": {
-      "1": 737,
-      "2": 466,
-      "3": 414,
+      "1": 697,
+      "2": 449,
+      "3": 409,
       "4": 170
     },
     "heldIds": [
       "q1-e-org",
-      "q4-e-org",
       "q1-e-start",
       "q4-e-start",
       "q1-e-scope",
@@ -2143,8 +2141,28 @@
     },
     {
       "kind": "single-choice",
+      "unitId": "cardamom-5",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "gardenia-3",
+      "reason": "誤答候補が3つ確保できない（ガード通過 2 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "coriander-2",
+      "reason": "誤答候補が3つ確保できない（ガード通過 1 件）"
+    },
+    {
+      "kind": "single-choice",
       "unitId": "saffron-2",
       "reason": "誤答候補が3つ確保できない（ガード通過 1 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "saffron-3",
+      "reason": "誤答候補が3つ確保できない（ガード通過 2 件）"
     },
     {
       "kind": "single-choice",
@@ -2153,13 +2171,103 @@
     },
     {
       "kind": "single-choice",
+      "unitId": "ginger-1",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "ginger-4",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
       "unitId": "turmeric-3",
       "reason": "二者択一・可否の設問は四択に適さない（監査AU-06、DECISIONS #54）"
     },
     {
       "kind": "single-choice",
-      "unitId": "shichimi-2",
-      "reason": "誤答候補が3つ確保できない（ガード通過 2 件）"
+      "unitId": "thyme-2",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "tarragon-1",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "chives-1",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "chives-3",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "chili-6",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "chili-7",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "nutmeg-1",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "basil-4",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "parsley-1",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "paprika-2",
+      "reason": "誤答候補が3つ確保できない（ガード通過 1 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "fennel-4",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "mustard-1",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "mint-1",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "rucola-2",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "rosemary-4",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "gokoufun-2",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "shichimi-1",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
     },
     {
       "kind": "single-choice",
@@ -2173,6 +2281,56 @@
     },
     {
       "kind": "single-choice",
+      "unitId": "saf-1",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "cel-1",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "tad-1",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "b-def",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "b-def-split",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "b-powder",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "b-taxonomy",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "b-family-meaning",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "b-fresh-points",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "b-fresh-stand",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
       "unitId": "b-cooking-care",
       "reason": "二者択一・可否の設問は四択に適さない（監査AU-06、DECISIONS #54）"
     },
@@ -2183,8 +2341,18 @@
     },
     {
       "kind": "single-choice",
-      "unitId": "h-hippocrates",
-      "reason": "誤答候補が3つ確保できない（ガード通過 2 件）"
+      "unitId": "h-ancient-uses",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "j-yakumi",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "j-fish",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
     },
     {
       "kind": "single-choice",
@@ -2193,8 +2361,83 @@
     },
     {
       "kind": "single-choice",
+      "unitId": "j-hajikami",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "j-shosoin-doc",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
       "unitId": "j-todaiji",
       "reason": "誤答候補が3つ確保できない（ガード通過 1 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "j-shichimi-origin",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "r-paella",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "r-cumin-potato",
+      "reason": "誤答候補が3つ確保できない（ガード通過 2 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "r-chai",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "c-bottle",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "c-paste-basil",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "u-3roles",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "u-aroma-main",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "u-aroma-herb",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "u-aroma-powder",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "u-heat",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "u-timing-prep",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "u-timing-finish-herb",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
     },
     {
       "kind": "single-choice",
@@ -2208,13 +2451,38 @@
     },
     {
       "kind": "single-choice",
+      "unitId": "u-knife",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
       "unitId": "u-pairing",
       "reason": "二者択一・可否の設問は四択に適さない（監査AU-06、DECISIONS #54）"
     },
     {
       "kind": "single-choice",
-      "unitId": "d-mojito",
-      "reason": "誤答候補が3つ確保できない（ガード通過 2 件）"
+      "unitId": "w-asia",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "d-moroccan-tea",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "m-greek",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "m-commissione",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "m-3func",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
     },
     {
       "kind": "single-choice",
@@ -2228,6 +2496,16 @@
     },
     {
       "kind": "single-choice",
+      "unitId": "m-hokenkinou",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "e-org",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
       "unitId": "t-cup",
       "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
     },
@@ -2238,13 +2516,43 @@
     },
     {
       "kind": "single-choice",
+      "unitId": "t-lid",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
       "unitId": "t-stevia",
       "reason": "誤答候補が3つ確保できない（ガード通過 2 件）"
     },
     {
       "kind": "single-choice",
+      "unitId": "t-raspberry",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "t-coffee",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
       "unitId": "l-bath",
       "reason": "誤答候補が3つ確保できない（ガード通過 2 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "l-hungarian",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "l-spray",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "l-tussie",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
     },
     {
       "kind": "single-choice",
@@ -2255,6 +2563,11 @@
       "kind": "single-choice",
       "unitId": "g-harvest-api",
       "reason": "二者択一・可否の設問は四択に適さない（監査AU-06、DECISIONS #54）"
+    },
+    {
+      "kind": "single-choice",
+      "unitId": "m-ayur-3",
+      "reason": "誤答候補が3つ確保できない（ガード通過 0 件）"
     },
     {
       "kind": "family-fill",

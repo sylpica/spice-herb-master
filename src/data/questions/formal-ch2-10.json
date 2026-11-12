@@ -3,233 +3,6 @@
   "version": 1,
   "status": "verified",
   "chapterId": "ch2",
-  "sectionId": "item-chili",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "chili-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9652",
-    "bookPage": 76,
-    "locationNote": "本書 p.76（原本画像 IMG_9652.PNG）。原文照合 batch2 で照合済みの知識単位 chili-profile から生成"
-   }
-  ],
-  "id": "qtf-part-chili-profile",
-  "format": "true-false",
-  "prompt": "唐辛子の利用部位は果実、葉である。",
-  "correctBoolean": true,
-  "explanation": "唐辛子: 科名はナス科。原産地は熱帯アメリカ。利用部位は果実、葉。別名はチリペッパー、チリ、カイエンペッパー(栽培品種の一部)、鷹の爪(栽培品種の一部)。検定1・2・3級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-chili",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "chili-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9652",
-    "bookPage": 76,
-    "locationNote": "本書 p.76（原本画像 IMG_9652.PNG）。原文照合 batch2 で照合済みの知識単位 chili-profile から生成"
-   }
-  ],
-  "id": "qtf-part-false-chili-profile",
-  "format": "true-false",
-  "prompt": "唐辛子の利用部位は根である。",
-  "correctBoolean": false,
-  "explanation": "唐辛子: 科名はナス科。原産地は熱帯アメリカ。利用部位は果実、葉。別名はチリペッパー、チリ、カイエンペッパー(栽培品種の一部)、鷹の爪(栽培品種の一部)。検定1・2・3級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-chili",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "chili-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9652",
-    "bookPage": 76,
-    "locationNote": "本書 p.76（原本画像 IMG_9652.PNG）。原文照合 batch2 で照合済みの知識単位 chili-profile から生成"
-   }
-  ],
-  "id": "qtable-chili-profile",
-  "format": "table-fill",
-  "prompt": "唐辛子のプロフィール表の空欄を埋めよ。",
-  "table": {
-   "headers": [
-    "項目",
-    "内容"
-   ],
-   "rows": [
-    [
-     "名称",
-     "唐辛子"
-    ],
-    [
-     "科名",
-     "（空欄A）"
-    ],
-    [
-     "利用部位",
-     "（空欄B）"
-    ]
-   ]
-  },
-  "blankCellAnswers": {
-   "A": "ナス科",
-   "B": "果実、葉"
-  },
-  "explanation": "唐辛子: 科名はナス科。原産地は熱帯アメリカ。利用部位は果実、葉。別名はチリペッパー、チリ、カイエンペッパー(栽培品種の一部)、鷹の爪(栽培品種の一部)。検定1・2・3級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-chili",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "chili-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9652",
-    "bookPage": 76,
-    "locationNote": "本書 p.76（原本画像 IMG_9652.PNG）。原文照合 batch2 で照合済みの知識単位 chili-profile から生成"
-   }
-  ],
-  "id": "qcomp-chili-profile",
-  "format": "composite",
-  "prompt": "唐辛子について、科名と利用部位をそれぞれ挙げて説明せよ。",
-  "modelAnswer": "科名はナス科。利用部位は果実、葉。",
-  "rubric": [
-   {
-    "id": "family",
-    "label": "科名を正しく挙げる",
-    "keywords": [
-     "ナス科"
-    ],
-    "required": true,
-    "points": 1
-   },
-   {
-    "id": "part",
-    "label": "利用部位を正しく挙げる",
-    "keywords": [
-     "果実、葉"
-    ],
-    "required": true,
-    "points": 1
-   }
-  ],
-  "explanation": "唐辛子: 科名はナス科。原産地は熱帯アメリカ。利用部位は果実、葉。別名はチリペッパー、チリ、カイエンペッパー(栽培品種の一部)、鷹の爪(栽培品種の一部)。検定1・2・3級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-chili",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "chili-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9652",
-    "bookPage": 76,
-    "locationNote": "本書 p.76（原本画像 IMG_9652.PNG）。原文照合 batch2 で照合済みの知識単位 chili-profile から生成"
-   }
-  ],
-  "id": "qrev-chili-profile",
-  "format": "reverse-lookup",
-  "prompt": "別名「チリペッパー」と呼ばれるスパイス＆ハーブはどれか。",
-  "choices": [
-   "バニラ",
-   "クレソン",
-   "唐辛子",
-   "みつば"
-  ],
-  "correctChoiceIndexes": [
-   2
-  ],
-  "explanation": "唐辛子: 科名はナス科。原産地は熱帯アメリカ。利用部位は果実、葉。別名はチリペッパー、チリ、カイエンペッパー(栽培品種の一部)、鷹の爪(栽培品種の一部)。検定1・2・3級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-nutmeg",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "nutmeg-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9654",
-    "bookPage": 78,
-    "locationNote": "本書 p.78（原本画像 IMG_9654.PNG）。原文照合 batch3 で照合済みの知識単位 nutmeg-profile から生成"
-   }
-  ],
-  "id": "qtf-family-nutmeg-profile",
-  "format": "true-false",
-  "prompt": "ナツメッグ/メースの科名はニクズク科である。",
-  "correctBoolean": true,
-  "explanation": "ナツメッグ/メース: 科名はニクズク科。原産地はインドネシア(マルク諸島)。利用部位は種子の仁(ナツメッグ)、仮種皮(メース)。別名はにくずく(ナツメッグ)、にくずくか(メース)。検定1・2・3級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-nutmeg",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "nutmeg-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9654",
-    "bookPage": 78,
-    "locationNote": "本書 p.78（原本画像 IMG_9654.PNG）。原文照合 batch3 で照合済みの知識単位 nutmeg-profile から生成"
-   }
-  ],
-  "id": "qtf-family-false-nutmeg-profile",
-  "format": "true-false",
-  "prompt": "ナツメッグ/メースの科名はアヤメ科である。",
-  "correctBoolean": false,
-  "explanation": "ナツメッグ/メース: 科名はニクズク科。原産地はインドネシア(マルク諸島)。利用部位は種子の仁(ナツメッグ)、仮種皮(メース)。別名はにくずく(ナツメッグ)、にくずくか(メース)。検定1・2・3級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-nutmeg",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "nutmeg-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9654",
-    "bookPage": 78,
-    "locationNote": "本書 p.78（原本画像 IMG_9654.PNG）。原文照合 batch3 で照合済みの知識単位 nutmeg-profile から生成"
-   }
-  ],
-  "id": "qtf-part-nutmeg-profile",
-  "format": "true-false",
-  "prompt": "ナツメッグ/メースの利用部位は種子の仁(ナツメッグ)、仮種皮(メース)である。",
-  "correctBoolean": true,
-  "explanation": "ナツメッグ/メース: 科名はニクズク科。原産地はインドネシア(マルク諸島)。利用部位は種子の仁(ナツメッグ)、仮種皮(メース)。別名はにくずく(ナツメッグ)、にくずくか(メース)。検定1・2・3級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
   "sectionId": "item-nutmeg",
   "difficulty": 1,
   "knowledgeUnitIds": [
@@ -2342,5 +2115,210 @@
    "B": "地上部"
   },
   "explanation": "ルッコラ: 科名はアブラナ科。原産地は地中海沿岸、西アジア。利用部位は地上部。別名はロケット、アルグラ、きばなすずしろ。検定1・2級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-rucola",
+  "difficulty": 3,
+  "knowledgeUnitIds": [
+   "rucola-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9664",
+    "bookPage": 88,
+    "locationNote": "本書 p.88（原本画像 IMG_9664.PNG）。原文照合 batch5 で照合済みの知識単位 rucola-profile から生成"
+   }
+  ],
+  "id": "qcomp-rucola-profile",
+  "format": "composite",
+  "prompt": "ルッコラについて、科名と利用部位をそれぞれ挙げて説明せよ。",
+  "modelAnswer": "科名はアブラナ科。利用部位は地上部。",
+  "rubric": [
+   {
+    "id": "family",
+    "label": "科名を正しく挙げる",
+    "keywords": [
+     "アブラナ科"
+    ],
+    "required": true,
+    "points": 1
+   },
+   {
+    "id": "part",
+    "label": "利用部位を正しく挙げる",
+    "keywords": [
+     "地上部"
+    ],
+    "required": true,
+    "points": 1
+   }
+  ],
+  "explanation": "ルッコラ: 科名はアブラナ科。原産地は地中海沿岸、西アジア。利用部位は地上部。別名はロケット、アルグラ、きばなすずしろ。検定1・2級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-rucola",
+  "difficulty": 3,
+  "knowledgeUnitIds": [
+   "rucola-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9664",
+    "bookPage": 88,
+    "locationNote": "本書 p.88（原本画像 IMG_9664.PNG）。原文照合 batch5 で照合済みの知識単位 rucola-profile から生成"
+   }
+  ],
+  "id": "qrev-rucola-profile",
+  "format": "reverse-lookup",
+  "prompt": "別名「ロケット」と呼ばれるスパイス＆ハーブはどれか。",
+  "choices": [
+   "ニゲラ",
+   "アジョワン",
+   "ルッコラ",
+   "スマック"
+  ],
+  "correctChoiceIndexes": [
+   2
+  ],
+  "explanation": "ルッコラ: 科名はアブラナ科。原産地は地中海沿岸、西アジア。利用部位は地上部。別名はロケット、アルグラ、きばなすずしろ。検定1・2級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-lemongrass",
+  "difficulty": 2,
+  "knowledgeUnitIds": [
+   "lemongrass-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9665",
+    "bookPage": 89,
+    "locationNote": "本書 p.89（原本画像 IMG_9665.PNG）。原文照合 batch5 で照合済みの知識単位 lemongrass-profile から生成"
+   }
+  ],
+  "id": "qtf-family-lemongrass-profile",
+  "format": "true-false",
+  "prompt": "レモングラスの科名はイネ科である。",
+  "correctBoolean": true,
+  "explanation": "レモングラス: 科名はイネ科。原産地はインド、熱帯アジア。利用部位は地上部。別名はレモンガヤ、レモンソウ、タクライ、セイラ。検定1・2級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-lemongrass",
+  "difficulty": 2,
+  "knowledgeUnitIds": [
+   "lemongrass-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9665",
+    "bookPage": 89,
+    "locationNote": "本書 p.89（原本画像 IMG_9665.PNG）。原文照合 batch5 で照合済みの知識単位 lemongrass-profile から生成"
+   }
+  ],
+  "id": "qtf-family-false-lemongrass-profile",
+  "format": "true-false",
+  "prompt": "レモングラスの科名はアブラナ科である。",
+  "correctBoolean": false,
+  "explanation": "レモングラス: 科名はイネ科。原産地はインド、熱帯アジア。利用部位は地上部。別名はレモンガヤ、レモンソウ、タクライ、セイラ。検定1・2級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-lemongrass",
+  "difficulty": 2,
+  "knowledgeUnitIds": [
+   "lemongrass-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9665",
+    "bookPage": 89,
+    "locationNote": "本書 p.89（原本画像 IMG_9665.PNG）。原文照合 batch5 で照合済みの知識単位 lemongrass-profile から生成"
+   }
+  ],
+  "id": "qtf-part-lemongrass-profile",
+  "format": "true-false",
+  "prompt": "レモングラスの利用部位は地上部である。",
+  "correctBoolean": true,
+  "explanation": "レモングラス: 科名はイネ科。原産地はインド、熱帯アジア。利用部位は地上部。別名はレモンガヤ、レモンソウ、タクライ、セイラ。検定1・2級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-lemongrass",
+  "difficulty": 2,
+  "knowledgeUnitIds": [
+   "lemongrass-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9665",
+    "bookPage": 89,
+    "locationNote": "本書 p.89（原本画像 IMG_9665.PNG）。原文照合 batch5 で照合済みの知識単位 lemongrass-profile から生成"
+   }
+  ],
+  "id": "qtf-part-false-lemongrass-profile",
+  "format": "true-false",
+  "prompt": "レモングラスの利用部位は葉および花穂、種子(バジルシード)である。",
+  "correctBoolean": false,
+  "explanation": "レモングラス: 科名はイネ科。原産地はインド、熱帯アジア。利用部位は地上部。別名はレモンガヤ、レモンソウ、タクライ、セイラ。検定1・2級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-lemongrass",
+  "difficulty": 3,
+  "knowledgeUnitIds": [
+   "lemongrass-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9665",
+    "bookPage": 89,
+    "locationNote": "本書 p.89（原本画像 IMG_9665.PNG）。原文照合 batch5 で照合済みの知識単位 lemongrass-profile から生成"
+   }
+  ],
+  "id": "qtable-lemongrass-profile",
+  "format": "table-fill",
+  "prompt": "レモングラスのプロフィール表の空欄を埋めよ。",
+  "table": {
+   "headers": [
+    "項目",
+    "内容"
+   ],
+   "rows": [
+    [
+     "名称",
+     "レモングラス"
+    ],
+    [
+     "科名",
+     "（空欄A）"
+    ],
+    [
+     "利用部位",
+     "（空欄B）"
+    ]
+   ]
+  },
+  "blankCellAnswers": {
+   "A": "イネ科",
+   "B": "地上部"
+  },
+  "explanation": "レモングラス: 科名はイネ科。原産地はインド、熱帯アジア。利用部位は地上部。別名はレモンガヤ、レモンソウ、タクライ、セイラ。検定1・2級の対象。"
  }
 ]

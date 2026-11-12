@@ -3,319 +3,6 @@
   "version": 1,
   "status": "verified",
   "chapterId": "ch2",
-  "sectionId": "item-anise",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "anise-1"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9627",
-    "bookPage": 52,
-    "locationNote": "本書 p.52（原本画像 IMG_9627.PNG）。原文照合 batch17 で照合済みの知識単位 anise-1 について、転記本文 p.52 の支持文に基づき人手作成（拡充Q3、DECISIONS #19）。支持文: 特に地中海沿岸諸国では、アニスを用いたリキュールが多い。"
-   }
-  ],
-  "id": "q1q3-anise-1",
-  "format": "one-answer",
-  "prompt": "アニスを用いたリキュールが多いのは、どの地域の諸国か。",
-  "acceptedAnswers": [
-   "地中海沿岸諸国"
-  ],
-  "explanation": "甘みのある独特の香りで、菓子・パン・スープの風味づけや、地中海沿岸のリキュールによく使われる。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-anise",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "anise-3"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9627",
-    "bookPage": 52,
-    "locationNote": "本書 p.52（原本画像 IMG_9627.PNG）。原文照合 batch17 で照合済みの知識単位 anise-3 について、転記本文 p.52 の支持文に基づき人手作成（拡充Q3、DECISIONS #19）。支持文: 古代エジプトでは、ミイラの防腐・保存剤としてクミンとともに使用されていた（シナモンが輸入されるようになるまで）。"
-   }
-  ],
-  "id": "q1q3-anise-3",
-  "format": "one-answer",
-  "prompt": "古代エジプトで、アニスはクミンとともに何として使用されていたか。",
-  "acceptedAnswers": [
-   "ミイラの防腐・保存剤"
-  ],
-  "explanation": "古代エジプトではクミンとともにミイラの防腐・保存剤として使われた(シナモンが輸入されるまで)。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-allspice",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "allspice-2"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9628",
-    "bookPage": 53,
-    "locationNote": "本書 p.53（原本画像 IMG_9628.PNG）。原文照合 batch17 で照合済みの知識単位 allspice-2 について、転記本文 p.53 の支持文に基づき人手作成（拡充Q3、DECISIONS #19）。支持文: 原産地の中央アメリカで文明社会を築いていた古代マヤ人は、紀元前2世紀頃から王の遺体に防腐剤として用いたり、調味料として使っていたといわれている。"
-   }
-  ],
-  "id": "q1q3-allspice-2",
-  "format": "one-answer",
-  "prompt": "オールスパイスを紀元前2世紀頃から王の遺体の防腐剤や調味料として使っていたのは、どの人々か。",
-  "acceptedAnswers": [
-   "古代マヤ人"
-  ],
-  "explanation": "古代マヤ人は紀元前2世紀頃から王の遺体の防腐剤や調味料として使っていたとされる。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-oregano",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "oregano-1"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9629",
-    "bookPage": 54,
-    "locationNote": "本書 p.54（原本画像 IMG_9629.PNG）。原文照合 batch17 で照合済みの知識単位 oregano-1 について、転記本文 p.54 の支持文に基づき人手作成（拡充Q3、DECISIONS #19）。支持文: シソ科の植物が持つ清涼感のある香りが人気で、また肉や魚などの素材の臭みを和らげるとして重宝されているほか、イタリアのトマト料理に欠かせないハーブのひとつ。"
-   }
-  ],
-  "id": "q1q3-oregano-1",
-  "format": "one-answer",
-  "prompt": "オレガノは、イタリアのどのような料理に欠かせないハーブのひとつか。",
-  "acceptedAnswers": [
-   "トマト料理"
-  ],
-  "explanation": "清涼感のある香りでイタリアのトマト料理に欠かせず、チリパウダーにも不可欠。きのことの相性もよい。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-cardamom",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "cardamom-2"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9631",
-    "bookPage": 56,
-    "locationNote": "本書 p.56（原本画像 IMG_9631.PNG）。原文照合 batch18 で照合済みの知識単位 cardamom-2 について、転記本文 p.56 の支持文に基づき人手作成（拡充Q3、DECISIONS #19）。支持文: 北欧ではバイキングが8～10世紀頃に持ち帰ったとされ、特に多用、そのほかインド、アラブ諸国、エジプトなどでも欠かせないスパイス。"
-   }
-  ],
-  "id": "q1q3-cardamom-2",
-  "format": "one-answer",
-  "prompt": "カルダモンを北欧に持ち帰ったとされるのは、8～10世紀頃のどの人々か。",
-  "acceptedAnswers": [
-   "バイキング"
-  ],
-  "explanation": "北欧ではバイキングが8〜10世紀頃に持ち帰ったとされ、特に多用される。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-cardamom",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "cardamom-3"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9631",
-    "bookPage": 56,
-    "locationNote": "本書 p.56（原本画像 IMG_9631.PNG）。原文照合 batch18 で照合済みの知識単位 cardamom-3 について、転記本文 p.56 の支持文に基づき人手作成（拡充Q3、DECISIONS #19）。支持文: 殻の中の黒い種子の部分に特に強い香りがあるため、ホールタイプを使う場合は、殻の部分に切り込みを入れて用いたり、殻をむいて種子そのものを取り出して、そのまま（または挽いて）用いたりすると、より効果的に香りをつけることができる。"
-   }
-  ],
-  "id": "q1q3-cardamom-3",
-  "format": "one-answer",
-  "prompt": "カルダモンで特に強い香りがあるのは、どの部分か。",
-  "acceptedAnswers": [
-   "殻の中の黒い種子の部分"
-  ],
-  "explanation": "殻の中の黒い種子に強い香りがあり、ホールは殻に切り込みを入れたり種子を取り出したりして使う。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-caraway",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "caraway-3"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9632",
-    "bookPage": 57,
-    "locationNote": "本書 p.57（原本画像 IMG_9632.PNG）。原文照合 batch18 で照合済みの知識単位 caraway-3 について、転記本文 p.57 の支持文に基づき人手作成（拡充Q3、DECISIONS #19）。支持文: キャラウェイには、人やモノを引き止めておく力があるというおもしろい言い伝えがある。"
-   }
-  ],
-  "id": "q1q3-caraway-3",
-  "format": "one-answer",
-  "prompt": "キャラウェイには、どのような力があるという言い伝えがあるか。",
-  "acceptedAnswers": [
-   "人やモノを引き止めておく力"
-  ],
-  "explanation": "人やモノを引き止める力があるという言い伝えがあり、惚れ薬の材料とされた。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-kuchinashi",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "gardenia-2"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9633",
-    "bookPage": 58,
-    "locationNote": "本書 p.58（原本画像 IMG_9633.PNG）。原文照合 batch18 で照合済みの知識単位 gardenia-2 について、転記本文 p.58 の支持文に基づき人手作成（拡充Q3、DECISIONS #19）。支持文: 果実が熟したあとも裂けないことから、口が開かない、口がないとの意味だといわれている。"
-   }
-  ],
-  "id": "q1q3-gardenia-2",
-  "format": "one-answer",
-  "prompt": "「くちなし」という名は、果実が熟したあとも裂けないことから、どのような意味だといわれているか。",
-  "acceptedAnswers": [
-   "口が開かない"
-  ],
-  "explanation": "熟しても実が裂けない(口が開かない)ことが名前の由来とされる。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-cumin",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "cumin-1"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9634",
-    "bookPage": 59,
-    "locationNote": "本書 p.59（原本画像 IMG_9634.PNG）。原文照合 batch18 で照合済みの知識単位 cumin-1 について、転記本文 p.59 の支持文に基づき人手作成（拡充Q3、DECISIONS #19）。支持文: インド料理ではスタータースパイス（p.19）として使われることが多い。"
-   }
-  ],
-  "id": "q1q3-cumin-1",
-  "format": "one-answer",
-  "prompt": "クミンはインド料理で、どのようなスパイスとして使われることが多いか。",
-  "acceptedAnswers": [
-   "スタータースパイス"
-  ],
-  "explanation": "カレーを思わせるエスニックな芳香で、カレー粉やチリパウダーに欠かせない。インド料理ではスタータースパイスとして使われる。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-cumin",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "cumin-2"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9634",
-    "bookPage": 59,
-    "locationNote": "本書 p.59（原本画像 IMG_9634.PNG）。原文照合 batch18 で照合済みの知識単位 cumin-2 について、転記本文 p.59 の支持文に基づき人手作成（拡充Q3、DECISIONS #19）。支持文: 古代エジプト時代には王などの遺体をミイラ化して保存するための防腐剤として、アニスなどほかのスパイスといっしょに用いられた。"
-   }
-  ],
-  "id": "q1q3-cumin-2",
-  "format": "one-answer",
-  "prompt": "古代エジプト時代、クミンは王などの遺体をミイラ化して保存するために何として用いられたか。",
-  "acceptedAnswers": [
-   "防腐剤"
-  ],
-  "explanation": "古代エジプトでは遺体をミイラにする際の防腐剤に使われた。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-clove",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "clove-1"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9635",
-    "bookPage": 60,
-    "locationNote": "本書 p.60（原本画像 IMG_9635.PNG）。原文照合 batch19 で照合済みの知識単位 clove-1 について、転記本文 p.60 の支持文に基づき人手作成（拡充Q3、DECISIONS #19）。支持文: スパイスとして利用する蕾は、開花直前（淡いピンクを帯び始める頃）に最も香りが強くなる。"
-   }
-  ],
-  "id": "q1q3-clove-1",
-  "format": "one-answer",
-  "prompt": "クローブの蕾は、いつ最も香りが強くなるか。",
-  "acceptedAnswers": [
-   "開花直前",
-   "淡いピンクを帯び始める頃"
-  ],
-  "explanation": "蕾は開花直前に最も香りが強くなる。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-clove",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "clove-2"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9635",
-    "bookPage": 60,
-    "locationNote": "本書 p.60（原本画像 IMG_9635.PNG）。原文照合 batch19 で照合済みの知識単位 clove-2 について、転記本文 p.60 の支持文に基づき人手作成（拡充Q3、DECISIONS #19）。支持文: 西洋ではフルーツポマンダー（p.120）の材料に。"
-   }
-  ],
-  "id": "q1q3-clove-2",
-  "format": "one-answer",
-  "prompt": "クローブは西洋で、何の材料にもなるか。",
-  "acceptedAnswers": [
-   "フルーツポマンダー"
-  ],
-  "explanation": "甘く濃厚な風味で肉料理と相性がよく、フルーツポマンダーの材料にもなる。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-pepper",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "pepper-1"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9636",
-    "bookPage": 61,
-    "locationNote": "本書 p.61（原本画像 IMG_9636.PNG）。原文照合 batch19 で照合済みの知識単位 pepper-1 について、転記本文 p.61 の支持文に基づき人手作成（拡充Q3、DECISIONS #19）。支持文: 果実の収穫時期と製法によって、ブラックペッパー、ホワイトペッパー、グリーンペッパーの3種類のこしょうができる。"
-   }
-  ],
-  "id": "q1q3-pepper-1",
-  "format": "one-answer",
-  "prompt": "ブラックペッパー、ホワイトペッパー、グリーンペッパーの3種類のこしょうは、果実の何の違いによってできるか。",
-  "acceptedAnswers": [
-   "収穫時期と製法"
-  ],
-  "explanation": "つる性の植物で、収穫時期と製法によりブラック・ホワイト・グリーンの3種類ができる。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
   "sectionId": "item-pepper",
   "difficulty": 1,
   "knowledgeUnitIds": [
@@ -1940,5 +1627,341 @@
   "prompt": "アニスの科名はイネ科である。",
   "correctBoolean": false,
   "explanation": "アニス: 科名はセリ科。原産地は地中海東部沿岸、エジプト。利用部位は種子(植物学上は果実)。別名は茴芹(ういきん)。検定1・2級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-anise",
+  "difficulty": 2,
+  "knowledgeUnitIds": [
+   "anise-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9627",
+    "bookPage": 52,
+    "locationNote": "本書 p.52（原本画像 IMG_9627.PNG）。原文照合 batch17 で照合済みの知識単位 anise-profile から生成"
+   }
+  ],
+  "id": "qtf-part-anise-profile",
+  "format": "true-false",
+  "prompt": "アニスの利用部位は種子(植物学上は果実)である。",
+  "correctBoolean": true,
+  "explanation": "アニス: 科名はセリ科。原産地は地中海東部沿岸、エジプト。利用部位は種子(植物学上は果実)。別名は茴芹(ういきん)。検定1・2級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-anise",
+  "difficulty": 2,
+  "knowledgeUnitIds": [
+   "anise-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9627",
+    "bookPage": 52,
+    "locationNote": "本書 p.52（原本画像 IMG_9627.PNG）。原文照合 batch17 で照合済みの知識単位 anise-profile から生成"
+   }
+  ],
+  "id": "qtf-part-false-anise-profile",
+  "format": "true-false",
+  "prompt": "アニスの利用部位は果実、果皮、葉である。",
+  "correctBoolean": false,
+  "explanation": "アニス: 科名はセリ科。原産地は地中海東部沿岸、エジプト。利用部位は種子(植物学上は果実)。別名は茴芹(ういきん)。検定1・2級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-anise",
+  "difficulty": 3,
+  "knowledgeUnitIds": [
+   "anise-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9627",
+    "bookPage": 52,
+    "locationNote": "本書 p.52（原本画像 IMG_9627.PNG）。原文照合 batch17 で照合済みの知識単位 anise-profile から生成"
+   }
+  ],
+  "id": "qtable-anise-profile",
+  "format": "table-fill",
+  "prompt": "アニスのプロフィール表の空欄を埋めよ。",
+  "table": {
+   "headers": [
+    "項目",
+    "内容"
+   ],
+   "rows": [
+    [
+     "名称",
+     "アニス"
+    ],
+    [
+     "科名",
+     "（空欄A）"
+    ],
+    [
+     "利用部位",
+     "（空欄B）"
+    ]
+   ]
+  },
+  "blankCellAnswers": {
+   "A": "セリ科",
+   "B": "種子(植物学上は果実)"
+  },
+  "explanation": "アニス: 科名はセリ科。原産地は地中海東部沿岸、エジプト。利用部位は種子(植物学上は果実)。別名は茴芹(ういきん)。検定1・2級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-anise",
+  "difficulty": 3,
+  "knowledgeUnitIds": [
+   "anise-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9627",
+    "bookPage": 52,
+    "locationNote": "本書 p.52（原本画像 IMG_9627.PNG）。原文照合 batch17 で照合済みの知識単位 anise-profile から生成"
+   }
+  ],
+  "id": "qcomp-anise-profile",
+  "format": "composite",
+  "prompt": "アニスについて、科名と利用部位をそれぞれ挙げて説明せよ。",
+  "modelAnswer": "科名はセリ科。利用部位は種子(植物学上は果実)。",
+  "rubric": [
+   {
+    "id": "family",
+    "label": "科名を正しく挙げる",
+    "keywords": [
+     "セリ科"
+    ],
+    "required": true,
+    "points": 1
+   },
+   {
+    "id": "part",
+    "label": "利用部位を正しく挙げる",
+    "keywords": [
+     "種子(植物学上は果実)"
+    ],
+    "required": true,
+    "points": 1
+   }
+  ],
+  "explanation": "アニス: 科名はセリ科。原産地は地中海東部沿岸、エジプト。利用部位は種子(植物学上は果実)。別名は茴芹(ういきん)。検定1・2級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-anise",
+  "difficulty": 3,
+  "knowledgeUnitIds": [
+   "anise-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9627",
+    "bookPage": 52,
+    "locationNote": "本書 p.52（原本画像 IMG_9627.PNG）。原文照合 batch17 で照合済みの知識単位 anise-profile から生成"
+   }
+  ],
+  "id": "qrev-anise-profile",
+  "format": "reverse-lookup",
+  "prompt": "別名「茴芹」と呼ばれるスパイス＆ハーブはどれか。",
+  "choices": [
+   "ガランガル",
+   "どくだみ",
+   "アニス",
+   "カレーリーフ"
+  ],
+  "correctChoiceIndexes": [
+   2
+  ],
+  "explanation": "アニス: 科名はセリ科。原産地は地中海東部沿岸、エジプト。利用部位は種子(植物学上は果実)。別名は茴芹(ういきん)。検定1・2級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-allspice",
+  "difficulty": 2,
+  "knowledgeUnitIds": [
+   "allspice-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9628",
+    "bookPage": 53,
+    "locationNote": "本書 p.53（原本画像 IMG_9628.PNG）。原文照合 batch17 で照合済みの知識単位 allspice-profile から生成"
+   }
+  ],
+  "id": "qtf-family-allspice-profile",
+  "format": "true-false",
+  "prompt": "オールスパイスの科名はフトモモ科である。",
+  "correctBoolean": true,
+  "explanation": "オールスパイス: 科名はフトモモ科。原産地はアンティル諸島(西インド諸島)、中央アメリカ。利用部位は未熟な果実。別名は百味こしょう、三香子(さんこうし)、ジャマイカンペッパー、ピメント。検定1・2級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-allspice",
+  "difficulty": 2,
+  "knowledgeUnitIds": [
+   "allspice-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9628",
+    "bookPage": 53,
+    "locationNote": "本書 p.53（原本画像 IMG_9628.PNG）。原文照合 batch17 で照合済みの知識単位 allspice-profile から生成"
+   }
+  ],
+  "id": "qtf-family-false-allspice-profile",
+  "format": "true-false",
+  "prompt": "オールスパイスの科名はイネ科である。",
+  "correctBoolean": false,
+  "explanation": "オールスパイス: 科名はフトモモ科。原産地はアンティル諸島(西インド諸島)、中央アメリカ。利用部位は未熟な果実。別名は百味こしょう、三香子(さんこうし)、ジャマイカンペッパー、ピメント。検定1・2級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-allspice",
+  "difficulty": 2,
+  "knowledgeUnitIds": [
+   "allspice-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9628",
+    "bookPage": 53,
+    "locationNote": "本書 p.53（原本画像 IMG_9628.PNG）。原文照合 batch17 で照合済みの知識単位 allspice-profile から生成"
+   }
+  ],
+  "id": "qtf-part-allspice-profile",
+  "format": "true-false",
+  "prompt": "オールスパイスの利用部位は未熟な果実である。",
+  "correctBoolean": true,
+  "explanation": "オールスパイス: 科名はフトモモ科。原産地はアンティル諸島(西インド諸島)、中央アメリカ。利用部位は未熟な果実。別名は百味こしょう、三香子(さんこうし)、ジャマイカンペッパー、ピメント。検定1・2級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-allspice",
+  "difficulty": 2,
+  "knowledgeUnitIds": [
+   "allspice-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9628",
+    "bookPage": 53,
+    "locationNote": "本書 p.53（原本画像 IMG_9628.PNG）。原文照合 batch17 で照合済みの知識単位 allspice-profile から生成"
+   }
+  ],
+  "id": "qtf-part-false-allspice-profile",
+  "format": "true-false",
+  "prompt": "オールスパイスの利用部位は蕾である。",
+  "correctBoolean": false,
+  "explanation": "オールスパイス: 科名はフトモモ科。原産地はアンティル諸島(西インド諸島)、中央アメリカ。利用部位は未熟な果実。別名は百味こしょう、三香子(さんこうし)、ジャマイカンペッパー、ピメント。検定1・2級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-allspice",
+  "difficulty": 3,
+  "knowledgeUnitIds": [
+   "allspice-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9628",
+    "bookPage": 53,
+    "locationNote": "本書 p.53（原本画像 IMG_9628.PNG）。原文照合 batch17 で照合済みの知識単位 allspice-profile から生成"
+   }
+  ],
+  "id": "qtable-allspice-profile",
+  "format": "table-fill",
+  "prompt": "オールスパイスのプロフィール表の空欄を埋めよ。",
+  "table": {
+   "headers": [
+    "項目",
+    "内容"
+   ],
+   "rows": [
+    [
+     "名称",
+     "オールスパイス"
+    ],
+    [
+     "科名",
+     "（空欄A）"
+    ],
+    [
+     "利用部位",
+     "（空欄B）"
+    ]
+   ]
+  },
+  "blankCellAnswers": {
+   "A": "フトモモ科",
+   "B": "未熟な果実"
+  },
+  "explanation": "オールスパイス: 科名はフトモモ科。原産地はアンティル諸島(西インド諸島)、中央アメリカ。利用部位は未熟な果実。別名は百味こしょう、三香子(さんこうし)、ジャマイカンペッパー、ピメント。検定1・2級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-allspice",
+  "difficulty": 3,
+  "knowledgeUnitIds": [
+   "allspice-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9628",
+    "bookPage": 53,
+    "locationNote": "本書 p.53（原本画像 IMG_9628.PNG）。原文照合 batch17 で照合済みの知識単位 allspice-profile から生成"
+   }
+  ],
+  "id": "qcomp-allspice-profile",
+  "format": "composite",
+  "prompt": "オールスパイスについて、科名と利用部位をそれぞれ挙げて説明せよ。",
+  "modelAnswer": "科名はフトモモ科。利用部位は未熟な果実。",
+  "rubric": [
+   {
+    "id": "family",
+    "label": "科名を正しく挙げる",
+    "keywords": [
+     "フトモモ科"
+    ],
+    "required": true,
+    "points": 1
+   },
+   {
+    "id": "part",
+    "label": "利用部位を正しく挙げる",
+    "keywords": [
+     "未熟な果実"
+    ],
+    "required": true,
+    "points": 1
+   }
+  ],
+  "explanation": "オールスパイス: 科名はフトモモ科。原産地はアンティル諸島(西インド諸島)、中央アメリカ。利用部位は未熟な果実。別名は百味こしょう、三香子(さんこうし)、ジャマイカンペッパー、ピメント。検定1・2級の対象。"
  }
 ]

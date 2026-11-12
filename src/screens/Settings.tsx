@@ -10,19 +10,18 @@ export default function Settings({ store, update }: { store: StoreData; update: 
       <h1>設定</h1>
       <section className="card">
         <h2>表示</h2>
-        <p>ダークモード: {store.reader.dark ? "オン" : "オフ"}（全画面共通）</p>
-        <p>
+        <p className="actions">
           <button
             type="button"
             aria-pressed={store.reader.dark}
             onClick={() => update((d: StoreData) => { d.reader.dark = !d.reader.dark; return d; })}
           >
-            ダークモード切替
+            ダークモード切替（現在: {store.reader.dark ? "オン" : "オフ"}）
           </button>
         </p>
       </section>
       <section className="card">
-        <h2>演習</h2>
+        <h2>演習と目標</h2>
         <p>
           <label style={{ display: "inline-flex", alignItems: "center", gap: ".5rem", minHeight: 44 }}>
             <input
@@ -34,19 +33,27 @@ export default function Settings({ store, update }: { store: StoreData; update: 
             正解したら自動で次の問題へ進む
           </label>
         </p>
+        <label>
+          1日の目標（問）
+          <input
+            type="number"
+            min={1}
+            inputMode="numeric"
+            value={store.goalPerDay}
+            onChange={(e) => update((d: StoreData) => ({ ...d, goalPerDay: Math.max(1, Math.floor(Number(e.target.value)) || 10) }))}
+          />
+        </label>
       </section>
       <section className="card">
         <h2>学習の記録を見る</h2>
-        <p>
-          <Link className="btn" to="/stats">学習分析を開く</Link>{" "}
+        <p className="actions">
+          <Link className="btn" to="/stats">学習分析を開く</Link>
           <Link className="btn" to="/qa">品質管理を開く</Link>
         </p>
-        <p className="muted">学習分析は正答率・網羅率などの集計、品質管理は教材データの検証集計です。</p>
       </section>
       <section className="card">
         <h2>データ</h2>
-        <p className="muted">学習履歴はこのブラウザ内（localStorage）にのみ保存されています。リセットすると解答記録・復習予定・読書位置などがすべて消え、元に戻せません。</p>
-        <p>
+        <p className="actions">
           <button
             type="button"
             className="ghost"
@@ -60,6 +67,7 @@ export default function Settings({ store, update }: { store: StoreData; update: 
             学習記録をリセット
           </button>
         </p>
+        <p className="foot-note">学習履歴はこのブラウザ内（localStorage）にのみ保存されています。リセットすると解答記録・復習予定・読書位置などがすべて消え、元に戻せません。</p>
       </section>
     </main>
   );

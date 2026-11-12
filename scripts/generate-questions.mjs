@@ -433,6 +433,8 @@ function quantityClass(raw) {
   if (/kg|キログラム|グラム|(^|[^a-zA-Z])g([^a-zA-Z]|$)/.test(raw)) return "quantity:mass";
   if (/倍|%|％|割/.test(raw)) return "quantity:ratio";
   if (/粒|杯|本|枚|個|滴|片|束/.test(raw)) return "quantity:count";
+  // 暦年（「1520年」「16世紀」）と期間（「5〜9年」「1週間」）は別の種類の事実なので分ける（BV-13）
+  if (/^(紀元前)?\d{3,4}年(頃)?$|世紀/.test(raw.trim())) return "quantity:year";
   if (/世紀|年|月|日|時間|分|秒|週間/.test(raw)) return "quantity:time";
   if (/cm|mm|センチ|メートル/.test(raw)) return "quantity:length";
   if (/度/.test(raw)) return "quantity:deg";
@@ -450,6 +452,22 @@ function answerShapeDim(ans) {
   if (/(寺|神社|宮殿|城)$/.test(raw)) return "place-name";
   return "unknown";
 }
+const QUESTION_STEM_PATTERNS = [
+  ["meaning", /の意味は|何を意味する/],
+  ["compound", /成分|酵素|物質は/],
+  ["language", /何語/],
+  ["person", /医師|女王は[?？]$|の王は|美食家|ポルトガル人|ハンガリー人|妖精|天皇/],
+  ["period", /時代[は?？]|時期は|いつ行う/],
+  ["book", /歴史書|旅行記|料理書|法律書|薬草書|書物/],
+  ["origin", /国は[?？]$|どの国|発祥の国/],
+  ["place", /島は|場所は|都市|現在の名称|諸島は|どの地域|地域を/],
+  ["seasoning", /調味料は|ペーストの名/],
+  ["dish", /料理は[?？]$|郷土料理|家庭料理|米料理/],
+  ["alias", /和名は|別名は|現地名は|漢方名は|呼び名は|何と呼ばれ|名前は[?？]$|何と呼んで/],
+  ["term", /を意味する言葉|何という[?？]|何と呼ぶ[?？]|何性という|略称は|形状は|形状を|形態を/],
+  ["ingredient", /素材は|食材は|肉は[?？]|魚は|ナッツは|豆は|何の粉/],
+  ["spice-name", /(スパイス|ハーブ)は[?？]$|ハーブを1つ挙げよ/],
+];
 const dimCache = new Map();
 function questionDim(unit) {
   if (dimCache.has(unit.id)) return dimCache.get(unit.id);
@@ -457,6 +475,10 @@ function questionDim(unit) {
   for (const [d, re] of QUESTION_DIM_PATTERNS) if (re.test(unit.draftQa.q)) { dim = d; break; }
   if (dim === "quantity") { const s = answerShapeDim(unit.draftQa.a); dim = s.startsWith("quantity") ? s : "quantity:plain"; }
   if (!dim) dim = answerShapeDim(unit.draftQa.a);
+  // 監査BV-13（旧AU-13、DECISIONS #55）: 正答の形からも次元が決まらない設問は、設問文が
+  // 何を尋ねているか（意味・成分・言語・別名・用語・人物・書名・場所・食材など）で型を付ける。
+  // 同じ型の設問の正答だけを誤答にするので、「調味料を問う設問に理由の文が並ぶ」不良が起きない。
+  if (dim === "unknown") for (const [d, re] of QUESTION_STEM_PATTERNS) if (re.test(unit.draftQa.q)) { dim = d; break; }
   dimCache.set(unit.id, dim);
   return dim;
 }
@@ -478,6 +500,25 @@ for (const u of eligible) {
   poolByChapter.get(u.chapterId).push(u);
 }
 
+// ---- 監査BV-13（旧AU-13、DECISIONS #55）: 次元不明の設問の誤答を揃える。
+// 残る次元不明の設問は、外部知識を使わず表記だけで判定する: 文か語か（述語・理由で終わる
+// 答えと名詞の答えを混ぜない）と、文字数（長いほうが短いほうの2.5倍以内）が正答と揃う
+// 候補だけを誤答にする。揃う候補が3つに満たない設問は四択を作らない（一問一答とカードは生成される）。
+function shapeCore(s) { return stripParenNote(String(s ?? "")).replace(/[\s　・、,，\-‐―〜~「」『』"'’.。]/g, ""); }
+function shapeClass(s) {
+  const t = shapeCore(s);
+  if (!t) return "empty";
+  if (/(する|しない|ため|出す|込む|える|かす|ぎる|める|早い|熱い|必要)$/.test(t)) return "clause";
+  if (t.length > 8 && /[ぁ-ん]/.test(t) && /[がをにで]/.test(t)) return "clause";
+  return "noun";
+}
+function shapeTail(s) { const t = shapeCore(s); return t ? t[t.length - 1] : ""; }
+function shapeCompatible(answer, cand) {
+  if (shapeClass(answer) !== shapeClass(cand)) return false;
+  const la = shapeCore(answer).length, lc = shapeCore(cand).length;
+  return Math.max(la, lc) <= Math.min(la, lc) * 2.5;
+}
+
 function distractorsFor(unit) {
   const a = unit.draftQa.a;
   const normA = normalizeText(a);
@@ -489,7 +530,7 @@ function distractorsFor(unit) {
   // 監査B-08是正の補完2: 次元が判明している設問では、同次元の候補が同一章で
   // 不足する場合に限り他章の照合済み回答も候補にする（温度・分量・科名などの
   // 値は章をまたいでも同じ種類の事実であり、弱い誤答を残すより正しい）。
-  // 次元不明の設問は従来どおり同一章のみ（話題の近さが唯一の担保のため）。
+  // 次元不明の設問は従来どおり同一章のみ（話題の近さが担保。加えて答えの形を揃える。BV-13）。
   const sameChapter = poolByChapter.get(unit.chapterId) ?? [];
   const crossChapter = dimQ !== "unknown" ? eligible.filter((o) => o.chapterId !== unit.chapterId) : [];
   for (const other of [...sameChapter, ...crossChapter]) {
@@ -505,15 +546,23 @@ function distractorsFor(unit) {
     // 監査B-08是正: 次元（人物／数量／原産地／品目名など）が設問と異なる候補は、
     // 形式だけで排除できてしまう弱い誤答になるため使わない。
     if (questionDim(other) !== dimQ) continue;
+    // 監査BV-13（旧AU-13、DECISIONS #55）: 次元不明の設問は、答えの「形」（文字種と長さ）が
+    // 正答と揃わない候補を使わない（例: 調味料名を問う設問に理由の文や「しない」が並ぶ不良）。
+    if (dimQ === "unknown" && !shapeCompatible(a, cand)) continue;
     cands.push({ cand, n, other });
   }
   // 重複（正規化後）を除き、優先度（同一節タイトル→同一ページ→同一カテゴリ→ハッシュ）で決定的に並べる
   const seen = new Set();
   const uniq = cands.filter((c) => (seen.has(c.n) ? false : (seen.add(c.n), true)));
   uniq.sort((x, y) => {
-    const tier = (c) => (c.other.sectionTitle === unit.sectionTitle ? 0 : 1) + (c.other.source.page === unit.source.page ? 0 : 2) + (c.other.category === unit.category ? 0 : 4) + (c.other.chapterId === unit.chapterId ? 0 : 8);
+    // 数量の設問は、正答と単位（末尾の「日」「年」「分」など）が同じ候補を最優先する（BV-13）。
+    const tailFirst = dimQ.startsWith("quantity");
+    const tier = (c) => (tailFirst && shapeTail(c.cand) !== shapeTail(a) ? 16 : 0) + (c.other.sectionTitle === unit.sectionTitle ? 0 : 1) + (c.other.source.page === unit.source.page ? 0 : 2) + (c.other.category === unit.category ? 0 : 4) + (c.other.chapterId === unit.chapterId ? 0 : 8);
     return tier(x) - tier(y) || fnv(`${unit.id}|${x.other.id}`) - fnv(`${unit.id}|${y.other.id}`);
   });
+  // 型が付かない設問では話題の近さだけが誤答のもっともらしさを支える。同じ節か同じページの
+  // 回答が2つ以上ある場合だけ四択にする（章が同じだけの遠い話題の語ばかりだと消去法で解けてしまう。BV-13）。
+  if (dimQ === "unknown" && uniq.filter((c) => c.other.sectionTitle === unit.sectionTitle || c.other.source.page === unit.source.page).length < 2) return [];
   const picked = uniq.slice(0, 3).map((c) => c.cand);
   // 監査B-08是正の補完: 科名・原産地・利用部位の次元では、同次元の候補が同一章の
   // draftQa 回答に不足する場合に限り、照合済みプロフィールの同属性値（qsc生成と
@@ -1056,8 +1105,10 @@ function validateGenerated(qs, cs) {
         if (!ok) problems.push(`${q.id}: 誤答「${c}」が同一章の照合済み回答にも同次元のプロフィール属性値にも存在しない`);
         if (normalizeText(unit.content).includes(normalizeText(c))) problems.push(`${q.id}: 誤答「${c}」が生成元単位の本文に現れる（曖昧さガード違反）`);
         if (a1ExcludedFor(unit.id, "draft-choice").has(c)) problems.push(`${q.id}: 誤答「${c}」が監査A1除外リストに登録されている（DECISIONS #20）`);
-        const srcUnit = (poolByChapter.get(unit.chapterId) ?? []).find((o) => o.id !== unit.id && o.draftQa.a === c);
-        if (srcUnit && questionDim(srcUnit) !== questionDim(unit)) problems.push(`${q.id}: 誤答「${c}」の次元が設問と異なる（監査B-08是正）`);
+        // 同じ答えを持つ単位が同一章に複数あるときは、そのいずれかが設問と同次元であればよい
+        // （先頭の1件だけで判定すると、同次元の出所があるのに誤検出する。BV-13）。
+        const srcUnitsInChapter = (poolByChapter.get(unit.chapterId) ?? []).filter((o) => o.id !== unit.id && o.draftQa.a === c);
+        if (srcUnitsInChapter.length > 0 && !srcUnitsInChapter.some((o) => questionDim(o) === questionDim(unit))) problems.push(`${q.id}: 誤答「${c}」の次元が設問と異なる（監査B-08是正）`);
       }
     }
     // ---- Q2（プロフィール属性由来）の根拠チェック: 正答・許容回答が単位 content の抽出値と一致すること

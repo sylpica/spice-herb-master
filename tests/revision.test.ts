@@ -130,7 +130,7 @@ describe("改訂ポイント画面（UX7）", () => {
 
   it("ホームに改訂ポイントの入口カードがある（入口はホームのカードと上部バーの「改訂」）", () => {
     const html = render(createElement(Home, { store, update }));
-    expect(html).toContain("4訂版の改訂ポイント");
+    expect(html).toContain("改訂ポイント");
     expect(html).toContain("/revision");
   });
 });

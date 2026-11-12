@@ -43,13 +43,13 @@
   "format": "single-choice",
   "prompt": "アニスで香りづけされた酒が水で割ると白く濁るのは、何という成分が反応するため?",
   "choices": [
-   "小ガランガル",
-   "テルペン",
+   "クロシン",
    "ミロシナーゼ",
-   "実山椒"
+   "テルペン",
+   "ベンジル芥子油"
   ],
   "correctChoiceIndexes": [
-   1
+   2
   ],
   "explanation": "トルコのラクやギリシャのウゾはアニスで香りづけした無色の酒で、水で割ると成分のテルペンが反応して白く濁る。"
  },
@@ -212,13 +212,13 @@
   "format": "single-choice",
   "prompt": "オールスパイスがヨーロッパにもたらされたのはいつ頃とされる?",
   "choices": [
+   "19世紀中頃",
    "17世紀初頭",
-   "1〜3分",
-   "5〜9年",
-   "1時間"
+   "1602年",
+   "2009年"
   ],
   "correctChoiceIndexes": [
-   0
+   1
   ],
   "explanation": "一説ではスペインの探検家フランシスコ・フェルナンデスが1570年代にメキシコで発見し、ヨーロッパに伝わったのは17世紀初頭とされる比較的新しいスパイス。"
  },
@@ -267,9 +267,9 @@
   "prompt": "オレガノの名の語源とされる古代ギリシア語の意味は?",
   "choices": [
    "喜びの山",
-   "椒房",
-   "ハバネロ",
-   "アピシウス"
+   "マリア様のバラ",
+   "温かい、熱い",
+   "枯れ草"
   ],
   "correctChoiceIndexes": [
    0
@@ -320,9 +320,9 @@
   "format": "single-choice",
   "prompt": "オレガノの香りを愛したとされるローマ時代の美食家は?",
   "choices": [
-   "老成しょうが",
-   "喜びの山",
-   "筆しょうが",
+   "バラダン2世",
+   "スザント・ゲオルギー",
+   "ミンテ",
    "アピシウス"
   ],
   "correctChoiceIndexes": [
@@ -431,13 +431,13 @@
   "format": "single-choice",
   "prompt": "ガーリックの無臭成分アリインが変化してできる香り成分は?",
   "choices": [
+   "バニリン",
    "グリチルリチン",
    "アリシン",
-   "油溶性",
    "クルクミン"
   ],
   "correctChoiceIndexes": [
-   1
+   2
   ],
   "explanation": "生のガーリックの無臭成分アリインは、刻むなどすると酵素アリイナーゼの作用でアリシンに変わり、特有の香りになる。"
  },
@@ -485,13 +485,13 @@
   "format": "single-choice",
   "prompt": "ガーリックのアリインをアリシンに変える酵素は?",
   "choices": [
-   "ブラックペッパー",
-   "二辛五香",
-   "ホワイトペッパー",
-   "アリイナーゼ"
+   "カプサイシン",
+   "クロシン",
+   "アリイナーゼ",
+   "ピペリン"
   ],
   "correctChoiceIndexes": [
-   3
+   2
   ],
   "explanation": "アリインをアリシンに変える酵素はアリイナーゼである。"
  },
@@ -621,13 +621,13 @@
   "format": "single-choice",
   "prompt": "カルダモンが栽培されていたとされる庭園の持ち主、バビロニア王国の王は?",
   "choices": [
-   "ハンガリー語",
-   "筆しょうが",
-   "バラダン2世",
-   "ブラックカルダモン"
+   "アピシウス",
+   "ミンテ",
+   "スザント・ゲオルギー",
+   "バラダン2世"
   ],
   "correctChoiceIndexes": [
-   2
+   3
   ],
   "explanation": "紀元前8世紀末、バビロニア王国のバラダン2世の庭園で栽培されていたという。"
  },
@@ -653,36 +653,6 @@
   "acceptedAnswers": [
    "ブラックカルダモン",
    "ビッグカルダモン"
-  ],
-  "explanation": "ブラックカルダモン(ビッグカルダモン)はショウガ科の別植物の果実で、グリーンカルダモンよりかなり大きく、ガラムマサラの材料などに使われる。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-cardamom",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "cardamom-5"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9631",
-    "bookPage": 56,
-    "locationNote": "本書 p.56（原本画像 IMG_9631.PNG）。原文照合 batch18 で照合済みの知識単位 cardamom-5 から生成"
-   }
-  ],
-  "id": "q4-cardamom-5",
-  "format": "single-choice",
-  "prompt": "ガラムマサラの材料にも使われる、グリーンカルダモンより大きなショウガ科の果実は?",
-  "choices": [
-   "ブラックカルダモン",
-   "バラダン2世",
-   "インディアンベイリーフ",
-   "ビリヤニ"
-  ],
-  "correctChoiceIndexes": [
-   0
   ],
   "explanation": "ブラックカルダモン(ビッグカルダモン)はショウガ科の別植物の果実で、グリーンカルダモンよりかなり大きく、ガラムマサラの材料などに使われる。"
  },
@@ -842,13 +812,13 @@
   "format": "single-choice",
   "prompt": "くちなしとサフランに共通する黄色色素の主成分は?",
   "choices": [
+   "グリチルリチン",
    "クロシン",
-   "黄飯",
-   "ホワイトペッパー",
-   "ブラックペッパー"
+   "チモール",
+   "ピペリン"
   ],
   "correctChoiceIndexes": [
-   0
+   1
   ],
   "explanation": "栗きんとん・たくあん漬けなどを黄色く色づける。黄色色素の主成分はクロシン(サフランと共通)で水溶性。"
  },
@@ -874,36 +844,6 @@
   "acceptedAnswers": [
    "黄飯",
    "おうはん"
-  ],
-  "explanation": "大分県臼杵市の郷土料理「黄飯(おうはん)」はくちなしの実で黄色く炊いたごはん。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-kuchinashi",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "gardenia-3"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9633",
-    "bookPage": 58,
-    "locationNote": "本書 p.58（原本画像 IMG_9633.PNG）。原文照合 batch18 で照合済みの知識単位 gardenia-3 から生成"
-   }
-  ],
-  "id": "q4-gardenia-3",
-  "format": "single-choice",
-  "prompt": "くちなしの実で黄色く炊き上げる大分県臼杵市の郷土料理は?",
-  "choices": [
-   "クロシン",
-   "黄飯",
-   "ミンテ",
-   "イタリアンパセリ"
-  ],
-  "correctChoiceIndexes": [
-   1
   ],
   "explanation": "大分県臼杵市の郷土料理「黄飯(おうはん)」はくちなしの実で黄色く炊いたごはん。"
  },
@@ -1065,9 +1005,9 @@
   "prompt": "クローブの香りの代表的な成分は?",
   "choices": [
    "オイゲノール",
-   "タイ語",
-   "虫",
-   "釘"
+   "グリチルリチン",
+   "クロシン",
+   "バニリン"
   ],
   "correctChoiceIndexes": [
    0
@@ -1119,9 +1059,9 @@
   "prompt": "クローブの名前の由来となったフランス語「clou」の意味は?",
   "choices": [
    "釘",
-   "椒房",
-   "油溶性",
-   "オイゲノール"
+   "虫",
+   "小さな竜",
+   "マリア様のバラ"
   ],
   "correctChoiceIndexes": [
    0
@@ -1173,13 +1113,13 @@
   "format": "single-choice",
   "prompt": "こしょうの未熟果を果皮ごと天日乾燥させたものは?",
   "choices": [
-   "ホワイトペッパー",
-   "グリーンペッパー",
+   "みかんの皮",
    "ブラックペッパー",
-   "ピペリン"
+   "グリーンペッパー",
+   "ホワイトペッパー"
   ],
   "correctChoiceIndexes": [
-   2
+   1
   ],
   "explanation": "ブラックペッパーは未熟果を果皮ごと天日乾燥したもので、野性的な香りと強い辛み。"
  },
@@ -1229,8 +1169,8 @@
   "prompt": "こしょうの熟果の果皮を除いて乾燥させたものは?",
   "choices": [
    "ホワイトペッパー",
-   "ピペリン",
    "グリーンペッパー",
+   "老成しょうが",
    "ブラックペッパー"
   ],
   "correctChoiceIndexes": [
@@ -1282,13 +1222,13 @@
   "format": "single-choice",
   "prompt": "こしょうの未熟果を機械乾燥させ緑色を生かしたものは?",
   "choices": [
-   "ピペリン",
    "ホワイトペッパー",
-   "ブラックペッパー",
-   "グリーンペッパー"
+   "スペアミント",
+   "グリーンペッパー",
+   "ブラックペッパー"
   ],
   "correctChoiceIndexes": [
-   3
+   2
   ],
   "explanation": "グリーンペッパーは未熟果を摘み取って機械乾燥(または塩漬け)したもので、美しい緑色が特徴。"
  },
@@ -1336,10 +1276,10 @@
   "format": "single-choice",
   "prompt": "こしょうの辛み成分は?",
   "choices": [
-   "グリーンペッパー",
-   "ブラックペッパー",
+   "アネトール",
+   "アリシン",
    "ピペリン",
-   "ホワイトペッパー"
+   "アリイナーゼ"
   ],
   "correctChoiceIndexes": [
    2
@@ -1392,8 +1332,8 @@
   "prompt": "「スパイスの王様」と呼ばれるスパイスは?",
   "choices": [
    "こしょう",
+   "ノコギリコリアンダー",
    "マーシュ",
-   "ローリエ",
    "キャラウェイ"
   ],
   "correctChoiceIndexes": [
@@ -1486,36 +1426,6 @@
   "sectionId": "item-coriander",
   "difficulty": 1,
   "knowledgeUnitIds": [
-   "coriander-2"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9638",
-    "bookPage": 63,
-    "locationNote": "本書 p.63（原本画像 IMG_9638.PNG）。原文照合 batch19 で照合済みの知識単位 coriander-2 から生成"
-   }
-  ],
-  "id": "q4-coriander-2",
-  "format": "single-choice",
-  "prompt": "コリアンダーの葉をさす「パクチー」は何語の名前?",
-  "choices": [
-   "タイ語",
-   "虫",
-   "ノコギリコリアンダー",
-   "あさつき"
-  ],
-  "correctChoiceIndexes": [
-   0
-  ],
-  "explanation": "日本ではタイ語名「パクチー」で親しまれている。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-coriander",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
    "coriander-3"
   ],
   "sourceRefs": [
@@ -1553,9 +1463,9 @@
   "format": "single-choice",
   "prompt": "コリアンダーの語源とされるギリシャ語「コリス」の意味は?",
   "choices": [
+   "枯れ草",
+   "小さな竜",
    "温かい、熱い",
-   "タイ語",
-   "ノコギリコリアンダー",
    "虫"
   ],
   "correctChoiceIndexes": [
@@ -1607,9 +1517,9 @@
   "format": "single-choice",
   "prompt": "ベトナムやタイで使われ、別名をエリンギュウムというハーブは?",
   "choices": [
-   "虫",
-   "タイ語",
-   "椒房",
+   "セージ",
+   "アジョワン",
+   "ルッコラ",
    "ノコギリコリアンダー"
   ],
   "correctChoiceIndexes": [
@@ -1664,36 +1574,6 @@
   "prompt": "スパイスと具材を炊き込んだインドの米料理で、サフランを使う代表料理は?",
   "acceptedAnswers": [
    "ビリヤニ"
-  ],
-  "explanation": "代表的な料理にビリヤニ(インドの炊き込み米料理)、パエリア、ブイヤベース、ミラノ風リゾットがある。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-saffron",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "saffron-3"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9639",
-    "bookPage": 64,
-    "locationNote": "本書 p.64（原本画像 IMG_9639.PNG）。原文照合 batch20 で照合済みの知識単位 saffron-3 から生成"
-   }
-  ],
-  "id": "q4-saffron-3",
-  "format": "single-choice",
-  "prompt": "スパイスと具材を炊き込んだインドの米料理で、サフランを使う代表料理は?",
-  "choices": [
-   "スザント・ゲオルギー",
-   "アネトール",
-   "ハンガリー語",
-   "ビリヤニ"
-  ],
-  "correctChoiceIndexes": [
-   3
   ],
   "explanation": "代表的な料理にビリヤニ(インドの炊き込み米料理)、パエリア、ブイヤベース、ミラノ風リゾットがある。"
  },
@@ -1803,13 +1683,13 @@
   "format": "single-choice",
   "prompt": "熟す前の山椒の若い実は何と呼ばれる?",
   "choices": [
-   "スペアミント",
+   "筆しょうが",
+   "干薑",
    "実山椒",
-   "ミンテ",
-   "二辛五香"
+   "椒房"
   ],
   "correctChoiceIndexes": [
-   1
+   2
   ],
   "explanation": "山椒の若葉や新芽は「木の芽」、熟す前の若い実は「実山椒」「青山椒」と呼ばれる。"
  },
@@ -1979,9 +1859,9 @@
   "format": "single-choice",
   "prompt": "日本の山野に山椒が自生していたことを記した3世紀頃の中国の歴史書は?",
   "choices": [
-   "ブラックペッパー",
-   "スザント・ゲオルギー",
-   "椒房",
+   "神農本草経",
+   "世界の記述",
+   "西洋料理指南",
    "魏志倭人伝"
   ],
   "correctChoiceIndexes": [
@@ -2033,13 +1913,13 @@
   "format": "single-choice",
   "prompt": "前漢時代、壁土に花椒を塗り込んだ皇后の部屋の呼び名は?",
   "choices": [
+   "実山椒",
    "椒房",
-   "グリーンペッパー",
-   "ブーケガルニ",
-   "魏志倭人伝"
+   "十薬",
+   "コチュカル"
   ],
   "correctChoiceIndexes": [
-   0
+   1
   ],
   "explanation": "前漢時代、皇后の部屋は壁土に花椒を塗り込んだことから「椒房」と呼ばれたとされる。"
  },
@@ -2116,9 +1996,9 @@
   "prompt": "インドで煮込み料理に使われるシナモンの葉の別名は?",
   "choices": [
    "インディアンベイリーフ",
-   "イギリス",
-   "老成しょうが",
-   "筆しょうが"
+   "筆しょうが",
+   "ナンヨウザンショウ",
+   "干薑"
   ],
   "correctChoiceIndexes": [
    0
@@ -2147,36 +2027,6 @@
   "acceptedAnswers": [
    "老成しょうが",
    "ひねしょうが"
-  ],
-  "explanation": "新しょうがは収穫したての根茎でやわらかく辛みが穏やか。老成(ひね)しょうがは貯蔵後に出回るかたく辛みの強いもので、日本の流通品のほとんど。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-ginger",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "ginger-1"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9643",
-    "bookPage": 68,
-    "locationNote": "本書 p.68（原本画像 IMG_9643.PNG）。原文照合 batch21 で照合済みの知識単位 ginger-1 から生成"
-   }
-  ],
-  "id": "q4-ginger-1",
-  "format": "single-choice",
-  "prompt": "収穫後に貯蔵して翌年に出回る、辛みの強いしょうがは?",
-  "choices": [
-   "筆しょうが",
-   "干薑",
-   "老成しょうが",
-   "シンガベラ"
-  ],
-  "correctChoiceIndexes": [
-   2
   ],
   "explanation": "新しょうがは収穫したての根茎でやわらかく辛みが穏やか。老成(ひね)しょうがは貯蔵後に出回るかたく辛みの強いもので、日本の流通品のほとんど。"
  },
@@ -2225,10 +2075,10 @@
   "format": "single-choice",
   "prompt": "ごく若く細い葉しょうがの呼び名は?",
   "choices": [
-   "老成しょうが",
-   "干薑",
+   "ドイツ人のからし",
+   "インディアンベイリーフ",
    "筆しょうが",
-   "シンガベラ"
+   "干薑"
   ],
   "correctChoiceIndexes": [
    2
@@ -2256,36 +2106,6 @@
   "prompt": "ジンジャーの語源とされるサンスクリット語は?",
   "acceptedAnswers": [
    "シンガベラ"
-  ],
-  "explanation": "ジンジャーの語源はサンスクリット語の「シンガベラ」(角の形をしたもの)で、根茎が鹿の角に似ていることに由来する。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-ginger",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "ginger-4"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9643",
-    "bookPage": 68,
-    "locationNote": "本書 p.68（原本画像 IMG_9643.PNG）。原文照合 batch21 で照合済みの知識単位 ginger-4 から生成"
-   }
-  ],
-  "id": "q4-ginger-4",
-  "format": "single-choice",
-  "prompt": "ジンジャーの語源とされるサンスクリット語は?",
-  "choices": [
-   "筆しょうが",
-   "シンガベラ",
-   "干薑",
-   "老成しょうが"
-  ],
-  "correctChoiceIndexes": [
-   1
   ],
   "explanation": "ジンジャーの語源はサンスクリット語の「シンガベラ」(角の形をしたもの)で、根茎が鹿の角に似ていることに由来する。"
  },
@@ -2334,10 +2154,10 @@
   "format": "single-choice",
   "prompt": "干したしょうがを何と呼んで区別した?",
   "choices": [
-   "老成しょうが",
+   "十薬",
    "干薑",
-   "筆しょうが",
-   "シンガベラ"
+   "椒房",
+   "筆しょうが"
   ],
   "correctChoiceIndexes": [
    1
@@ -2388,9 +2208,9 @@
   "format": "single-choice",
   "prompt": "スターアニス・アニス・フェンネルに共通する甘い香りの主成分は?",
   "choices": [
-   "黄飯",
-   "スモーリッジ",
    "クロシン",
+   "シニグリン",
+   "アリシン",
    "アネトール"
   ],
   "correctChoiceIndexes": [
@@ -2498,13 +2318,13 @@
   "format": "single-choice",
   "prompt": "ターメリックの黄色い色素成分は?",
   "choices": [
-   "ビリヤニ",
+   "オイゲノール",
+   "シニグリン",
    "クルクミン",
-   "スモーリッジ",
-   "山形県"
+   "バニリン"
   ],
   "correctChoiceIndexes": [
-   1
+   2
   ],
   "explanation": "黄色い色素成分はクルクミンで油溶性。紫外線で分解されるため、衣服のシミは洗って日光に当てるとよい。"
  },
@@ -2619,36 +2439,6 @@
   "sectionId": "item-thyme",
   "difficulty": 1,
   "knowledgeUnitIds": [
-   "thyme-2"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9646",
-    "bookPage": 71,
-    "locationNote": "本書 p.71（原本画像 IMG_9646.PNG）。原文照合 batch1 で照合済みの知識単位 thyme-2 から生成"
-   }
-  ],
-  "id": "q4-thyme-2",
-  "format": "single-choice",
-  "prompt": "タイム・ローレル・パセリなどで作る、煮込みに使うハーブの束は?",
-  "choices": [
-   "勇気",
-   "イギリス",
-   "ブーケガルニ",
-   "チモール"
-  ],
-  "correctChoiceIndexes": [
-   2
-  ],
-  "explanation": "ローレル・パセリとともにハーブの束「ブーケガルニ」に欠かせない。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-thyme",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
    "thyme-3"
   ],
   "sourceRefs": [
@@ -2686,9 +2476,9 @@
   "format": "single-choice",
   "prompt": "タイムの香りの主成分は?",
   "choices": [
-   "勇気",
+   "グリチルリチン",
    "ピペリン",
-   "ブーケガルニ",
+   "アリシン",
    "チモール"
   ],
   "correctChoiceIndexes": [
@@ -2741,13 +2531,13 @@
   "format": "single-choice",
   "prompt": "タイムの語源とされるギリシア語「チモス」の意味は?",
   "choices": [
-   "チモール",
    "勇気",
-   "油溶性",
-   "ブーケガルニ"
+   "喜びの山",
+   "小さな竜",
+   "虫"
   ],
   "correctChoiceIndexes": [
-   1
+   0
   ],
   "explanation": "名前は古代ギリシア語で「勇気」などを意味する「チモス」に由来するとされる。"
  },
@@ -2772,36 +2562,6 @@
   "prompt": "料理に一般的に使われるタラゴンの種類は?",
   "acceptedAnswers": [
    "フレンチタラゴン"
-  ],
-  "explanation": "フレンチタラゴンとロシアンタラゴンがあり、料理には風味のよいフレンチタラゴンが使われる。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-tarragon",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "tarragon-1"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9648",
-    "bookPage": 72,
-    "locationNote": "本書 p.72（原本画像 IMG_9648.PNG）。原文照合 batch1 で照合済みの知識単位 tarragon-1 から生成"
-   }
-  ],
-  "id": "q4-tarragon-1",
-  "format": "single-choice",
-  "prompt": "料理に一般的に使われるタラゴンの種類は?",
-  "choices": [
-   "小さな竜",
-   "椒房",
-   "フレンチタラゴン",
-   "二辛五香"
-  ],
-  "correctChoiceIndexes": [
-   2
   ],
   "explanation": "フレンチタラゴンとロシアンタラゴンがあり、料理には風味のよいフレンチタラゴンが使われる。"
  },
@@ -2849,13 +2609,13 @@
   "format": "single-choice",
   "prompt": "タラゴンのフランス名「エストラゴン」の意味は?",
   "choices": [
-   "グリチルリチン",
-   "フレンチタラゴン",
-   "オイゲノール",
-   "小さな竜"
+   "なだめる",
+   "喜びの山",
+   "小さな竜",
+   "枯れ草"
   ],
   "correctChoiceIndexes": [
-   3
+   2
   ],
   "explanation": "フランス名エストラゴンは「小さな竜」の意味。"
  },
@@ -2947,36 +2707,6 @@
   "sectionId": "item-chive",
   "difficulty": 2,
   "knowledgeUnitIds": [
-   "chives-1"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9650",
-    "bookPage": 74,
-    "locationNote": "本書 p.74（原本画像 IMG_9650.PNG）。原文照合 batch2 で照合済みの知識単位 chives-1 から生成"
-   }
-  ],
-  "id": "q4-chives-1",
-  "format": "single-choice",
-  "prompt": "チャイブは日本の何に似た使い方をする?",
-  "choices": [
-   "あさつき",
-   "みつばち",
-   "アピシウス",
-   "にら"
-  ],
-  "correctChoiceIndexes": [
-   0
-  ],
-  "explanation": "繊細でマイルドな香りで、日本のあさつきに似た使い方をする。加熱しすぎないこと。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-chive",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
    "chives-3"
   ],
   "sourceRefs": [
@@ -2991,36 +2721,6 @@
   "prompt": "「ガーリックチャイブ」とは日本でいう何?",
   "acceptedAnswers": [
    "にら"
-  ],
-  "explanation": "ガーリックチャイブは葉が平らでにんにくに似た香りを持ち、日本の「にら」のこと。西欧ではチャイニーズチャイブとも呼ぶ。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-chive",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "chives-3"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9650",
-    "bookPage": 74,
-    "locationNote": "本書 p.74（原本画像 IMG_9650.PNG）。原文照合 batch2 で照合済みの知識単位 chives-3 から生成"
-   }
-  ],
-  "id": "q4-chives-3",
-  "format": "single-choice",
-  "prompt": "「ガーリックチャイブ」とは日本でいう何?",
-  "choices": [
-   "勇気",
-   "あさつき",
-   "にら",
-   "釘"
-  ],
-  "correctChoiceIndexes": [
-   2
   ],
   "explanation": "ガーリックチャイブは葉が平らでにんにくに似た香りを持ち、日本の「にら」のこと。西欧ではチャイニーズチャイブとも呼ぶ。"
  },
@@ -3069,10 +2769,10 @@
   "format": "single-choice",
   "prompt": "ディルの名前の由来である古代ノルウェー語「Dilla」の意味は?",
   "choices": [
-   "イタリアンパセリ",
-   "にら",
+   "温かい、熱い",
+   "みつばち",
    "なだめる",
-   "十薬"
+   "虫"
   ],
   "correctChoiceIndexes": [
    2
@@ -3178,13 +2878,13 @@
   "format": "single-choice",
   "prompt": "唐辛子の辛み成分は?",
   "choices": [
-   "ハバネロ",
    "カプサイシン",
-   "コチュカル",
-   "ハラペーニョ"
+   "アリシン",
+   "ピペリン",
+   "アリイナーゼ"
   ],
   "correctChoiceIndexes": [
-   1
+   0
   ],
   "explanation": "辛み成分はカプサイシンで、含有量は品種や産地で大きく異なる。"
  },
@@ -3232,13 +2932,13 @@
   "format": "single-choice",
   "prompt": "韓国で、あらびきや粉末状の唐辛子は何と呼ばれる?",
   "choices": [
-   "ハラペーニョ",
+   "干薑",
+   "椒房",
    "コチュカル",
-   "カプサイシン",
-   "ハバネロ"
+   "筆しょうが"
   ],
   "correctChoiceIndexes": [
-   1
+   2
   ],
   "explanation": "天鷹唐辛子は約5cmの小ぶりで辛みが強い。韓国産唐辛子は辛みが少なく甘みと酸味があり、あらびきや粉末はコチュカルと呼ばれる。"
  },
@@ -3273,36 +2973,6 @@
   "sectionId": "item-chili",
   "difficulty": 1,
   "knowledgeUnitIds": [
-   "chili-6"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9652",
-    "bookPage": 76,
-    "locationNote": "本書 p.76（原本画像 IMG_9652.PNG）。原文照合 batch2 で照合済みの知識単位 chili-6 から生成"
-   }
-  ],
-  "id": "q4-chili-6",
-  "format": "single-choice",
-  "prompt": "メキシコを代表するグリーンチリ(青唐辛子)は?",
-  "choices": [
-   "カプサイシン",
-   "テルペン",
-   "ハラペーニョ",
-   "コチュカル"
-  ],
-  "correctChoiceIndexes": [
-   2
-  ],
-  "explanation": "ハラペーニョはメキシコを代表するグリーンチリ、ハバネロはベル形でフルーティな激辛種、プリッキーヌはトムヤムクンやグリーンカレーに使われる。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-chili",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
    "chili-7"
   ],
   "sourceRefs": [
@@ -3317,36 +2987,6 @@
   "prompt": "ベル形でフルーティな風味を持つ激辛の唐辛子は?",
   "acceptedAnswers": [
    "ハバネロ"
-  ],
-  "explanation": "ベル形でフルーティな風味を持つ激辛の唐辛子はハバネロである。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-chili",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "chili-7"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9652",
-    "bookPage": 76,
-    "locationNote": "本書 p.76（原本画像 IMG_9652.PNG）。原文照合 batch2 で照合済みの知識単位 chili-7 から生成"
-   }
-  ],
-  "id": "q4-chili-7",
-  "format": "single-choice",
-  "prompt": "ベル形でフルーティな風味を持つ激辛の唐辛子は?",
-  "choices": [
-   "ハバネロ",
-   "コチュカル",
-   "ハラペーニョ",
-   "カプサイシン"
-  ],
-  "correctChoiceIndexes": [
-   0
   ],
   "explanation": "ベル形でフルーティな風味を持つ激辛の唐辛子はハバネロである。"
  },
@@ -3449,7 +3089,7 @@
   "prompt": "唐辛子・もち米などを熟成させた韓国の調味料は?",
   "choices": [
    "柚子こしょう",
-   "北アフリカ",
+   "サンバル",
    "豆板醤",
    "コチュジャン"
   ],
@@ -3503,7 +3143,7 @@
   "prompt": "そら豆が原料で、唐辛子とともに発酵させる中国の調味料は?",
   "choices": [
    "柚子こしょう",
-   "北アフリカ",
+   "コチュジャン",
    "豆板醤",
    "サンバル"
   ],
@@ -3557,9 +3197,9 @@
   "prompt": "カピ(小えびの塩辛)などを使うインドネシアの唐辛子調味料は?",
   "choices": [
    "サンバル",
+   "柚子こしょう",
    "豆板醤",
-   "北アフリカ",
-   "柚子こしょう"
+   "コチュジャン"
   ],
   "correctChoiceIndexes": [
    0
@@ -3610,10 +3250,10 @@
   "format": "single-choice",
   "prompt": "ハリッサはどの地域の唐辛子ペースト?",
   "choices": [
-   "豆板醤",
+   "フィリピン",
    "北アフリカ",
-   "コチュジャン",
-   "サンバル"
+   "コーリコード",
+   "ペナン島"
   ],
   "correctChoiceIndexes": [
    1
@@ -3641,36 +3281,6 @@
   "prompt": "メースはナツメッグの実のどの部分?",
   "acceptedAnswers": [
    "仮種皮"
-  ],
-  "explanation": "ナツメッグは種子の殻を除いた仁、メースは種子を包む仮種皮を乾燥させたもの。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-nutmeg",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "nutmeg-1"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9654",
-    "bookPage": 78,
-    "locationNote": "本書 p.78（原本画像 IMG_9654.PNG）。原文照合 batch3 で照合済みの知識単位 nutmeg-1 から生成"
-   }
-  ],
-  "id": "q4-nutmeg-1",
-  "format": "single-choice",
-  "prompt": "メースはナツメッグの実のどの部分?",
-  "choices": [
-   "仮種皮",
-   "小ガランガル",
-   "椒房",
-   "ハンガリー語"
-  ],
-  "correctChoiceIndexes": [
-   0
   ],
   "explanation": "ナツメッグは種子の殻を除いた仁、メースは種子を包む仮種皮を乾燥させたもの。"
  },
@@ -3718,13 +3328,13 @@
   "format": "single-choice",
   "prompt": "ナツメッグの木は植えてから何年ほどで結実する?",
   "choices": [
-   "1〜3分",
-   "17世紀初頭",
+   "5年",
    "5〜9年",
+   "1〜3分",
    "1時間"
   ],
   "correctChoiceIndexes": [
-   2
+   1
   ],
   "explanation": "植えてから5〜9年でようやく結実する常緑樹。"
  },
@@ -3868,36 +3478,6 @@
   "version": 1,
   "status": "verified",
   "chapterId": "ch2",
-  "sectionId": "item-basil",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "basil-4"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9655",
-    "bookPage": 79,
-    "locationNote": "本書 p.79（原本画像 IMG_9655.PNG）。原文照合 batch3 で照合済みの知識単位 basil-4 から生成"
-   }
-  ],
-  "id": "q4-basil-4",
-  "format": "single-choice",
-  "prompt": "タイ料理に欠かせない、苦みとアクのあるバジルは?",
-  "choices": [
-   "ホーリーバジル",
-   "筆しょうが",
-   "干薑",
-   "シンガベラ"
-  ],
-  "correctChoiceIndexes": [
-   0
-  ],
-  "explanation": "ホーリーバジルは苦みとアクがありタイ料理に欠かせない。シナモンバジルはメキシコ生まれでシナモンの香りがする。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
   "sectionId": "item-parsley",
   "difficulty": 1,
   "knowledgeUnitIds": [
@@ -3915,36 +3495,6 @@
   "prompt": "葉が平らな「フラットリーフ」パセリの代表は?",
   "acceptedAnswers": [
    "イタリアンパセリ"
-  ],
-  "explanation": "葉が縮れた「カールリーフ」(代表:モスカールドパセリ)と、葉が平らな「フラットリーフ」(代表:イタリアンパセリ)の2種類がある。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-parsley",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "parsley-1"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9656",
-    "bookPage": 80,
-    "locationNote": "本書 p.80（原本画像 IMG_9656.PNG）。原文照合 batch3 で照合済みの知識単位 parsley-1 から生成"
-   }
-  ],
-  "id": "q4-parsley-1",
-  "format": "single-choice",
-  "prompt": "葉が平らな「フラットリーフ」パセリの代表は?",
-  "choices": [
-   "イタリアンパセリ",
-   "みかんの皮",
-   "ビリヤニ",
-   "温かい、熱い"
-  ],
-  "correctChoiceIndexes": [
-   0
   ],
   "explanation": "葉が縮れた「カールリーフ」(代表:モスカールドパセリ)と、葉が平らな「フラットリーフ」(代表:イタリアンパセリ)の2種類がある。"
  },
@@ -3992,9 +3542,9 @@
   "format": "single-choice",
   "prompt": "バニラのさやを発酵と乾燥を繰り返して仕上げる工程を何という?",
   "choices": [
-   "バニリン",
-   "クルクミン",
-   "油溶性",
+   "フードファディズム",
+   "フレッシュ",
+   "単品",
    "キュアリング"
   ],
   "correctChoiceIndexes": [
@@ -4046,13 +3596,13 @@
   "format": "single-choice",
   "prompt": "バニラの香りの主成分は?",
   "choices": [
-   "黄飯",
    "クロシン",
-   "キュアリング",
-   "バニリン"
+   "バニリン",
+   "グリチルリチン",
+   "アネトール"
   ],
   "correctChoiceIndexes": [
-   3
+   1
   ],
   "explanation": "香りの主成分はバニリンで、冷凍・冷蔵したさやの表面の白い粉はバニリンが凝固したもの。"
  },
@@ -4077,36 +3627,6 @@
   "prompt": "「パプリカ」はもともと何語で唐辛子全般をさす言葉?",
   "acceptedAnswers": [
    "ハンガリー語"
-  ],
-  "explanation": "「パプリカ」はもともと唐辛子全般をさすハンガリー語で、ハンガリーでは必ずしも甘唐辛子を意味しない。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-paprika",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "paprika-2"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9658",
-    "bookPage": 82,
-    "locationNote": "本書 p.82（原本画像 IMG_9658.PNG）。原文照合 batch4 で照合済みの知識単位 paprika-2 から生成"
-   }
-  ],
-  "id": "q4-paprika-2",
-  "format": "single-choice",
-  "prompt": "「パプリカ」はもともと何語で唐辛子全般をさす言葉?",
-  "choices": [
-   "スザント・ゲオルギー",
-   "ハラペーニョ",
-   "ハンガリー語",
-   "コチュカル"
-  ],
-  "correctChoiceIndexes": [
-   2
   ],
   "explanation": "「パプリカ」はもともと唐辛子全般をさすハンガリー語で、ハンガリーでは必ずしも甘唐辛子を意味しない。"
  },
@@ -4155,9 +3675,9 @@
   "format": "single-choice",
   "prompt": "パプリカのビタミンCの研究でノーベル賞を受賞したハンガリー人は?",
   "choices": [
-   "ハンガリー語",
-   "オイゲノール",
-   "釘",
+   "からしや徳右衛門",
+   "バラダン2世",
+   "ミンテ",
    "スザント・ゲオルギー"
   ],
   "correctChoiceIndexes": [
@@ -4209,9 +3729,9 @@
   "format": "single-choice",
   "prompt": "フェンネルの語源のラテン語「フェヌム」の意味は?",
   "choices": [
-   "シニグリン",
-   "フローレンスフェンネル",
-   "ブラックペッパー",
+   "マリア様のバラ",
+   "虫",
+   "みつばち",
    "枯れ草"
   ],
   "correctChoiceIndexes": [
@@ -4240,36 +3760,6 @@
   "prompt": "株のまま販売され、肥大した株元を食用にするフェンネルの種類は?",
   "acceptedAnswers": [
    "フローレンスフェンネル"
-  ],
-  "explanation": "株のまま売られるフローレンスフェンネルは食用の種類で、肥大した株元を野菜感覚で使う。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-fennel",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "fennel-4"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9659",
-    "bookPage": 83,
-    "locationNote": "本書 p.83（原本画像 IMG_9659.PNG）。原文照合 batch4 で照合済みの知識単位 fennel-4 から生成"
-   }
-  ],
-  "id": "q4-fennel-4",
-  "format": "single-choice",
-  "prompt": "株のまま販売され、肥大した株元を食用にするフェンネルの種類は?",
-  "choices": [
-   "フローレンスフェンネル",
-   "カプサイシン",
-   "仮種皮",
-   "枯れ草"
-  ],
-  "correctChoiceIndexes": [
-   0
   ],
   "explanation": "株のまま売られるフローレンスフェンネルは食用の種類で、肥大した株元を野菜感覚で使う。"
  },
@@ -4317,13 +3807,13 @@
   "format": "single-choice",
   "prompt": "北海道で野生化したホースラディッシュの呼び名は?",
   "choices": [
-   "小ガランガル",
    "アイヌわさび",
-   "アネトール",
+   "インディアンベイリーフ",
+   "十薬",
    "ドイツ人のからし"
   ],
   "correctChoiceIndexes": [
-   1
+   0
   ],
   "explanation": "日本へはアメリカから伝わり、北海道で野生化したことから「アイヌわさび」とも呼ばれる。"
  },
@@ -4372,9 +3862,9 @@
   "prompt": "フランスでホースラディッシュは何と呼ばれたことがある?",
   "choices": [
    "ドイツ人のからし",
+   "コチュカル",
    "アイヌわさび",
-   "半立性",
-   "マリア様のバラ"
+   "インディアンベイリーフ"
   ],
   "correctChoiceIndexes": [
    0
@@ -4407,5 +3897,380 @@
    "花薄荷"
   ],
   "explanation": "オレガノに似るが、より甘く繊細な香り。羊肉や魚、レバーなどの臭み消しに下ごしらえで使われる。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-marjoram-mustard",
+  "difficulty": 2,
+  "knowledgeUnitIds": [
+   "marjoram-1"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9661",
+    "bookPage": 85,
+    "locationNote": "本書 p.85（原本画像 IMG_9661.PNG）。原文照合 batch4 で照合済みの知識単位 marjoram-1 から生成"
+   }
+  ],
+  "id": "q4-marjoram-1",
+  "format": "single-choice",
+  "prompt": "オレガノに似ているが、より甘く繊細な香りのハーブは?",
+  "choices": [
+   "タイム",
+   "マジョラム",
+   "ローリエ",
+   "カトルエピス"
+  ],
+  "correctChoiceIndexes": [
+   1
+  ],
+  "explanation": "オレガノに似るが、より甘く繊細な香り。羊肉や魚、レバーなどの臭み消しに下ごしらえで使われる。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-marjoram-mustard",
+  "difficulty": 1,
+  "knowledgeUnitIds": [
+   "mustard-1"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9661",
+    "bookPage": 85,
+    "locationNote": "本書 p.85（原本画像 IMG_9661.PNG）。原文照合 batch4 で照合済みの知識単位 mustard-1 から生成"
+   }
+  ],
+  "id": "q1-mustard-1",
+  "format": "one-answer",
+  "prompt": "マスタードの3種類は白からし・黒からしと何?",
+  "acceptedAnswers": [
+   "和がらし"
+  ],
+  "explanation": "白からし・和がらし・黒からしの3種類があり、形状や辛み成分が異なる。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-marjoram-mustard",
+  "difficulty": 1,
+  "knowledgeUnitIds": [
+   "mustard-2"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9661",
+    "bookPage": 85,
+    "locationNote": "本書 p.85（原本画像 IMG_9661.PNG）。原文照合 batch4 で照合済みの知識単位 mustard-2 から生成"
+   }
+  ],
+  "id": "q1-mustard-2",
+  "format": "one-answer",
+  "prompt": "白からしの辛み成分は?",
+  "acceptedAnswers": [
+   "ベンジル芥子油"
+  ],
+  "explanation": "和がらし・黒からしの辛み成分はアリル芥子油で揮発性のツーンとした辛み、白からしはベンジル芥子油で揮発性が弱くマイルド。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-marjoram-mustard",
+  "difficulty": 1,
+  "knowledgeUnitIds": [
+   "mustard-2"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9661",
+    "bookPage": 85,
+    "locationNote": "本書 p.85（原本画像 IMG_9661.PNG）。原文照合 batch4 で照合済みの知識単位 mustard-2 から生成"
+   }
+  ],
+  "id": "q4-mustard-2",
+  "format": "single-choice",
+  "prompt": "白からしの辛み成分は?",
+  "choices": [
+   "ミロシナーゼ",
+   "ピペリン",
+   "ベンジル芥子油",
+   "アリイナーゼ"
+  ],
+  "correctChoiceIndexes": [
+   2
+  ],
+  "explanation": "和がらし・黒からしの辛み成分はアリル芥子油で揮発性のツーンとした辛み、白からしはベンジル芥子油で揮発性が弱くマイルド。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-marjoram-mustard",
+  "difficulty": 1,
+  "knowledgeUnitIds": [
+   "mustard-3"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9661",
+    "bookPage": 85,
+    "locationNote": "本書 p.85（原本画像 IMG_9661.PNG）。原文照合 batch4 で照合済みの知識単位 mustard-3 から生成"
+   }
+  ],
+  "id": "q1-mustard-3",
+  "format": "one-answer",
+  "prompt": "粉からしをぬるま湯で溶くのは、何という酵素が40度前後で活性化するため?",
+  "acceptedAnswers": [
+   "ミロシナーゼ"
+  ],
+  "explanation": "粉からしは、辛みを生む酵素ミロシナーゼが40度前後で最も活性化するため、ぬるま湯で溶く。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-marjoram-mustard",
+  "difficulty": 1,
+  "knowledgeUnitIds": [
+   "mustard-3"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9661",
+    "bookPage": 85,
+    "locationNote": "本書 p.85（原本画像 IMG_9661.PNG）。原文照合 batch4 で照合済みの知識単位 mustard-3 から生成"
+   }
+  ],
+  "id": "q4-mustard-3",
+  "format": "single-choice",
+  "prompt": "粉からしをぬるま湯で溶くのは、何という酵素が40度前後で活性化するため?",
+  "choices": [
+   "ミロシナーゼ",
+   "クロシン",
+   "ベンジル芥子油",
+   "オイゲノール"
+  ],
+  "correctChoiceIndexes": [
+   0
+  ],
+  "explanation": "粉からしは、辛みを生む酵素ミロシナーゼが40度前後で最も活性化するため、ぬるま湯で溶く。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-mint",
+  "difficulty": 1,
+  "knowledgeUnitIds": [
+   "mint-1"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9663",
+    "bookPage": 87,
+    "locationNote": "本書 p.87（原本画像 IMG_9663.PNG）。原文照合 batch5 で照合済みの知識単位 mint-1 から生成"
+   }
+  ],
+  "id": "q1-mint-1",
+  "format": "one-answer",
+  "prompt": "ペパーミントは、ウォーターミントと何の交配種?",
+  "acceptedAnswers": [
+   "スペアミント"
+  ],
+  "explanation": "交雑しやすく種類が多い。ペパーミントはウォーターミントとスペアミントの交配種でメントール主体のクールな香り、スペアミントは穏やかで甘みがある。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-mint",
+  "difficulty": 1,
+  "knowledgeUnitIds": [
+   "mint-2"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9663",
+    "bookPage": 87,
+    "locationNote": "本書 p.87（原本画像 IMG_9663.PNG）。原文照合 batch5 で照合済みの知識単位 mint-2 から生成"
+   }
+  ],
+  "id": "q1-mint-2",
+  "format": "one-answer",
+  "prompt": "ミントの名前の由来となったギリシア神話の妖精は?",
+  "acceptedAnswers": [
+   "ミンテ"
+  ],
+  "explanation": "名前はギリシア神話の妖精ミンテにちなむ。冥界の王ハデスの心をとらえ、妻ペルセポネに草に姿を変えられたとされる。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-mint",
+  "difficulty": 1,
+  "knowledgeUnitIds": [
+   "mint-2"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9663",
+    "bookPage": 87,
+    "locationNote": "本書 p.87（原本画像 IMG_9663.PNG）。原文照合 batch5 で照合済みの知識単位 mint-2 から生成"
+   }
+  ],
+  "id": "q4-mint-2",
+  "format": "single-choice",
+  "prompt": "ミントの名前の由来となったギリシア神話の妖精は?",
+  "choices": [
+   "ミンテ",
+   "バラダン2世",
+   "スザント・ゲオルギー",
+   "アピシウス"
+  ],
+  "correctChoiceIndexes": [
+   0
+  ],
+  "explanation": "名前はギリシア神話の妖精ミンテにちなむ。冥界の王ハデスの心をとらえ、妻ペルセポネに草に姿を変えられたとされる。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-rucola",
+  "difficulty": 2,
+  "knowledgeUnitIds": [
+   "rucola-1"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9664",
+    "bookPage": 88,
+    "locationNote": "本書 p.88（原本画像 IMG_9664.PNG）。原文照合 batch5 で照合済みの知識単位 rucola-1 から生成"
+   }
+  ],
+  "id": "q1-rucola-1",
+  "format": "one-answer",
+  "prompt": "噛むとごまに似た香りがするイタリア料理の定番ハーブは?",
+  "acceptedAnswers": [
+   "ルッコラ",
+   "ロケット",
+   "アルグラ",
+   "きばなすずしろ"
+  ],
+  "explanation": "葉は噛むとごまに似た香りとクレソンのような辛みがあり、イタリア料理の定番。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-rucola",
+  "difficulty": 2,
+  "knowledgeUnitIds": [
+   "rucola-1"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9664",
+    "bookPage": 88,
+    "locationNote": "本書 p.88（原本画像 IMG_9664.PNG）。原文照合 batch5 で照合済みの知識単位 rucola-1 から生成"
+   }
+  ],
+  "id": "q4-rucola-1",
+  "format": "single-choice",
+  "prompt": "噛むとごまに似た香りがするイタリア料理の定番ハーブは?",
+  "choices": [
+   "ルッコラ",
+   "めぼうき",
+   "エルブドプロバンス",
+   "パンダンリーフ"
+  ],
+  "correctChoiceIndexes": [
+   0
+  ],
+  "explanation": "葉は噛むとごまに似た香りとクレソンのような辛みがあり、イタリア料理の定番。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-rucola",
+  "difficulty": 2,
+  "knowledgeUnitIds": [
+   "rucola-2"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9664",
+    "bookPage": 88,
+    "locationNote": "本書 p.88（原本画像 IMG_9664.PNG）。原文照合 batch5 で照合済みの知識単位 rucola-2 から生成"
+   }
+  ],
+  "id": "q1-rucola-2",
+  "format": "one-answer",
+  "prompt": "ルッコラの原種といわれ、イタリア料理店で「セルバチコ」と呼ばれるものは?",
+  "acceptedAnswers": [
+   "ルッコラセルバチカ"
+  ],
+  "explanation": "セルバチコ(ルッコラセルバチカ)はルッコラの原種といわれ、葉の切り込みが大きく辛みや香りがより強い。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-lemongrass",
+  "difficulty": 2,
+  "knowledgeUnitIds": [
+   "lemongrass-1"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9665",
+    "bookPage": 89,
+    "locationNote": "本書 p.89（原本画像 IMG_9665.PNG）。原文照合 batch5 で照合済みの知識単位 lemongrass-1 から生成"
+   }
+  ],
+  "id": "q1-lemongrass-1",
+  "format": "one-answer",
+  "prompt": "レモングラスは何科の植物?",
+  "acceptedAnswers": [
+   "イネ科"
+  ],
+  "explanation": "レモンのような香りで東南アジアで広く使われ、代表料理はトムヤムクン。寒さに弱い熱帯植物。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-lemongrass",
+  "difficulty": 2,
+  "knowledgeUnitIds": [
+   "lemongrass-1"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9665",
+    "bookPage": 89,
+    "locationNote": "本書 p.89（原本画像 IMG_9665.PNG）。原文照合 batch5 で照合済みの知識単位 lemongrass-1 から生成"
+   }
+  ],
+  "id": "q4-lemongrass-1",
+  "format": "single-choice",
+  "prompt": "レモングラスは何科の植物?",
+  "choices": [
+   "セリ科",
+   "アブラナ科",
+   "ウルシ科",
+   "イネ科"
+  ],
+  "correctChoiceIndexes": [
+   3
+  ],
+  "explanation": "レモンのような香りで東南アジアで広く使われ、代表料理はトムヤムクン。寒さに弱い熱帯植物。"
  }
 ]

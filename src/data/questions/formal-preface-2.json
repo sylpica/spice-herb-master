@@ -15,41 +15,17 @@
     "locationNote": "本書 p.7（原本画像 IMG_9582.PNG）。原文照合 batch22 で照合済みの知識単位 h-medieval-price から生成"
    }
   ],
-  "id": "q1-h-medieval-price",
-  "format": "one-answer",
-  "prompt": "中世ヨーロッパでスパイスは何に匹敵する価値を持ったとされる?",
-  "acceptedAnswers": [
-   "金銀"
-  ],
-  "explanation": "中世、スパイスは東洋から陸路・海路で運ばれたが、盗賊や災害の危険と長い輸送時間のため高騰し、ヨーロッパでは金銀に匹敵する価値を持った。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "preface",
-  "sectionId": "history-world",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "h-medieval-price"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9582",
-    "bookPage": 7,
-    "locationNote": "本書 p.7（原本画像 IMG_9582.PNG）。原文照合 batch22 で照合済みの知識単位 h-medieval-price から生成"
-   }
-  ],
   "id": "q4-h-medieval-price",
   "format": "single-choice",
   "prompt": "中世ヨーロッパでスパイスは何に匹敵する価値を持ったとされる?",
   "choices": [
-   "大航海時代",
-   "スパイス戦争",
+   "結露",
    "盗木",
-   "金銀"
+   "金銀",
+   "肉の保存"
   ],
   "correctChoiceIndexes": [
-   3
+   2
   ],
   "explanation": "中世、スパイスは東洋から陸路・海路で運ばれたが、盗賊や災害の危険と長い輸送時間のため高騰し、ヨーロッパでは金銀に匹敵する価値を持った。"
  },
@@ -153,8 +129,8 @@
   "choices": [
    "祭事・媚薬・保存剤",
    "肉の保存",
-   "ディオスコリデス",
-   "大航海時代"
+   "盗木",
+   "金銀"
   ],
   "correctChoiceIndexes": [
    1
@@ -260,9 +236,9 @@
   "format": "single-choice",
   "prompt": "『世界の記述』(『東方見聞録』)が発表された年は?",
   "choices": [
-   "紀元前2500年頃",
-   "1602年",
+   "1520年",
    "1600年",
+   "1602年",
    "1299年"
   ],
   "correctChoiceIndexes": [
@@ -369,13 +345,13 @@
   "format": "single-choice",
   "prompt": "マルコ・ポーロの書物が幕開けを促したとされる時代は?",
   "choices": [
-   "スパイス戦争",
    "大航海時代",
-   "盗木",
-   "金銀"
+   "奈良時代",
+   "開花直前",
+   "午前中"
   ],
   "correctChoiceIndexes": [
-   1
+   0
   ],
   "explanation": "『世界の記述』は東洋への好奇心をかきたて、200年以上にわたる大航海時代の幕開けを促すきっかけとなった。"
  },
@@ -483,7 +459,7 @@
   "format": "single-choice",
   "prompt": "コロンブスの航海を支援したスペインの女王は?",
   "choices": [
-   "聖武天皇",
+   "ヒポクラテス",
    "ディオスコリデス",
    "バスコ・ダ・ガマ",
    "イサベル女王"
@@ -592,8 +568,8 @@
   "prompt": "1498年にカリカットまでの航海に成功したポルトガル人は?",
   "choices": [
    "イサベル女王",
+   "ヒポクラテス",
    "ディオスコリデス",
-   "聖武天皇",
    "バスコ・ダ・ガマ"
   ],
   "correctChoiceIndexes": [
@@ -807,7 +783,7 @@
   "format": "single-choice",
   "prompt": "マゼラン船団がモルッカ諸島から持ち帰ったスパイスによって莫大な利益を得た国は?",
   "choices": [
-   "ヴェネツィア",
+   "ドイツ",
    "オランダ",
    "スペイン",
    "イギリス"
@@ -917,10 +893,10 @@
   "format": "single-choice",
   "prompt": "こしょう・クローブ・ナツメッグの争奪戦が東南アジアで発展した争いを何と呼ぶ?",
   "choices": [
-   "金銀",
+   "シナジー効果",
    "スパイス戦争",
-   "盗木",
-   "大航海時代"
+   "あらびき",
+   "ホール"
   ],
   "correctChoiceIndexes": [
    1
@@ -971,8 +947,8 @@
   "format": "single-choice",
   "prompt": "イギリス東インド会社が設立された年は?",
   "choices": [
-   "紀元前2500年頃",
-   "19世紀中頃",
+   "1520年",
+   "1299年",
    "1602年",
    "1600年"
   ],
@@ -1025,10 +1001,10 @@
   "format": "single-choice",
   "prompt": "オランダ東インド会社が設立された年は?",
   "choices": [
-   "19世紀中頃",
+   "1299年",
    "1602年",
    "1600年",
-   "1299年"
+   "1520年"
   ],
   "correctChoiceIndexes": [
    1
@@ -1133,13 +1109,13 @@
   "format": "single-choice",
   "prompt": "スパイス戦争の結果、モルッカ諸島の大部分を統制下においた国は?",
   "choices": [
+   "ウクライナ",
    "スペイン",
    "イギリス",
-   "オランダ",
-   "マダガスカル島"
+   "オランダ"
   ],
   "correctChoiceIndexes": [
-   2
+   3
   ],
   "explanation": "モルッカ諸島は一部を除きオランダの統制下に入り、18世紀までの2世紀近くオランダが繁栄した。"
  },
@@ -1187,13 +1163,13 @@
   "format": "single-choice",
   "prompt": "1770年頃、フランスがクローブなどの苗木を移植したフランス島の別名は?",
   "choices": [
+   "コチュカル",
+   "十薬",
    "マダガスカル島",
-   "ヴェネツィア",
-   "フィリピン",
-   "ペナン島"
+   "トゥラシー"
   ],
   "correctChoiceIndexes": [
-   0
+   2
   ],
   "explanation": "1770年頃、フランスはオランダの監視の隙を突いてクローブやナツメッグの苗木を持ち出し(盗木)、フランス島(マダガスカル島)に移植した。"
  },
@@ -1241,9 +1217,9 @@
   "format": "single-choice",
   "prompt": "オランダの牙城を崩すためにフランスがとった方法は?",
   "choices": [
-   "大航海時代",
+   "肉の保存",
    "盗木",
-   "スパイス戦争",
+   "ごま",
    "金銀"
   ],
   "correctChoiceIndexes": [
@@ -1295,9 +1271,9 @@
   "format": "single-choice",
   "prompt": "イギリスがクローブやナツメッグを移植した島は?",
   "choices": [
-   "マダガスカル島",
-   "ヴェネツィア",
    "イスタンブール",
+   "ヴェネツィア",
+   "フィリピン",
    "ペナン島"
   ],
   "correctChoiceIndexes": [
@@ -1349,13 +1325,13 @@
   "format": "single-choice",
   "prompt": "スパイス戦争が自然消滅的に終焉を迎えたのはいつ頃?",
   "choices": [
+   "紀元前2500年頃",
    "19世紀中頃",
    "1602年",
-   "1600年",
-   "1299年"
+   "1600年"
   ],
   "correctChoiceIndexes": [
-   0
+   1
   ],
   "explanation": "栽培地が広がり、19世紀中頃には移植地での生産量が原産地を上回り、スパイス戦争は自然消滅的に終焉した。"
  },
@@ -1390,36 +1366,6 @@
   "sectionId": "history-japan",
   "difficulty": 1,
   "knowledgeUnitIds": [
-   "j-yakumi"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9585",
-    "bookPage": 10,
-    "locationNote": "本書 p.10（原本画像 IMG_9585.PNG）。原文照合 batch23 で照合済みの知識単位 j-yakumi から生成"
-   }
-  ],
-  "id": "q4-j-yakumi",
-  "format": "single-choice",
-  "prompt": "日本でスパイスを大量に使う必要がなかった理由は?",
-  "choices": [
-   "しない",
-   "ウスターソース",
-   "漢方薬の配合",
-   "新鮮な食材が手に入りやすかったため"
-  ],
-  "correctChoiceIndexes": [
-   3
-  ],
-  "explanation": "日本では新鮮な海山の幸を得やすかったため、防腐や強い香りづけのためにスパイスを使う必要がなかった。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "preface",
-  "sectionId": "history-japan",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
    "j-fish"
   ],
   "sourceRefs": [
@@ -1434,36 +1380,6 @@
   "prompt": "日本で魚介に使われてきた代表的なスパイス(わさび、山椒、しょうが以外)は?",
   "acceptedAnswers": [
    "ねぎ"
-  ],
-  "explanation": "日本では魚介に使うスパイスが多く、代表はわさび・山椒・しょうが・ねぎなどで、隠し味や薬味として少量を添えた。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "preface",
-  "sectionId": "history-japan",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "j-fish"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9585",
-    "bookPage": 10,
-    "locationNote": "本書 p.10（原本画像 IMG_9585.PNG）。原文照合 batch23 で照合済みの知識単位 j-fish から生成"
-   }
-  ],
-  "id": "q4-j-fish",
-  "format": "single-choice",
-  "prompt": "日本で魚介に使われてきた代表的なスパイス(わさび、山椒、しょうが以外)は?",
-  "choices": [
-   "ごま",
-   "ねぎ",
-   "奈良時代",
-   "しょうが、もしくは山椒"
-  ],
-  "correctChoiceIndexes": [
-   1
   ],
   "explanation": "日本では魚介に使うスパイスが多く、代表はわさび・山椒・しょうが・ねぎなどで、隠し味や薬味として少量を添えた。"
  },
@@ -1579,36 +1495,6 @@
   "sectionId": "history-japan",
   "difficulty": 1,
   "knowledgeUnitIds": [
-   "j-hajikami"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9585",
-    "bookPage": 10,
-    "locationNote": "本書 p.10（原本画像 IMG_9585.PNG）。原文照合 batch23 で照合済みの知識単位 j-hajikami から生成"
-   }
-  ],
-  "id": "q4-j-hajikami",
-  "format": "single-choice",
-  "prompt": "『古事記』に登場する「はじかみ」がさすものは?",
-  "choices": [
-   "ごま",
-   "新鮮な食材が手に入りやすかったため",
-   "しょうが、もしくは山椒",
-   "ねぎ"
-  ],
-  "correctChoiceIndexes": [
-   2
-  ],
-  "explanation": "『古事記』に登場する「はじかみ」は、しょうが、もしくは山椒をさす。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "preface",
-  "sectionId": "history-japan",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
    "j-shosoin-doc"
   ],
   "sourceRefs": [
@@ -1623,36 +1509,6 @@
   "prompt": "『正倉院文書』に記された「胡麻子」とは何のこと?",
   "acceptedAnswers": [
    "ごま"
-  ],
-  "explanation": "『正倉院文書』(734年頃)には胡麻子(ごま)が記されている。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "preface",
-  "sectionId": "history-japan",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "j-shosoin-doc"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9585",
-    "bookPage": 10,
-    "locationNote": "本書 p.10（原本画像 IMG_9585.PNG）。原文照合 batch23 で照合済みの知識単位 j-shosoin-doc から生成"
-   }
-  ],
-  "id": "q4-j-shosoin-doc",
-  "format": "single-choice",
-  "prompt": "『正倉院文書』に記された「胡麻子」とは何のこと?",
-  "choices": [
-   "しょうが、もしくは山椒",
-   "ねぎ",
-   "ごま",
-   "聖武天皇"
-  ],
-  "correctChoiceIndexes": [
-   2
   ],
   "explanation": "『正倉院文書』(734年頃)には胡麻子(ごま)が記されている。"
  },
@@ -1948,9 +1804,9 @@
   "format": "single-choice",
   "prompt": "スパイスが日本に渡来したのは何時代?",
   "choices": [
-   "古事記",
-   "新鮮な食材が手に入りやすかったため",
-   "ごま",
+   "午前中",
+   "大航海時代",
+   "開花直前",
    "奈良時代"
   ],
   "correctChoiceIndexes": [
@@ -2005,8 +1861,8 @@
   "choices": [
    "1872年",
    "1625年",
-   "19世紀中頃",
-   "1990年代"
+   "1520年",
+   "1299年"
   ],
   "correctChoiceIndexes": [
    1
@@ -2034,36 +1890,6 @@
   "prompt": "七味唐辛子のヒントになったといわれるものは?",
   "acceptedAnswers": [
    "漢方薬の配合"
-  ],
-  "explanation": "七味唐辛子は漢方薬の配合がヒントになったとされ、唐辛子・山椒・陳皮・青のり・ごま・麻の実・けしの実など主に7種を混ぜた日本独自のミックススパイスである。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "preface",
-  "sectionId": "history-japan",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "j-shichimi-origin"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9586",
-    "bookPage": 11,
-    "locationNote": "本書 p.11（原本画像 IMG_9586.PNG）。原文照合 batch23 で照合済みの知識単位 j-shichimi-origin から生成"
-   }
-  ],
-  "id": "q4-j-shichimi-origin",
-  "format": "single-choice",
-  "prompt": "七味唐辛子のヒントになったといわれるものは?",
-  "choices": [
-   "漢方薬の配合",
-   "しない",
-   "ウスターソース",
-   "新鮮な食材が手に入りやすかったため"
-  ],
-  "correctChoiceIndexes": [
-   0
   ],
   "explanation": "七味唐辛子は漢方薬の配合がヒントになったとされ、唐辛子・山椒・陳皮・青のり・ごま・麻の実・けしの実など主に7種を混ぜた日本独自のミックススパイスである。"
  },
@@ -2167,10 +1993,10 @@
   "format": "single-choice",
   "prompt": "日本で初めてカレーの作り方が料理書に載ったのは西暦何年?",
   "choices": [
-   "1600年",
-   "1872年",
    "1625年",
-   "1990年代"
+   "1872年",
+   "1600年",
+   "1520年"
   ],
   "correctChoiceIndexes": [
    1
@@ -2222,7 +2048,7 @@
   "prompt": "カレーはどの国を経由して西洋料理として日本に紹介された?",
   "choices": [
    "スペイン",
-   "漢方薬の配合",
+   "ドイツ",
    "イギリス",
    "オランダ"
   ],
@@ -2275,9 +2101,9 @@
   "format": "single-choice",
   "prompt": "戦前からカレー粉のほかにスパイスが使われ消費されていた調味料は?",
   "choices": [
-   "新鮮な食材が手に入りやすかったため",
-   "漢方薬の配合",
-   "しない",
+   "豆板醤",
+   "柚子こしょう",
+   "サンバル",
    "ウスターソース"
   ],
   "correctChoiceIndexes": [
@@ -2329,9 +2155,9 @@
   "format": "single-choice",
   "prompt": "家庭でスパイスやハーブがポピュラーになった食の流行が起きたのは何年代以降?",
   "choices": [
-   "1625年",
-   "1872年",
-   "紀元前2500年頃",
+   "1〜2カ月",
+   "7〜10分",
+   "4〜5日",
    "1990年代"
   ],
   "correctChoiceIndexes": [

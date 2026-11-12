@@ -20,6 +20,7 @@ import { availableSearchFormats } from "../domain/search";
 import {
   buildPracticePool,
   DEFAULT_PRACTICE_FILTERS,
+  ESSAY_FORMATS,
   FOCUS_LABELS,
   PRACTICE_DIFFICULTIES,
   type PracticeFilters,
@@ -79,7 +80,8 @@ export default function Practice({ store, update }: { store: StoreData; update: 
   useEffect(() => cancelAuto, []);
   const [done, setDone] = useState(false);
 
-  const basePool = (m: string): Question[] => selectForPractice(QUESTIONS);
+  // 利用者が除外した問題（R18）は出題しない。
+  const basePool = (m: string): Question[] => selectForPractice(QUESTIONS).filter((x) => !store.excluded.includes(x.id));
   const ctx = { records: store.records, srs: store.srs, favorites: store.favorites };
   const poolCount = useMemo(
     () => buildPracticePool(basePool(mode), filters, ctx).length,
@@ -136,6 +138,36 @@ export default function Practice({ store, update }: { store: StoreData; update: 
   const sectionChapters = filters.chapterIds.length > 0 ? CHAPTERS.filter((c) => filters.chapterIds.includes(c.id)) : CHAPTERS;
 
   const q = sessionQs[idx];
+  const goPrev = () => { if (idx === 0) return; cancelAuto(); setIdx(idx - 1); };
+  const goNext = () => { cancelAuto(); if (idx + 1 >= sessionQs.length) setDone(true); else setIdx(idx + 1); };
+  // 後回し（R27）: 未回答の問題をセッションの末尾へ回し、次の問題を先に解く。
+  const canDefer = !!q && !answered[q.id] && idx + 1 < sessionQs.length;
+  const defer = () => { if (!q || !canDefer) return; cancelAuto(); setSessionQs((qs) => [...qs.slice(0, idx), ...qs.slice(idx + 1), q]); };
+  // R27: ←/→ キーと左右スワイプで前後の問題へ移動する（入力中は無効）。
+  const navRef = useRef({ goPrev, goNext, done });
+  navRef.current = { goPrev, goNext, done };
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.defaultPrevented || e.metaKey || e.ctrlKey || e.altKey || navRef.current.done) return;
+      const tag = (e.target as HTMLElement | null)?.tagName ?? "";
+      if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") return;
+      if (e.key === "ArrowLeft") navRef.current.goPrev();
+      else if (e.key === "ArrowRight") navRef.current.goNext();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
+  const touch = useRef<{ x: number; y: number } | null>(null);
+  const onTouchStart = (e: React.TouchEvent) => { const t = e.touches[0]; touch.current = t ? { x: t.clientX, y: t.clientY } : null; };
+  const onTouchEnd = (e: React.TouchEvent) => {
+    const s0 = touch.current; touch.current = null; const t = e.changedTouches[0];
+    if (!s0 || !t) return;
+    const tag = (e.target as HTMLElement | null)?.tagName ?? "";
+    if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") return;
+    const dx = t.clientX - s0.x, dy = t.clientY - s0.y;
+    if (Math.abs(dx) < 80 || Math.abs(dy) > 40) return;
+    if (dx < 0) goNext(); else goPrev();
+  };
   const isFav = q ? store.favorites.includes(q.id) : false;
   const answeredInSession = results.length;
   const correctInSession = results.filter((r) => r.correct === true).length;
@@ -167,13 +199,19 @@ export default function Practice({ store, update }: { store: StoreData; update: 
         </section>
       ) : !q ? (
         <p className="card">
-          現在の条件に合う問題がありません。条件を緩めるか、学習フォーカスを「すべて」に戻してください。「問題が存在しない」ことを学習済みと誤認しないでください。
+          現在の条件に合う問題がありません。条件を緩めるか、学習フォーカスを「すべて」に戻してください。
         </p>
       ) : (
         <>
-          <p className="muted">セッション {Math.min(idx + 1, sessionQs.length)} / {sessionQs.length} 問</p>
+          <p className="muted" style={{ margin: "0 0 .3rem" }}>セッション {Math.min(idx + 1, sessionQs.length)} / {sessionQs.length} 問</p>
+          <div onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
           <QuestionRunner
             key={q.id}
+            pastAnswers={store.records.filter((r) => r.questionId === q.id && typeof r.answerText === "string" && r.answerText !== "").map((r) => ({ at: r.answeredAt, text: r.answerText!, scoreRatio: r.selfScoreRatio ?? r.scoreRatio }))}
+            reported={store.reports.some((r) => r.questionId === q.id)}
+            onReport={(note) => update((d: StoreData) => { d.reports.push({ questionId: q.id, note, at: new Date().toISOString() }); return d; })}
+            excluded={store.excluded.includes(q.id)}
+            onToggleExcluded={() => update((d: StoreData) => ({ ...d, excluded: d.excluded.includes(q.id) ? d.excluded.filter((x) => x !== q.id) : [...d.excluded, q.id] }))}
             q={q}
             saved={answered[q.id]}
             onGraded={(r: GradeResult, self, responseMs, answer) => {
@@ -187,12 +225,13 @@ export default function Practice({ store, update }: { store: StoreData; update: 
                 }, AUTO_ADVANCE_MS);
               }
               update((d: StoreData) => {
-                d.records.push({ questionId: q.id, answeredAt: new Date().toISOString(), correct: r.correct, scoreRatio: r.scoreRatio, autoScoreRatio: r.autoScoreRatio, selfScoreRatio: self, responseMs });
+                d.records.push({ questionId: q.id, answeredAt: new Date().toISOString(), correct: r.correct, scoreRatio: r.scoreRatio, autoScoreRatio: r.autoScoreRatio, selfScoreRatio: self, responseMs, ...(ESSAY_FORMATS.includes(q.format) && typeof answer === "string" && answer.trim() ? { answerText: answer } : {}) });
                 const cur = d.srs[q.id] ?? initSrs(q.id);
                 d.srs[q.id] = reviewSrs(cur, qualityFromResult(r.correct, r.scoreRatio));
                 return d;
               });
-              setResults((rs) => [...rs, { questionId: q.id, correct: r.correct }]);
+              // 記述式の書き直し（R47）では同じ問題の結果を置き換え、セッションの回答数を二重に数えない。
+              setResults((rs) => [...rs.filter((x) => x.questionId !== q.id), { questionId: q.id, correct: r.correct }]);
             }}
             onSelfScore={(self) => {
               setAnswered((m) => (m[q.id] ? { ...m, [q.id]: { ...m[q.id]!, selfRatio: self } } : m));
@@ -207,15 +246,20 @@ export default function Practice({ store, update }: { store: StoreData; update: 
               navigate("/reader");
             }}
           />
-          <p>
-            <button className="ghost" disabled={idx === 0} onClick={() => { cancelAuto(); setIdx(idx - 1); }}>
+          </div>
+          <p className="actions">
+            <button className="ghost" disabled={idx === 0} onClick={goPrev}>
               前の問題へ
-            </button>{" "}
-            <button className="ghost" onClick={() => { cancelAuto(); if (idx + 1 >= sessionQs.length) setDone(true); else setIdx(idx + 1); }}>
+            </button>
+            <button className="ghost" onClick={goNext}>
               {idx + 1 >= sessionQs.length ? "セッションを終了する" : "次の問題へ"}
-            </button>{" "}
+            </button>
+            <button className="ghost" disabled={!canDefer} onClick={defer}>
+              後回し
+            </button>
             <button
               className="ghost"
+              aria-pressed={isFav}
               onClick={() =>
                 update((d: StoreData) => ({
                   ...d,
@@ -294,9 +338,9 @@ export default function Practice({ store, update }: { store: StoreData; update: 
         </label>
         <div style={{ marginTop: ".8rem" }}>
           <span>章（複数選択可）</span>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: ".3rem 1rem" }}>
+          <div className="chips">
             {CHAPTERS.map((c) => (
-              <label key={c.id}>
+              <label key={c.id} className="chip">
                 <input type="checkbox" checked={filters.chapterIds.includes(c.id)} onChange={(e) => toggleChapter(c.id, e.target.checked)} /> {c.label}
               </label>
             ))}
@@ -304,9 +348,9 @@ export default function Practice({ store, update }: { store: StoreData; update: 
         </div>
         <div style={{ marginTop: ".8rem" }}>
           <span>難易度（複数選択可）</span>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: ".3rem 1rem" }}>
+          <div className="chips">
             {PRACTICE_DIFFICULTIES.map((d) => (
-              <label key={d}>
+              <label key={d} className="chip">
                 <input
                   type="checkbox"
                   checked={filters.difficulties.includes(d)}
@@ -324,9 +368,9 @@ export default function Practice({ store, update }: { store: StoreData; update: 
         </div>
         <div style={{ marginTop: ".8rem" }}>
           <span>問題形式（複数選択可）</span>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: ".3rem 1rem" }}>
+          <div className="chips">
             {FORMAT_OPTIONS.map((f: QuestionFormat) => (
-              <label key={f}>
+              <label key={f} className="chip">
                 <input
                   type="checkbox"
                   checked={filters.formats.includes(f)}

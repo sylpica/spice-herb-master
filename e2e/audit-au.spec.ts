@@ -33,10 +33,10 @@ test.describe("演習の回答後表示と前後移動（AU-02・AU-03）", () =
     await expect(answer).toHaveText("正答: 芳香性植物");
     const verdictBox = await result.getByText(/^不正解/).boundingBox();
     const answerBox = await answer.boundingBox();
-    const detailsBox = await result.locator("details").boundingBox();
+    const detailsBox = await result.locator("details.result-details").boundingBox();
     expect(answerBox!.y).toBeGreaterThan(verdictBox!.y);
     expect(detailsBox!.y).toBeGreaterThan(answerBox!.y);
-    await expect(result.locator("details")).not.toHaveAttribute("open", /.*/);
+    await expect(result.locator("details.result-details")).not.toHaveAttribute("open", /.*/);
   });
 
   test("前の問題へ戻ると回答と採点が残り、再確定できず、記録は1件のまま", async ({ page }) => {

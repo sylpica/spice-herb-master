@@ -13,7 +13,7 @@
  */
 export const APP_DATA_SUMMARY = {
   /** 正式問題数（QUESTIONS.length） */
-  formalQuestions: 1795,
+  formalQuestions: 1732,
   /** 正式カード数（CARDS.length） */
   formalCards: 602,
   /** 取り込み済み知識単位数（IMPORTED_KNOWLEDGE_UNITS.length） */
@@ -30,8 +30,8 @@ export const APP_DATA_SUMMARY = {
   verifiedKnowledgeUnits: 0,
   /** 全文転記済みページ数（重複を除いたページ数。レコード数は同ページ開始の節で分割されるため一致しないことがある） */
   transcribedPages: 140,
-  /** 取り込み済み原本画像数（source-manifest の totalPresent） */
-  presentImages: 139,
-  /** 欠落画像数（source-manifest の totalMissing。IMG_9647.PNG） */
+  /** 収録済み原本画像数（page-images.json の件数。p.141〜147 の追加分を含む） */
+  presentImages: 146,
+  /** 欠落画像数（IMG_9577〜9723 の連番のうちファイルがないもの。IMG_9647） */
   missingImages: 1,
 } as const;

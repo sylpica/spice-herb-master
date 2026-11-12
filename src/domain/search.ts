@@ -215,3 +215,74 @@ export function availableTranscriptionStatuses(
   }
   return seen;
 }
+
+/**
+ * 学習状況による問題の絞り込みと並べ替え（R28、DECISIONS #55）。
+ * 検索の複合フィルタ（教材データだけで決まる）とは別に、端末の学習履歴から決まる条件を扱う。
+ * - unanswered: 一度も解いていない
+ * - wrong: 直近の回答が不正解
+ * - weak: 2回以上解いて正答率50%未満（演習の「苦手」と同じ定義）
+ * - mastered: 直近2回が連続正解（学習分析の「習得済みと推定」と同じ定義）
+ * - favorites: ブックマーク済み
+ */
+export type LearningState = "all" | "unanswered" | "wrong" | "weak" | "mastered" | "favorites";
+export const LEARNING_STATE_LABELS: Record<LearningState, string> = {
+  all: "すべて",
+  unanswered: "未回答",
+  wrong: "直近が不正解",
+  weak: "苦手（正答率50%未満）",
+  mastered: "習得済み（2回連続正解）",
+  favorites: "ブックマーク",
+};
+export type SearchSort = "default" | "difficulty-asc" | "difficulty-desc" | "accuracy-asc";
+export const SEARCH_SORT_LABELS: Record<SearchSort, string> = {
+  default: "収録順",
+  "difficulty-asc": "難易度が低い順",
+  "difficulty-desc": "難易度が高い順",
+  "accuracy-asc": "正答率が低い順",
+};
+
+export interface LearningIndex {
+  attempts: Map<string, { total: number; correct: number; lastTwo: (boolean | null)[] }>;
+  favorites: Set<string>;
+}
+
+export function buildLearningIndex(
+  records: readonly { questionId: string; correct: boolean | null }[],
+  favorites: readonly string[],
+): LearningIndex {
+  const attempts: LearningIndex["attempts"] = new Map();
+  for (const r of records) {
+    const e = attempts.get(r.questionId) ?? { total: 0, correct: 0, lastTwo: [] };
+    e.total++;
+    if (r.correct === true) e.correct++;
+    e.lastTwo.push(r.correct);
+    if (e.lastTwo.length > 2) e.lastTwo.shift();
+    attempts.set(r.questionId, e);
+  }
+  return { attempts, favorites: new Set(favorites) };
+}
+
+export function matchesLearningState(state: LearningState, questionId: string, index: LearningIndex): boolean {
+  const a = index.attempts.get(questionId);
+  switch (state) {
+    case "unanswered": return !a;
+    case "wrong": return !!a && a.lastTwo[a.lastTwo.length - 1] === false;
+    case "weak": return !!a && a.total >= 2 && a.correct / a.total < 0.5;
+    case "mastered": return !!a && a.lastTwo.length >= 2 && a.lastTwo.every((c) => c === true);
+    case "favorites": return index.favorites.has(questionId);
+    default: return true;
+  }
+}
+
+/** 並べ替え（安定ソート）。正答率順は未回答の問題を末尾に置く。 */
+export function sortSearchQuestions<T extends { id: string; difficulty: number }>(
+  questions: readonly T[],
+  sort: SearchSort,
+  index: LearningIndex,
+): T[] {
+  if (sort === "default") return [...questions];
+  const acc = (q: T) => { const a = index.attempts.get(q.id); return a ? a.correct / a.total : Number.POSITIVE_INFINITY; };
+  const key = sort === "difficulty-asc" ? (q: T) => q.difficulty : sort === "difficulty-desc" ? (q: T) => -q.difficulty : acc;
+  return questions.map((q, i) => ({ q, i })).sort((x, y) => key(x.q) - key(y.q) || x.i - y.i).map((x) => x.q);
+}

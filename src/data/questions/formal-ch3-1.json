@@ -30,36 +30,6 @@
   "sectionId": "life-health",
   "difficulty": 2,
   "knowledgeUnitIds": [
-   "m-greek"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9706",
-    "bookPage": 130,
-    "locationNote": "本書 p.130（原本画像 IMG_9706.PNG）。原文照合 batch15 で照合済みの知識単位 m-greek から生成"
-   }
-  ],
-  "id": "q4-m-greek",
-  "format": "single-choice",
-  "prompt": "ギリシア発祥の伝統医学が通じているとされる現在の西洋ハーブ医学は?",
-  "choices": [
-   "薬機法",
-   "ドーシャ",
-   "コミッションE",
-   "メディカルハーブ"
-  ],
-  "correctChoiceIndexes": [
-   3
-  ],
-  "explanation": "ギリシア発祥の伝統医学は時代とともに発展し、現在の西洋ハーブ医学(メディカルハーブ)にも通じている。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch3",
-  "sectionId": "life-health",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
    "m-wanames"
   ],
   "sourceRefs": [
@@ -192,36 +162,6 @@
   "sectionId": "life-health",
   "difficulty": 2,
   "knowledgeUnitIds": [
-   "m-commissione"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9706",
-    "bookPage": 130,
-    "locationNote": "本書 p.130（原本画像 IMG_9706.PNG）。原文照合 batch15 で照合済みの知識単位 m-commissione から生成"
-   }
-  ],
-  "id": "q4-m-commissione",
-  "format": "single-choice",
-  "prompt": "ハーブ先進国ドイツの専門機関で、ハーブの効果と安全性のモノグラフを作成したのは?",
-  "choices": [
-   "コミッションE",
-   "メディカルハーブ",
-   "カパ",
-   "薬機法"
-  ],
-  "correctChoiceIndexes": [
-   0
-  ],
-  "explanation": "ハーブ先進国ドイツの専門機関コミッションEが作成した『コミッションEモノグラフ』は、ハーブと植物性薬品の効果と安全性に関する正確な情報として評価されている。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch3",
-  "sectionId": "life-health",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
    "m-3func"
   ],
   "sourceRefs": [
@@ -236,36 +176,6 @@
   "prompt": "食品の3つの機能は、栄養機能・嗜好機能と何?",
   "acceptedAnswers": [
    "生体調節機能"
-  ],
-  "explanation": "食品の3つの機能は栄養機能・嗜好機能・生体調節機能で、スパイスやハーブは特に嗜好機能と生体調節機能に優れた食材として注目されている。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch3",
-  "sectionId": "life-health",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "m-3func"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9707",
-    "bookPage": 131,
-    "locationNote": "本書 p.131（原本画像 IMG_9707.PNG）。原文照合 batch15 で照合済みの知識単位 m-3func から生成"
-   }
-  ],
-  "id": "q4-m-3func",
-  "format": "single-choice",
-  "prompt": "食品の3つの機能は、栄養機能・嗜好機能と何?",
-  "choices": [
-   "弱アルカリ性",
-   "メディカルハーブ",
-   "生体調節機能",
-   "摘芯"
-  ],
-  "correctChoiceIndexes": [
-   2
   ],
   "explanation": "食品の3つの機能は栄養機能・嗜好機能・生体調節機能で、スパイスやハーブは特に嗜好機能と生体調節機能に優れた食材として注目されている。"
  },
@@ -316,10 +226,10 @@
   "format": "single-choice",
   "prompt": "本書の表で「血流増加」の作用が挙げられているスパイスは?",
   "choices": [
-   "タイム",
-   "七味唐辛子",
+   "ラベンダー",
+   "ローズマリー",
    "ロングペッパー",
-   "ローズマリー"
+   "七味唐辛子"
   ],
   "correctChoiceIndexes": [
    2
@@ -419,9 +329,9 @@
   "prompt": "健康のために適切な量の食塩を摂ることを何という?",
   "choices": [
    "適塩",
-   "常緑植物",
-   "湿潤",
-   "食経験"
+   "サシェ",
+   "食経験",
+   "常緑植物"
   ],
   "correctChoiceIndexes": [
    0
@@ -472,10 +382,10 @@
   "format": "single-choice",
   "prompt": "「日本人の食事摂取基準」は何年ごとに改定される?",
   "choices": [
-   "2009年",
+   "5〜9年",
    "5年",
-   "7〜10分",
-   "4〜5日"
+   "4〜5日",
+   "7〜10分"
   ],
   "correctChoiceIndexes": [
    1
@@ -527,9 +437,9 @@
   "prompt": "本書の減塩メニュー例で、減塩みそ汁に加えるスパイスは?",
   "choices": [
    "七味唐辛子",
-   "ロングペッパー",
+   "エルダーフラワー",
    "ローズマリー",
-   "タイム"
+   "ジャーマンカモミール"
   ],
   "correctChoiceIndexes": [
    0
@@ -582,7 +492,7 @@
   "choices": [
    "フードファディズム",
    "食経験",
-   "機能性表示食品",
+   "常緑植物",
    "HFNet"
   ],
   "correctChoiceIndexes": [
@@ -611,36 +521,6 @@
   "prompt": "保健機能食品は、特定保健用食品・栄養機能食品と何の3つ?",
   "acceptedAnswers": [
    "機能性表示食品"
-  ],
-  "explanation": "保健機能食品とは、特定保健用食品・栄養機能食品・機能性表示食品のこと。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch3",
-  "sectionId": "life-health",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "m-hokenkinou"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9710",
-    "bookPage": 134,
-    "locationNote": "本書 p.134（原本画像 IMG_9710.PNG）。原文照合 batch16 で照合済みの知識単位 m-hokenkinou から生成"
-   }
-  ],
-  "id": "q4-m-hokenkinou",
-  "format": "single-choice",
-  "prompt": "保健機能食品は、特定保健用食品・栄養機能食品と何の3つ?",
-  "choices": [
-   "HFNet",
-   "フードファディズム",
-   "食経験",
-   "機能性表示食品"
-  ],
-  "correctChoiceIndexes": [
-   3
   ],
   "explanation": "保健機能食品とは、特定保健用食品・栄養機能食品・機能性表示食品のこと。"
  },
@@ -689,8 +569,8 @@
   "prompt": "食べ物の健康への影響を過大に信じたり評価したりする傾向を何という?",
   "choices": [
    "食経験",
-   "機能性表示食品",
    "HFNet",
+   "ホリスティック",
    "フードファディズム"
   ],
   "correctChoiceIndexes": [
@@ -742,13 +622,13 @@
   "format": "single-choice",
   "prompt": "医薬基盤・健康・栄養研究所が運営する健康食品の情報サイトの略称は?",
   "choices": [
-   "機能性表示食品",
-   "HFNet",
    "食経験",
+   "ホリスティック",
+   "HFNet",
    "フードファディズム"
   ],
   "correctChoiceIndexes": [
-   1
+   2
   ],
   "explanation": "公的な情報源の例として、医薬基盤・健康・栄養研究所が運営する「『健康食品』の安全性・有効性情報(HFNet)」がある。"
  },
@@ -796,13 +676,13 @@
   "format": "single-choice",
   "prompt": "複数のハーブを用いたハーブティーを何と呼ぶ?",
   "choices": [
-   "ブレンドハーブティー",
-   "機能性表示食品",
+   "食経験",
    "フードファディズム",
-   "カパ"
+   "ブレンドハーブティー",
+   "木本性"
   ],
   "correctChoiceIndexes": [
-   0
+   2
   ],
   "explanation": "1種類のハーブでいれたものをシングルハーブティー、複数のハーブを使ったものをブレンドハーブティーと呼ぶ。"
  },
@@ -885,36 +765,6 @@
   "sectionId": "life-tea",
   "difficulty": 2,
   "knowledgeUnitIds": [
-   "t-lid"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9687",
-    "bookPage": 111,
-    "locationNote": "本書 p.111（原本画像 IMG_9687.PNG）。原文照合 batch10 で照合済みの知識単位 t-lid から生成"
-   }
-  ],
-  "id": "q4-t-lid",
-  "format": "single-choice",
-  "prompt": "ハーブティーをいれるとき、ポットに蓋をする理由は?",
-  "choices": [
-   "湿潤",
-   "挿し木",
-   "外側",
-   "揮発性の香りを逃がさないため"
-  ],
-  "correctChoiceIndexes": [
-   3
-  ],
-  "explanation": "沸騰したての熱湯を使うのは香りを出しやすくするため、蓋をするのは揮発性の香りを逃がさないため。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch3",
-  "sectionId": "life-tea",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
    "t-time"
   ],
   "sourceRefs": [
@@ -952,13 +802,13 @@
   "format": "single-choice",
   "prompt": "かたい種皮を持つ果実や種子のハーブティーの抽出時間の目安は?",
   "choices": [
-   "2009年",
    "5年",
-   "4〜5日",
-   "7〜10分"
+   "1〜3分",
+   "7〜10分",
+   "4〜5日"
   ],
   "correctChoiceIndexes": [
-   3
+   2
   ],
   "explanation": "抽出時間はフレッシュで3分程度、ドライ(葉や花)で3〜5分、かたい果実や種子は7〜10分が目安。"
  },
@@ -1006,13 +856,13 @@
   "format": "single-choice",
   "prompt": "「大地のりんご」と呼ばれるハーブは?",
   "choices": [
+   "ラベンダー",
    "エルダーフラワー",
-   "ジャーマンカモミール",
-   "ラズベリーリーフ",
-   "ローゼル"
+   "マロウ",
+   "ジャーマンカモミール"
   ],
   "correctChoiceIndexes": [
-   1
+   3
   ],
   "explanation": "ジャーマンカモミールは、りんごに似た甘い香りから「大地のりんご」と呼ばれる。"
  },
@@ -1084,13 +934,13 @@
   "format": "single-choice",
   "prompt": "ハイビスカスの別名は?",
   "choices": [
+   "西洋オトギリソウ",
    "ローゼル",
-   "マロウ",
-   "エルダーフラワー",
-   "ラズベリーリーフ"
+   "ハルディ",
+   "ベルベーヌ"
   ],
   "correctChoiceIndexes": [
-   0
+   1
   ],
   "explanation": "ハイビスカスは酸味と赤い色が特徴でクエン酸を多く含み、別名ローゼル。"
  },
@@ -1141,9 +991,9 @@
   "prompt": "色の変化から「夜明けのハーブティー」と呼ばれるハーブは?",
   "choices": [
    "マロウ",
-   "ラズベリーリーフ",
-   "エルダーフラワー",
-   "ローゼル"
+   "ジャーマンカモミール",
+   "ラベンダー",
+   "エルダーフラワー"
   ],
   "correctChoiceIndexes": [
    0
@@ -1171,36 +1021,6 @@
   "prompt": "ヨーロッパで「安産のハーブティー」として親しまれてきたのは?",
   "acceptedAnswers": [
    "ラズベリーリーフ"
-  ],
-  "explanation": "ラズベリーリーフはヨーロッパで「安産のハーブティー」として親しまれてきた(妊娠中の飲用はかかりつけ医に相談)。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch3",
-  "sectionId": "life-tea",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "t-raspberry"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9689",
-    "bookPage": 113,
-    "locationNote": "本書 p.113（原本画像 IMG_9689.PNG）。原文照合 batch11 で照合済みの知識単位 t-raspberry から生成"
-   }
-  ],
-  "id": "q4-t-raspberry",
-  "format": "single-choice",
-  "prompt": "ヨーロッパで「安産のハーブティー」として親しまれてきたのは?",
-  "choices": [
-   "ローゼル",
-   "エルダーフラワー",
-   "ジャーマンカモミール",
-   "ラズベリーリーフ"
-  ],
-  "correctChoiceIndexes": [
-   3
   ],
   "explanation": "ラズベリーリーフはヨーロッパで「安産のハーブティー」として親しまれてきた(妊娠中の飲用はかかりつけ医に相談)。"
  },
@@ -1250,11 +1070,11 @@
   "choices": [
    "マロウ",
    "ジャーマンカモミール",
-   "エルダーフラワー",
-   "ラズベリーリーフ"
+   "ラベンダー",
+   "エルダーフラワー"
   ],
   "correctChoiceIndexes": [
-   2
+   3
   ],
   "explanation": "エルダーフラワーはマスカットに似た甘い香りで、欧米では万病薬的存在とされてきた。"
  },
@@ -1302,13 +1122,13 @@
   "format": "single-choice",
   "prompt": "「ハーブの女王」とも呼ばれるハーブは?",
   "choices": [
-   "ドッグローズ",
-   "ダンデリオン",
-   "ラベンダー",
-   "ベルベーヌ"
+   "エルダーフラワー",
+   "ジャーマンカモミール",
+   "マロウ",
+   "ラベンダー"
   ],
   "correctChoiceIndexes": [
-   2
+   3
   ],
   "explanation": "ラベンダーは甘くフローラルな強い香りで「ハーブの女王」とも呼ばれる。"
  },
@@ -1357,9 +1177,9 @@
   "prompt": "レモンバーベナの別名は?",
   "choices": [
    "ベルベーヌ",
-   "ダンデリオン",
-   "ラベンダー",
-   "ドッグローズ"
+   "ローゼル",
+   "カミツレ",
+   "ハルディ"
   ],
   "correctChoiceIndexes": [
    0
@@ -1410,8 +1230,8 @@
   "format": "single-choice",
   "prompt": "ローズヒップは何という植物の実?",
   "choices": [
-   "ベルベーヌ",
-   "ラベンダー",
+   "ラズベリーリーフ",
+   "山崎香辛料振興財団",
    "ドッグローズ",
    "ダンデリオン"
   ],
@@ -1441,36 +1261,6 @@
   "prompt": "代替コーヒーの原料として代表的な、セイヨウタンポポの英名は?",
   "acceptedAnswers": [
    "ダンデリオン"
-  ],
-  "explanation": "ハーブの根をローストした代替コーヒー(ハーブコーヒー)にはカフェインが含まれず、ダンデリオン(セイヨウタンポポ)やチコリの根を使ったものが代表的。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch3",
-  "sectionId": "life-tea",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "t-coffee"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9690",
-    "bookPage": 114,
-    "locationNote": "本書 p.114（原本画像 IMG_9690.PNG）。原文照合 batch11 で照合済みの知識単位 t-coffee から生成"
-   }
-  ],
-  "id": "q4-t-coffee",
-  "format": "single-choice",
-  "prompt": "代替コーヒーの原料として代表的な、セイヨウタンポポの英名は?",
-  "choices": [
-   "ダンデリオン",
-   "ラベンダー",
-   "ドッグローズ",
-   "ベルベーヌ"
-  ],
-  "correctChoiceIndexes": [
-   0
   ],
   "explanation": "ハーブの根をローストした代替コーヒー(ハーブコーヒー)にはカフェインが含まれず、ダンデリオン(セイヨウタンポポ)やチコリの根を使ったものが代表的。"
  },
@@ -1599,13 +1389,13 @@
   "format": "single-choice",
   "prompt": "脂性肌向けの化粧水に向くハーブの例を1つ挙げよ。",
   "choices": [
-   "唐辛子",
    "ローズマリー",
    "タイム",
-   "クローブ"
+   "クローブ",
+   "マロウ"
   ],
   "correctChoiceIndexes": [
-   1
+   0
   ],
   "explanation": "化粧水のハーブ選びの例:乾燥肌〜普通肌はラベンダーやジャーマンカモミール、普通肌〜脂性肌はゼラニウム、脂性肌はローズマリーやジュニパーベリー。"
  },
@@ -1653,13 +1443,13 @@
   "format": "single-choice",
   "prompt": "手作り化粧水は冷蔵保管で何日で使い切る?",
   "choices": [
-   "5年",
-   "2009年",
    "7〜10分",
-   "4〜5日"
+   "5年",
+   "4〜5日",
+   "2〜3日"
   ],
   "correctChoiceIndexes": [
-   3
+   2
   ],
   "explanation": "手作り化粧水は自家用のみとし、冷蔵室で保管して4〜5日で使い切る。"
  },
@@ -1684,36 +1474,6 @@
   "prompt": "ハンガリー王妃の逸話で知られる、ローズマリーなどで作った化粧水の名は?",
   "acceptedAnswers": [
    "ハンガリアンウォーター"
-  ],
-  "explanation": "14世紀頃、ハンガリー王妃にローズマリーなどで作った化粧水が献上され、健康と若々しさを取り戻したという逸話から「ハンガリアンウォーター」と呼ばれる。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch3",
-  "sectionId": "life-beauty",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "l-hungarian"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9692",
-    "bookPage": 116,
-    "locationNote": "本書 p.116（原本画像 IMG_9692.PNG）。原文照合 batch12 で照合済みの知識単位 l-hungarian から生成"
-   }
-  ],
-  "id": "q4-l-hungarian",
-  "format": "single-choice",
-  "prompt": "ハンガリー王妃の逸話で知られる、ローズマリーなどで作った化粧水の名は?",
-  "choices": [
-   "サシェ",
-   "タッジーマッジー",
-   "香り玉",
-   "ハンガリアンウォーター"
-  ],
-  "correctChoiceIndexes": [
-   3
   ],
   "explanation": "14世紀頃、ハンガリー王妃にローズマリーなどで作った化粧水が献上され、健康と若々しさを取り戻したという逸話から「ハンガリアンウォーター」と呼ばれる。"
  },
@@ -1764,9 +1524,9 @@
   "prompt": "抗菌作用が強いといわれる成分チモールを含み、うがい液に向くハーブは?",
   "choices": [
    "タイム",
-   "ロングペッパー",
    "ローズマリー",
-   "七味唐辛子"
+   "七味唐辛子",
+   "ジャーマンカモミール"
   ],
   "correctChoiceIndexes": [
    0
@@ -1817,8 +1577,8 @@
   "format": "single-choice",
   "prompt": "精油の香りを空間に漂わせて楽しむことを何という?",
   "choices": [
+   "アロマテラピー",
    "ドーシャ",
-   "ピートモス",
    "食経験",
    "芳香浴"
   ],
@@ -1848,36 +1608,6 @@
   "prompt": "ルームスプレーで、精油を最初に混ぜる液体は?",
   "acceptedAnswers": [
    "無水エタノール"
-  ],
-  "explanation": "ルームスプレーは無水エタノール5mlに精油20滴以下を混ぜ、精製水45mlを加えて作る。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch3",
-  "sectionId": "life-house",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "l-spray"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9693",
-    "bookPage": 117,
-    "locationNote": "本書 p.117（原本画像 IMG_9693.PNG）。原文照合 batch12 で照合済みの知識単位 l-spray から生成"
-   }
-  ],
-  "id": "q4-l-spray",
-  "format": "single-choice",
-  "prompt": "ルームスプレーで、精油を最初に混ぜる液体は?",
-  "choices": [
-   "ブレンドハーブティー",
-   "ピートモス",
-   "芳香浴",
-   "無水エタノール"
-  ],
-  "correctChoiceIndexes": [
-   3
   ],
   "explanation": "ルームスプレーは無水エタノール5mlに精油20滴以下を混ぜ、精製水45mlを加えて作る。"
  },
@@ -1926,13 +1656,13 @@
   "format": "single-choice",
   "prompt": "精油の香りと作用を生かしたものを何という?",
   "choices": [
-   "湿潤",
-   "ピートモス",
+   "ドーシャ",
    "木本性",
-   "アロマテラピー"
+   "アロマテラピー",
+   "芳香浴"
   ],
   "correctChoiceIndexes": [
-   3
+   2
   ],
   "explanation": "精油(エッセンシャルオイル)は植物から抽出した芳香成分を高濃度に含む天然素材で、それを生かしたものがアロマテラピー(芳香療法)。口に入れない、肌に直接使わない、火気に注意する。"
  },
@@ -1966,5 +1696,115 @@
    "鷹の爪"
   ],
   "explanation": "米びつに唐辛子(2〜3本)やローレル(3〜4枚)を入れておくと虫がつかないとされる。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch3",
+  "sectionId": "life-house",
+  "difficulty": 1,
+  "knowledgeUnitIds": [
+   "l-rice"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9694",
+    "bookPage": 118,
+    "locationNote": "本書 p.118（原本画像 IMG_9694.PNG）。原文照合 batch12 で照合済みの知識単位 l-rice から生成"
+   }
+  ],
+  "id": "q4-l-rice",
+  "format": "single-choice",
+  "prompt": "米びつに入れて虫よけにするとされるスパイス・ハーブを1つ挙げよ。",
+  "choices": [
+   "ロングペッパー",
+   "唐辛子",
+   "タイム",
+   "ラベンダー"
+  ],
+  "correctChoiceIndexes": [
+   1
+  ],
+  "explanation": "米びつに唐辛子(2〜3本)やローレル(3〜4枚)を入れておくと虫がつかないとされる。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch3",
+  "sectionId": "life-handmade",
+  "difficulty": 1,
+  "knowledgeUnitIds": [
+   "l-sachet"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9695",
+    "bookPage": 119,
+    "locationNote": "本書 p.119（原本画像 IMG_9695.PNG）。原文照合 batch12 で照合済みの知識単位 l-sachet から生成"
+   }
+  ],
+  "id": "q1-l-sachet",
+  "format": "one-answer",
+  "prompt": "フランス語で「香り袋」を意味する言葉は?",
+  "acceptedAnswers": [
+   "サシェ"
+  ],
+  "explanation": "サシェはフランス語で「香り袋」のこと。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch3",
+  "sectionId": "life-handmade",
+  "difficulty": 1,
+  "knowledgeUnitIds": [
+   "l-sachet"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9695",
+    "bookPage": 119,
+    "locationNote": "本書 p.119（原本画像 IMG_9695.PNG）。原文照合 batch12 で照合済みの知識単位 l-sachet から生成"
+   }
+  ],
+  "id": "q4-l-sachet",
+  "format": "single-choice",
+  "prompt": "フランス語で「香り袋」を意味する言葉は?",
+  "choices": [
+   "サシェ",
+   "ホリスティック",
+   "木本性",
+   "薬機法"
+  ],
+  "correctChoiceIndexes": [
+   0
+  ],
+  "explanation": "サシェはフランス語で「香り袋」のこと。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch3",
+  "sectionId": "life-handmade",
+  "difficulty": 1,
+  "knowledgeUnitIds": [
+   "l-sachet-deodor"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9696",
+    "bookPage": 120,
+    "locationNote": "本書 p.120（原本画像 IMG_9696.PNG）。原文照合 batch13 で照合済みの知識単位 l-sachet-deodor から生成"
+   }
+  ],
+  "id": "q1-l-sachet-deodor",
+  "format": "one-answer",
+  "prompt": "リラックス用のサシェに向くハーブを1つ挙げよ。",
+  "acceptedAnswers": [
+   "ラベンダー",
+   "ローズ",
+   "ジャーマンカモミール"
+  ],
+  "explanation": "消臭用サシェにはペパーミント・クローブ・タイム、リフレッシュ用にはローズマリー・レモングラス・山椒、リラックス用にはラベンダー・ローズ・ジャーマンカモミールが向く。"
  }
 ]

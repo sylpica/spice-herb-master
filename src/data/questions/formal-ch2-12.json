@@ -6,159 +6,6 @@
   "sectionId": "item-others",
   "difficulty": 3,
   "knowledgeUnitIds": [
-   "grainsofparadise-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9676",
-    "bookPage": 100,
-    "locationNote": "本書 p.100（原本画像 IMG_9676.PNG）。原文照合 batch8 で照合済みの知識単位 grainsofparadise-profile から生成"
-   }
-  ],
-  "id": "qtf-part-false-grainsofparadise-profile",
-  "format": "true-false",
-  "prompt": "グレインズオブパラダイスの利用部位は根茎である。",
-  "correctBoolean": false,
-  "explanation": "グレインズオブパラダイス: 科名はショウガ科。利用部位は種子。検定1級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-others",
-  "difficulty": 4,
-  "knowledgeUnitIds": [
-   "grainsofparadise-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9676",
-    "bookPage": 100,
-    "locationNote": "本書 p.100（原本画像 IMG_9676.PNG）。原文照合 batch8 で照合済みの知識単位 grainsofparadise-profile から生成"
-   }
-  ],
-  "id": "qtable-grainsofparadise-profile",
-  "format": "table-fill",
-  "prompt": "グレインズオブパラダイスのプロフィール表の空欄を埋めよ。",
-  "table": {
-   "headers": [
-    "項目",
-    "内容"
-   ],
-   "rows": [
-    [
-     "名称",
-     "グレインズオブパラダイス"
-    ],
-    [
-     "科名",
-     "（空欄A）"
-    ],
-    [
-     "利用部位",
-     "（空欄B）"
-    ]
-   ]
-  },
-  "blankCellAnswers": {
-   "A": "ショウガ科",
-   "B": "種子"
-  },
-  "explanation": "グレインズオブパラダイス: 科名はショウガ科。利用部位は種子。検定1級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-others",
-  "difficulty": 4,
-  "knowledgeUnitIds": [
-   "grainsofparadise-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9676",
-    "bookPage": 100,
-    "locationNote": "本書 p.100（原本画像 IMG_9676.PNG）。原文照合 batch8 で照合済みの知識単位 grainsofparadise-profile から生成"
-   }
-  ],
-  "id": "qcomp-grainsofparadise-profile",
-  "format": "composite",
-  "prompt": "グレインズオブパラダイスについて、科名と利用部位をそれぞれ挙げて説明せよ。",
-  "modelAnswer": "科名はショウガ科。利用部位は種子。",
-  "rubric": [
-   {
-    "id": "family",
-    "label": "科名を正しく挙げる",
-    "keywords": [
-     "ショウガ科"
-    ],
-    "required": true,
-    "points": 1
-   },
-   {
-    "id": "part",
-    "label": "利用部位を正しく挙げる",
-    "keywords": [
-     "種子"
-    ],
-    "required": true,
-    "points": 1
-   }
-  ],
-  "explanation": "グレインズオブパラダイス: 科名はショウガ科。利用部位は種子。検定1級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-others",
-  "difficulty": 3,
-  "knowledgeUnitIds": [
-   "cresson-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9676",
-    "bookPage": 100,
-    "locationNote": "本書 p.100（原本画像 IMG_9676.PNG）。原文照合 batch8 で照合済みの知識単位 cresson-profile から生成"
-   }
-  ],
-  "id": "qtf-family-cresson-profile",
-  "format": "true-false",
-  "prompt": "クレソンの科名はアブラナ科である。",
-  "correctBoolean": true,
-  "explanation": "クレソン: 科名はアブラナ科。利用部位は葉、茎。別名はウォータークレス。検定1級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-others",
-  "difficulty": 3,
-  "knowledgeUnitIds": [
-   "cresson-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9676",
-    "bookPage": 100,
-    "locationNote": "本書 p.100（原本画像 IMG_9676.PNG）。原文照合 batch8 で照合済みの知識単位 cresson-profile から生成"
-   }
-  ],
-  "id": "qtf-family-false-cresson-profile",
-  "format": "true-false",
-  "prompt": "クレソンの科名はスイカズラ科である。",
-  "correctBoolean": false,
-  "explanation": "クレソン: 科名はアブラナ科。利用部位は葉、茎。別名はウォータークレス。検定1級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-others",
-  "difficulty": 3,
-  "knowledgeUnitIds": [
    "cresson-profile"
   ],
   "sourceRefs": [
@@ -2338,5 +2185,136 @@
   "prompt": "タマリンドの利用部位は果実である。",
   "correctBoolean": true,
   "explanation": "タマリンド: 科名はマメ科。利用部位は果実。検定1級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-others",
+  "difficulty": 3,
+  "knowledgeUnitIds": [
+   "tamarind-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9680",
+    "bookPage": 104,
+    "locationNote": "本書 p.104（原本画像 IMG_9680.PNG）。原文照合 batch9 で照合済みの知識単位 tamarind-profile から生成"
+   }
+  ],
+  "id": "qtf-part-false-tamarind-profile",
+  "format": "true-false",
+  "prompt": "タマリンドの利用部位は根茎である。",
+  "correctBoolean": false,
+  "explanation": "タマリンド: 科名はマメ科。利用部位は果実。検定1級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-others",
+  "difficulty": 4,
+  "knowledgeUnitIds": [
+   "tamarind-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9680",
+    "bookPage": 104,
+    "locationNote": "本書 p.104（原本画像 IMG_9680.PNG）。原文照合 batch9 で照合済みの知識単位 tamarind-profile から生成"
+   }
+  ],
+  "id": "qtable-tamarind-profile",
+  "format": "table-fill",
+  "prompt": "タマリンドのプロフィール表の空欄を埋めよ。",
+  "table": {
+   "headers": [
+    "項目",
+    "内容"
+   ],
+   "rows": [
+    [
+     "名称",
+     "タマリンド"
+    ],
+    [
+     "科名",
+     "（空欄A）"
+    ],
+    [
+     "利用部位",
+     "（空欄B）"
+    ]
+   ]
+  },
+  "blankCellAnswers": {
+   "A": "マメ科",
+   "B": "果実"
+  },
+  "explanation": "タマリンド: 科名はマメ科。利用部位は果実。検定1級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-others",
+  "difficulty": 4,
+  "knowledgeUnitIds": [
+   "tamarind-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9680",
+    "bookPage": 104,
+    "locationNote": "本書 p.104（原本画像 IMG_9680.PNG）。原文照合 batch9 で照合済みの知識単位 tamarind-profile から生成"
+   }
+  ],
+  "id": "qcomp-tamarind-profile",
+  "format": "composite",
+  "prompt": "タマリンドについて、科名と利用部位をそれぞれ挙げて説明せよ。",
+  "modelAnswer": "科名はマメ科。利用部位は果実。",
+  "rubric": [
+   {
+    "id": "family",
+    "label": "科名を正しく挙げる",
+    "keywords": [
+     "マメ科"
+    ],
+    "required": true,
+    "points": 1
+   },
+   {
+    "id": "part",
+    "label": "利用部位を正しく挙げる",
+    "keywords": [
+     "果実"
+    ],
+    "required": true,
+    "points": 1
+   }
+  ],
+  "explanation": "タマリンド: 科名はマメ科。利用部位は果実。検定1級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-others",
+  "difficulty": 3,
+  "knowledgeUnitIds": [
+   "dokudami-profile"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9680",
+    "bookPage": 104,
+    "locationNote": "本書 p.104（原本画像 IMG_9680.PNG）。原文照合 batch9 で照合済みの知識単位 dokudami-profile から生成"
+   }
+  ],
+  "id": "qtf-family-dokudami-profile",
+  "format": "true-false",
+  "prompt": "どくだみの科名はドクダミ科である。",
+  "correctBoolean": true,
+  "explanation": "どくだみ: 科名はドクダミ科。利用部位は葉。検定1級の対象。"
  }
 ]
