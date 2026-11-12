@@ -75,7 +75,7 @@ describe("正式問題の生成（フェーズ4: scripts/generate-questions.mjs�
     const byFormat: Record<string, number> = {};
     for (const q of QUESTIONS) byFormat[q.format] = (byFormat[q.format] ?? 0) + 1;
     expect(byFormat).toEqual({ ...META.byFormat });
-    expect(byFormat).toEqual({ "one-answer": 465, "single-choice": 462, "fill-blank": 148, "term-input": 120, "true-false": 272, "multiple-choice": 32, "matching": 43, "reverse-lookup": 60, "table-fill": 68, "composite": 68, "figure": 17, "ordering": 17, "short-essay": 12, "long-essay": 4, "compare-essay": 7 });
+    expect(byFormat).toEqual({ "one-answer": 465, "single-choice": 399, "fill-blank": 148, "term-input": 120, "true-false": 272, "multiple-choice": 32, "matching": 43, "reverse-lookup": 60, "table-fill": 68, "composite": 68, "figure": 17, "ordering": 17, "short-essay": 12, "long-essay": 4, "compare-essay": 7 });
     // 機械検証できる変換のみ（第一弾: draftQa直接変換、Q2: プロフィール構造化属性、Q3: 転記支持文つき人手作成の一問一答、F1: プロフィール構造化属性から検証できる追加7形式。DECISIONS #21。F2: 転記の番号付き手順・支持文に基づく人手作成の並べ替え・短文記述。DECISIONS #26。F3: 転記の複数段落の支持文・明示的な対比に基づく人手作成の長文記述・比較記述。DECISIONS #27）
     expect(Object.keys(byFormat).sort()).toEqual(["compare-essay", "composite", "figure", "fill-blank", "long-essay", "matching", "multiple-choice", "one-answer", "ordering", "reverse-lookup", "short-essay", "single-choice", "table-fill", "term-input", "true-false"]);
   });
@@ -246,7 +246,8 @@ describe("正式問題の生成（フェーズ4: scripts/generate-questions.mjs�
     expect(META.excludedUnits).toBe(0);
     // 項目レベルの除外はプロフィールに属性の記載がない項目（科名12・利用部位12・原産地41・別名20・逆引き20）
     // ＋監査B-08是正で同次元の誤答を3つ用意できず四択として成立しなくなった15項目＋監査AU-06で二者択一・可否の設問の四択をやめた9項目（DECISIONS #54）
-    expect(META.excludedItems).toBe(129);
+    // ＋監査BV-13（旧AU-13、DECISIONS #55）: 誤答の型・形・話題の近さを揃えられず四択をやめた項目が加わり、計192件
+    expect(META.excludedItems).toBe(192);
   });
   it("Q3: 散文単位の一問一答は手書きデータと一致し、正答が転記支持文に字句として含まれる（根拠の機械チェック）", () => {
     const manual = JSON.parse(readFileSync(new URL("../scripts/q3-manual-questions.json", import.meta.url), "utf8")) as {
@@ -569,7 +570,7 @@ describe("難易度較正D1（フェーズ6、DECISIONS #22）", () => {
     const base = ({ 3: 1, 2: 2, 1: 3 } as Record<number, number>)[Math.min(...(grades as number[]))]!;
     return Math.max(1, Math.min(5, base + (LOAD.has(q.format) || q.id.startsWith("qti-rev-") ? 1 : 0)));
   };
-  const HELD = ["q1-e-org", "q4-e-org", "q1-e-start", "q4-e-start", "q1-e-scope", "q4-e-scope", "q1q3-e-level1", "q1q3-e-scope1"];
+  const HELD = ["q1-e-org", "q1-e-start", "q4-e-start", "q1-e-scope", "q4-e-scope", "q1q3-e-level1", "q1q3-e-scope1"];
 
   it("プロフィールの対象級の種数が転記 p.137 の単品知識の階層（25/20/35種）と一致する", () => {
     const counts = { 3: 0, 2: 0, 1: 0 } as Record<number, number>;
@@ -577,7 +578,7 @@ describe("難易度較正D1（フェーズ6、DECISIONS #22）", () => {
     expect(counts).toEqual({ 1: 35, 2: 20, 3: 25 }); // 最下級1=1級のみ35種、最下級2=2級追加20種、最下級3=3級25種
   });
 
-  it("全問題の難易度が較正規則の再計算と一致し、較正不能な検定情報の8問だけが2に据え置かれる", () => {
+  it("全問題の難易度が較正規則の再計算と一致し、較正不能な検定情報の7問だけが2に据え置かれる", () => {
     const held: string[] = [];
     for (const q of QUESTIONS) {
       const e = expected(q);
@@ -586,17 +587,17 @@ describe("難易度較正D1（フェーズ6、DECISIONS #22）", () => {
     }
     expect(held.sort()).toEqual([...HELD].sort());
     expect(META.d1HeldIds).toEqual(HELD); // 生成順のまま固定
-    expect(META.d1HeldQuestions).toBe(8);
-    expect(META.d1CalibratedQuestions).toBe(1787); // F2の29問・F3の11問も全件較正済み（DECISIONS #26・#27。監査B-08是正の再生成で四択15問が減り較正済みも15問減）
+    expect(META.d1HeldQuestions).toBe(7); // q4-e-org は監査BV-13で四択をやめたため据え置きは7問（DECISIONS #55）
+    expect(META.d1CalibratedQuestions).toBe(1725); // F2の29問・F3の11問も全件較正済み（DECISIONS #26・#27。監査B-08是正の再生成で四択15問が減り較正済みも15問減）
   });
 
   it("難易度分布の実測が固定値と一致する（較正前は全件2）", () => {
     const dist: Record<string, number> = {};
     for (const q of QUESTIONS) dist[q.difficulty] = (dist[q.difficulty] ?? 0) + 1;
-    expect(dist).toEqual({ 1: 737, 2: 474, 3: 414, 4: 170 });
-    expect(META.d1ByDifficulty).toEqual({ 1: 737, 2: 474, 3: 414, 4: 170 });
-    // 較正済みのみの分布（2の474問のうち466問は較正済み、残り8問は据え置き）
-    expect(META.d1CalibratedByDifficulty).toEqual({ 1: 737, 2: 466, 3: 414, 4: 170 });
+    expect(dist).toEqual({ 1: 697, 2: 456, 3: 409, 4: 170 });
+    expect(META.d1ByDifficulty).toEqual({ 1: 697, 2: 456, 3: 409, 4: 170 });
+    // 較正済みのみの分布（2の456問のうち449問は較正済み、残り7問は据え置き）
+    expect(META.d1CalibratedByDifficulty).toEqual({ 1: 697, 2: 449, 3: 409, 4: 170 });
   });
 });
 
@@ -977,12 +978,33 @@ describe("監査是正: 別名許容（B-07）と四択の同次元化（B-08）
     for (const c of f?.choices ?? []) expect(c).toMatch(/科$/);
   });
   it("B-08: 同次元の誤答を3つ用意できない四択は生成しない（プール不足の脱落を固定）", () => {
-    // 人物名の照合済み回答は全書で3件しかなく、人物の四択は成立しない。
     // 知識自体は一問一答（q1）側で引き続き出題される。
-    for (const id of ["q4-h-hippocrates", "q4-shichimi-2", "q4-d-mojito", "q4-t-cup", "q4-j-todaiji"]) {
+    for (const id of ["q4-t-cup", "q4-j-todaiji", "q4-e-org", "q4-b-fresh-stand", "q4-u-3roles"]) {
       expect(byId.has(id), id).toBe(false);
     }
-    expect(byId.has("q1-h-hippocrates")).toBe(true);
+    for (const id of ["q1-e-org", "q1-b-fresh-stand", "q1-u-3roles"]) expect(byId.has(id), id).toBe(true);
+  });
+  it("BV-13: 設問文から型を付けた四択は、誤答も同じ型の設問の正答だけになる（DECISIONS #55）", () => {
+    // 人物を問う設問（医師・女王・人物など）は、誤答も人物。以前は人物の回答が3件しかなく四択にできなかった。
+    const persons = ["ヒポクラテス", "ディオスコリデス", "イサベル女王", "バスコ・ダ・ガマ", "アピシウス", "バラダン2世", "スザント・ゲオルギー", "ミンテ", "からしや徳右衛門", "聖武天皇", "ヘミングウェイ", "マルコ・ポーロ", "コロンブス", "マゼラン"];
+    for (const id of ["q4-h-hippocrates", "q4-shichimi-2", "q4-d-mojito"]) {
+      const q = byId.get(id);
+      expect(q, id).toBeDefined();
+      for (const c of q?.choices ?? []) expect(persons, `${id}: ${c}`).toContain(c);
+    }
+    // 成分を問う設問の誤答は成分名、意味を問う設問の誤答は語の意味、調味料を問う設問の誤答は調味料。
+    const expectAll = (id: string, allowed: string[]) => { const q = byId.get(id); expect(q, id).toBeDefined(); for (const c of q?.choices ?? []) expect(allowed, `${id}: ${c}`).toContain(c); };
+    expectAll("q4-clove-3", ["オイゲノール", "グリチルリチン", "クロシン", "バニリン", "ピペリン", "アリシン", "クルクミン", "チモール", "アネトール", "シニグリン", "カプサイシン", "テルペン", "アリイナーゼ", "ミロシナーゼ", "ベンジル芥子油", "揮発性の香気成分"]);
+    expectAll("q4-clove-4", ["釘", "虫", "小さな竜", "マリア様のバラ", "喜びの山", "勇気", "なだめる", "枯れ草", "みつばち", "温かい、熱い", "口に飛び込む", "フライパン", "香り玉"]);
+    expectAll("q4-j-prewar", ["ウスターソース", "豆板醤", "柚子こしょう", "サンバル", "コチュジャン", "ナンプラー", "ハリッサ"]);
+    // 暦年を問う設問の誤答は暦年だけ（期間の「5年」「7〜10分」は混ざらない）。
+    for (const c of byId.get("q4-h-magellan-year")?.choices ?? []) expect(c).toMatch(/^\d{3,4}年$/);
+    // 理由の文や「しない」などの述語が、名詞を答える四択に混ざらない。
+    for (const q of QUESTIONS.filter((x) => x.id.startsWith("q4-"))) {
+      const ans = q.choices![q.correctChoiceIndexes![0]!]!;
+      if (/(ため|しない|する)$/.test(ans)) continue;
+      for (const c of q.choices!) expect(/(ため|しない)$/.test(c), `${q.id}: ${c}`).toBe(false);
+    }
   });
   it("B-07: 別名展開の対象問題数は生成メタに記録される（128問）", () => {
     expect(META.aliasExpandedQuestions).toBe(128);

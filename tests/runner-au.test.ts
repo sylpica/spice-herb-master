@@ -60,7 +60,7 @@ describe("AU-02: 確定済み回答の復元", () => {
     const q = firstOf("one-answer");
     const ans = q.acceptedAnswers![0]!;
     const html = renderToString(createElement(QuestionRunner, { q, saved: { answer: ans, result: gradeQuestion(q, ans), selfRatio: null } }));
-    expect(html).toContain("確定済み（記録は1回だけ保存されます）");
+    expect(html).toContain("確定済み");
     expect(html).toMatch(/<button[^>]*disabled[^>]*>確定済み/);
     expect(html).toContain(`value="${ans}"`);
     expect(html).toContain("正解");

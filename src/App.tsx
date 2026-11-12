@@ -61,8 +61,8 @@ export default function App(){
  <ScrollToTop/>
  <ErrorBoundary>
  <Suspense fallback={<ScreenLoading/>}>
- <Routes><Route path="/" element={<Home store={store} update={update}/>}/><Route path="/practice" element={<Practice store={store} update={update}/>}/><Route path="/reader" element={<Reader store={store} update={update}/>}/><Route path="/cards" element={<Cards store={store} update={update}/>}/><Route path="/exam" element={<Exam store={store} update={update}/>}/><Route path="/stats" element={<Stats store={store}/>}/><Route path="/search" element={<SearchPage update={update}/>}/><Route path="/qa" element={<QaPage/>}/><Route path="/settings" element={<Settings store={store} update={update}/>}/><Route path="/memorize" element={<Memorize store={store} update={update}/>}/><Route path="/revision" element={<Revision store={store} update={update}/>}/></Routes>
+ <Routes><Route path="/" element={<Home store={store} update={update}/>}/><Route path="/practice" element={<Practice store={store} update={update}/>}/><Route path="/reader" element={<Reader store={store} update={update}/>}/><Route path="/cards" element={<Cards store={store} update={update}/>}/><Route path="/exam" element={<Exam store={store} update={update}/>}/><Route path="/stats" element={<Stats store={store}/>}/><Route path="/search" element={<SearchPage store={store} update={update}/>}/><Route path="/qa" element={<QaPage store={store} update={update}/>}/><Route path="/settings" element={<Settings store={store} update={update}/>}/><Route path="/memorize" element={<Memorize store={store} update={update}/>}/><Route path="/revision" element={<Revision store={store} update={update}/>}/></Routes>
  </Suspense>
  </ErrorBoundary>
- <footer style={{padding:"1rem",paddingBottom:"calc(1rem + env(safe-area-inset-bottom))"}} className="muted">学習履歴はブラウザ内（localStorage）にのみ保存されます。ブラウザデータ削除・機種変更で消える可能性があります。同期・バックアップ機能はありません（要件）。</footer></div>;
+ <footer style={{padding:".6rem 1rem",paddingBottom:"calc(.6rem + env(safe-area-inset-bottom))",fontSize:".8rem"}} className="muted">学習履歴はこの端末のブラウザ内にのみ保存されます（同期・バックアップなし）。</footer></div>;
 }

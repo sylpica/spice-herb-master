@@ -3,471 +3,6 @@
   "version": 1,
   "status": "verified",
   "chapterId": "ch2",
-  "sectionId": "item-marjoram-mustard",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "marjoram-1"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9661",
-    "bookPage": 85,
-    "locationNote": "本書 p.85（原本画像 IMG_9661.PNG）。原文照合 batch4 で照合済みの知識単位 marjoram-1 から生成"
-   }
-  ],
-  "id": "q4-marjoram-1",
-  "format": "single-choice",
-  "prompt": "オレガノに似ているが、より甘く繊細な香りのハーブは?",
-  "choices": [
-   "タイム",
-   "マジョラム",
-   "ローリエ",
-   "カトルエピス"
-  ],
-  "correctChoiceIndexes": [
-   1
-  ],
-  "explanation": "オレガノに似るが、より甘く繊細な香り。羊肉や魚、レバーなどの臭み消しに下ごしらえで使われる。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-marjoram-mustard",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "mustard-1"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9661",
-    "bookPage": 85,
-    "locationNote": "本書 p.85（原本画像 IMG_9661.PNG）。原文照合 batch4 で照合済みの知識単位 mustard-1 から生成"
-   }
-  ],
-  "id": "q1-mustard-1",
-  "format": "one-answer",
-  "prompt": "マスタードの3種類は白からし・黒からしと何?",
-  "acceptedAnswers": [
-   "和がらし"
-  ],
-  "explanation": "白からし・和がらし・黒からしの3種類があり、形状や辛み成分が異なる。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-marjoram-mustard",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "mustard-1"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9661",
-    "bookPage": 85,
-    "locationNote": "本書 p.85（原本画像 IMG_9661.PNG）。原文照合 batch4 で照合済みの知識単位 mustard-1 から生成"
-   }
-  ],
-  "id": "q4-mustard-1",
-  "format": "single-choice",
-  "prompt": "マスタードの3種類は白からし・黒からしと何?",
-  "choices": [
-   "和がらし",
-   "ミロシナーゼ",
-   "アピシウス",
-   "ベンジル芥子油"
-  ],
-  "correctChoiceIndexes": [
-   0
-  ],
-  "explanation": "白からし・和がらし・黒からしの3種類があり、形状や辛み成分が異なる。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-marjoram-mustard",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "mustard-2"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9661",
-    "bookPage": 85,
-    "locationNote": "本書 p.85（原本画像 IMG_9661.PNG）。原文照合 batch4 で照合済みの知識単位 mustard-2 から生成"
-   }
-  ],
-  "id": "q1-mustard-2",
-  "format": "one-answer",
-  "prompt": "白からしの辛み成分は?",
-  "acceptedAnswers": [
-   "ベンジル芥子油"
-  ],
-  "explanation": "和がらし・黒からしの辛み成分はアリル芥子油で揮発性のツーンとした辛み、白からしはベンジル芥子油で揮発性が弱くマイルド。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-marjoram-mustard",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "mustard-2"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9661",
-    "bookPage": 85,
-    "locationNote": "本書 p.85（原本画像 IMG_9661.PNG）。原文照合 batch4 で照合済みの知識単位 mustard-2 から生成"
-   }
-  ],
-  "id": "q4-mustard-2",
-  "format": "single-choice",
-  "prompt": "白からしの辛み成分は?",
-  "choices": [
-   "ミロシナーゼ",
-   "ブラックペッパー",
-   "ベンジル芥子油",
-   "ホワイトペッパー"
-  ],
-  "correctChoiceIndexes": [
-   2
-  ],
-  "explanation": "和がらし・黒からしの辛み成分はアリル芥子油で揮発性のツーンとした辛み、白からしはベンジル芥子油で揮発性が弱くマイルド。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-marjoram-mustard",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "mustard-3"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9661",
-    "bookPage": 85,
-    "locationNote": "本書 p.85（原本画像 IMG_9661.PNG）。原文照合 batch4 で照合済みの知識単位 mustard-3 から生成"
-   }
-  ],
-  "id": "q1-mustard-3",
-  "format": "one-answer",
-  "prompt": "粉からしをぬるま湯で溶くのは、何という酵素が40度前後で活性化するため?",
-  "acceptedAnswers": [
-   "ミロシナーゼ"
-  ],
-  "explanation": "粉からしは、辛みを生む酵素ミロシナーゼが40度前後で最も活性化するため、ぬるま湯で溶く。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-marjoram-mustard",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "mustard-3"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9661",
-    "bookPage": 85,
-    "locationNote": "本書 p.85（原本画像 IMG_9661.PNG）。原文照合 batch4 で照合済みの知識単位 mustard-3 から生成"
-   }
-  ],
-  "id": "q4-mustard-3",
-  "format": "single-choice",
-  "prompt": "粉からしをぬるま湯で溶くのは、何という酵素が40度前後で活性化するため?",
-  "choices": [
-   "ミロシナーゼ",
-   "和がらし",
-   "黄飯",
-   "ベンジル芥子油"
-  ],
-  "correctChoiceIndexes": [
-   0
-  ],
-  "explanation": "粉からしは、辛みを生む酵素ミロシナーゼが40度前後で最も活性化するため、ぬるま湯で溶く。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-mint",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "mint-1"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9663",
-    "bookPage": 87,
-    "locationNote": "本書 p.87（原本画像 IMG_9663.PNG）。原文照合 batch5 で照合済みの知識単位 mint-1 から生成"
-   }
-  ],
-  "id": "q1-mint-1",
-  "format": "one-answer",
-  "prompt": "ペパーミントは、ウォーターミントと何の交配種?",
-  "acceptedAnswers": [
-   "スペアミント"
-  ],
-  "explanation": "交雑しやすく種類が多い。ペパーミントはウォーターミントとスペアミントの交配種でメントール主体のクールな香り、スペアミントは穏やかで甘みがある。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-mint",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "mint-1"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9663",
-    "bookPage": 87,
-    "locationNote": "本書 p.87（原本画像 IMG_9663.PNG）。原文照合 batch5 で照合済みの知識単位 mint-1 から生成"
-   }
-  ],
-  "id": "q4-mint-1",
-  "format": "single-choice",
-  "prompt": "ペパーミントは、ウォーターミントと何の交配種?",
-  "choices": [
-   "小さな竜",
-   "ミンテ",
-   "スペアミント",
-   "ナンヨウザンショウ"
-  ],
-  "correctChoiceIndexes": [
-   2
-  ],
-  "explanation": "交雑しやすく種類が多い。ペパーミントはウォーターミントとスペアミントの交配種でメントール主体のクールな香り、スペアミントは穏やかで甘みがある。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-mint",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "mint-2"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9663",
-    "bookPage": 87,
-    "locationNote": "本書 p.87（原本画像 IMG_9663.PNG）。原文照合 batch5 で照合済みの知識単位 mint-2 から生成"
-   }
-  ],
-  "id": "q1-mint-2",
-  "format": "one-answer",
-  "prompt": "ミントの名前の由来となったギリシア神話の妖精は?",
-  "acceptedAnswers": [
-   "ミンテ"
-  ],
-  "explanation": "名前はギリシア神話の妖精ミンテにちなむ。冥界の王ハデスの心をとらえ、妻ペルセポネに草に姿を変えられたとされる。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-mint",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "mint-2"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9663",
-    "bookPage": 87,
-    "locationNote": "本書 p.87（原本画像 IMG_9663.PNG）。原文照合 batch5 で照合済みの知識単位 mint-2 から生成"
-   }
-  ],
-  "id": "q4-mint-2",
-  "format": "single-choice",
-  "prompt": "ミントの名前の由来となったギリシア神話の妖精は?",
-  "choices": [
-   "ミンテ",
-   "スペアミント",
-   "アピシウス",
-   "喜びの山"
-  ],
-  "correctChoiceIndexes": [
-   0
-  ],
-  "explanation": "名前はギリシア神話の妖精ミンテにちなむ。冥界の王ハデスの心をとらえ、妻ペルセポネに草に姿を変えられたとされる。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-rucola",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "rucola-1"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9664",
-    "bookPage": 88,
-    "locationNote": "本書 p.88（原本画像 IMG_9664.PNG）。原文照合 batch5 で照合済みの知識単位 rucola-1 から生成"
-   }
-  ],
-  "id": "q1-rucola-1",
-  "format": "one-answer",
-  "prompt": "噛むとごまに似た香りがするイタリア料理の定番ハーブは?",
-  "acceptedAnswers": [
-   "ルッコラ",
-   "ロケット",
-   "アルグラ",
-   "きばなすずしろ"
-  ],
-  "explanation": "葉は噛むとごまに似た香りとクレソンのような辛みがあり、イタリア料理の定番。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-rucola",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "rucola-1"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9664",
-    "bookPage": 88,
-    "locationNote": "本書 p.88（原本画像 IMG_9664.PNG）。原文照合 batch5 で照合済みの知識単位 rucola-1 から生成"
-   }
-  ],
-  "id": "q4-rucola-1",
-  "format": "single-choice",
-  "prompt": "噛むとごまに似た香りがするイタリア料理の定番ハーブは?",
-  "choices": [
-   "ルッコラ",
-   "めぼうき",
-   "エルブドプロバンス",
-   "パンダンリーフ"
-  ],
-  "correctChoiceIndexes": [
-   0
-  ],
-  "explanation": "葉は噛むとごまに似た香りとクレソンのような辛みがあり、イタリア料理の定番。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-rucola",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "rucola-2"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9664",
-    "bookPage": 88,
-    "locationNote": "本書 p.88（原本画像 IMG_9664.PNG）。原文照合 batch5 で照合済みの知識単位 rucola-2 から生成"
-   }
-  ],
-  "id": "q1-rucola-2",
-  "format": "one-answer",
-  "prompt": "ルッコラの原種といわれ、イタリア料理店で「セルバチコ」と呼ばれるものは?",
-  "acceptedAnswers": [
-   "ルッコラセルバチカ"
-  ],
-  "explanation": "セルバチコ(ルッコラセルバチカ)はルッコラの原種といわれ、葉の切り込みが大きく辛みや香りがより強い。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-rucola",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "rucola-2"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9664",
-    "bookPage": 88,
-    "locationNote": "本書 p.88（原本画像 IMG_9664.PNG）。原文照合 batch5 で照合済みの知識単位 rucola-2 から生成"
-   }
-  ],
-  "id": "q4-rucola-2",
-  "format": "single-choice",
-  "prompt": "ルッコラの原種といわれ、イタリア料理店で「セルバチコ」と呼ばれるものは?",
-  "choices": [
-   "ルッコラセルバチカ",
-   "ブラックカルダモン",
-   "ホーリーバジル",
-   "イギリス"
-  ],
-  "correctChoiceIndexes": [
-   0
-  ],
-  "explanation": "セルバチコ(ルッコラセルバチカ)はルッコラの原種といわれ、葉の切り込みが大きく辛みや香りがより強い。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-lemongrass",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "lemongrass-1"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9665",
-    "bookPage": 89,
-    "locationNote": "本書 p.89（原本画像 IMG_9665.PNG）。原文照合 batch5 で照合済みの知識単位 lemongrass-1 から生成"
-   }
-  ],
-  "id": "q1-lemongrass-1",
-  "format": "one-answer",
-  "prompt": "レモングラスは何科の植物?",
-  "acceptedAnswers": [
-   "イネ科"
-  ],
-  "explanation": "レモンのような香りで東南アジアで広く使われ、代表料理はトムヤムクン。寒さに弱い熱帯植物。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-lemongrass",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "lemongrass-1"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9665",
-    "bookPage": 89,
-    "locationNote": "本書 p.89（原本画像 IMG_9665.PNG）。原文照合 batch5 で照合済みの知識単位 lemongrass-1 から生成"
-   }
-  ],
-  "id": "q4-lemongrass-1",
-  "format": "single-choice",
-  "prompt": "レモングラスは何科の植物?",
-  "choices": [
-   "セリ科",
-   "アブラナ科",
-   "ウルシ科",
-   "イネ科"
-  ],
-  "correctChoiceIndexes": [
-   3
-  ],
-  "explanation": "レモンのような香りで東南アジアで広く使われ、代表料理はトムヤムクン。寒さに弱い熱帯植物。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
   "sectionId": "item-rosemary",
   "difficulty": 1,
   "knowledgeUnitIds": [
@@ -509,9 +44,9 @@
   "prompt": "ローズマリーの英名の由来とされる俗説で、「ローズ・オブ・マリー」の意味は?",
   "choices": [
    "マリア様のバラ",
-   "ルッコラセルバチカ",
-   "半立性",
-   "十薬"
+   "みつばち",
+   "なだめる",
+   "喜びの山"
   ],
   "correctChoiceIndexes": [
    0
@@ -539,36 +74,6 @@
   "prompt": "ローズマリーの3種類のうち、最も香りがよく料理向きとされるのは?",
   "acceptedAnswers": [
    "半立性"
-  ],
-  "explanation": "育ち方で立性・ほふく性・半立性の3種類に分けられ、料理には最も香りがよい半立性が向くとされる。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-rosemary",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "rosemary-4"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9666",
-    "bookPage": 90,
-    "locationNote": "本書 p.90（原本画像 IMG_9666.PNG）。原文照合 batch5 で照合済みの知識単位 rosemary-4 から生成"
-   }
-  ],
-  "id": "q4-rosemary-4",
-  "format": "single-choice",
-  "prompt": "ローズマリーの3種類のうち、最も香りがよく料理向きとされるのは?",
-  "choices": [
-   "半立性",
-   "グリチルリチン",
-   "マリア様のバラ",
-   "イギリス"
-  ],
-  "correctChoiceIndexes": [
-   0
   ],
   "explanation": "育ち方で立性・ほふく性・半立性の3種類に分けられ、料理には最も香りがよい半立性が向くとされる。"
  },
@@ -670,13 +175,13 @@
   "format": "single-choice",
   "prompt": "ローレルを煮込みに使う場合、苦みを避けるために何時間ほどで取り出す?",
   "choices": [
+   "1週間",
    "1〜3分",
-   "17世紀初頭",
-   "1時間",
-   "5〜9年"
+   "1〜2週間",
+   "1時間"
   ],
   "correctChoiceIndexes": [
-   2
+   3
   ],
   "explanation": "長時間煮込むと苦みが出るので、1時間ほどで取り出すとよい。"
  },
@@ -778,13 +283,13 @@
   "format": "single-choice",
   "prompt": "わさびの辛みのもととなる細胞中の物質は?",
   "choices": [
+   "チモール",
    "シニグリン",
-   "キュアリング",
-   "勇気",
-   "バニリン"
+   "バニリン",
+   "グリチルリチン"
   ],
   "correctChoiceIndexes": [
-   0
+   1
   ],
   "explanation": "辛み成分は揮発性のアリル芥子油で、すりおろすと細胞中のシニグリンに酵素ミロシナーゼが作用して生まれる。"
  },
@@ -832,9 +337,9 @@
   "format": "single-choice",
   "prompt": "わさびはすりおろして何分ほどで香りと辛みのピークに達する?",
   "choices": [
+   "7〜10分",
    "1時間",
    "5〜9年",
-   "17世紀初頭",
    "1〜3分"
   ],
   "correctChoiceIndexes": [
@@ -917,36 +422,6 @@
   "prompt": "「陳皮」とは何を乾燥させたもの?",
   "acceptedAnswers": [
    "みかんの皮"
-  ],
-  "explanation": "陳皮とはみかんの皮を乾燥させたもの。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-mix",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "gokoufun-2"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9669",
-    "bookPage": 93,
-    "locationNote": "本書 p.93（原本画像 IMG_9669.PNG）。原文照合 batch6 で照合済みの知識単位 gokoufun-2 から生成"
-   }
-  ],
-  "id": "q4-gokoufun-2",
-  "format": "single-choice",
-  "prompt": "「陳皮」とは何を乾燥させたもの?",
-  "choices": [
-   "ビリヤニ",
-   "たで酢",
-   "みかんの皮",
-   "ルッコラセルバチカ"
-  ],
-  "correctChoiceIndexes": [
-   2
   ],
   "explanation": "陳皮とはみかんの皮を乾燥させたもの。"
  },
@@ -1104,13 +579,13 @@
   "format": "single-choice",
   "prompt": "ヒンディー語の「ガラム」の意味は?",
   "choices": [
-   "キュアリング",
-   "バニリン",
+   "喜びの山",
    "マリア様のバラ",
-   "温かい、熱い"
+   "温かい、熱い",
+   "みつばち"
   ],
   "correctChoiceIndexes": [
-   3
+   2
   ],
   "explanation": "ヒンディー語でガラムは「温かい、熱い」、マサラは「(混合)スパイス」の意味。"
  },
@@ -1270,9 +745,9 @@
   "prompt": "カレー粉の発祥とされる国は?",
   "choices": [
    "イギリス",
-   "豆板醤",
-   "キュアリング",
-   "バニリン"
+   "フランス",
+   "中国",
+   "スペイン"
   ],
   "correctChoiceIndexes": [
    0
@@ -1310,28 +785,22 @@
   "sectionId": "item-mix",
   "difficulty": 1,
   "knowledgeUnitIds": [
-   "shichimi-1"
+   "shichimi-2"
   ],
   "sourceRefs": [
    {
     "manifestImageId": "IMG_9672",
     "bookPage": 96,
-    "locationNote": "本書 p.96（原本画像 IMG_9672.PNG）。原文照合 batch7 で照合済みの知識単位 shichimi-1 から生成"
+    "locationNote": "本書 p.96（原本画像 IMG_9672.PNG）。原文照合 batch7 で照合済みの知識単位 shichimi-2 から生成"
    }
   ],
-  "id": "q4-shichimi-1",
-  "format": "single-choice",
-  "prompt": "七味唐辛子の配合の基本を表す言葉は?",
-  "choices": [
-   "勇気",
-   "小さな竜",
-   "フレンチタラゴン",
-   "二辛五香"
+  "id": "q1-shichimi-2",
+  "format": "one-answer",
+  "prompt": "七味唐辛子を最初に売り出したとされる人物は?",
+  "acceptedAnswers": [
+   "からしや徳右衛門"
   ],
-  "correctChoiceIndexes": [
-   3
-  ],
-  "explanation": "配合の基本は「二辛五香(にしんごこう)」で、辛さに特徴のあるもの2種と香りを重視したもの5種という意味。"
+  "explanation": "1625年、からしや徳右衛門が江戸の薬研堀(現在の東日本橋)に店を構えて売り出したのが最初とされる。"
  },
  {
   "version": 1,
@@ -1349,11 +818,17 @@
     "locationNote": "本書 p.96（原本画像 IMG_9672.PNG）。原文照合 batch7 で照合済みの知識単位 shichimi-2 から生成"
    }
   ],
-  "id": "q1-shichimi-2",
-  "format": "one-answer",
+  "id": "q4-shichimi-2",
+  "format": "single-choice",
   "prompt": "七味唐辛子を最初に売り出したとされる人物は?",
-  "acceptedAnswers": [
-   "からしや徳右衛門"
+  "choices": [
+   "からしや徳右衛門",
+   "アピシウス",
+   "バラダン2世",
+   "ミンテ"
+  ],
+  "correctChoiceIndexes": [
+   0
   ],
   "explanation": "1625年、からしや徳右衛門が江戸の薬研堀(現在の東日本橋)に店を構えて売り出したのが最初とされる。"
  },
@@ -1614,10 +1089,10 @@
   "format": "single-choice",
   "prompt": "カレーリーフの和名は?",
   "choices": [
-   "グリチルリチン",
+   "十薬",
    "ナンヨウザンショウ",
-   "小ガランガル",
-   "ブーケガルニ"
+   "コチュカル",
+   "実山椒"
   ],
   "correctChoiceIndexes": [
    1
@@ -1668,10 +1143,10 @@
   "format": "single-choice",
   "prompt": "かんぞう(甘草)の甘み成分は?",
   "choices": [
-   "小ガランガル",
-   "アリシン",
+   "ベンジル芥子油",
+   "アリイナーゼ",
    "グリチルリチン",
-   "ナンヨウザンショウ"
+   "アリシン"
   ],
   "correctChoiceIndexes": [
    2
@@ -1983,36 +1458,6 @@
   "sectionId": "item-others",
   "difficulty": 3,
   "knowledgeUnitIds": [
-   "saf-1"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9677",
-    "bookPage": 101,
-    "locationNote": "本書 p.101（原本画像 IMG_9677.PNG）。原文照合 batch8 で照合済みの知識単位 saf-1 から生成"
-   }
-  ],
-  "id": "q4-saf-1",
-  "format": "single-choice",
-  "prompt": "サフラワー(べにばな)を県花とする県は?",
-  "choices": [
-   "黄飯",
-   "山形県",
-   "アネトール",
-   "クロシン"
-  ],
-  "correctChoiceIndexes": [
-   1
-  ],
-  "explanation": "乾燥した紅色の花弁から抽出した黄色い液を色づけに使う。別名べにばなで山形県の県花。種子は食用油の原料。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-others",
-  "difficulty": 3,
-  "knowledgeUnitIds": [
    "sav-1"
   ],
   "sourceRefs": [
@@ -2195,5 +1640,495 @@
    "スモーリッジ"
   ],
   "explanation": "強い爽やかな香りとほろ苦さがあり、野菜の青臭さを抑える。スパイスに使うのは野生種スモーリッジの種子。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-others",
+  "difficulty": 3,
+  "knowledgeUnitIds": [
+   "sor-1"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9679",
+    "bookPage": 103,
+    "locationNote": "本書 p.103（原本画像 IMG_9679.PNG）。原文照合 batch9 で照合済みの知識単位 sor-1 から生成"
+   }
+  ],
+  "id": "q1-sor-1",
+  "format": "one-answer",
+  "prompt": "フランス名をオゼイユという、強い酸味を持つタデ科のハーブは?",
+  "acceptedAnswers": [
+   "ソレル",
+   "オゼイユ"
+  ],
+  "explanation": "爽やかで強い酸味とほろ苦さがあり、フランス料理でピューレやソースに使われる。白い斑点のあるフレンチソレル(バックラーリーフソレル)もある。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-others",
+  "difficulty": 3,
+  "knowledgeUnitIds": [
+   "sor-1"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9679",
+    "bookPage": 103,
+    "locationNote": "本書 p.103（原本画像 IMG_9679.PNG）。原文照合 batch9 で照合済みの知識単位 sor-1 から生成"
+   }
+  ],
+  "id": "q4-sor-1",
+  "format": "single-choice",
+  "prompt": "フランス名をオゼイユという、強い酸味を持つタデ科のハーブは?",
+  "choices": [
+   "ラセラヌー",
+   "ソレル",
+   "スマック",
+   "カルダモン"
+  ],
+  "correctChoiceIndexes": [
+   1
+  ],
+  "explanation": "爽やかで強い酸味とほろ苦さがあり、フランス料理でピューレやソースに使われる。白い斑点のあるフレンチソレル(バックラーリーフソレル)もある。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-others",
+  "difficulty": 3,
+  "knowledgeUnitIds": [
+   "tad-1"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9680",
+    "bookPage": 104,
+    "locationNote": "本書 p.104（原本画像 IMG_9680.PNG）。原文照合 batch9 で照合済みの知識単位 tad-1 から生成"
+   }
+  ],
+  "id": "q1-tad-1",
+  "format": "one-answer",
+  "prompt": "鮎料理に欠かせない薬味として有名な、たでの葉を使った酢は?",
+  "acceptedAnswers": [
+   "たで酢"
+  ],
+  "explanation": "食用は主にやなぎたでとその変種(紅たで・青たで)。青たでは「鮎たで」とも呼ばれ、たで酢は鮎料理に欠かせない。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-others",
+  "difficulty": 3,
+  "knowledgeUnitIds": [
+   "tam-1"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9680",
+    "bookPage": 104,
+    "locationNote": "本書 p.104（原本画像 IMG_9680.PNG）。原文照合 batch9 で照合済みの知識単位 tam-1 から生成"
+   }
+  ],
+  "id": "q1-tam-1",
+  "format": "one-answer",
+  "prompt": "さやの中の果肉を酸味づけに使うマメ科のスパイスは?",
+  "acceptedAnswers": [
+   "タマリンド"
+  ],
+  "explanation": "さやの中の果肉を使い、フルーツのような酸味で南インドや東南アジアの料理に甘酸っぱさを加える。チャツネやソースの原料にもなる。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-others",
+  "difficulty": 3,
+  "knowledgeUnitIds": [
+   "tam-1"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9680",
+    "bookPage": 104,
+    "locationNote": "本書 p.104（原本画像 IMG_9680.PNG）。原文照合 batch9 で照合済みの知識単位 tam-1 から生成"
+   }
+  ],
+  "id": "q4-tam-1",
+  "format": "single-choice",
+  "prompt": "さやの中の果肉を酸味づけに使うマメ科のスパイスは?",
+  "choices": [
+   "マーシュ",
+   "パンチフォロン",
+   "タマリンド",
+   "クベバ"
+  ],
+  "correctChoiceIndexes": [
+   2
+  ],
+  "explanation": "さやの中の果肉を使い、フルーツのような酸味で南インドや東南アジアの料理に甘酸っぱさを加える。チャツネやソースの原料にもなる。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-others",
+  "difficulty": 3,
+  "knowledgeUnitIds": [
+   "dok-1"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9680",
+    "bookPage": 104,
+    "locationNote": "本書 p.104（原本画像 IMG_9680.PNG）。原文照合 batch9 で照合済みの知識単位 dok-1 から生成"
+   }
+  ],
+  "id": "q1-dok-1",
+  "format": "one-answer",
+  "prompt": "生薬としてのどくだみの名前は?",
+  "acceptedAnswers": [
+   "十薬"
+  ],
+  "explanation": "強い香りを持ち、ベトナム料理に使われ、日本では乾燥葉をお茶にする。生薬としては十薬と呼ばれる。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-others",
+  "difficulty": 3,
+  "knowledgeUnitIds": [
+   "dok-1"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9680",
+    "bookPage": 104,
+    "locationNote": "本書 p.104（原本画像 IMG_9680.PNG）。原文照合 batch9 で照合済みの知識単位 dok-1 から生成"
+   }
+  ],
+  "id": "q4-dok-1",
+  "format": "single-choice",
+  "prompt": "生薬としてのどくだみの名前は?",
+  "choices": [
+   "アイヌわさび",
+   "実山椒",
+   "十薬",
+   "ドイツ人のからし"
+  ],
+  "correctChoiceIndexes": [
+   2
+  ],
+  "explanation": "強い香りを持ち、ベトナム料理に使われ、日本では乾燥葉をお茶にする。生薬としては十薬と呼ばれる。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-others",
+  "difficulty": 3,
+  "knowledgeUnitIds": [
+   "pan-1"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9681",
+    "bookPage": 105,
+    "locationNote": "本書 p.105（原本画像 IMG_9681.PNG）。原文照合 batch9 で照合済みの知識単位 pan-1 から生成"
+   }
+  ],
+  "id": "q1-pan-1",
+  "format": "one-answer",
+  "prompt": "炊きたてごはんのような香りを持つ、タコノキ科の葉は?",
+  "acceptedAnswers": [
+   "パンダンリーフ",
+   "ニオイタコノキ",
+   "ニオイアダン",
+   "ランペ"
+  ],
+  "explanation": "炊きたてごはんのような甘く強い香りで、東南アジアの米料理やデザートに使う。スリランカではランペ、タイではバイトーイと呼ばれる。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-others",
+  "difficulty": 3,
+  "knowledgeUnitIds": [
+   "pan-1"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9681",
+    "bookPage": 105,
+    "locationNote": "本書 p.105（原本画像 IMG_9681.PNG）。原文照合 batch9 で照合済みの知識単位 pan-1 から生成"
+   }
+  ],
+  "id": "q4-pan-1",
+  "format": "single-choice",
+  "prompt": "炊きたてごはんのような香りを持つ、タコノキ科の葉は?",
+  "choices": [
+   "パンダンリーフ",
+   "マジョラム",
+   "ターメリック",
+   "フェネグリーク"
+  ],
+  "correctChoiceIndexes": [
+   0
+  ],
+  "explanation": "炊きたてごはんのような甘く強い香りで、東南アジアの米料理やデザートに使う。スリランカではランペ、タイではバイトーイと呼ばれる。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-others",
+  "difficulty": 3,
+  "knowledgeUnitIds": [
+   "fen-1"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9681",
+    "bookPage": 105,
+    "locationNote": "本書 p.105（原本画像 IMG_9681.PNG）。原文照合 batch9 で照合済みの知識単位 fen-1 から生成"
+   }
+  ],
+  "id": "q1-fen-1",
+  "format": "one-answer",
+  "prompt": "メイプルシロップに似た香りを持つマメ科の種子は?",
+  "acceptedAnswers": [
+   "フェネグリーク",
+   "メティ(メッチ)",
+   "メティ"
+  ],
+  "explanation": "種子はメイプルシロップに似た甘い香りと強い苦みを持ち、スタータースパイスとして使う。苦みがあるので量は控えめに。葉はカスリメティと呼ばれる。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-others",
+  "difficulty": 3,
+  "knowledgeUnitIds": [
+   "fen-1"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9681",
+    "bookPage": 105,
+    "locationNote": "本書 p.105（原本画像 IMG_9681.PNG）。原文照合 batch9 で照合済みの知識単位 fen-1 から生成"
+   }
+  ],
+  "id": "q4-fen-1",
+  "format": "single-choice",
+  "prompt": "メイプルシロップに似た香りを持つマメ科の種子は?",
+  "choices": [
+   "パンダンリーフ",
+   "フェネグリーク",
+   "ラセラヌー",
+   "カルダモン"
+  ],
+  "correctChoiceIndexes": [
+   1
+  ],
+  "explanation": "種子はメイプルシロップに似た甘い香りと強い苦みを持ち、スタータースパイスとして使う。苦みがあるので量は控えめに。葉はカスリメティと呼ばれる。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-others",
+  "difficulty": 3,
+  "knowledgeUnitIds": [
+   "mac-1"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9682",
+    "bookPage": 106,
+    "locationNote": "本書 p.106（原本画像 IMG_9682.PNG）。原文照合 batch9 で照合済みの知識単位 mac-1 から生成"
+   }
+  ],
+  "id": "q1-mac-1",
+  "format": "one-answer",
+  "prompt": "英名を「コーンサラダ」というハーブは?",
+  "acceptedAnswers": [
+   "マーシュ"
+  ],
+  "explanation": "丸い卵形の葉とクセのない風味。英名コーンサラダはトウモロコシ畑近くに自生したことに由来する。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-others",
+  "difficulty": 3,
+  "knowledgeUnitIds": [
+   "mac-1"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9682",
+    "bookPage": 106,
+    "locationNote": "本書 p.106（原本画像 IMG_9682.PNG）。原文照合 batch9 で照合済みの知識単位 mac-1 から生成"
+   }
+  ],
+  "id": "q4-mac-1",
+  "format": "single-choice",
+  "prompt": "英名を「コーンサラダ」というハーブは?",
+  "choices": [
+   "マンゴーパウダー",
+   "ジュニパーベリー",
+   "マーシュ",
+   "グレインズオブパラダイス"
+  ],
+  "correctChoiceIndexes": [
+   2
+  ],
+  "explanation": "丸い卵形の葉とクセのない風味。英名コーンサラダはトウモロコシ畑近くに自生したことに由来する。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-others",
+  "difficulty": 3,
+  "knowledgeUnitIds": [
+   "amc-1"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9682",
+    "bookPage": 106,
+    "locationNote": "本書 p.106（原本画像 IMG_9682.PNG）。原文照合 batch9 で照合済みの知識単位 amc-1 から生成"
+   }
+  ],
+  "id": "q1-amc-1",
+  "format": "one-answer",
+  "prompt": "チャートマサラの基本となるスパイスは?",
+  "acceptedAnswers": [
+   "マンゴーパウダー",
+   "アムチュール"
+  ],
+  "explanation": "未熟なマンゴーを乾燥・粉末にしたもので、レモンのような強い酸味。チャートマサラの原料。インド名アムチュール。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-others",
+  "difficulty": 3,
+  "knowledgeUnitIds": [
+   "amc-1"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9682",
+    "bookPage": 106,
+    "locationNote": "本書 p.106（原本画像 IMG_9682.PNG）。原文照合 batch9 で照合済みの知識単位 amc-1 から生成"
+   }
+  ],
+  "id": "q4-amc-1",
+  "format": "single-choice",
+  "prompt": "チャートマサラの基本となるスパイスは?",
+  "choices": [
+   "マンゴーパウダー",
+   "アニス",
+   "マーシュ",
+   "めぼうき"
+  ],
+  "correctChoiceIndexes": [
+   0
+  ],
+  "explanation": "未熟なマンゴーを乾燥・粉末にしたもので、レモンのような強い酸味。チャートマサラの原料。インド名アムチュール。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-others",
+  "difficulty": 3,
+  "knowledgeUnitIds": [
+   "lb-1"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9682",
+    "bookPage": 106,
+    "locationNote": "本書 p.106（原本画像 IMG_9682.PNG）。原文照合 batch9 で照合済みの知識単位 lb-1 から生成"
+   }
+  ],
+  "id": "q1-lb-1",
+  "format": "one-answer",
+  "prompt": "レモンバームの別名「メリッサ」の意味は?",
+  "acceptedAnswers": [
+   "みつばち"
+  ],
+  "explanation": "おだやかなレモンのような香り。学名でもあるメリッサは「みつばち」の意味で、みつばちを集める植物として栽培された。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-others",
+  "difficulty": 3,
+  "knowledgeUnitIds": [
+   "lb-1"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9682",
+    "bookPage": 106,
+    "locationNote": "本書 p.106（原本画像 IMG_9682.PNG）。原文照合 batch9 で照合済みの知識単位 lb-1 から生成"
+   }
+  ],
+  "id": "q4-lb-1",
+  "format": "single-choice",
+  "prompt": "レモンバームの別名「メリッサ」の意味は?",
+  "choices": [
+   "温かい、熱い",
+   "みつばち",
+   "マリア様のバラ",
+   "虫"
+  ],
+  "correctChoiceIndexes": [
+   1
+  ],
+  "explanation": "おだやかなレモンのような香り。学名でもあるメリッサは「みつばち」の意味で、みつばちを集める植物として栽培された。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-others",
+  "difficulty": 3,
+  "knowledgeUnitIds": [
+   "lp-1"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9683",
+    "bookPage": 107,
+    "locationNote": "本書 p.107（原本画像 IMG_9683.PNG）。原文照合 batch10 で照合済みの知識単位 lp-1 から生成"
+   }
+  ],
+  "id": "q1-lp-1",
+  "format": "one-answer",
+  "prompt": "沖縄で「島こしょう」とも呼ばれるコショウ科のスパイスは?",
+  "acceptedAnswers": [
+   "ロングペッパー",
+   "ヒハツ",
+   "ヒバーチ",
+   "ピバーチ"
+  ],
+  "explanation": "細長い棒状の果実をつけるこしょうの近縁種。沖縄では島こしょう・ヒバーチと呼ばれ、沖縄そばの薬味に使う。"
  }
 ]

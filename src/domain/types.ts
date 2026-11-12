@@ -39,6 +39,8 @@ export interface ImportedKnowledgeUnit {
   spice: { id: string; name: string; en: string|null } | null;
   collation: CollationRecord | null;
 }
-export interface AnswerRecord { questionId: string; answeredAt: string; correct: boolean|null; scoreRatio: number|null; autoScoreRatio: number|null; selfScoreRatio: number|null; responseMs: number|null; selfEval?: "known"|"unsure"|"unknown"|null; mistakeCause?: string|null; }
+export interface AnswerRecord { questionId: string; answeredAt: string; correct: boolean|null; scoreRatio: number|null; autoScoreRatio: number|null; selfScoreRatio: number|null; responseMs: number|null; selfEval?: "known"|"unsure"|"unknown"|null; mistakeCause?: string|null;
+  /** 記述式の回答本文（R47: 書き直し・過去回答との比較用。記述式だけに保存する） */
+  answerText?: string; }
 export interface SrsState { itemId: string; easeFactor: number; intervalDays: number; repetitions: number; dueAt: string; lastReviewedAt: string|null; }
 export interface ReaderState { sectionId: string; fontSize: number; dark: boolean; bookmarks: string[]; highlights: Record<string,string>; notes: Record<string,string>; }

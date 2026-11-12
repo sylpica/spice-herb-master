@@ -26,7 +26,7 @@ describe("画面スモーク（E1: 分割後の画面。UX2で設定、UX5で暗
   it("ホーム: 件数表示が軽量サマリ経由で描画される", () => {
     const html = render(createElement(Home, { store, update }));
     expect(html).toContain("スパイス＆ハーブ検定1級 学習アプリ");
-    expect(html).toContain("1795"); // 正式問題数
+    expect(html).toContain("1732"); // 正式問題数
     expect(html).toContain("545"); // 取り込み済み知識単位数
     expect(html).toContain("140"); // 転記済みページ数
   });
@@ -47,11 +47,10 @@ describe("画面スモーク（E1: 分割後の画面。UX2で設定、UX5で暗
   });
   it("カード: 正式カードが描画される", () => {
     const html = render(createElement(Cards, { store, update }));
-    expect(html).toContain("フラッシュカード・単語帳");
-    expect(html).toContain("正式カード");
+    expect(html).toContain("単語帳");
     // C1（DECISIONS #32）: 自己評価UIの土台として、未評価の状態表示と評価方法の案内が出る
     // （評価ボタン自体は裏面表示後にのみ出るため SSR では描画されない）
-    expect(html).toContain("このカードの状態: 未評価");
+    expect(html).toContain("未評価");
     // UX10: ボタンはカードの真下にあり、表面でも「裏面を表示」「次のカード」が出る
     expect(html).toContain("裏面を表示すると自己評価を記録できます");
     expect(html).toContain("裏面を表示");
@@ -60,11 +59,11 @@ describe("画面スモーク（E1: 分割後の画面。UX2で設定、UX5で暗
   it("模試: 出題候補数がサマリ経由で描画される", () => {
     const html = render(createElement(Exam, { store, update }));
     expect(html).toContain("模擬試験");
-    expect(html).toContain("1795");
+    expect(html).toContain("1641"); // 模試の対象（記述系4形式を除く）
   });
   it("分析: 網羅率の5指標が描画される", () => {
     const html = render(createElement(Stats, { store }));
-    expect(html).toContain("学習分析・可視化");
+    expect(html).toContain("学習分析");
     expect(html).toContain("網羅率");
   });
   it("検索: 節と問題の件数が描画される", () => {
@@ -76,25 +75,27 @@ describe("画面スモーク（E1: 分割後の画面。UX2で設定、UX5で暗
     expect(html).toContain("検索対象");
     expect(html).toContain("検索結果 合計");
     // SSR では数値と「件」の間に React のコメントマーカーが挟まるため数値で固定する
-    expect(html).toContain("1876");
+    expect(html).toContain("1813");
   });
   it("品質管理: 検証集計が描画される", () => {
     const html = render(createElement(QaPage));
-    expect(html).toContain("品質管理（管理・監査）");
-    expect(html).toContain("取り込み済み知識単位");
+    expect(html).toContain("品質管理");
+    expect(html).toContain("知識単位");
+    expect(html).toContain("問題報告");
   });
   it("設定: ダークモード切替と分析・品質管理への導線が描画される（UX2）", () => {
     const html = render(createElement(Settings, { store, update }));
     expect(html).toContain("設定");
-    expect(html).toContain("ダークモード切替");
+    expect(html).toContain("ダークモード");
+    expect(html).toContain("1日の目標");
     expect(html).toContain("学習分析を開く");
     expect(html).toContain("品質管理を開く");
     expect(html).toContain("学習記録をリセット");
   });
   it("ホーム: 暗記モードへの入口が描画される（UX5）", () => {
     const html = render(createElement(Home, { store, update }));
-    expect(html).toContain("全種類を覚える（暗記モード）");
-    expect(html).toContain("暗記を始める");
+    expect(html).toContain('href="/memorize"');
+    expect(html).toContain("全80種");
   });
   it("暗記モード: 全80種のデッキと答え合わせボタンが描画される（UX5）", () => {
     const html = render(createElement(Memorize, { store, update }));

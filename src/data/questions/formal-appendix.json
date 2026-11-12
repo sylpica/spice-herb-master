@@ -30,36 +30,6 @@
   "sectionId": "exam-about",
   "difficulty": 2,
   "knowledgeUnitIds": [
-   "e-org"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9712",
-    "bookPage": 136,
-    "locationNote": "本書 p.136（原本画像 IMG_9712.PNG）。原文照合 batch30 で照合済みの知識単位 e-org から生成"
-   }
-  ],
-  "id": "q4-e-org",
-  "format": "single-choice",
-  "prompt": "スパイス&ハーブ検定を主催する団体は?",
-  "choices": [
-   "外側",
-   "山崎香辛料振興財団",
-   "素焼き",
-   "ブレンドハーブティー"
-  ],
-  "correctChoiceIndexes": [
-   1
-  ],
-  "explanation": "スパイス&ハーブ検定は公益財団法人 山崎香辛料振興財団が主催し、2009年にスタートした。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "appendix",
-  "sectionId": "exam-about",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
    "e-start"
   ],
   "sourceRefs": [
@@ -97,13 +67,13 @@
   "format": "single-choice",
   "prompt": "スパイス&ハーブ検定がスタートした年は?",
   "choices": [
-   "7〜10分",
-   "4〜5日",
-   "5年",
-   "2009年"
+   "1520年",
+   "1602年",
+   "2009年",
+   "1625年"
   ],
   "correctChoiceIndexes": [
-   3
+   2
   ],
   "explanation": "スパイス&ハーブ検定は2009年にスタートした。"
  },
@@ -151,13 +121,13 @@
   "format": "single-choice",
   "prompt": "1級の単品知識で対象となるスパイス・ハーブは全部で何種?",
   "choices": [
+   "1/3量",
    "600種",
    "4回",
-   "80種",
-   "1/3量"
+   "80種"
   ],
   "correctChoiceIndexes": [
-   2
+   3
   ],
   "explanation": "単品知識は3級25種、2級は追加20種(計45種)、1級は追加35種(計80種)。1級の追加分は本書p.98〜108のプロ級が該当する。"
  },

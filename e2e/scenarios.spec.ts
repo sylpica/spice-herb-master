@@ -84,11 +84,11 @@ test.describe("学習状態の保存・復元", () => {
     await expect(page.getByRole("heading", { name: "演習" })).toBeVisible();
     await page.goto("#/stats");
     await expect(page.getByRole("heading", { name: "学習分析・可視化" })).toBeVisible();
-    await expect(page.getByText(/総解答数 1 ／ 正答率 100%/)).toBeVisible();
+    await expect(page.getByText(/^1問 ・ 正答率 100%$/)).toBeVisible();
 
     // ホームの学習進捗にも復元された記録が反映される
     await page.goto("");
-    await expect(page.getByText(/総解答 1 ／ 正答率 100%/)).toBeVisible();
+    await expect(page.getByText("総解答 1", { exact: true })).toBeVisible();
   });
 
   test("リーダーの読書位置としおりが再読み込み後も保持される", async ({ page }) => {
@@ -96,7 +96,7 @@ test.describe("学習状態の保存・復元", () => {
     await expect(page.getByRole("heading", { name: "電子書籍リーダー" })).toBeVisible();
     await page.getByRole("button", { name: "日本における歴史（p.10）" }).click();
     await expect(page.getByText(/書籍 p\.10 ／ 転記状態: 転記済み/)).toBeVisible();
-    await page.getByRole("button", { name: "しおり", exact: true }).click();
+    await page.getByRole("button", { name: "☆ しおり" }).click();
 
     await expect
       .poll(async () => {
@@ -109,7 +109,9 @@ test.describe("学習状態の保存・復元", () => {
     await expect(page.getByRole("heading", { name: "電子書籍リーダー" })).toBeVisible();
     // 読書位置（p.10 の節）が復元され、しおり一覧にも残る
     await expect(page.getByText(/書籍 p\.10 ／ 転記状態: 転記済み/)).toBeVisible();
-    await expect(page.getByText(/しおり: history-japan/)).toBeVisible();
+    // しおりは節名の一覧として表示され、押すとその節へ移動できる（内部IDは表示しない）
+    await expect(page.getByRole("button", { name: "★ しおり" })).toBeVisible();
+    await expect(page.locator("#reader-page ul.rows").getByRole("button", { name: /日本における歴史/ })).toBeVisible();
   });
 });
 
@@ -139,9 +141,9 @@ test.describe("SRS・復習フロー", () => {
 
     // 期限は翌日なので、学習分析の「期限到来」は 0 件のまま（再読み込み後も同じ）
     await page.goto("#/stats");
-    await expect(page.getByText("0件が期限到来")).toBeVisible();
+    await expect(page.getByText("問題 0件 ・ カード 0件")).toBeVisible();
     await page.reload();
-    await expect(page.getByText("0件が期限到来")).toBeVisible();
+    await expect(page.getByText("問題 0件 ・ カード 0件")).toBeVisible();
   });
 
   test("期限到来のSRSをストレージに用意すると分析とホームで数えられ、未来期限は数えられない", async ({
@@ -184,13 +186,13 @@ test.describe("SRS・復習フロー", () => {
     await page.goto("#/stats");
     await expect(page.getByRole("heading", { name: "学習分析・可視化" })).toBeVisible();
     // 過去期限の1件だけが期限到来として数えられる
-    await expect(page.getByText("1件が期限到来")).toBeVisible();
+    await expect(page.getByText("問題 1件 ・ カード 0件")).toBeVisible();
 
     await page.goto("");
     await expect(
       page.getByRole("heading", { name: "スパイス＆ハーブ検定1級 学習アプリ" }),
     ).toBeVisible();
-    await expect(page.getByText(/復習予定: 1件/)).toBeVisible();
+    await expect(page.getByText("期限 1件", { exact: true })).toBeVisible();
   });
 });
 
@@ -201,7 +203,7 @@ test.describe("横断検索の絞り込み", () => {
     await page.goto("#/search");
     await expect(page.getByRole("heading", { name: "横断検索" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "教材（節） 81件" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "問題 1795件" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "問題 1732件" })).toBeVisible();
 
     // 単独キーワード: 節と問題の両方が同時に絞られる（横断検索の実態）
     await page.getByLabel("キーワード").fill("歴史");
@@ -212,12 +214,12 @@ test.describe("横断検索の絞り込み", () => {
     await page.getByLabel("キーワード").fill("世界における歴史");
     await expect(page.getByRole("heading", { name: "教材（節） 2件" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "問題 0件" })).toBeVisible();
-    await expect(page.getByText("世界における歴史（p.6・転記済み）")).toBeVisible();
+    await expect(page.getByRole("button", { name: "世界における歴史 リーダーで開く" })).toBeVisible();
 
     // 条件を解除すると全件表示に戻る
     await page.getByLabel("キーワード").fill("");
     await expect(page.getByRole("heading", { name: "教材（節） 81件" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "問題 1795件" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "問題 1732件" })).toBeVisible();
   });
 
   test("該当しないキーワードでは節・問題とも0件の空状態になる", async ({ page }) => {
@@ -236,8 +238,8 @@ test.describe("横断検索の複合フィルタ（S1）", () => {
     await page.goto("#/search");
     await expect(page.getByRole("heading", { name: "横断検索" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "教材（節） 81件" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "問題 1795件" })).toBeVisible();
-    await expect(page.getByText(/検索結果 合計 1876件/)).toBeVisible();
+    await expect(page.getByRole("heading", { name: "問題 1732件" })).toBeVisible();
+    await expect(page.getByText(/検索結果 合計 1813件/)).toBeVisible();
 
     // キーワード単独: 節6件（タイトル2＋本文4）・問題4件
     await page.getByLabel("キーワード").fill("歴史");
@@ -280,8 +282,8 @@ test.describe("横断検索の複合フィルタ（S1）", () => {
     // すべての条件を解除すると全件表示に復帰し、入力値も初期状態に戻る
     await page.getByRole("button", { name: "すべての条件を解除" }).click();
     await expect(page.getByRole("heading", { name: "教材（節） 81件" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "問題 1795件" })).toBeVisible();
-    await expect(page.getByText(/検索結果 合計 1876件/)).toBeVisible();
+    await expect(page.getByRole("heading", { name: "問題 1732件" })).toBeVisible();
+    await expect(page.getByText(/検索結果 合計 1813件/)).toBeVisible();
     await expect(page.getByLabel("キーワード")).toHaveValue("");
     await expect(page.getByLabel("序章", { exact: true })).not.toBeChecked();
     await expect(page.getByLabel("一問一答", { exact: true })).not.toBeChecked();
@@ -295,10 +297,10 @@ test.describe("横断検索の複合フィルタ（S1）", () => {
     await expect(page.getByRole("heading", { name: "問題 0件" })).toBeVisible();
     await page.getByLabel("検索対象").selectOption("questions");
     await expect(page.getByRole("heading", { name: "教材（節） 0件" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "問題 1795件" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "問題 1732件" })).toBeVisible();
     await page.getByRole("button", { name: "対象: 問題のみ ×" }).click();
     await expect(page.getByRole("heading", { name: "教材（節） 81件" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "問題 1795件" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "問題 1732件" })).toBeVisible();
   });
 });
 
@@ -309,19 +311,19 @@ test.describe("横断検索の拡張フィルタ（S2）", () => {
     await page.goto("#/search");
     await expect(page.getByRole("heading", { name: "横断検索" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "教材（節） 81件" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "問題 1795件" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "問題 1732件" })).toBeVisible();
 
     // 章を1つ選択: 序章だけに絞られる
     await page.getByLabel("序章", { exact: true }).check();
     await expect(page.getByRole("heading", { name: "教材（節） 5件" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "問題 181件" })).toBeVisible();
-    await expect(page.getByText(/検索結果 合計 186件/)).toBeVisible();
+    await expect(page.getByRole("heading", { name: "問題 169件" })).toBeVisible();
+    await expect(page.getByText(/検索結果 合計 174件/)).toBeVisible();
 
     // 章をもう1つ足す（次元内 OR）: 第二章との合算に単調に広がる
     await page.getByLabel("第二章", { exact: true }).check();
     await expect(page.getByRole("heading", { name: "教材（節） 44件" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "問題 1469件" })).toBeVisible();
-    await expect(page.getByText(/検索結果 合計 1513件/)).toBeVisible();
+    await expect(page.getByRole("heading", { name: "問題 1432件" })).toBeVisible();
+    await expect(page.getByText(/検索結果 合計 1476件/)).toBeVisible();
 
     // 形式（一問一答）を重ねる（次元間 AND）: 2章の一問一答308件に絞られ、節は対象外になる
     await page.getByLabel("一問一答", { exact: true }).check();
@@ -336,13 +338,13 @@ test.describe("横断検索の拡張フィルタ（S2）", () => {
     // 形式のチップを個別解除すると、序章のみの結果（節5件・問題181件）に戻る
     await page.getByRole("button", { name: "形式: 一問一答 ×" }).click();
     await expect(page.getByRole("heading", { name: "教材（節） 5件" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "問題 181件" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "問題 169件" })).toBeVisible();
 
     // 序章のチェックを外すと全件に復帰する
     await page.getByLabel("序章", { exact: true }).uncheck();
     await expect(page.getByRole("heading", { name: "教材（節） 81件" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "問題 1795件" })).toBeVisible();
-    await expect(page.getByText(/検索結果 合計 1876件/)).toBeVisible();
+    await expect(page.getByRole("heading", { name: "問題 1732件" })).toBeVisible();
+    await expect(page.getByText(/検索結果 合計 1813件/)).toBeVisible();
   });
 
   test("節・問題の状態・転記状態で絞り込め、解除で全件に戻る", async ({ page }) => {
@@ -355,35 +357,35 @@ test.describe("横断検索の拡張フィルタ（S2）", () => {
     await expect(page.getByRole("heading", { name: "教材（節） 1件" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "問題 67件" })).toBeVisible();
     await expect(page.getByText(/検索結果 合計 68件/)).toBeVisible();
-    await expect(page.getByText("世界における歴史（p.6・転記済み）")).toBeVisible();
+    await expect(page.getByRole("button", { name: "世界における歴史 リーダーで開く" })).toBeVisible();
 
     // 節のチップで個別解除すると全件に戻る
     await page.getByRole("button", { name: "節: 世界における歴史 ×" }).click();
     await expect(page.getByRole("heading", { name: "教材（節） 81件" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "問題 1795件" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "問題 1732件" })).toBeVisible();
 
     // 問題の状態（正式）: サンプル削除後は正式のみが選択肢にあり、問題固有の条件のため節は対象外になる
     await page.getByLabel("問題の状態").selectOption("verified");
     await expect(page.getByRole("heading", { name: "教材（節） 0件" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "問題 1795件" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "問題 1732件" })).toBeVisible();
 
     // 状態のチップで個別解除すると全件に戻る
     await page.getByRole("button", { name: "状態: 正式 ×" }).click();
     await expect(page.getByRole("heading", { name: "教材（節） 81件" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "問題 1795件" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "問題 1732件" })).toBeVisible();
 
     // 転記状態（転記済み）: T18 で全81節が転記済みになったため、選択肢は「転記済み」のみで
     // 絞り込んでも全件のまま（未処理の節は存在しない）
     await page.getByLabel("転記状態").selectOption("転記済み");
     await expect(page.getByRole("heading", { name: "教材（節） 81件" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "問題 1795件" })).toBeVisible();
-    await expect(page.getByText(/検索結果 合計 1876件/)).toBeVisible();
+    await expect(page.getByRole("heading", { name: "問題 1732件" })).toBeVisible();
+    await expect(page.getByText(/検索結果 合計 1813件/)).toBeVisible();
 
     // すべての条件を解除すると全件表示と入力初期値に復帰する
     await page.getByRole("button", { name: "すべての条件を解除" }).click();
     await expect(page.getByRole("heading", { name: "教材（節） 81件" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "問題 1795件" })).toBeVisible();
-    await expect(page.getByText(/検索結果 合計 1876件/)).toBeVisible();
+    await expect(page.getByRole("heading", { name: "問題 1732件" })).toBeVisible();
+    await expect(page.getByText(/検索結果 合計 1813件/)).toBeVisible();
     await expect(page.getByLabel("転記状態")).toHaveValue("");
   });
 });
@@ -433,7 +435,7 @@ test.describe("フラッシュカードの自己評価（C1）", () => {
     expect(front).toBeTruthy();
     // 評価ボタンは裏面を表示するまで出ない（DECISIONS #32: 反転後にのみ自己評価できる）
     await expect(page.getByRole("button", { name: "分かった" })).toBeHidden();
-    await expect(page.getByText("このカードの状態: 未評価")).toBeVisible();
+    await expect(page.getByText(/枚 ・ .+ ・ 未評価$/)).toBeVisible();
 
     await card.click();
     const back = (await card.textContent())?.trim();
@@ -491,7 +493,7 @@ test.describe("フラッシュカードの自己評価（C1）", () => {
         return `${Object.keys(s.srs).length}/${reps}`;
       })
       .toBe("2/0,1");
-    await expect(page.getByText(/評価済み 2 \/ 全 602 件/)).toBeVisible();
+    await expect(page.getByText(/評価済み 2 \/ 全 602 枚/)).toBeVisible();
 
     // 再読み込み後、登録順の1枚目に戻ると保持された評価が状態表示に出る（1枚目は repetitions=0）
     await page.reload();
@@ -499,10 +501,10 @@ test.describe("フラッシュカードの自己評価（C1）", () => {
       page.getByRole("heading", { name: "フラッシュカード・単語帳" }),
     ).toBeVisible();
     await page.getByLabel("並び").selectOption("sequence");
-    await expect(page.getByText(/このカードの状態: 評価済み（復習 0 回/)).toBeVisible();
+    await expect(page.getByText(/・ 復習 0 回・次回/)).toBeVisible();
 
     // 期限は翌日のため、学習分析の「期限到来」は 0 件のまま（カードのSRSも同じ集計に載る）
     await page.goto("#/stats");
-    await expect(page.getByText("0件が期限到来")).toBeVisible();
+    await expect(page.getByText("問題 0件 ・ カード 0件")).toBeVisible();
   });
 });

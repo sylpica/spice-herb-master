@@ -1,7 +1,8 @@
-# 要件追跡表（2026-11-03 Claude Code 独立監査時点）
+# 要件追跡表（2026-11-12 Claude Code 第2ラウンド監査時点）
 
 R01〜R55、UX1〜UX14、DECISIONS #52 の各要件について、実装箇所・検証・判定を示す。
-判定は修正後（コミット 8a4f00d 以降）の実測に基づく。前回（2026-10-31、Muse）の版は git 履歴にある。
+判定は第2ラウンドの修正後（DECISIONS #55）の実測に基づく。第1ラウンド（2026-11-03）と Muse（2026-10-31）の版は git 履歴にある。
+第2ラウンドで判定や内容が変わった行には「#55」と記した。
 前回 PASS とされていたもののうち、今回の実測で未実装・不具合が見つかったものは PARTIAL または FAIL に改めた。
 判定: PASS（検証して合格）／PARTIAL（一部のみ充足）／FAIL（未充足）／NOT TESTED（未検証）。
 
@@ -9,56 +10,56 @@ R01〜R55、UX1〜UX14、DECISIONS #52 の各要件について、実装箇所�
 
 | 要件 | 実装箇所 | 検証 | 判定 | 修正履歴・未検証理由 |
 |---|---|---|---|---|
-| R01 教材の完全網羅 | src/data/transcripts、knowledge | 独立再集計（142レコード・140ページ・90,957字・81節）、8ページ目視照合、80プロフィール機械照合 | PARTIAL | 全140ページの原本全数照合は未実施。p.141以降は原本画像が Drive にない（既知） |
+| R01 教材の完全網羅 | src/data/transcripts、knowledge | 独立再集計（142レコード・140ページ・90,957字・81節）、10ページ目視照合（#55 で p.103・106 を追加）、80プロフィール機械照合 | PARTIAL | 全140ページの原本全数照合は未実施 |
 | R02 多様な出題形式 | domain/types.ts、QuestionRunner | 15形式の再集計、形式別の採点単体テスト | PARTIAL | 写真識別（photo-id）は未生成（R25） |
 | R03 記述式採点 | domain/grading.ts | 記述23問の rubric・modelAnswer、境界ケース単体（羅列で正解と断定しない、改行・全角空白） | PASS | AU-05 で列挙問題の順序違いを修正 |
 | R04 知識単位 | src/data/knowledge | 545件・verified 545・全問題の参照が実在 | PASS | AU-11/12 で4単位を上書き（batch 維持） |
-| R05 問題数（水増し禁止） | scripts/generate-questions.mjs | 1,795問。四択として成立しない9問を生成しない | PASS | AU-06 |
+| R05 問題数（水増し禁止） | scripts/generate-questions.mjs | 1,732問（#55）。誤答を揃えられない四択を生成しない | PASS | AU-06、BV-13（#55） |
 | R06 演習モード | screens/Practice.tsx、domain/practice.ts | 章・節・形式・難易度・未回答・誤答・苦手・ブックマーク・期限・記述の絞り込み E2E | PASS | — |
 | R07 間隔反復 | domain/srs.ts | SRS 単体・E2E（翌日期限、自己評価の保持） | PASS | 解答時間は記録されるが間隔計算には使わない |
-| R08 解説 | QuestionRunner の details | 解説・出典・関連節の表示 | PARTIAL | 誤答選択肢ごとの説明はない |
-| R09 分析 | screens/Stats.tsx | 章・形式・難易度別、網羅率の E2E | PASS | AU-09 で集計を索引化 |
+| R08 解説 | QuestionRunner の details | 解説・出典・関連節の表示。確定後は正答の選択肢に「（正答）」を表示（#55） | PARTIAL | 誤答選択肢ごとの説明はない（原本に根拠のある説明文が必要） |
+| R09 分析 | screens/Stats.tsx | 章・形式・難易度別、網羅率、連続学習・直近7/30日（#55）の E2E | PASS | AU-09 で集計を索引化 |
 | R10 端末保存 | domain/store.ts | 再読み込み後の保持 E2E、壊れたデータの単体 | PASS | — |
 | R11 出題条件 | Practice・Exam | 絞り込み・問題数・時間の E2E | PASS | — |
-| R12 電子書籍 | screens/Reader.tsx | 目次・節・原画・しおり・ページジャンプ・索引 E2E | PARTIAL | ハイライト・メモの E2E はない。書籍内全文検索は節タイトル検索のみ（全文は横断検索側） |
+| R12 電子書籍 | screens/Reader.tsx | 目次・節・原画・しおり（付け外し・移動、#55）・前後の節・ページジャンプ・索引 E2E | PARTIAL | ハイライト・メモの E2E はない。書籍内全文検索は節タイトル検索のみ（全文は横断検索側） |
 | R13 全文収録 | transcripts | 文字数の独立再集計一致 | PASS | — |
 | R14 個人利用 | — | ログイン・アカウントなし | PASS | — |
 | R15 原本 | public/pages-b64 | 146件の復号・WebP 検証・寸法・重複0 | PASS | IMG_9647 は欠番（内容未確認） |
 | R16 解説表示タイミング | Practice・Exam | 演習は回答直後、模試は終了後の一括採点 E2E | PASS | — |
 | R17 中断・再開 | store.examDraft、reader | 模試の途中保存・読書位置の E2E | PASS | 演習セッションの途中状態はリロードで復元しない（記録は保存） |
-| R18 問題品質管理 | screens/QaPage.tsx | 検証集計の E2E | PARTIAL | 利用者からの問題報告・除外・修正案の入力はない（AU-17） |
-| R19 UI/UX | 全画面 | 390×844・1280×800 の実測、ダークモード E2E | PASS | 文字サイズはリーダーのみ |
-| R20 オフライン方針 | vite-plugin-pwa | プリキャッシュ37件（教材画像を含まない）、SW E2E | PASS | — |
-| R21 模擬試験 | screens/Exam.tsx、domain/exam.ts | プール1,704・除外91、時間・一括採点・記録 E2E | PARTIAL | 級別の設定はない（AU-17）。公式形式の再現とは表示していない |
+| R18 問題品質管理 | QuestionRunner、screens/QaPage.tsx、store | 報告→品質管理の一覧→除外で演習プール1件減→復帰の E2E（#55） | PASS | BV-08 で実装。報告は端末内保存＋JSON 書き出し（GitHub 直接書き込みはしない） |
+| R19 UI/UX | 全画面 | 375×667・1280×800 の全11画面の機械計測（文字切れ0・44px未満0）、ダークモード E2E（#55） | PASS | 文字サイズはリーダーのみ |
+| R20 オフライン方針 | vite-plugin-pwa | プリキャッシュ38件（教材画像を含まない）、SW E2E | PASS | — |
+| R21 模擬試験 | screens/Exam.tsx、domain/exam.ts | プール1,641・除外91、時間（1〜120分）・一括採点・記録 E2E、並べ替えの入れ替え単体（#55） | PARTIAL | BV-02 を修正。級別の設定はない（問題に級の属性がない）。公式形式の再現とは表示していない |
 | R22 端末容量 | store.ts | 教材の永続保存なし | PASS | 履歴件数は無上限（P3 既知） |
 | R23 技術・運用 | GitHub | main・Actions・gh-pages の実測 | PASS | — |
-| R24 単語帳 | screens/Cards.tsx | 602枚、表裏・逆引き・種別・章・自己評価・前後 E2E | PARTIAL | カードのお気に入り・タグ・画像はない（AU-17） |
+| R24 単語帳 | screens/Cards.tsx | 602枚、表裏・逆引き・種別・章・自己評価・前後・お気に入り（#55） E2E | PARTIAL | BV-09 でお気に入りを追加。タグは種別・章の絞り込みで代替、画像はない |
 | R25 画像学習 | figure 形式 | 図表問題17問 | PARTIAL | 写真識別は未実装（DECISIONS #53 の再開条件） |
 | R26 記述回答 | QuestionRunner | テキスト入力・自己採点 | PARTIAL | 音声入力は OS キーボードの機能に依存（アプリ側の実装なし） |
-| R27 高速演習 | Practice | 「とりあえず5問」、自動進行（設定） E2E | PARTIAL | AU-08 で自動進行を追加。スワイプ・キーボード操作・後回しはない |
-| R28 高度な検索 | screens/SearchPage.tsx | 章・節・形式・難易度・状態・転記状態の複合 E2E、総数1,876 | PARTIAL | 正答率・解答履歴・習得度・お気に入りでの検索はない（演習の学習フォーカスにはある） |
-| R29 継続学習支援 | Home | 1日の目標 | FAIL | 連続学習日数・バッジ・週間/月間レポート・通知設定がない（AU-17） |
-| R30 品質保証 | tests、e2e | 単体251・データ13・E2E59・型・ビルド全合格 | PASS | — |
-| R31 全機能対象 | — | 本表 | PARTIAL | R18・R21・R24・R27〜R29・R47 に未実装あり |
-| R32 CI・公開 | .github/workflows/ci.yml | e2e 失敗の原因を特定・修正（AU-01） | PARTIAL | 修正のリモート CI 結果は PR で確認する。gh-pages への配信は未実施 |
+| R27 高速演習 | Practice、QuestionRunner | 「とりあえず5問」、自動進行、後回し・数字/Enter/←→キー（#55） E2E | PASS | BV-07 で実装。左右スワイプは実装したが実機では NOT TESTED |
+| R28 高度な検索 | screens/SearchPage.tsx、domain/search.ts | 章・節・形式・難易度・状態・転記状態の複合に加え、学習状況（未回答・直近不正解・苦手・習得済み・ブックマーク）と並び順（難易度・正答率）の単体・E2E、総数1,813（#55） | PASS | BV-06 で実装 |
+| R29 継続学習支援 | Home、Stats、Settings、domain/streak.ts | 1日の目標・進捗バー・連続学習日数・直近7/30日レポート・バッジの単体・E2E（#55） | PARTIAL | BV-10 で実装。通知は未実装（DECISIONS #55 (11)） |
+| R30 品質保証 | tests、e2e | 単体277・データ13・E2E71・型・ビルド全合格（#55） | PASS | — |
+| R31 全機能対象 | — | 本表 | PARTIAL | 未実装は R21 級別・R25 写真識別・R08 誤答選択肢の説明・R29 通知 |
+| R32 CI・公開 | .github/workflows/ci.yml | main `2e70f29` の CI 成功・gh-pages `ac18ae4` とビルドのハッシュ一致を実測（#55） | PARTIAL | 第2ラウンド分のリモート CI は PR で確認。配信は公開前ゲートで保留 |
 | R33 教材管理 | collation-overrides、import、generate | 再実行で差分0の決定性、照合バッチ記録 | PASS | — |
-| R34 PWA | manifest・アイコン・SW | PWA E2E | PASS | 公開版 sw.js の PNG revision 不一致（AU-16、P3） |
-| R35 OCR・転記品質 | transcripts | 8ページ目視、80プロフィール機械照合 | PARTIAL | 不一致3件を修正（AU-11）。全数照合は未実施 |
+| R34 PWA | manifest・アイコン・SW | PWA E2E、公開版 sw.js とビルドの一致 | PASS | AU-16 は解消済み（#55 で確認） |
+| R35 OCR・転記品質 | transcripts | 10ページ目視、80プロフィール機械照合 | PARTIAL | AU-11 の修正は再生成後も保持（#55 で確認）。全数照合は未実施 |
 | R36 重複最適化 | — | 364組のツインは保持 | NOT TESTED | 個別の学習価値は未評価 |
 | R37 バックアップ不要 | — | クラウド同期なし | PASS | — |
 | R38〜R40 教材配信 | gh-pages | 原画146件の配信 | PASS | 許諾範囲の適法性は判断しない |
-| R41 ホーム | screens/Home.tsx | E2E | PASS | — |
+| R41 ホーム | screens/Home.tsx | タイル10個と目標が 375×667 の一画面に収まる E2E（#55） | PASS | BV-01 |
 | R42 弱点克服 | Practice（誤答・苦手） | E2E | PARTIAL | 誤答原因の記録（mistakeCause）の入力 UI はない |
 | R43 メモ | Reader | 実装あり | NOT TESTED | E2E なし |
 | R44 網羅性 | Stats | 網羅・問題化・学習・習得を区別表示 | PASS | — |
 | R45 原文連携 | QuestionRunner→Reader、模試は終了まで参照なし | E2E | PASS | — |
 | R46 解答後UI | QuestionRunner | 正誤→正答→詳細の順（全形式）、自動・手動進行 E2E | PASS | AU-03・AU-08 で修正 |
-| R47 記述力強化 | grading・QuestionRunner | 要点別・部分点・自己採点 | PARTIAL | 再記述・過去回答との比較はない |
+| R47 記述力強化 | grading・QuestionRunner | 要点別・部分点・自己採点、書き直し・過去回答の表示（#55） | PARTIAL | BV-11 で実装。書き直し・過去回答の E2E はない。苦手要素の復習は誤答・苦手フォーカスで代替 |
 | R48 品質管理 | QaPage、生成後検証 | 未検証・出典不一致・重複の機械検証 | PASS | 認証なしの GitHub 書き込みはない |
 | R49 デザイン | styles.css | 実測 | PASS | — |
-| R50 通知・演出 | — | 不要な演出なし | PARTIAL | 通知の設定項目がない |
-| R51 分析指標 | Stats | 区別表示 | PARTIAL | 記述要点達成率の表示はない |
-| R52 性能 | 遅延チャンク・SW | ビルド構成、集計の索引化 | PASS | data-questions 1.90MB（gzip 187KB、P3） |
+| R50 通知・演出 | — | 不要な演出なし | PARTIAL | 通知機能そのものがない（設定項目もない） |
+| R51 分析指標 | Stats | 原本の収録・問題化・学習済み・習得推定・記述の要点達成の5指標を分けて表示する E2E（#55） | PASS | BV-05・BV-10 |
+| R52 性能 | 遅延チャンク・SW | ビルド構成、集計の索引化、検索の段階表示（#55） | PASS | data-questions 1.86MB（gzip 185KB、P3） |
 | R53 データ生成 | scripts | 決定的再生成・生成後検証 | PASS | AU-04/06 のガードを生成後検証に追加 |
 | R54 完成基準 | — | 本監査 | PARTIAL | 第38章の品質ゲートは docs/POST_FIX_AUDIT_REPORT.md |
 | R55 ドキュメント | docs | 本監査で更新 | PASS | — |
@@ -86,3 +87,13 @@ R01〜R55、UX1〜UX14、DECISIONS #52 の各要件について、実装箇所�
 | 改訂内容の全体適用 | 36件の旧表記が学習データに残っていない。注記の未反映2件（唐辛子・しそ）を修正 | PASS |
 | ロングペッパー「ピバーチ」・batch10 | 原本 p.107 と一致、batch10 維持 | PASS |
 | カリカット「コーリコード」 | 原本 p.8 と一致 | PASS |
+
+## 全アプリ共通UIルール（2026-11-03 追記、#55）
+
+| ルール | 検証 | 判定 |
+|---|---|---|
+| 1 スクロールを減らす | 375×667 でホームのタイル10個と目標が一画面内、模試はスクロールなし、検索は20件ずつ、改訂は畳む、リーダーの目次はスマホ幅で畳む（E2E でページ高さの上限を固定） | PASS（演習の設定・絞り込みは UX13 の確定指示により問題の下に展開したまま） |
+| 2 文字の切れをなくす | 375×667・1280×800 の全11画面で、はみ出し・横切れ・縦切れ・省略表示が0件（E2E） | PASS（実機は NOT TESTED） |
+| 3 免責・説明は下 | 全画面で説明・注記を末尾へ移動（単体で出現順、E2E で座標を検証） | PASS |
+| 4 上部バーはコンパクト | 要素は12項目のリンクのみ。寸法は確定仕様により不変（375px で111px、E2E で固定） | PASS（現行寸法の範囲で確認） |
+

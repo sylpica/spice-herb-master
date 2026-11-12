@@ -93,8 +93,7 @@ export default function Memorize({ store, update }: { store: StoreData; update: 
 
  return <main>
   <h1>暗記モード（全{deck.length}種）</h1>
-  <p className="muted">思い出してからタップで答え合わせをしてください。自己評価は単語帳と共通の復習記録（SRS）に反映されます。</p>
-  <p>{round}周目 ／ {pos + 1} / {order.length}種 ／ この周の「覚えた」: {roundKnown}種 ／ 評価済み（累計）: {evaluatedKinds} / {deck.length}種</p>
+  <p className="muted" style={{ margin: "0 0 .3rem" }}>{round}周目 ・ {pos + 1} / {order.length}種 ・ 覚えた {roundKnown}種</p>
   <section className="card">
    {reverse ? <>
     <p className="muted">説明から名前を当てる{page ? `（本書 p.${page}）` : ""}</p>
@@ -104,22 +103,23 @@ export default function Memorize({ store, update }: { store: StoreData; update: 
        <h2 style={{ fontSize: "2rem", margin: ".4rem 0" }}>{name}</h2>
        <p style={{ whiteSpace: "pre-wrap" }}>{card.back}</p>
       </>
-     : <p><button type="button" onClick={() => setFlip(true)}>名前を表示（答え合わせ）</button></p>}
+     : <p className="actions"><button type="button" onClick={() => setFlip(true)}>名前を表示（答え合わせ）</button></p>}
    </> : <>
     <p className="muted">スパイス＆ハーブの種類{page ? `（本書 p.${page}）` : ""}</p>
     <h2 style={{ fontSize: "2rem", margin: ".4rem 0" }}>{name}</h2>
     {flip
      ? <p style={{ whiteSpace: "pre-wrap" }}>{card.back}</p>
-     : <p><button type="button" onClick={() => setFlip(true)}>プロフィールを表示（答え合わせ）</button></p>}
+     : <p className="actions"><button type="button" onClick={() => setFlip(true)}>プロフィールを表示（答え合わせ）</button></p>}
    </>}
-   {flip && <p>{EVAL_OPTIONS.map((o) => <button key={o.key} type="button" onClick={() => evaluate(o.key)} style={{ marginRight: ".5rem" }}>{o.label}</button>)}</p>}
+   {flip && <p className="actions" role="group" aria-label="自己評価">{EVAL_OPTIONS.map((o) => <button key={o.key} type="button" onClick={() => evaluate(o.key)}>{o.label}</button>)}</p>}
   </section>
-  <p><button type="button" disabled={pos === 0} onClick={() => { setFlip(false); setPos(pos - 1); }}>前へ</button>{" "}<button type="button" onClick={skip}>次へ</button></p>
+  <p className="actions"><button type="button" className="ghost" disabled={pos === 0} onClick={() => { setFlip(false); setPos(pos - 1); }}>前へ</button><button type="button" className="ghost" onClick={skip}>次へ</button></p>
   {/* 出題の向き（逆モード）の切替は下に置く（ユーザー指示 2026-10-31） */}
-  <p role="group" aria-label="出題の向き">
-   <button type="button" aria-pressed={!reverse} onClick={() => { setDirection("name-first"); setFlip(false); }}>名前 → プロフィール</button>{" "}
-   <button type="button" aria-pressed={reverse} onClick={() => { setDirection("desc-first"); setFlip(false); }}>プロフィール → 名前（逆）</button>
+  <p className="actions" role="group" aria-label="出題の向き">
+   <button type="button" className={reverse ? "ghost" : ""} aria-pressed={!reverse} onClick={() => { setDirection("name-first"); setFlip(false); }}>名前 → プロフィール</button>
+   <button type="button" className={reverse ? "" : "ghost"} aria-pressed={reverse} onClick={() => { setDirection("desc-first"); setFlip(false); }}>プロフィール → 名前（逆）</button>
   </p>
-  <p><button type="button" className="ghost" onClick={restart}>最初から回し直す</button> <Link className="btn" to="/cards">単語帳で復習する</Link></p>
+  <p className="actions"><button type="button" className="ghost" onClick={restart}>最初から回し直す</button><Link className="btn ghost" to="/cards">単語帳で復習する</Link></p>
+  <p className="foot-note">思い出してから答え合わせをし、自己評価を付けます。自己評価は単語帳と共通の復習記録（SRS）に反映されます。一周すると、「覚えた」以外を先頭にして次の周が始まります。評価済み（累計）: {evaluatedKinds} / {deck.length}種</p>
  </main>;
 }

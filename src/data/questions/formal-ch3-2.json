@@ -3,116 +3,6 @@
   "version": 1,
   "status": "verified",
   "chapterId": "ch3",
-  "sectionId": "life-house",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "l-rice"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9694",
-    "bookPage": 118,
-    "locationNote": "本書 p.118（原本画像 IMG_9694.PNG）。原文照合 batch12 で照合済みの知識単位 l-rice から生成"
-   }
-  ],
-  "id": "q4-l-rice",
-  "format": "single-choice",
-  "prompt": "米びつに入れて虫よけにするとされるスパイス・ハーブを1つ挙げよ。",
-  "choices": [
-   "ロングペッパー",
-   "タイム",
-   "唐辛子",
-   "ローズマリー"
-  ],
-  "correctChoiceIndexes": [
-   2
-  ],
-  "explanation": "米びつに唐辛子(2〜3本)やローレル(3〜4枚)を入れておくと虫がつかないとされる。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch3",
-  "sectionId": "life-handmade",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "l-sachet"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9695",
-    "bookPage": 119,
-    "locationNote": "本書 p.119（原本画像 IMG_9695.PNG）。原文照合 batch12 で照合済みの知識単位 l-sachet から生成"
-   }
-  ],
-  "id": "q1-l-sachet",
-  "format": "one-answer",
-  "prompt": "フランス語で「香り袋」を意味する言葉は?",
-  "acceptedAnswers": [
-   "サシェ"
-  ],
-  "explanation": "サシェはフランス語で「香り袋」のこと。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch3",
-  "sectionId": "life-handmade",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "l-sachet"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9695",
-    "bookPage": 119,
-    "locationNote": "本書 p.119（原本画像 IMG_9695.PNG）。原文照合 batch12 で照合済みの知識単位 l-sachet から生成"
-   }
-  ],
-  "id": "q4-l-sachet",
-  "format": "single-choice",
-  "prompt": "フランス語で「香り袋」を意味する言葉は?",
-  "choices": [
-   "サシェ",
-   "ホリスティック",
-   "タッジーマッジー",
-   "香り玉"
-  ],
-  "correctChoiceIndexes": [
-   0
-  ],
-  "explanation": "サシェはフランス語で「香り袋」のこと。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch3",
-  "sectionId": "life-handmade",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "l-sachet-deodor"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9696",
-    "bookPage": 120,
-    "locationNote": "本書 p.120（原本画像 IMG_9696.PNG）。原文照合 batch13 で照合済みの知識単位 l-sachet-deodor から生成"
-   }
-  ],
-  "id": "q1-l-sachet-deodor",
-  "format": "one-answer",
-  "prompt": "リラックス用のサシェに向くハーブを1つ挙げよ。",
-  "acceptedAnswers": [
-   "ラベンダー",
-   "ローズ",
-   "ジャーマンカモミール"
-  ],
-  "explanation": "消臭用サシェにはペパーミント・クローブ・タイム、リフレッシュ用にはローズマリー・レモングラス・山椒、リラックス用にはラベンダー・ローズ・ジャーマンカモミールが向く。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch3",
   "sectionId": "life-handmade",
   "difficulty": 1,
   "knowledgeUnitIds": [
@@ -129,13 +19,13 @@
   "format": "single-choice",
   "prompt": "リラックス用のサシェに向くハーブを1つ挙げよ。",
   "choices": [
-   "マロウ",
-   "ドッグローズ",
    "ラベンダー",
-   "ベルベーヌ"
+   "七味唐辛子",
+   "ロングペッパー",
+   "マロウ"
   ],
   "correctChoiceIndexes": [
-   2
+   0
   ],
   "explanation": "消臭用サシェにはペパーミント・クローブ・タイム、リフレッシュ用にはローズマリー・レモングラス・山椒、リラックス用にはラベンダー・ローズ・ジャーマンカモミールが向く。"
  },
@@ -189,13 +79,13 @@
   "format": "single-choice",
   "prompt": "フルーツポマンダーで、オレンジに刺すスパイスは?",
   "choices": [
-   "唐辛子",
+   "ジャーマンカモミール",
+   "マロウ",
    "クローブ",
-   "ローズマリー",
-   "七味唐辛子"
+   "唐辛子"
   ],
   "correctChoiceIndexes": [
-   1
+   2
   ],
   "explanation": "ポマンダーは「香り玉」の意味。フルーツポマンダーは柑橘にクローブを刺し、シナモンパウダーをまぶして作る。高温多湿の夏はカビやすいので秋〜春に作る。"
  },
@@ -243,13 +133,13 @@
   "format": "single-choice",
   "prompt": "「ポマンダー」の意味は?",
   "choices": [
-   "タッジーマッジー",
-   "サシェ",
    "香り玉",
-   "適塩"
+   "フライパン",
+   "虫",
+   "マリア様のバラ"
   ],
   "correctChoiceIndexes": [
-   2
+   0
   ],
   "explanation": "ポマンダーは「香り玉」を意味する。"
  },
@@ -274,36 +164,6 @@
   "prompt": "ビクトリア朝時代に流行した、「語るブーケ」とも呼ばれるハーブ入りの花束は?",
   "acceptedAnswers": [
    "タッジーマッジー"
-  ],
-  "explanation": "タッジーマッジーはイギリス伝統のハーブ入りの小さな花束で、19世紀ビクトリア朝時代に花言葉とともに流行し、「語るブーケ」「言葉の花束」と呼ばれた。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch3",
-  "sectionId": "life-handmade",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "l-tussie"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9697",
-    "bookPage": 121,
-    "locationNote": "本書 p.121（原本画像 IMG_9697.PNG）。原文照合 batch13 で照合済みの知識単位 l-tussie から生成"
-   }
-  ],
-  "id": "q4-l-tussie",
-  "format": "single-choice",
-  "prompt": "ビクトリア朝時代に流行した、「語るブーケ」とも呼ばれるハーブ入りの花束は?",
-  "choices": [
-   "香り玉",
-   "タッジーマッジー",
-   "サシェ",
-   "メディカルハーブ"
-  ],
-  "correctChoiceIndexes": [
-   1
   ],
   "explanation": "タッジーマッジーはイギリス伝統のハーブ入りの小さな花束で、19世紀ビクトリア朝時代に花言葉とともに流行し、「語るブーケ」「言葉の花束」と呼ばれた。"
  },
@@ -375,13 +235,13 @@
   "format": "single-choice",
   "prompt": "一年中、地上部が枯れない植物を何という?",
   "choices": [
-   "弱アルカリ性",
+   "摘芯",
+   "フードファディズム",
    "常緑植物",
-   "ピートモス",
-   "湿潤"
+   "木本性"
   ],
   "correctChoiceIndexes": [
-   1
+   2
   ],
   "explanation": "発芽から開花・結実・枯死までが1年未満の植物を一年草、毎年茎や葉を伸ばすものを多年草、一年中地上部が枯れないものを常緑植物という。"
  },
@@ -430,12 +290,12 @@
   "prompt": "一般的にハーブの培養土に適するとされる酸度は?",
   "choices": [
    "ピートモス",
-   "弱アルカリ性",
-   "常緑植物",
-   "木本性"
+   "メディカルハーブ",
+   "コミッションE",
+   "弱アルカリ性"
   ],
   "correctChoiceIndexes": [
-   1
+   3
   ],
   "explanation": "ハーブ栽培には弱アルカリ性・通気性がある・排水性と保水性をあわせ持つ土が適するとされる。"
  },
@@ -484,8 +344,8 @@
   "prompt": "保水性をよくするが酸性のため、酸度調整済みのものを使う土は?",
   "choices": [
    "弱アルカリ性",
-   "木本性",
    "湿潤",
+   "メディカルハーブ",
    "ピートモス"
   ],
   "correctChoiceIndexes": [
@@ -537,13 +397,13 @@
   "format": "single-choice",
   "prompt": "通気性はよいが夏は乾燥しやすい鉢の素材は?",
   "choices": [
-   "木本性",
-   "弱アルカリ性",
-   "摘芯",
-   "素焼き"
+   "羊肉",
+   "アンチョビ",
+   "素焼き",
+   "赤身魚"
   ],
   "correctChoiceIndexes": [
-   3
+   2
   ],
   "explanation": "素焼き鉢は通気性がよいが夏は乾燥しやすく、プラスチック鉢は軽いが蒸れやすい。苗の根元が鉢の縁から2cm程度下になるよう植える。"
  },
@@ -645,10 +505,10 @@
   "format": "single-choice",
   "prompt": "ハーブの水やりは1日のいつ行うのが基本?",
   "choices": [
-   "春",
+   "奈良時代",
    "午前中",
-   "湿潤",
-   "開花直前"
+   "開花直前",
+   "大航海時代"
   ],
   "correctChoiceIndexes": [
    1
@@ -699,9 +559,9 @@
   "format": "single-choice",
   "prompt": "乾燥と湿潤のうち、バジルが好むのは?",
   "choices": [
-   "弱アルカリ性",
-   "摘芯",
-   "木本性",
+   "カパ",
+   "挿し木",
+   "ピートモス",
    "湿潤"
   ],
   "correctChoiceIndexes": [
@@ -753,10 +613,10 @@
   "format": "single-choice",
   "prompt": "枝先の中心を切り取って脇から新芽を出させることを何という?",
   "choices": [
-   "木本性",
+   "常緑植物",
    "摘芯",
-   "ピートモス",
-   "弱アルカリ性"
+   "木本性",
+   "ホリスティック"
   ],
   "correctChoiceIndexes": [
    1
@@ -807,13 +667,13 @@
   "format": "single-choice",
   "prompt": "ドライにするハーブの収穫に適した時期は?",
   "choices": [
-   "春",
-   "開花直前",
-   "摘芯",
-   "午前中"
+   "午前中",
+   "奈良時代",
+   "大航海時代",
+   "開花直前"
   ],
   "correctChoiceIndexes": [
-   1
+   3
   ],
   "explanation": "ドライにする場合は、最も香りが強くなる開花直前の収穫がおすすめ。"
  },
@@ -861,8 +721,8 @@
   "format": "single-choice",
   "prompt": "ローズマリーやラベンダーのように茎が木質化するハーブを何性という?",
   "choices": [
-   "素焼き",
-   "弱アルカリ性",
+   "アロマテラピー",
+   "摘芯",
    "木本性",
    "常緑植物"
   ],
@@ -939,9 +799,9 @@
   "format": "single-choice",
   "prompt": "ハーブをふやす3つの方法は、種まき・株分けと何?",
   "choices": [
-   "揮発性の香りを逃がさないため",
+   "ピートモス",
    "挿し木",
-   "木本性",
+   "湿潤",
    "外側"
   ],
   "correctChoiceIndexes": [
@@ -995,8 +855,8 @@
   "choices": [
    "ホリスティック",
    "薬機法",
-   "ドーシャ",
-   "カパ"
+   "ブレンドハーブティー",
+   "ドーシャ"
   ],
   "correctChoiceIndexes": [
    0
@@ -1048,9 +908,9 @@
   "prompt": "アーユルヴェーダで体の機能をとらえる3要素を総称して何という?",
   "choices": [
    "ドーシャ",
-   "メディカルハーブ",
    "ホリスティック",
-   "コミッションE"
+   "フードファディズム",
+   "薬機法"
   ],
   "correctChoiceIndexes": [
    0
@@ -1078,36 +938,6 @@
   "prompt": "ドーシャの3要素は、ヴァータ・ピッタと何?",
   "acceptedAnswers": [
    "カパ"
-  ],
-  "explanation": "ドーシャの3要素はヴァータ・ピッタ・カパである。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch3",
-  "sectionId": "life-health",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "m-ayur-3"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9704",
-    "bookPage": 128,
-    "locationNote": "本書 p.128（原本画像 IMG_9704.PNG）。原文照合 batch15 で照合済みの知識単位 m-ayur-3 から生成"
-   }
-  ],
-  "id": "q4-m-ayur-3",
-  "format": "single-choice",
-  "prompt": "ドーシャの3要素は、ヴァータ・ピッタと何?",
-  "choices": [
-   "薬機法",
-   "ホリスティック",
-   "カパ",
-   "メディカルハーブ"
-  ],
-  "correctChoiceIndexes": [
-   2
   ],
   "explanation": "ドーシャの3要素はヴァータ・ピッタ・カパである。"
  },
@@ -1264,13 +1094,13 @@
   "format": "single-choice",
   "prompt": "中医学の古典薬草書の名は?",
   "choices": [
-   "肉豆蔲",
-   "コミッションE",
    "神農本草経",
-   "薬機法"
+   "西洋料理指南",
+   "古事記",
+   "延喜式"
   ],
   "correctChoiceIndexes": [
-   2
+   0
   ],
   "explanation": "中国医学は陰陽五行説に基づき、韓国では韓医学、日本では漢方として定着した。古典薬草書は『神農本草経』。"
  },
@@ -1375,9 +1205,9 @@
   "prompt": "食品としてのスパイスと漢方薬を区別している法律の略称は?",
   "choices": [
    "薬機法",
-   "コミッションE",
-   "メディカルハーブ",
-   "カパ"
+   "フードファディズム",
+   "ドーシャ",
+   "ホリスティック"
   ],
   "correctChoiceIndexes": [
    0

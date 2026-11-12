@@ -30,36 +30,6 @@
   "sectionId": "classification",
   "difficulty": 1,
   "knowledgeUnitIds": [
-   "b-def"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9587",
-    "bookPage": 12,
-    "locationNote": "本書 p.12（原本画像 IMG_9587.PNG）。原文照合 batch23 で照合済みの知識単位 b-def から生成"
-   }
-  ],
-  "id": "q4-b-def",
-  "format": "single-choice",
-  "prompt": "スパイス&ハーブの定義の一例で、両者は何という植物の一部とされる?",
-  "choices": [
-   "芳香性植物",
-   "低温・適度な湿気・傷めない",
-   "利用する部位",
-   "結露"
-  ],
-  "correctChoiceIndexes": [
-   0
-  ],
-  "explanation": "定義の一例として、スパイスとハーブは芳香性植物の一部で、料理・園芸・クラフトなど生活の分野で有益な役割を果たすものとされる。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "preface",
-  "sectionId": "classification",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
    "b-def-split"
   ],
   "sourceRefs": [
@@ -74,36 +44,6 @@
   "prompt": "スパイスとハーブを区分する一般的な基準は?",
   "acceptedAnswers": [
    "利用する部位"
-  ],
-  "explanation": "スパイスとハーブの区分は、利用する部位(種子・根・果実・葉・花など)で大別するのが一般的である。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "preface",
-  "sectionId": "classification",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "b-def-split"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9587",
-    "bookPage": 12,
-    "locationNote": "本書 p.12（原本画像 IMG_9587.PNG）。原文照合 batch23 で照合済みの知識単位 b-def-split から生成"
-   }
-  ],
-  "id": "q4-b-def-split",
-  "format": "single-choice",
-  "prompt": "スパイスとハーブを区分する一般的な基準は?",
-  "choices": [
-   "単品",
-   "芳香性植物",
-   "利用する部位",
-   "ホール"
-  ],
-  "correctChoiceIndexes": [
-   2
   ],
   "explanation": "スパイスとハーブの区分は、利用する部位(種子・根・果実・葉・花など)で大別するのが一般的である。"
  },
@@ -152,8 +92,8 @@
   "prompt": "生で使用するスパイスやハーブの形態を何という?",
   "choices": [
    "フレッシュ",
-   "パウダー",
    "マスキング効果",
+   "ミックス",
    "あらびき"
   ],
   "correctChoiceIndexes": [
@@ -266,13 +206,13 @@
   "format": "single-choice",
   "prompt": "乾燥させ、保存がきくスパイスやハーブの形態を何という?",
   "choices": [
-   "マスキング効果",
    "ドライ",
    "フレッシュ",
-   "パウダー"
+   "マスキング効果",
+   "あらびき"
   ],
   "correctChoiceIndexes": [
-   1
+   0
   ],
   "explanation": "ドライとは乾燥させたスパイスやハーブで保存がきき、粉砕の程度や混合の有無でさらに分類される。"
  },
@@ -469,36 +409,6 @@
   "sectionId": "classification",
   "difficulty": 1,
   "knowledgeUnitIds": [
-   "b-powder"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9588",
-    "bookPage": 13,
-    "locationNote": "本書 p.13（原本画像 IMG_9588.PNG）。原文照合 batch23 で照合済みの知識単位 b-powder から生成"
-   }
-  ],
-  "id": "q4-b-powder",
-  "format": "single-choice",
-  "prompt": "ホール・あらびき・パウダーのうち、最も香りがとびやすいのは?",
-  "choices": [
-   "マスキング効果",
-   "パウダー",
-   "ドライ",
-   "ミックス"
-  ],
-  "correctChoiceIndexes": [
-   1
-  ],
-  "explanation": "パウダーはホールを細かく粉砕したもので、粒が細かく香りがとびやすい。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "preface",
-  "sectionId": "classification",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
    "b-mix"
   ],
   "sourceRefs": [
@@ -536,9 +446,9 @@
   "format": "single-choice",
   "prompt": "複数のスパイスやハーブを混ぜたものを何という?",
   "choices": [
-   "パウダー",
-   "シナジー効果",
    "マスキング効果",
+   "単品",
+   "シナジー効果",
    "ミックス"
   ],
   "correctChoiceIndexes": [
@@ -644,13 +554,13 @@
   "format": "single-choice",
   "prompt": "混ぜたスパイスが互いのとがった香りを消し合い丸みのある香りになる効果を何という?",
   "choices": [
-   "あらびき",
-   "パウダー",
+   "ドライ",
+   "マスキング効果",
    "ミックス",
-   "マスキング効果"
+   "あらびき"
   ],
   "correctChoiceIndexes": [
-   3
+   1
   ],
   "explanation": "混ぜたスパイスが互いのとがった香りを消し合い、丸みのあるふくよかな香りになる効果をマスキング効果という。"
  },
@@ -1231,36 +1141,6 @@
   "sectionId": "classification",
   "difficulty": 1,
   "knowledgeUnitIds": [
-   "b-taxonomy"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9590",
-    "bookPage": 15,
-    "locationNote": "本書 p.15（原本画像 IMG_9590.PNG）。原文照合 batch24 で照合済みの知識単位 b-taxonomy から生成"
-   }
-  ],
-  "id": "q4-b-taxonomy",
-  "format": "single-choice",
-  "prompt": "植物学の分類単位を大きい順に並べると「界・門・綱・目・?・属・種」の?に入るのは?",
-  "choices": [
-   "単品",
-   "シナジー効果",
-   "科",
-   "あらびき"
-  ],
-  "correctChoiceIndexes": [
-   2
-  ],
-  "explanation": "植物学では大きい順に「界・門・綱・目・科・属・種」の単位で分類する。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "preface",
-  "sectionId": "classification",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
    "b-family-meaning"
   ],
   "sourceRefs": [
@@ -1275,36 +1155,6 @@
   "prompt": "スパイスの種類を特定できる分類単位は(科、属・種のどれ)?",
   "acceptedAnswers": [
    "属・種"
-  ],
-  "explanation": "科がわかればある程度の特徴が推測でき、属・種までわかれば種類を特定できる。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "preface",
-  "sectionId": "classification",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "b-family-meaning"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9590",
-    "bookPage": 15,
-    "locationNote": "本書 p.15（原本画像 IMG_9590.PNG）。原文照合 batch24 で照合済みの知識単位 b-family-meaning から生成"
-   }
-  ],
-  "id": "q4-b-family-meaning",
-  "format": "single-choice",
-  "prompt": "スパイスの種類を特定できる分類単位は(科、属・種のどれ)?",
-  "choices": [
-   "パウダー",
-   "ミックス",
-   "属・種",
-   "ドライ"
-  ],
-  "correctChoiceIndexes": [
-   2
   ],
   "explanation": "科がわかればある程度の特徴が推測でき、属・種までわかれば種類を特定できる。"
  },
@@ -1568,9 +1418,9 @@
   "format": "single-choice",
   "prompt": "フレッシュハーブを保存する場所として適しているのは?",
   "choices": [
-   "モルッカ諸島",
-   "ペナン島",
-   "フィリピン",
+   "光・熱・湿気",
+   "香りと色",
+   "祭事・媚薬・保存剤",
    "冷蔵庫の野菜室"
   ],
   "correctChoiceIndexes": [
@@ -1609,36 +1459,6 @@
   "sectionId": "preservation",
   "difficulty": 1,
   "knowledgeUnitIds": [
-   "b-fresh-points"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9591",
-    "bookPage": 16,
-    "locationNote": "本書 p.16（原本画像 IMG_9591.PNG）。原文照合 batch24 で照合済みの知識単位 b-fresh-points から生成"
-   }
-  ],
-  "id": "q4-b-fresh-points",
-  "format": "single-choice",
-  "prompt": "フレッシュハーブ保存の3つのポイントは?",
-  "choices": [
-   "光・熱・湿気",
-   "低温・適度な湿気・傷めない",
-   "香りと色",
-   "結露"
-  ],
-  "correctChoiceIndexes": [
-   1
-  ],
-  "explanation": "フレッシュハーブ保存の3つのポイントは低温・適度な湿気・傷めないことである。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "preface",
-  "sectionId": "preservation",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
    "b-fresh-stand"
   ],
   "sourceRefs": [
@@ -1653,36 +1473,6 @@
   "prompt": "フレッシュハーブを野菜室で保存する理想的な置き方は?",
   "acceptedAnswers": [
    "立てて保存する"
-  ],
-  "explanation": "茎の切り口に湿らせたペーパーを巻くとある程度もち、野菜室で立てて保存するのが理想。冷風を受けない位置に置く。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "preface",
-  "sectionId": "preservation",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "b-fresh-stand"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9591",
-    "bookPage": 16,
-    "locationNote": "本書 p.16（原本画像 IMG_9591.PNG）。原文照合 batch24 で照合済みの知識単位 b-fresh-stand から生成"
-   }
-  ],
-  "id": "q4-b-fresh-stand",
-  "format": "single-choice",
-  "prompt": "フレッシュハーブを野菜室で保存する理想的な置き方は?",
-  "choices": [
-   "新鮮な食材が手に入りやすかったため",
-   "漢方薬の配合",
-   "立てて保存する",
-   "しない"
-  ],
-  "correctChoiceIndexes": [
-   2
   ],
   "explanation": "茎の切り口に湿らせたペーパーを巻くとある程度もち、野菜室で立てて保存するのが理想。冷風を受けない位置に置く。"
  },
@@ -1893,12 +1683,12 @@
   "prompt": "ドライスパイスの保存における3つの大敵は?",
   "choices": [
    "結露",
-   "マスキング効果",
    "光・熱・湿気",
-   "低温・適度な湿気・傷めない"
+   "属・種",
+   "パウダー"
   ],
   "correctChoiceIndexes": [
-   2
+   1
   ],
   "explanation": "ドライのスパイスやハーブの生命は香りと色で、大敵は「光」「熱」「湿気」。蓋をしっかり閉めて冷暗所で保存する。"
  },
@@ -1947,9 +1737,9 @@
   "prompt": "ドライスパイスの「生命」とされる2つの要素は?",
   "choices": [
    "光・熱・湿気",
-   "結露",
+   "パウダー",
    "香りと色",
-   "低温・適度な湿気・傷めない"
+   "結露"
   ],
   "correctChoiceIndexes": [
    2
@@ -2002,8 +1792,8 @@
   "choices": [
    "香りと色",
    "結露",
-   "低温・適度な湿気・傷めない",
-   "光・熱・湿気"
+   "光・熱・湿気",
+   "芳香性植物"
   ],
   "correctChoiceIndexes": [
    1
@@ -2320,6 +2110,36 @@
   "sectionId": "history-world",
   "difficulty": 1,
   "knowledgeUnitIds": [
+   "h-hippocrates"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9581",
+    "bookPage": 6,
+    "locationNote": "本書 p.6（原本画像 IMG_9581.PNG）。原文照合 batch22 で照合済みの知識単位 h-hippocrates から生成"
+   }
+  ],
+  "id": "q4-h-hippocrates",
+  "format": "single-choice",
+  "prompt": "紀元前400年頃に400種のハーブ処方をまとめ「医学の父」と呼ばれる人物は?",
+  "choices": [
+   "ヒポクラテス",
+   "イサベル女王",
+   "ディオスコリデス",
+   "バスコ・ダ・ガマ"
+  ],
+  "correctChoiceIndexes": [
+   0
+  ],
+  "explanation": "古代ギリシャの医師ヒポクラテスは、紀元前400年頃に400種ものハーブの処方をまとめたとされ、病気を科学的にとらえたことから「医学の父」と呼ばれる。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "preface",
+  "sectionId": "history-world",
+  "difficulty": 1,
+  "knowledgeUnitIds": [
    "h-dioscorides"
   ],
   "sourceRefs": [
@@ -2357,13 +2177,13 @@
   "format": "single-choice",
   "prompt": "『マテリア・メディカ(薬物誌)』を著したローマ時代の医師は?",
   "choices": [
-   "聖武天皇",
    "バスコ・ダ・ガマ",
    "ディオスコリデス",
-   "イサベル女王"
+   "イサベル女王",
+   "ヒポクラテス"
   ],
   "correctChoiceIndexes": [
-   2
+   1
   ],
   "explanation": "紀元50〜70年頃のローマ時代の医師ディオスコリデスは、植物・動物・鉱物を薬理機能で分類した『マテリア・メディカ(薬物誌)』を著した。"
  },
@@ -2412,8 +2232,8 @@
   "prompt": "『マテリア・メディカ』に掲載された植物は何種に及ぶ?",
   "choices": [
    "4回",
-   "80種",
    "4カ国",
+   "80種",
    "600種"
   ],
   "correctChoiceIndexes": [
@@ -2452,27 +2272,21 @@
   "sectionId": "history-world",
   "difficulty": 1,
   "knowledgeUnitIds": [
-   "h-ancient-uses"
+   "h-medieval-price"
   ],
   "sourceRefs": [
    {
     "manifestImageId": "IMG_9582",
     "bookPage": 7,
-    "locationNote": "本書 p.7（原本画像 IMG_9582.PNG）。原文照合 batch22 で照合済みの知識単位 h-ancient-uses から生成"
+    "locationNote": "本書 p.7（原本画像 IMG_9582.PNG）。原文照合 batch22 で照合済みの知識単位 h-medieval-price から生成"
    }
   ],
-  "id": "q4-h-ancient-uses",
-  "format": "single-choice",
-  "prompt": "古代のスパイスやハーブの用途として挙げられるものを答えよ(薬事以外に3つ)。",
-  "choices": [
-   "祭事・媚薬・保存剤",
-   "肉の保存",
-   "大航海時代",
-   "世界の記述"
+  "id": "q1-h-medieval-price",
+  "format": "one-answer",
+  "prompt": "中世ヨーロッパでスパイスは何に匹敵する価値を持ったとされる?",
+  "acceptedAnswers": [
+   "金銀"
   ],
-  "correctChoiceIndexes": [
-   0
-  ],
-  "explanation": "スパイスやハーブは古代から薬事・祭事・媚薬・保存剤などの目的で使われ、貴重品とされた。"
+  "explanation": "中世、スパイスは東洋から陸路・海路で運ばれたが、盗賊や災害の危険と長い輸送時間のため高騰し、ヨーロッパでは金銀に匹敵する価値を持った。"
  }
 ]

@@ -47,10 +47,15 @@ test.describe("モバイル viewport（390×844）", () => {
     await page.goto("#/reader");
     await expect(page.getByRole("heading", { name: "電子書籍リーダー" })).toBeVisible();
     await expect(page.getByText(/書籍 p\.6 ／ 転記状態: 転記済み/)).toBeVisible();
+    // スマホ幅では目次（81節）を畳み、本文を先に見せる（全アプリ共通UIルール1、DECISIONS #55）
+    await expect(page.getByRole("button", { name: "日本における歴史（p.10）" })).toBeHidden();
+    await page.locator("summary", { hasText: "目次" }).click();
     await page.getByRole("button", { name: "日本における歴史（p.10）" }).click();
     await expect(page.getByText(/書籍 p\.10 ／ 転記状態: 転記済み/)).toBeVisible();
-    // 節を選んだら、スクロール操作なしで本文ページが画面内に入る（DECISIONS #35）
-    await expect(page.getByText(/書籍 p\.10 ／ 転記状態: 転記済み/)).toBeInViewport();
+    // 節を選んだら目次は畳まれ、スクロール操作なしで本文の見出しが画面内に入る（DECISIONS #35）
+    await expect(
+      page.locator("#reader-page").getByRole("heading", { name: "日本における歴史", level: 2 }),
+    ).toBeInViewport();
     await expect(
       page.getByText(/「薬味」という言葉はあっても、「スパイス」や「香辛料」は最近まで/),
     ).toBeVisible();
@@ -58,7 +63,7 @@ test.describe("モバイル viewport（390×844）", () => {
 
   test("ホームの「電子書籍を開く」は目次を飛ばして本文ページへ直接着地する", async ({ page }) => {
     await page.goto("");
-    await page.getByRole("link", { name: "電子書籍を開く" }).click();
+    await page.locator("main").getByRole("link", { name: "前回の続き" }).click();
     await expect(page).toHaveURL(/#\/reader$/);
     // 初期節（世界における歴史、p.6）の本文見出しが、スクロールなしで画面内にある
     // （転記本文側にも同名の h3 があるため、節タイトルは h2 に限定する）

@@ -87,10 +87,10 @@ export const QUESTION_GENERATION_META = {
     "profile-card": 80
   },
   "q2Questions": 375,
-  "formalQuestions": 1795,
+  "formalQuestions": 1732,
   "byFormat": {
     "one-answer": 465,
-    "single-choice": 462,
+    "single-choice": 399,
     "fill-blank": 148,
     "term-input": 120,
     "true-false": 272,
@@ -106,22 +106,21 @@ export const QUESTION_GENERATION_META = {
     "compare-essay": 7
   },
   "d1ByDifficulty": {
-    "1": 737,
-    "2": 474,
-    "3": 414,
+    "1": 697,
+    "2": 456,
+    "3": 409,
     "4": 170
   },
   "d1CalibratedByDifficulty": {
-    "1": 737,
-    "2": 466,
-    "3": 414,
+    "1": 697,
+    "2": 449,
+    "3": 409,
     "4": 170
   },
-  "d1CalibratedQuestions": 1787,
-  "d1HeldQuestions": 8,
+  "d1CalibratedQuestions": 1725,
+  "d1HeldQuestions": 7,
   "d1HeldIds": [
     "q1-e-org",
-    "q4-e-org",
     "q1-e-start",
     "q4-e-start",
     "q1-e-scope",
@@ -137,7 +136,7 @@ export const QUESTION_GENERATION_META = {
   },
   "fix1Cards": 143,
   "fix1SkippedItems": 17,
-  "excludedItems": 129,
+  "excludedItems": 192,
   "excludedUnits": 0,
   "files": [
     "formal-preface-1.json",

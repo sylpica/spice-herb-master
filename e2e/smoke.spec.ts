@@ -25,10 +25,12 @@ test.describe("ホームとナビゲーション", () => {
   test("ホームが表示され、教材の主要指標が見える", async ({ page }) => {
     await openHome(page);
     // 軽量サマリ経由の件数表示（tests/summary.test.ts が実データ一致を固定）
-    await expect(page.getByText("正式問題 1795問").first()).toBeVisible();
-    await expect(page.getByText(/取り込み済み知識単位: 545件/)).toBeVisible();
-    await expect(page.getByText(/全文転記: 140ページ/)).toBeVisible();
-    await expect(page.getByText("教材の状態（正直な表示）")).toBeVisible();
+    await expect(page.getByText("1732問").first()).toBeVisible();
+    // 収録状況の説明は画面末尾に畳んである（全アプリ共通UIルール3、DECISIONS #55）
+    await page.getByText("教材の収録状況").click();
+    await expect(page.getByText(/知識単位 545件/)).toBeVisible();
+    await expect(page.getByText(/全文転記 140ページ/)).toBeVisible();
+    await expect(page.getByText(/原本画像 146件/)).toBeVisible();
   });
 
   test("主要ナビゲーションから各画面へ遷移できる（遅延チャンク読み込み）", async ({
@@ -76,7 +78,7 @@ test.describe("ホームとナビゲーション", () => {
 
   test("ホームの「5問始める」は設定なしで5問セッションを開始する", async ({ page }) => {
     await openHome(page);
-    await page.getByRole("link", { name: "5問始める" }).click();
+    await page.getByRole("link", { name: "とりあえず5問" }).click();
     await expect(page).toHaveURL(/#\/practice$/);
     await expect(page.getByText(/セッション 1 \/ 5 問/)).toBeVisible();
     // UX9: クイック開始では絞り込み・学習フォーカス等の設定UIを出さず、問題が初期表示範囲に入る
@@ -175,7 +177,7 @@ test.describe("電子書籍リーダー", () => {
       page.getByText(/「薬味」という言葉はあっても、「スパイス」や「香辛料」は最近まで/),
     ).toBeVisible();
     // その節の関連問題数などの付帯情報も描画される
-    await expect(page.getByText(/関連問題: \d+問（正式）/)).toBeVisible();
+    await expect(page.getByRole("link", { name: /この節の問題を演習する（\d+問）/ })).toBeVisible();
   });
 
   test("原画（ページ画像）がリーダーで実際に読み込まれて表示される（UX3）", async ({ page }) => {
@@ -218,7 +220,7 @@ test.describe("電子書籍リーダー", () => {
 test.describe("改訂ポイント（UX7）", () => {
   test("ホームから入り、1級対象の変更と出典が見え、該当ページへ移動できる", async ({ page }) => {
     await openHome(page);
-    await page.getByRole("link", { name: "改訂ポイントを見る" }).click();
+    await page.locator("main").getByRole("link", { name: "改訂ポイント" }).click();
     await expect(page.getByRole("heading", { name: "改訂ポイント（4訂版）" })).toBeVisible();
     await expect(page.getByText(/第18回以降（2027年〜）/)).toBeVisible();
     await expect(page.getByText("ジュニパーベリー", { exact: true }).first()).toBeVisible();
@@ -233,7 +235,7 @@ test.describe("改訂ポイント（UX7）", () => {
 test.describe("暗記モード（UX5）", () => {
   test("ホームから入り、全80種を答え合わせと自己評価で回せる", async ({ page }) => {
     await openHome(page);
-    await page.getByRole("link", { name: "暗記を始める" }).click();
+    await page.locator("main").getByRole("link", { name: "暗記" }).click();
     await expect(page.getByRole("heading", { name: "暗記モード（全80種）" })).toBeVisible();
     await expect(page.getByText("1 / 80種")).toBeVisible();
     // 出題順は毎回シャッフル（Date.now() シード）で、先頭がミックススパイス等の「科名」を
@@ -246,23 +248,23 @@ test.describe("暗記モード（UX5）", () => {
     await expect(page.locator("main section.card")).toContainText("検定");
     await page.getByRole("button", { name: "覚えた", exact: true }).click();
     await expect(page.getByText("2 / 80種")).toBeVisible();
-    await expect(page.getByText(/この周の「覚えた」: 1種/)).toBeVisible();
+    await expect(page.getByText(/覚えた 1種/)).toBeVisible();
   });
 
   test("答え合わせしなくても次へ進める（UX10）", async ({ page }) => {
     await openHome(page);
-    await page.getByRole("link", { name: "暗記を始める" }).click();
+    await page.locator("main").getByRole("link", { name: "暗記" }).click();
     await expect(page.getByText("1 / 80種")).toBeVisible();
     // 答え合わせも自己評価もしていない状態で「次へ」が使える
     await page.getByRole("button", { name: "次へ", exact: true }).click();
     await expect(page.getByText("2 / 80種")).toBeVisible();
-    await expect(page.getByText(/この周の「覚えた」: 0種/)).toBeVisible();
+    await expect(page.getByText(/覚えた 0種/)).toBeVisible();
     await expect(page.getByText(/評価済み（累計）: 0 \/ 80種/)).toBeVisible();
   });
 
   test("逆モード: 説明から名前を当てられる（UX10）", async ({ page }) => {
     await openHome(page);
-    await page.getByRole("link", { name: "暗記を始める" }).click();
+    await page.locator("main").getByRole("link", { name: "暗記" }).click();
     await page.getByRole("button", { name: "プロフィール → 名前（逆）" }).click();
     // 表面は説明文で、名前（見出し）はまだ出ていない
     await expect(page.getByText("説明から名前を当てる")).toBeVisible();
@@ -316,7 +318,7 @@ test.describe("演習", () => {
     await expect(page.getByText("セッション完了")).toBeVisible();
     await expect(page.getByText(/1 問に回答し、正解 1 問/)).toBeVisible();
     await page.goto("#/stats");
-    await expect(page.getByText(/総解答数 1 ／/)).toBeVisible();
+    await expect(page.getByText(/^1問 ・ 正答率 \d+%$/)).toBeVisible();
   });
 
   test("演習で次の問題へ進んでから前の問題へ戻れる（#52）", async ({ page }) => {
@@ -372,7 +374,7 @@ test.describe("画面遷移とスクロール（UX11）", () => {
     const badge = page.locator("main p.badge");
     await expect(badge).toHaveCount(1);
     // バッジは主要機能グリッドより後（=画面の下部）にある
-    const gridBox = await page.locator("main section.grid").boundingBox();
+    const gridBox = await page.locator("main section.tiles").boundingBox();
     const badgeBox = await badge.boundingBox();
     expect(gridBox).not.toBeNull();
     expect(badgeBox).not.toBeNull();
@@ -401,6 +403,8 @@ test.describe("改訂ポイントのページジャンプ（DECISIONS #51）", (
 
   test("p.71（タイム）のボタンは p.71 に着地する", async ({ page }) => {
     await page.goto("#/revision");
+    // 変更箇所の一覧は領域ごとに畳んである（全アプリ共通UIルール1、DECISIONS #55）
+    await page.getByText(/第2章 スパイス＆ハーブ（品目）（\d+件）/).click();
     await page.getByRole("button", { name: "4訂版 p.71 を読む" }).first().click();
     await expect(page.getByRole("heading", { name: "電子書籍リーダー" })).toBeVisible();
     const anchor = page.locator("#reader-pg-71");
@@ -451,7 +455,7 @@ test.describe("フラッシュカード", () => {
     ).toBeVisible();
     // FIX1（DECISIONS #34）: 既定は全種別シャッフル開始のため、先頭カードは決定的でない。
     // 表→裏→次へ、の遷移そのものを固定する（カード同定には依存しない）。
-    await expect(page.getByText(/対象カード 602 件（全 602 件）/)).toBeVisible();
+    await expect(page.getByText(/1 \/ 602 枚/)).toBeVisible();
     const card = page.getByRole("button", { name: "カード反転" });
     const front = (await card.textContent())?.trim();
     expect(front).toBeTruthy();
@@ -499,11 +503,11 @@ test.describe("フラッシュカード", () => {
       page.getByRole("heading", { name: "フラッシュカード・単語帳" }),
     ).toBeVisible();
     await page.getByLabel("種別").selectOption("term");
-    await expect(page.getByText(/対象カード 80 件/)).toBeVisible();
-    await expect(page.getByText(/種別: 用語/)).toBeVisible();
+    await expect(page.getByText(/1 \/ 80 枚/)).toBeVisible();
+    await expect(page.getByText(/枚 ・ 用語 ・/)).toBeVisible();
     await page.getByLabel("種別").selectOption("reverse");
-    await expect(page.getByText(/対象カード 63 件/)).toBeVisible();
-    await expect(page.getByText(/種別: 逆引き/)).toBeVisible();
+    await expect(page.getByText(/1 \/ 63 枚/)).toBeVisible();
+    await expect(page.getByText(/枚 ・ 逆引き ・/)).toBeVisible();
   });
 });
 
@@ -511,9 +515,9 @@ test.describe("模擬試験", () => {
   test("設定画面から模試を開始し、未回答のまま終了すると一括採点され記録が保存される（FIX1）", async ({ page }) => {
     await page.goto("#/exam");
     await expect(page.getByRole("heading", { name: "模擬試験（練習用）" })).toBeVisible();
-    await expect(page.getByText("出題候補（検証済み）: 1795問")).toBeVisible();
+    await expect(page.getByText(/対象 1641問/)).toBeVisible();
     await page.getByLabel("制限時間（分）").fill("1");
-    await page.getByRole("button", { name: "開始（途中状態を保存）" }).click();
+    await page.getByRole("button", { name: "開始", exact: true }).click();
     // 出題中: 進捗と残り時間が見え、正解・解説は表示されない（制限時間1分=2問）
     await expect(page.getByText(/問題 1 \/ 2/)).toBeVisible();
     await expect(page.getByText(/残り時間/)).toBeVisible();
@@ -536,13 +540,15 @@ test.describe("分析・検索・品質管理", () => {
     await page.goto("#/stats");
     await expect(page.getByRole("heading", { name: "学習分析・可視化" })).toBeVisible();
     // 新規プロファイル（履歴なし）では総解答 0 件・正答率は未測定が正しい表示
-    await expect(page.getByText(/総解答数 0 ／ 正答率 未測定（算出不能）/)).toBeVisible();
-    await expect(page.getByText("網羅率（5指標を分離表示）")).toBeVisible();
-    await expect(page.getByText("1. 教科書の取り込み率")).toBeVisible();
-    await expect(page.getByText(/139\/140画像/)).toBeVisible();
-    await expect(
-      page.getByText(/545件（原文照合済み 545件・未検証 0件・一問一答ドラフト付き 379件）/),
-    ).toBeVisible();
+    await expect(page.getByText(/^0問 ・ 正答率 —$/)).toBeVisible();
+    await expect(page.getByRole("heading", { name: "網羅率" })).toBeVisible();
+    // 5指標（原本の収録・問題化・学習済み・習得推定・記述の要点達成）を分けて表示する（R51）
+    for (const label of ["原本の収録", "問題化", "学習済み", "習得推定", "記述の要点達成"]) {
+      await expect(page.getByText(label, { exact: true })).toBeVisible();
+    }
+    // 原本画像は実際の収録数（146件。旧表示の139/140は初回取り込み時の値、監査BV-05）
+    await expect(page.getByText(/146\/147画像/)).toBeVisible();
+    await expect(page.getByText(/知識単位 545件/)).toBeVisible();
   });
 
   test("横断検索: 件数が見え、キーワードで絞り込める", async ({ page }) => {
@@ -550,10 +556,10 @@ test.describe("分析・検索・品質管理", () => {
     await expect(page.getByRole("heading", { name: "横断検索" })).toBeVisible();
     // 初期状態は全件: 節 81 件・問題 1795 件（正式のみ。サンプルは全削除済み、#52）
     await expect(page.getByRole("heading", { name: "教材（節） 81件" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "問題 1795件" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "問題 1732件" })).toBeVisible();
     await page.getByLabel("キーワード").fill("歴史");
     await expect(page.getByRole("heading", { name: "教材（節） 6件" })).toBeVisible();
-    await expect(page.getByText("世界における歴史（p.6・転記済み）")).toBeVisible();
+    await expect(page.getByRole("button", { name: "世界における歴史 リーダーで開く" })).toBeVisible();
   });
 
   test("品質管理: 検証集計の主要指標が見える", async ({ page }) => {
@@ -561,12 +567,11 @@ test.describe("分析・検索・品質管理", () => {
     await expect(
       page.getByRole("heading", { name: "品質管理（管理・監査）" }),
     ).toBeVisible();
-    await expect(page.getByText(/重複候補: \d+組/)).toBeVisible();
+    await expect(page.getByText("同一文の重複", { exact: true })).toBeVisible();
+    await expect(page.getByText(/545件（原文照合済み 545件/)).toBeVisible();
+    await expect(page.getByText(/146件（欠落 1件）/)).toBeVisible();
     await expect(
-      page.getByText(/取り込み済み知識単位: 545件（原文照合済み 545件・未検証 0件/),
-    ).toBeVisible();
-    await expect(
-      page.getByRole("button", { name: "修正案JSONを出力" }),
+      page.getByRole("button", { name: "報告・検証結果を書き出す（JSON）" }),
     ).toBeVisible();
   });
 });

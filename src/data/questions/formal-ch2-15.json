@@ -3,63 +3,6 @@
   "version": 1,
   "status": "verified",
   "chapterId": "ch2",
-  "sectionId": "item-laurel",
-  "difficulty": 4,
-  "knowledgeUnitIds": [
-   "laurel-profile",
-   "lemongrass-profile",
-   "licorice-profile",
-   "longpepper-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9667",
-    "bookPage": 91,
-    "locationNote": "本書 p.91（原本画像 IMG_9667.PNG）。原文照合 batch6 で照合済みの知識単位 laurel-profile から生成"
-   },
-   {
-    "manifestImageId": "IMG_9665",
-    "bookPage": 89,
-    "locationNote": "本書 p.89（原本画像 IMG_9665.PNG）。原文照合 batch5 で照合済みの知識単位 lemongrass-profile から生成"
-   },
-   {
-    "manifestImageId": "IMG_9675",
-    "bookPage": 99,
-    "locationNote": "本書 p.99（原本画像 IMG_9675.PNG）。原文照合 batch8 で照合済みの知識単位 licorice-profile から生成"
-   },
-   {
-    "manifestImageId": "IMG_9683",
-    "bookPage": 107,
-    "locationNote": "本書 p.107（原本画像 IMG_9683.PNG）。原文照合 batch10 で照合済みの知識単位 longpepper-profile から生成"
-   }
-  ],
-  "id": "qmatch-part-laurel-profile",
-  "format": "matching",
-  "prompt": "次の名称と利用部位を組み合わせよ（対象: ローレル・レモングラス・かんぞう(甘草)・ロングペッパー）。",
-  "matchingPairs": [
-   {
-    "left": "ローレル",
-    "right": "葉"
-   },
-   {
-    "left": "レモングラス",
-    "right": "地上部"
-   },
-   {
-    "left": "かんぞう(甘草)",
-    "right": "根、走根"
-   },
-   {
-    "left": "ロングペッパー",
-    "right": "果実"
-   }
-  ],
-  "explanation": "ローレル: 科名はクスノキ科。原産地は西アジア、ヨーロッパ南部。利用部位は葉。別名は月桂樹、ベイリーブス、ローリエ。検定1・2・3級の対象。\nレモングラス: 科名はイネ科。原産地はインド、熱帯アジア。利用部位は地上部。別名はレモンガヤ、レモンソウ、タクライ、セイラ。検定1・2級の対象。\nかんぞう(甘草): 科名はマメ科。利用部位は根、走根。別名はリコリス、リカリス。検定1級の対象。\nロングペッパー: 科名はコショウ科。利用部位は果実。別名はヒハツ、ヒバーチ、ピバーチ。検定1級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
   "sectionId": "item-others",
   "difficulty": 4,
   "knowledgeUnitIds": [

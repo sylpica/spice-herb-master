@@ -3,424 +3,6 @@
   "version": 1,
   "status": "verified",
   "chapterId": "ch2",
-  "sectionId": "item-lemongrass",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "lemongrass-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9665",
-    "bookPage": 89,
-    "locationNote": "本書 p.89（原本画像 IMG_9665.PNG）。原文照合 batch5 で照合済みの知識単位 lemongrass-profile から生成"
-   }
-  ],
-  "id": "qti-alias-lemongrass-profile",
-  "format": "term-input",
-  "prompt": "レモングラスの別名を1つ答えよ。",
-  "acceptedAnswers": [
-   "レモンガヤ",
-   "レモンソウ",
-   "タクライ",
-   "セイラ"
-  ],
-  "explanation": "レモングラス: 科名はイネ科。原産地はインド、熱帯アジア。利用部位は地上部。別名はレモンガヤ、レモンソウ、タクライ、セイラ。検定1・2級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-lemongrass",
-  "difficulty": 3,
-  "knowledgeUnitIds": [
-   "lemongrass-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9665",
-    "bookPage": 89,
-    "locationNote": "本書 p.89（原本画像 IMG_9665.PNG）。原文照合 batch5 で照合済みの知識単位 lemongrass-profile から生成"
-   }
-  ],
-  "id": "qti-rev-lemongrass-profile",
-  "format": "term-input",
-  "prompt": "別名「レモンガヤ」と呼ばれるスパイス＆ハーブの名称を答えよ。",
-  "acceptedAnswers": [
-   "レモングラス",
-   "レモンソウ",
-   "タクライ",
-   "セイラ"
-  ],
-  "explanation": "レモングラス: 科名はイネ科。原産地はインド、熱帯アジア。利用部位は地上部。別名はレモンガヤ、レモンソウ、タクライ、セイラ。検定1・2級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-rosemary",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "rosemary-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9666",
-    "bookPage": 90,
-    "locationNote": "本書 p.90（原本画像 IMG_9666.PNG）。原文照合 batch5 で照合済みの知識単位 rosemary-profile から生成"
-   }
-  ],
-  "id": "qfb-family-rosemary-profile",
-  "format": "fill-blank",
-  "prompt": "ローズマリーの科名は（　）である。",
-  "acceptedAnswers": [
-   "シソ科"
-  ],
-  "explanation": "ローズマリー: 科名はシソ科。原産地は地中海沿岸。利用部位は葉および花穂。別名はまんねんろう。検定1・2・3級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-rosemary",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "rosemary-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9666",
-    "bookPage": 90,
-    "locationNote": "本書 p.90（原本画像 IMG_9666.PNG）。原文照合 batch5 で照合済みの知識単位 rosemary-profile から生成"
-   }
-  ],
-  "id": "qfb-level-rosemary-profile",
-  "format": "fill-blank",
-  "prompt": "ローズマリーは検定（　）級の対象である。",
-  "acceptedAnswers": [
-   "1・2・3"
-  ],
-  "explanation": "ローズマリー: 科名はシソ科。原産地は地中海沿岸。利用部位は葉および花穂。別名はまんねんろう。検定1・2・3級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-rosemary",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "rosemary-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9666",
-    "bookPage": 90,
-    "locationNote": "本書 p.90（原本画像 IMG_9666.PNG）。原文照合 batch5 で照合済みの知識単位 rosemary-profile から生成"
-   }
-  ],
-  "id": "qsc-part-rosemary-profile",
-  "format": "single-choice",
-  "prompt": "ローズマリーの利用部位はどれか。",
-  "choices": [
-   "根、走根",
-   "葉および花穂",
-   "地上部",
-   "種子(植物学上は果実)"
-  ],
-  "correctChoiceIndexes": [
-   1
-  ],
-  "explanation": "ローズマリー: 科名はシソ科。原産地は地中海沿岸。利用部位は葉および花穂。別名はまんねんろう。検定1・2・3級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-rosemary",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "rosemary-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9666",
-    "bookPage": 90,
-    "locationNote": "本書 p.90（原本画像 IMG_9666.PNG）。原文照合 batch5 で照合済みの知識単位 rosemary-profile から生成"
-   }
-  ],
-  "id": "qsc-origin-rosemary-profile",
-  "format": "single-choice",
-  "prompt": "ローズマリーの原産地はどれか。",
-  "choices": [
-   "熱帯アメリカ",
-   "熱帯アジア",
-   "中国、ベトナム",
-   "地中海沿岸"
-  ],
-  "correctChoiceIndexes": [
-   3
-  ],
-  "explanation": "ローズマリー: 科名はシソ科。原産地は地中海沿岸。利用部位は葉および花穂。別名はまんねんろう。検定1・2・3級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-rosemary",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "rosemary-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9666",
-    "bookPage": 90,
-    "locationNote": "本書 p.90（原本画像 IMG_9666.PNG）。原文照合 batch5 で照合済みの知識単位 rosemary-profile から生成"
-   }
-  ],
-  "id": "qti-alias-rosemary-profile",
-  "format": "term-input",
-  "prompt": "ローズマリーの別名を1つ答えよ。",
-  "acceptedAnswers": [
-   "まんねんろう"
-  ],
-  "explanation": "ローズマリー: 科名はシソ科。原産地は地中海沿岸。利用部位は葉および花穂。別名はまんねんろう。検定1・2・3級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-rosemary",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "rosemary-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9666",
-    "bookPage": 90,
-    "locationNote": "本書 p.90（原本画像 IMG_9666.PNG）。原文照合 batch5 で照合済みの知識単位 rosemary-profile から生成"
-   }
-  ],
-  "id": "qti-rev-rosemary-profile",
-  "format": "term-input",
-  "prompt": "別名「まんねんろう」と呼ばれるスパイス＆ハーブの名称を答えよ。",
-  "acceptedAnswers": [
-   "ローズマリー"
-  ],
-  "explanation": "ローズマリー: 科名はシソ科。原産地は地中海沿岸。利用部位は葉および花穂。別名はまんねんろう。検定1・2・3級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-laurel",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "laurel-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9667",
-    "bookPage": 91,
-    "locationNote": "本書 p.91（原本画像 IMG_9667.PNG）。原文照合 batch6 で照合済みの知識単位 laurel-profile から生成"
-   }
-  ],
-  "id": "qfb-family-laurel-profile",
-  "format": "fill-blank",
-  "prompt": "ローレルの科名は（　）である。",
-  "acceptedAnswers": [
-   "クスノキ科"
-  ],
-  "explanation": "ローレル: 科名はクスノキ科。原産地は西アジア、ヨーロッパ南部。利用部位は葉。別名は月桂樹、ベイリーブス、ローリエ。検定1・2・3級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-laurel",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "laurel-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9667",
-    "bookPage": 91,
-    "locationNote": "本書 p.91（原本画像 IMG_9667.PNG）。原文照合 batch6 で照合済みの知識単位 laurel-profile から生成"
-   }
-  ],
-  "id": "qfb-level-laurel-profile",
-  "format": "fill-blank",
-  "prompt": "ローレルは検定（　）級の対象である。",
-  "acceptedAnswers": [
-   "1・2・3"
-  ],
-  "explanation": "ローレル: 科名はクスノキ科。原産地は西アジア、ヨーロッパ南部。利用部位は葉。別名は月桂樹、ベイリーブス、ローリエ。検定1・2・3級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-laurel",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "laurel-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9667",
-    "bookPage": 91,
-    "locationNote": "本書 p.91（原本画像 IMG_9667.PNG）。原文照合 batch6 で照合済みの知識単位 laurel-profile から生成"
-   }
-  ],
-  "id": "qsc-part-laurel-profile",
-  "format": "single-choice",
-  "prompt": "ローレルの利用部位はどれか。",
-  "choices": [
-   "果実",
-   "種子の仁(ナツメッグ)、仮種皮(メース)",
-   "根、走根",
-   "葉"
-  ],
-  "correctChoiceIndexes": [
-   3
-  ],
-  "explanation": "ローレル: 科名はクスノキ科。原産地は西アジア、ヨーロッパ南部。利用部位は葉。別名は月桂樹、ベイリーブス、ローリエ。検定1・2・3級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-laurel",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "laurel-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9667",
-    "bookPage": 91,
-    "locationNote": "本書 p.91（原本画像 IMG_9667.PNG）。原文照合 batch6 で照合済みの知識単位 laurel-profile から生成"
-   }
-  ],
-  "id": "qsc-origin-laurel-profile",
-  "format": "single-choice",
-  "prompt": "ローレルの原産地はどれか。",
-  "choices": [
-   "西アジア、ヨーロッパ南部",
-   "地中海沿岸(白からし)、インド・中国(和がらし)、中近東(黒からし)",
-   "スリランカ、インド(シナモン)/ベトナム、中国、タイ(カシア)",
-   "ロシア南部、西アジア"
-  ],
-  "correctChoiceIndexes": [
-   0
-  ],
-  "explanation": "ローレル: 科名はクスノキ科。原産地は西アジア、ヨーロッパ南部。利用部位は葉。別名は月桂樹、ベイリーブス、ローリエ。検定1・2・3級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-laurel",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "laurel-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9667",
-    "bookPage": 91,
-    "locationNote": "本書 p.91（原本画像 IMG_9667.PNG）。原文照合 batch6 で照合済みの知識単位 laurel-profile から生成"
-   }
-  ],
-  "id": "qti-alias-laurel-profile",
-  "format": "term-input",
-  "prompt": "ローレルの別名を1つ答えよ。",
-  "acceptedAnswers": [
-   "月桂樹",
-   "ベイリーブス",
-   "ローリエ"
-  ],
-  "explanation": "ローレル: 科名はクスノキ科。原産地は西アジア、ヨーロッパ南部。利用部位は葉。別名は月桂樹、ベイリーブス、ローリエ。検定1・2・3級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-laurel",
-  "difficulty": 2,
-  "knowledgeUnitIds": [
-   "laurel-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9667",
-    "bookPage": 91,
-    "locationNote": "本書 p.91（原本画像 IMG_9667.PNG）。原文照合 batch6 で照合済みの知識単位 laurel-profile から生成"
-   }
-  ],
-  "id": "qti-rev-laurel-profile",
-  "format": "term-input",
-  "prompt": "別名「月桂樹」と呼ばれるスパイス＆ハーブの名称を答えよ。",
-  "acceptedAnswers": [
-   "ローレル",
-   "ベイリーブス",
-   "ローリエ"
-  ],
-  "explanation": "ローレル: 科名はクスノキ科。原産地は西アジア、ヨーロッパ南部。利用部位は葉。別名は月桂樹、ベイリーブス、ローリエ。検定1・2・3級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-wasabi",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "wasabi-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9668",
-    "bookPage": 92,
-    "locationNote": "本書 p.92（原本画像 IMG_9668.PNG）。原文照合 batch6 で照合済みの知識単位 wasabi-profile から生成"
-   }
-  ],
-  "id": "qfb-family-wasabi-profile",
-  "format": "fill-blank",
-  "prompt": "わさびの科名は（　）である。",
-  "acceptedAnswers": [
-   "アブラナ科"
-  ],
-  "explanation": "わさび: 科名はアブラナ科。原産地は日本。利用部位は根茎、葉、茎。別名は山葵(わさび)、日本わさび、沢わさび。検定1・2・3級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
-  "sectionId": "item-wasabi",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "wasabi-profile"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9668",
-    "bookPage": 92,
-    "locationNote": "本書 p.92（原本画像 IMG_9668.PNG）。原文照合 batch6 で照合済みの知識単位 wasabi-profile から生成"
-   }
-  ],
-  "id": "qfb-level-wasabi-profile",
-  "format": "fill-blank",
-  "prompt": "わさびは検定（　）級の対象である。",
-  "acceptedAnswers": [
-   "1・2・3"
-  ],
-  "explanation": "わさび: 科名はアブラナ科。原産地は日本。利用部位は根茎、葉、茎。別名は山葵(わさび)、日本わさび、沢わさび。検定1・2・3級の対象。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch2",
   "sectionId": "item-wasabi",
   "difficulty": 1,
   "knowledgeUnitIds": [
@@ -4123,5 +3705,318 @@
    "1"
   ],
   "explanation": "ラセラヌー: ミックススパイス。検定1級の対象。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-anise",
+  "difficulty": 2,
+  "knowledgeUnitIds": [
+   "anise-1"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9627",
+    "bookPage": 52,
+    "locationNote": "本書 p.52（原本画像 IMG_9627.PNG）。原文照合 batch17 で照合済みの知識単位 anise-1 について、転記本文 p.52 の支持文に基づき人手作成（拡充Q3、DECISIONS #19）。支持文: 特に地中海沿岸諸国では、アニスを用いたリキュールが多い。"
+   }
+  ],
+  "id": "q1q3-anise-1",
+  "format": "one-answer",
+  "prompt": "アニスを用いたリキュールが多いのは、どの地域の諸国か。",
+  "acceptedAnswers": [
+   "地中海沿岸諸国"
+  ],
+  "explanation": "甘みのある独特の香りで、菓子・パン・スープの風味づけや、地中海沿岸のリキュールによく使われる。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-anise",
+  "difficulty": 2,
+  "knowledgeUnitIds": [
+   "anise-3"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9627",
+    "bookPage": 52,
+    "locationNote": "本書 p.52（原本画像 IMG_9627.PNG）。原文照合 batch17 で照合済みの知識単位 anise-3 について、転記本文 p.52 の支持文に基づき人手作成（拡充Q3、DECISIONS #19）。支持文: 古代エジプトでは、ミイラの防腐・保存剤としてクミンとともに使用されていた（シナモンが輸入されるようになるまで）。"
+   }
+  ],
+  "id": "q1q3-anise-3",
+  "format": "one-answer",
+  "prompt": "古代エジプトで、アニスはクミンとともに何として使用されていたか。",
+  "acceptedAnswers": [
+   "ミイラの防腐・保存剤"
+  ],
+  "explanation": "古代エジプトではクミンとともにミイラの防腐・保存剤として使われた(シナモンが輸入されるまで)。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-allspice",
+  "difficulty": 2,
+  "knowledgeUnitIds": [
+   "allspice-2"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9628",
+    "bookPage": 53,
+    "locationNote": "本書 p.53（原本画像 IMG_9628.PNG）。原文照合 batch17 で照合済みの知識単位 allspice-2 について、転記本文 p.53 の支持文に基づき人手作成（拡充Q3、DECISIONS #19）。支持文: 原産地の中央アメリカで文明社会を築いていた古代マヤ人は、紀元前2世紀頃から王の遺体に防腐剤として用いたり、調味料として使っていたといわれている。"
+   }
+  ],
+  "id": "q1q3-allspice-2",
+  "format": "one-answer",
+  "prompt": "オールスパイスを紀元前2世紀頃から王の遺体の防腐剤や調味料として使っていたのは、どの人々か。",
+  "acceptedAnswers": [
+   "古代マヤ人"
+  ],
+  "explanation": "古代マヤ人は紀元前2世紀頃から王の遺体の防腐剤や調味料として使っていたとされる。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-oregano",
+  "difficulty": 1,
+  "knowledgeUnitIds": [
+   "oregano-1"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9629",
+    "bookPage": 54,
+    "locationNote": "本書 p.54（原本画像 IMG_9629.PNG）。原文照合 batch17 で照合済みの知識単位 oregano-1 について、転記本文 p.54 の支持文に基づき人手作成（拡充Q3、DECISIONS #19）。支持文: シソ科の植物が持つ清涼感のある香りが人気で、また肉や魚などの素材の臭みを和らげるとして重宝されているほか、イタリアのトマト料理に欠かせないハーブのひとつ。"
+   }
+  ],
+  "id": "q1q3-oregano-1",
+  "format": "one-answer",
+  "prompt": "オレガノは、イタリアのどのような料理に欠かせないハーブのひとつか。",
+  "acceptedAnswers": [
+   "トマト料理"
+  ],
+  "explanation": "清涼感のある香りでイタリアのトマト料理に欠かせず、チリパウダーにも不可欠。きのことの相性もよい。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-cardamom",
+  "difficulty": 2,
+  "knowledgeUnitIds": [
+   "cardamom-2"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9631",
+    "bookPage": 56,
+    "locationNote": "本書 p.56（原本画像 IMG_9631.PNG）。原文照合 batch18 で照合済みの知識単位 cardamom-2 について、転記本文 p.56 の支持文に基づき人手作成（拡充Q3、DECISIONS #19）。支持文: 北欧ではバイキングが8～10世紀頃に持ち帰ったとされ、特に多用、そのほかインド、アラブ諸国、エジプトなどでも欠かせないスパイス。"
+   }
+  ],
+  "id": "q1q3-cardamom-2",
+  "format": "one-answer",
+  "prompt": "カルダモンを北欧に持ち帰ったとされるのは、8～10世紀頃のどの人々か。",
+  "acceptedAnswers": [
+   "バイキング"
+  ],
+  "explanation": "北欧ではバイキングが8〜10世紀頃に持ち帰ったとされ、特に多用される。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-cardamom",
+  "difficulty": 2,
+  "knowledgeUnitIds": [
+   "cardamom-3"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9631",
+    "bookPage": 56,
+    "locationNote": "本書 p.56（原本画像 IMG_9631.PNG）。原文照合 batch18 で照合済みの知識単位 cardamom-3 について、転記本文 p.56 の支持文に基づき人手作成（拡充Q3、DECISIONS #19）。支持文: 殻の中の黒い種子の部分に特に強い香りがあるため、ホールタイプを使う場合は、殻の部分に切り込みを入れて用いたり、殻をむいて種子そのものを取り出して、そのまま（または挽いて）用いたりすると、より効果的に香りをつけることができる。"
+   }
+  ],
+  "id": "q1q3-cardamom-3",
+  "format": "one-answer",
+  "prompt": "カルダモンで特に強い香りがあるのは、どの部分か。",
+  "acceptedAnswers": [
+   "殻の中の黒い種子の部分"
+  ],
+  "explanation": "殻の中の黒い種子に強い香りがあり、ホールは殻に切り込みを入れたり種子を取り出したりして使う。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-caraway",
+  "difficulty": 2,
+  "knowledgeUnitIds": [
+   "caraway-3"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9632",
+    "bookPage": 57,
+    "locationNote": "本書 p.57（原本画像 IMG_9632.PNG）。原文照合 batch18 で照合済みの知識単位 caraway-3 について、転記本文 p.57 の支持文に基づき人手作成（拡充Q3、DECISIONS #19）。支持文: キャラウェイには、人やモノを引き止めておく力があるというおもしろい言い伝えがある。"
+   }
+  ],
+  "id": "q1q3-caraway-3",
+  "format": "one-answer",
+  "prompt": "キャラウェイには、どのような力があるという言い伝えがあるか。",
+  "acceptedAnswers": [
+   "人やモノを引き止めておく力"
+  ],
+  "explanation": "人やモノを引き止める力があるという言い伝えがあり、惚れ薬の材料とされた。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-kuchinashi",
+  "difficulty": 2,
+  "knowledgeUnitIds": [
+   "gardenia-2"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9633",
+    "bookPage": 58,
+    "locationNote": "本書 p.58（原本画像 IMG_9633.PNG）。原文照合 batch18 で照合済みの知識単位 gardenia-2 について、転記本文 p.58 の支持文に基づき人手作成（拡充Q3、DECISIONS #19）。支持文: 果実が熟したあとも裂けないことから、口が開かない、口がないとの意味だといわれている。"
+   }
+  ],
+  "id": "q1q3-gardenia-2",
+  "format": "one-answer",
+  "prompt": "「くちなし」という名は、果実が熟したあとも裂けないことから、どのような意味だといわれているか。",
+  "acceptedAnswers": [
+   "口が開かない"
+  ],
+  "explanation": "熟しても実が裂けない(口が開かない)ことが名前の由来とされる。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-cumin",
+  "difficulty": 1,
+  "knowledgeUnitIds": [
+   "cumin-1"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9634",
+    "bookPage": 59,
+    "locationNote": "本書 p.59（原本画像 IMG_9634.PNG）。原文照合 batch18 で照合済みの知識単位 cumin-1 について、転記本文 p.59 の支持文に基づき人手作成（拡充Q3、DECISIONS #19）。支持文: インド料理ではスタータースパイス（p.19）として使われることが多い。"
+   }
+  ],
+  "id": "q1q3-cumin-1",
+  "format": "one-answer",
+  "prompt": "クミンはインド料理で、どのようなスパイスとして使われることが多いか。",
+  "acceptedAnswers": [
+   "スタータースパイス"
+  ],
+  "explanation": "カレーを思わせるエスニックな芳香で、カレー粉やチリパウダーに欠かせない。インド料理ではスタータースパイスとして使われる。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-cumin",
+  "difficulty": 1,
+  "knowledgeUnitIds": [
+   "cumin-2"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9634",
+    "bookPage": 59,
+    "locationNote": "本書 p.59（原本画像 IMG_9634.PNG）。原文照合 batch18 で照合済みの知識単位 cumin-2 について、転記本文 p.59 の支持文に基づき人手作成（拡充Q3、DECISIONS #19）。支持文: 古代エジプト時代には王などの遺体をミイラ化して保存するための防腐剤として、アニスなどほかのスパイスといっしょに用いられた。"
+   }
+  ],
+  "id": "q1q3-cumin-2",
+  "format": "one-answer",
+  "prompt": "古代エジプト時代、クミンは王などの遺体をミイラ化して保存するために何として用いられたか。",
+  "acceptedAnswers": [
+   "防腐剤"
+  ],
+  "explanation": "古代エジプトでは遺体をミイラにする際の防腐剤に使われた。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-clove",
+  "difficulty": 1,
+  "knowledgeUnitIds": [
+   "clove-1"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9635",
+    "bookPage": 60,
+    "locationNote": "本書 p.60（原本画像 IMG_9635.PNG）。原文照合 batch19 で照合済みの知識単位 clove-1 について、転記本文 p.60 の支持文に基づき人手作成（拡充Q3、DECISIONS #19）。支持文: スパイスとして利用する蕾は、開花直前（淡いピンクを帯び始める頃）に最も香りが強くなる。"
+   }
+  ],
+  "id": "q1q3-clove-1",
+  "format": "one-answer",
+  "prompt": "クローブの蕾は、いつ最も香りが強くなるか。",
+  "acceptedAnswers": [
+   "開花直前",
+   "淡いピンクを帯び始める頃"
+  ],
+  "explanation": "蕾は開花直前に最も香りが強くなる。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-clove",
+  "difficulty": 1,
+  "knowledgeUnitIds": [
+   "clove-2"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9635",
+    "bookPage": 60,
+    "locationNote": "本書 p.60（原本画像 IMG_9635.PNG）。原文照合 batch19 で照合済みの知識単位 clove-2 について、転記本文 p.60 の支持文に基づき人手作成（拡充Q3、DECISIONS #19）。支持文: 西洋ではフルーツポマンダー（p.120）の材料に。"
+   }
+  ],
+  "id": "q1q3-clove-2",
+  "format": "one-answer",
+  "prompt": "クローブは西洋で、何の材料にもなるか。",
+  "acceptedAnswers": [
+   "フルーツポマンダー"
+  ],
+  "explanation": "甘く濃厚な風味で肉料理と相性がよく、フルーツポマンダーの材料にもなる。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch2",
+  "sectionId": "item-pepper",
+  "difficulty": 1,
+  "knowledgeUnitIds": [
+   "pepper-1"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9636",
+    "bookPage": 61,
+    "locationNote": "本書 p.61（原本画像 IMG_9636.PNG）。原文照合 batch19 で照合済みの知識単位 pepper-1 について、転記本文 p.61 の支持文に基づき人手作成（拡充Q3、DECISIONS #19）。支持文: 果実の収穫時期と製法によって、ブラックペッパー、ホワイトペッパー、グリーンペッパーの3種類のこしょうができる。"
+   }
+  ],
+  "id": "q1q3-pepper-1",
+  "format": "one-answer",
+  "prompt": "ブラックペッパー、ホワイトペッパー、グリーンペッパーの3種類のこしょうは、果実の何の違いによってできるか。",
+  "acceptedAnswers": [
+   "収穫時期と製法"
+  ],
+  "explanation": "つる性の植物で、収穫時期と製法によりブラック・ホワイト・グリーンの3種類ができる。"
  }
 ]

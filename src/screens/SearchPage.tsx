@@ -2,7 +2,7 @@
 // 複合フィルタはフェーズ7・バッチS1で実装（docs/DECISIONS.md #31）、バッチS2で
 // 章・形式の複数選択（OR）と節・状態・転記状態の条件を追加（docs/DECISIONS.md #33）。
 // 絞り込みの純粋ロジックは src/domain/search.ts に置き、単体テストで固定する。
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { ALL_SECTIONS, CHAPTERS } from "../data/structure";
 import type { StoreData } from "../domain/store";
@@ -17,6 +17,13 @@ import {
   filterSearchResults,
   hasActiveSearchFilters,
   keywordExcerpt,
+  buildLearningIndex,
+  matchesLearningState,
+  sortSearchQuestions,
+  LEARNING_STATE_LABELS,
+  SEARCH_SORT_LABELS,
+  type LearningState,
+  type SearchSort,
   type SearchFilters,
   type SearchTarget,
 } from "../domain/search";
@@ -47,14 +54,29 @@ const STATUS_LABELS: Record<QuestionStatus, string> = {
 // 転記状態の選択肢は節データに実在する状態のみ（転記済み・未処理、#33）。
 const TRANSCRIPTION_OPTIONS = availableTranscriptionStatuses(ALL_SECTIONS);
 
-export default function SearchPage({ update }: { update?: (fn: (d: StoreData) => StoreData) => void }) {
+/** 一度に表示する問題の件数（全件を一度に描画しない。全アプリ共通UIルール1、DECISIONS #55） */
+const PAGE_SIZE = 20;
+const SECTION_PAGE_SIZE = 5;
+
+export default function SearchPage({ store, update }: { store?: StoreData; update?: (fn: (d: StoreData) => StoreData) => void }) {
   const navigate = useNavigate();
   const [filters, setFilters] = useState<SearchFilters>(DEFAULT_SEARCH_FILTERS);
-  const { sections: secs, questions: qs, total } = filterSearchResults(
-    SEARCHABLE_SECTIONS,
-    ALL_QUESTIONS,
-    filters,
+  // 学習状況の条件と並べ替え（R28）。端末の学習履歴から決まる問題固有の条件。
+  const [learning, setLearning] = useState<LearningState>("all");
+  const [sort, setSort] = useState<SearchSort>("default");
+  const [shown, setShown] = useState(PAGE_SIZE);
+  const [secShown, setSecShown] = useState(SECTION_PAGE_SIZE);
+  const index = useMemo(() => buildLearningIndex(store?.records ?? [], store?.favorites ?? []), [store?.records, store?.favorites]);
+  const base = filterSearchResults(SEARCHABLE_SECTIONS, ALL_QUESTIONS, filters);
+  const secs = learning === "all" ? base.sections : [];
+  const qs = sortSearchQuestions(
+    learning === "all" ? base.questions : base.questions.filter((x) => matchesLearningState(learning, x.id, index)),
+    sort,
+    index,
   );
+  const total = secs.length + qs.length;
+  // 条件が変わったら表示件数を先頭ページへ戻す。
+  useEffect(() => { setShown(PAGE_SIZE); setSecShown(SECTION_PAGE_SIZE); }, [filters, learning, sort]);
   const set = (patch: Partial<SearchFilters>) => setFilters((f) => ({ ...f, ...patch }));
 
   // 章の複数選択: 値を足すと次元内 OR で広がり、外すとその分だけ戻る。
@@ -157,8 +179,8 @@ export default function SearchPage({ update }: { update?: (fn: (d: StoreData) =>
         {secs.length === 0 ? (
           <p className="muted">該当する教材（節）はありません。</p>
         ) : (
-          <ul>
-            {secs.slice(0, 30).map((s) => {
+          <ul className="rows">
+            {secs.slice(0, secShown).map((s) => {
               // タイトルに一致せず本文にだけ一致した節は、一致箇所の抜粋を示す（監査C-15）
               const excerpt =
                 filters.keyword && !s.title.includes(filters.keyword)
@@ -166,27 +188,37 @@ export default function SearchPage({ update }: { update?: (fn: (d: StoreData) =>
                   : null;
               return (
                 <li key={s.id}>
-                  {s.title}（p.{s.bookPage}・{s.transcriptionStatus}）{" "}
                   <button
                     type="button"
-                    className="ghost"
+                    className="row"
+                    aria-label={`${s.title} リーダーで開く`}
                     onClick={() => {
                       update?.((d: StoreData) => { d.reader.sectionId = s.id; return d; });
                       navigate("/reader");
                     }}
                   >
-                    リーダーで開く
+                    <span>
+                      {s.title}
+                      {excerpt && (
+                        <>
+                          <br />
+                          <span className="muted">{excerpt}</span>
+                        </>
+                      )}
+                    </span>
+                    <small>p.{s.bookPage}</small>
                   </button>
-                  {excerpt && (
-                    <>
-                      <br />
-                      <span className="muted">{excerpt}</span>
-                    </>
-                  )}
                 </li>
               );
             })}
           </ul>
+        )}
+        {secs.length > secShown && (
+          <p className="actions">
+            <button type="button" className="ghost" onClick={() => setSecShown(secs.length)}>
+              節をさらに表示（残り {secs.length - secShown}件）
+            </button>
+          </p>
         )}
       </section>
       <section className="card">
@@ -194,14 +226,25 @@ export default function SearchPage({ update }: { update?: (fn: (d: StoreData) =>
         {qs.length === 0 ? (
           <p className="muted">該当する問題はありません。</p>
         ) : (
-          <ul>
-            {qs.map((x) => (
-              <li key={x.id}>
-                [{FORMAT_LABELS[x.format]}/{x.status}] {x.prompt.slice(0, 80)}{" "}
-                <Link to="/practice" state={{ questionId: x.id }}>演習で開く</Link>
-              </li>
-            ))}
-          </ul>
+          <>
+            <ul className="rows">
+              {qs.slice(0, shown).map((x) => (
+                <li key={x.id}>
+                  <Link className="row" to="/practice" state={{ questionId: x.id }} aria-label={`${x.prompt} 演習で開く`}>
+                    <span>{x.prompt}</span>
+                    <small>{FORMAT_LABELS[x.format]}</small>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            {qs.length > shown && (
+              <p className="actions">
+                <button type="button" className="ghost" onClick={() => setShown(shown + PAGE_SIZE * 2)}>
+                  さらに表示（残り {qs.length - shown}件）
+                </button>
+              </p>
+            )}
+          </>
         )}
       </section>
       <section className="card" aria-label="検索条件">
@@ -283,6 +326,22 @@ export default function SearchPage({ update }: { update?: (fn: (d: StoreData) =>
             </select>
           </label>
           <label>
+            学習状況
+            <select aria-label="学習状況" value={learning} onChange={(e) => setLearning(e.target.value as LearningState)}>
+              {(Object.keys(LEARNING_STATE_LABELS) as LearningState[]).map((k) => (
+                <option key={k} value={k}>{LEARNING_STATE_LABELS[k]}</option>
+              ))}
+            </select>
+          </label>
+          <label>
+            並び順
+            <select aria-label="並び順" value={sort} onChange={(e) => setSort(e.target.value as SearchSort)}>
+              {(Object.keys(SEARCH_SORT_LABELS) as SearchSort[]).map((k) => (
+                <option key={k} value={k}>{SEARCH_SORT_LABELS[k]}</option>
+              ))}
+            </select>
+          </label>
+          <label>
             転記状態
             <select
               aria-label="転記状態"
@@ -300,9 +359,9 @@ export default function SearchPage({ update }: { update?: (fn: (d: StoreData) =>
         </div>
         <div style={{ marginTop: ".8rem" }}>
           <span>章（複数選択可）</span>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: ".3rem 1rem" }}>
+          <div className="chips">
             {CHAPTERS.map((c) => (
-              <label key={c.id}>
+              <label key={c.id} className="chip">
                 <input
                   type="checkbox"
                   checked={filters.chapterIds.includes(c.id)}
@@ -315,9 +374,9 @@ export default function SearchPage({ update }: { update?: (fn: (d: StoreData) =>
         </div>
         <div style={{ marginTop: ".8rem" }}>
           <span>問題形式（複数選択可）</span>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: ".3rem 1rem" }}>
+          <div className="chips">
             {FORMAT_OPTIONS.map((f) => (
-              <label key={f}>
+              <label key={f} className="chip">
                 <input
                   type="checkbox"
                   checked={filters.formats.includes(f)}
@@ -328,7 +387,7 @@ export default function SearchPage({ update }: { update?: (fn: (d: StoreData) =>
             ))}
           </div>
         </div>
-        {hasActiveSearchFilters(filters) && (
+        {(hasActiveSearchFilters(filters) || learning !== "all" || sort !== "default") && (
           <p>
             {chips.map((chip) => (
               <button
@@ -341,7 +400,7 @@ export default function SearchPage({ update }: { update?: (fn: (d: StoreData) =>
                 {chip.label} ×
               </button>
             ))}
-            <button type="button" onClick={() => setFilters(DEFAULT_SEARCH_FILTERS)}>
+            <button type="button" onClick={() => { setFilters(DEFAULT_SEARCH_FILTERS); setLearning("all"); setSort("default"); }}>
               すべての条件を解除
             </button>
           </p>
@@ -349,9 +408,9 @@ export default function SearchPage({ update }: { update?: (fn: (d: StoreData) =>
         <p aria-live="polite">
           検索結果 合計 {total}件（教材（節） {secs.length}件・問題 {qs.length}件）
         </p>
-        <p className="muted">
+        <p className="foot-note">
           条件はキーワードと組み合わされます。章・問題形式は複数選択でき、同じ条件の中ではいずれかに一致すれば対象になります（OR）。異なる条件の間は
-          AND です。問題形式・難易度・問題の状態は問題固有の条件のため、指定した場合は教材（節）は対象外になります。転記状態は、問題については所属する節の転記状態で判定します。
+          AND です。問題形式・難易度・問題の状態・学習状況は問題固有の条件のため、指定した場合は教材（節）は対象外になります。転記状態は、問題については所属する節の転記状態で判定します。
         </p>
       </section>
     </main>

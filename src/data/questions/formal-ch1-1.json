@@ -46,13 +46,13 @@
   "format": "single-choice",
   "prompt": "本書のチキンカレーに添えるライスを黄色く色づけるスパイスは?",
   "choices": [
-   "パクチー",
    "チリパウダー",
    "スターアニス",
-   "ターメリック"
+   "ターメリック",
+   "クローブとシナモン"
   ],
   "correctChoiceIndexes": [
-   3
+   2
   ],
   "explanation": "本書のチキンカレーは、ターメリック・コリアンダー・クミン・ナツメッグ・シナモンのパウダーなどを組み合わせた本格インド風で、ターメリックライスを添える。"
  },
@@ -101,12 +101,12 @@
   "prompt": "ジェノベーゼソースの冷蔵保存の目安は?",
   "choices": [
    "1〜2週間",
-   "5年",
-   "1週間",
-   "2〜3日"
+   "1時間",
+   "2〜3日",
+   "1週間"
   ],
   "correctChoiceIndexes": [
-   2
+   3
   ],
   "explanation": "ジェノベーゼソースはバジルの葉・にんにく・粉チーズ・松の実・オリーブオイルで作る。冷蔵で1週間が目安で、空気に触れると黒っぽく変色するため表面をオリーブオイルで覆う。冷凍で1〜2カ月保存できる。"
  },
@@ -192,36 +192,6 @@
   "version": 1,
   "status": "verified",
   "chapterId": "ch1",
-  "sectionId": "dish-paella",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "r-paella"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9610",
-    "bookPage": 35,
-    "locationNote": "本書 p.35（原本画像 IMG_9610.PNG）。原文照合 batch28 で照合済みの知識単位 r-paella から生成"
-   }
-  ],
-  "id": "q4-r-paella",
-  "format": "single-choice",
-  "prompt": "パエリアに使うサフランは、使う前にどうする?",
-  "choices": [
-   "水に合わせておいて色を出す",
-   "挽く・加熱する",
-   "煮沸消毒して乾かす",
-   "ちぎる"
-  ],
-  "correctChoiceIndexes": [
-   0
-  ],
-  "explanation": "本書のパエリアは、サフランを水に合わせて20分ほどおいて色を出してから使う。仕上げにイタリアンパセリを散らす。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch1",
   "sectionId": "dish-chili",
   "difficulty": 1,
   "knowledgeUnitIds": [
@@ -262,13 +232,13 @@
   "format": "single-choice",
   "prompt": "チリコンカンで主役となるミックススパイスは?",
   "choices": [
-   "ターメリック",
-   "スターアニス",
    "チリパウダー",
-   "シナモン"
+   "クローブとシナモン",
+   "スターアニス",
+   "ターメリック"
   ],
   "correctChoiceIndexes": [
-   2
+   0
   ],
   "explanation": "本書のチリコンカンはチリパウダー・クミン・ブラックペッパー・にんにく・ローレルを使う豆とひき肉の料理で、アメリカやメキシコの定番ファストフード。"
  },
@@ -324,13 +294,13 @@
   "format": "single-choice",
   "prompt": "本書の中国風「豚の角煮」で風味の決め手となるスパイスは?",
   "choices": [
+   "クローブとシナモン",
    "スターアニス",
    "ターメリック",
-   "クミン",
-   "チリパウダー"
+   "クミン"
   ],
   "correctChoiceIndexes": [
-   0
+   1
   ],
   "explanation": "本書の豚の角煮はスターアニスで風味をきかせた中国風で、しょうが・シナモンスティックも使う。"
  },
@@ -379,9 +349,9 @@
   "prompt": "セビーチェはどの地域風の魚介マリネ?",
   "choices": [
    "南米",
-   "ひよこ豆",
-   "松の実",
-   "シナモン・カルダモン・クローブ"
+   "ペナン島",
+   "フィリピン",
+   "イスタンブール"
   ],
   "correctChoiceIndexes": [
    0
@@ -486,13 +456,13 @@
   "format": "single-choice",
   "prompt": "クスクスは何の粉を粒状にしたパスタ?",
   "choices": [
-   "ナンプラー",
    "松の実",
    "セモリナ粉",
-   "ひよこ豆"
+   "ひよこ豆",
+   "牛肉"
   ],
   "correctChoiceIndexes": [
-   2
+   1
   ],
   "explanation": "クスクスはセモリナ粉を粒状にした小さなパスタで、チュニジアやモロッコなど北アフリカの料理だがフランスでもポピュラー。"
  },
@@ -599,10 +569,10 @@
   "format": "single-choice",
   "prompt": "カリーヴルストはどこの国のファストフード?",
   "choices": [
-   "フランス",
+   "ウクライナ",
    "中国",
    "ドイツ",
-   "タイ"
+   "フランス"
   ],
   "correctChoiceIndexes": [
    2
@@ -637,36 +607,6 @@
   "version": 1,
   "status": "verified",
   "chapterId": "ch1",
-  "sectionId": "dish-cumin-potato",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "r-cumin-potato"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9618",
-    "bookPage": 43,
-    "locationNote": "本書 p.43（原本画像 IMG_9618.PNG）。原文照合 batch29 で照合済みの知識単位 r-cumin-potato から生成"
-   }
-  ],
-  "id": "q4-r-cumin-potato",
-  "format": "single-choice",
-  "prompt": "クミンポテトのもとになっているインドの家庭料理は?",
-  "choices": [
-   "シナモン・カルダモン・クローブ",
-   "サブジ",
-   "テクス・メクス",
-   "ハリッサ"
-  ],
-  "correctChoiceIndexes": [
-   1
-  ],
-  "explanation": "クミンポテトはスタータースパイスのクミン(シード)を炒めて香りを出す、インドの家庭料理「サブジ」風の一品。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch1",
   "sectionId": "dish-chai",
   "difficulty": 1,
   "knowledgeUnitIds": [
@@ -684,36 +624,6 @@
   "prompt": "本書のチャイに使うスパイスを3つ挙げよ。",
   "acceptedAnswers": [
    "シナモン・カルダモン・クローブ"
-  ],
-  "explanation": "チャイはミルクとスパイスのインド風紅茶で、本書ではシナモンスティック・カルダモン・クローブを使う。カルダモンはさやをつぶして使う。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch1",
-  "sectionId": "dish-chai",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "r-chai"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9619",
-    "bookPage": 44,
-    "locationNote": "本書 p.44（原本画像 IMG_9619.PNG）。原文照合 batch29 で照合済みの知識単位 r-chai から生成"
-   }
-  ],
-  "id": "q4-r-chai",
-  "format": "single-choice",
-  "prompt": "本書のチャイに使うスパイスを3つ挙げよ。",
-  "choices": [
-   "クローブとシナモン",
-   "シナモン・カルダモン・クローブ",
-   "ブラックペッパー",
-   "イタリアンパセリ"
-  ],
-  "correctChoiceIndexes": [
-   1
   ],
   "explanation": "チャイはミルクとスパイスのインド風紅茶で、本書ではシナモンスティック・カルダモン・クローブを使う。カルダモンはさやをつぶして使う。"
  },
@@ -761,9 +671,9 @@
   "format": "single-choice",
   "prompt": "焼きりんごに使う2つのスパイスは?",
   "choices": [
-   "イタリアンパセリ",
-   "ブラックペッパー",
-   "シナモン・カルダモン・クローブ",
+   "スターアニス",
+   "クミン",
+   "ターメリック",
    "クローブとシナモン"
   ],
   "correctChoiceIndexes": [
@@ -817,8 +727,8 @@
   "choices": [
    "1〜2週間",
    "2〜3日",
-   "1〜2カ月",
-   "1週間"
+   "1週間",
+   "1時間"
   ],
   "correctChoiceIndexes": [
    0
@@ -846,36 +756,6 @@
   "prompt": "手作り調味料に使う保存びんは事前にどうしておく?",
   "acceptedAnswers": [
    "煮沸消毒して乾かす"
-  ],
-  "explanation": "手作り調味料の保存びんは、あらかじめ煮沸消毒して乾かしたものを使う。フレッシュハーブは完全に液中に漬けて空気に触れないようにする。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch1",
-  "sectionId": "season-oil",
-  "difficulty": 3,
-  "knowledgeUnitIds": [
-   "c-bottle"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9621",
-    "bookPage": 46,
-    "locationNote": "本書 p.46（原本画像 IMG_9621.PNG）。原文照合 batch29 で照合済みの知識単位 c-bottle から生成"
-   }
-  ],
-  "id": "q4-c-bottle",
-  "format": "single-choice",
-  "prompt": "手作り調味料に使う保存びんは事前にどうしておく?",
-  "choices": [
-   "挽く・加熱する",
-   "煮沸消毒して乾かす",
-   "ちぎる",
-   "水に合わせておいて色を出す"
-  ],
-  "correctChoiceIndexes": [
-   1
   ],
   "explanation": "手作り調味料の保存びんは、あらかじめ煮沸消毒して乾かしたものを使う。フレッシュハーブは完全に液中に漬けて空気に触れないようにする。"
  },
@@ -964,36 +844,6 @@
   "sectionId": "season-paste",
   "difficulty": 3,
   "knowledgeUnitIds": [
-   "c-paste-basil"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9623",
-    "bookPage": 48,
-    "locationNote": "本書 p.48（原本画像 IMG_9623.PNG）。原文照合 batch30 で照合済みの知識単位 c-paste-basil から生成"
-   }
-  ],
-  "id": "q4-c-paste-basil",
-  "format": "single-choice",
-  "prompt": "バジルペーストの半量を何にかえると、より鮮やかな緑色になる?",
-  "choices": [
-   "イタリアンパセリ",
-   "ブラックペッパー",
-   "クローブとシナモン",
-   "シナモン・カルダモン・クローブ"
-  ],
-  "correctChoiceIndexes": [
-   0
-  ],
-  "explanation": "バジルペーストは半量をイタリアンパセリにかえると、より鮮やかな緑色に仕上がる。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch1",
-  "sectionId": "season-paste",
-  "difficulty": 3,
-  "knowledgeUnitIds": [
    "c-paste-rucola"
   ],
   "sourceRefs": [
@@ -1032,12 +882,12 @@
   "prompt": "ルッコラペーストに加えると味わいが深くなる食材は?",
   "choices": [
    "白身魚",
-   "羊肉",
    "アンチョビ",
-   "ナンプラー"
+   "赤身魚",
+   "羊肉"
   ],
   "correctChoiceIndexes": [
-   2
+   1
   ],
   "explanation": "ルッコラのペーストは、アンチョビを加えると味わいが深くなる。"
  },
@@ -1085,13 +935,13 @@
   "format": "single-choice",
   "prompt": "手作りドレッシングの冷蔵保存の目安は?",
   "choices": [
+   "4〜5日",
    "1〜2週間",
-   "1〜2カ月",
-   "1週間",
-   "2〜3日"
+   "2〜3日",
+   "1〜2カ月"
   ],
   "correctChoiceIndexes": [
-   3
+   2
   ],
   "explanation": "ドレッシングの基本はオイル・酢・塩で、油を少しずつ加えて乳化させる。冷蔵で2〜3日が目安。"
  },
@@ -1140,7 +990,7 @@
   "prompt": "フランス語で「細かく刻んだハーブ」を意味する言葉は?",
   "choices": [
    "フュージョン料理",
-   "揮発性の香気成分",
+   "パウダー",
    "ホール",
    "フィーヌゼルブ"
   ],
@@ -1193,13 +1043,13 @@
   "format": "single-choice",
   "prompt": "エスニック風ドレッシングで塩の代わりに使う調味料は?",
   "choices": [
-   "赤身魚",
    "ナンプラー",
-   "ひよこ豆",
-   "アンチョビ"
+   "ハリッサ",
+   "ウスターソース",
+   "コチュジャン"
   ],
   "correctChoiceIndexes": [
-   1
+   0
   ],
   "explanation": "エスニック風ドレッシングは、基本の塩の代わりにナンプラーを使う。"
  },
@@ -1234,36 +1084,6 @@
   "sectionId": "basic-aroma",
   "difficulty": 1,
   "knowledgeUnitIds": [
-   "u-3roles"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9593",
-    "bookPage": 18,
-    "locationNote": "本書 p.18（原本画像 IMG_9593.PNG）。原文照合 batch24 で照合済みの知識単位 u-3roles から生成"
-   }
-  ],
-  "id": "q4-u-3roles",
-  "format": "single-choice",
-  "prompt": "料理におけるスパイスやハーブの3つの働きは?",
-  "choices": [
-   "香りづけ・辛みづけ・色づけ",
-   "発酵調味料",
-   "ホール",
-   "スタータースパイス"
-  ],
-  "correctChoiceIndexes": [
-   0
-  ],
-  "explanation": "料理におけるスパイスやハーブの3つの働きは、香りづけ・辛みづけ・色づけである。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch1",
-  "sectionId": "basic-aroma",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
    "u-aroma-main"
   ],
   "sourceRefs": [
@@ -1278,36 +1098,6 @@
   "prompt": "3つの働きのうち、ほとんどのスパイスやハーブが持つ働きは?",
   "acceptedAnswers": [
    "香りづけ"
-  ],
-  "explanation": "3つの働きのうち、ほとんどのスパイスやハーブが持つのは香りづけで、香りがスパイスの一番の特徴である。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch1",
-  "sectionId": "basic-aroma",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "u-aroma-main"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9593",
-    "bookPage": 18,
-    "locationNote": "本書 p.18（原本画像 IMG_9593.PNG）。原文照合 batch24 で照合済みの知識単位 u-aroma-main から生成"
-   }
-  ],
-  "id": "q4-u-aroma-main",
-  "format": "single-choice",
-  "prompt": "3つの働きのうち、ほとんどのスパイスやハーブが持つ働きは?",
-  "choices": [
-   "オーバースパイス",
-   "フィーヌゼルブ",
-   "パウダー",
-   "香りづけ"
-  ],
-  "correctChoiceIndexes": [
-   3
   ],
   "explanation": "3つの働きのうち、ほとんどのスパイスやハーブが持つのは香りづけで、香りがスパイスの一番の特徴である。"
  },
@@ -1355,13 +1145,13 @@
   "format": "single-choice",
   "prompt": "スパイスの香りの正体は何という成分?",
   "choices": [
-   "スタータースパイス",
-   "揮発性の香気成分",
-   "香りづけ・辛みづけ・色づけ",
-   "オーバースパイス"
+   "チモール",
+   "ベンジル芥子油",
+   "ミロシナーゼ",
+   "揮発性の香気成分"
   ],
   "correctChoiceIndexes": [
-   1
+   3
   ],
   "explanation": "香りの正体は揮発性の香気成分で、植物の組織や細胞に蓄えられ、それが壊れたときに強い芳香を放つ。"
  },
@@ -1457,36 +1247,6 @@
   "sectionId": "basic-aroma",
   "difficulty": 1,
   "knowledgeUnitIds": [
-   "u-aroma-herb"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9594",
-    "bookPage": 19,
-    "locationNote": "本書 p.19（原本画像 IMG_9594.PNG）。原文照合 batch25 で照合済みの知識単位 u-aroma-herb から生成"
-   }
-  ],
-  "id": "q4-u-aroma-herb",
-  "format": "single-choice",
-  "prompt": "フレッシュハーブの香りを引き出す方法を1つ挙げよ。",
-  "choices": [
-   "ちぎる",
-   "挽く・加熱する",
-   "水に合わせておいて色を出す",
-   "煮沸消毒して乾かす"
-  ],
-  "correctChoiceIndexes": [
-   0
-  ],
-  "explanation": "ハーブ(ホール・フレッシュ)は、ちぎる・刻む・切り込みを入れる・もむ・砕く・たたくことで香りを引き出す。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch1",
-  "sectionId": "basic-aroma",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
    "u-aroma-powder"
   ],
   "sourceRefs": [
@@ -1501,36 +1261,6 @@
   "prompt": "パウダースパイスの短所は?",
   "acceptedAnswers": [
    "香りの消失が早い"
-  ],
-  "explanation": "パウダーはあらかじめ組織が挽かれて香りが立ちやすいが、香りの消失も早い。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch1",
-  "sectionId": "basic-aroma",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "u-aroma-powder"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9594",
-    "bookPage": 19,
-    "locationNote": "本書 p.19（原本画像 IMG_9594.PNG）。原文照合 batch25 で照合済みの知識単位 u-aroma-powder から生成"
-   }
-  ],
-  "id": "q4-u-aroma-powder",
-  "format": "single-choice",
-  "prompt": "パウダースパイスの短所は?",
-  "choices": [
-   "葉がやわらかく香りがマイルド",
-   "少量ずつ味をみながら加える",
-   "香りの消失が早い",
-   "必要"
-  ],
-  "correctChoiceIndexes": [
-   2
   ],
   "explanation": "パウダーはあらかじめ組織が挽かれて香りが立ちやすいが、香りの消失も早い。"
  },
@@ -1578,10 +1308,10 @@
   "format": "single-choice",
   "prompt": "調理の最初に油で炒めて香りを移すスパイスを何と呼ぶ?",
   "choices": [
-   "フュージョン料理",
+   "パウダー",
    "スタータースパイス",
-   "揮発性の香気成分",
-   "パウダー"
+   "フュージョン料理",
+   "オーバースパイス"
   ],
   "correctChoiceIndexes": [
    1
@@ -1638,9 +1368,9 @@
   "format": "single-choice",
   "prompt": "スタータースパイスの代表例を1つ挙げよ。",
   "choices": [
-   "スターアニス",
    "ローズマリー",
-   "パセリ",
+   "スターアニス",
+   "クローブとシナモン",
    "クミン"
   ],
   "correctChoiceIndexes": [
@@ -1669,36 +1399,6 @@
   "prompt": "辛みのあるスパイスを加える際の基本的な注意は?",
   "acceptedAnswers": [
    "少量ずつ味をみながら加える"
-  ],
-  "explanation": "辛みは料理にメリハリを与えるが、分量を誤ると台無しになるため少量ずつ味をみながら加える。辛みには舌が焼ける辛み・ピリッとした辛み・鼻に抜けるツンとした辛みなどの個性がある。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch1",
-  "sectionId": "basic-aroma",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "u-heat"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9595",
-    "bookPage": 20,
-    "locationNote": "本書 p.20（原本画像 IMG_9595.PNG）。原文照合 batch25 で照合済みの知識単位 u-heat から生成"
-   }
-  ],
-  "id": "q4-u-heat",
-  "format": "single-choice",
-  "prompt": "辛みのあるスパイスを加える際の基本的な注意は?",
-  "choices": [
-   "葉がやわらかく香りがマイルド",
-   "フライパン",
-   "素材",
-   "少量ずつ味をみながら加える"
-  ],
-  "correctChoiceIndexes": [
-   3
   ],
   "explanation": "辛みは料理にメリハリを与えるが、分量を誤ると台無しになるため少量ずつ味をみながら加える。辛みには舌が焼ける辛み・ピリッとした辛み・鼻に抜けるツンとした辛みなどの個性がある。"
  },
@@ -1753,9 +1453,9 @@
   "prompt": "色づけの目的で使われるスパイスを1つ挙げよ(例:ターメリック以外)。",
   "choices": [
    "ナツメッグ",
-   "パクチー",
+   "ミント",
    "パプリカ",
-   "ミント"
+   "クローブとシナモン"
   ],
   "correctChoiceIndexes": [
    2
@@ -1783,36 +1483,6 @@
   "prompt": "素材の臭みとりや香りづけを目的にスパイスを使うタイミングは?",
   "acceptedAnswers": [
    "下ごしらえ"
-  ],
-  "explanation": "下ごしらえ(調理前)の目的は、臭みとり・香りをしっかりつける・色を出しておくこと。まぶす・漬け込む・下ゆでに使う。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch1",
-  "sectionId": "basic-timing",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "u-timing-prep"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9596",
-    "bookPage": 21,
-    "locationNote": "本書 p.21（原本画像 IMG_9596.PNG）。原文照合 batch25 で照合済みの知識単位 u-timing-prep から生成"
-   }
-  ],
-  "id": "q4-u-timing-prep",
-  "format": "single-choice",
-  "prompt": "素材の臭みとりや香りづけを目的にスパイスを使うタイミングは?",
-  "choices": [
-   "ホール",
-   "葉がやわらかく香りがマイルド",
-   "パウダー",
-   "下ごしらえ"
-  ],
-  "correctChoiceIndexes": [
-   3
   ],
   "explanation": "下ごしらえ(調理前)の目的は、臭みとり・香りをしっかりつける・色を出しておくこと。まぶす・漬け込む・下ゆでに使う。"
  },
@@ -1860,13 +1530,13 @@
   "format": "single-choice",
   "prompt": "下ごしらえで素材にまんべんなくまぶすのに適した形状は?",
   "choices": [
-   "発酵調味料",
-   "香りづけ・辛みづけ・色づけ",
+   "フュージョン料理",
    "パウダー",
-   "スタータースパイス"
+   "スタータースパイス",
+   "フィーヌゼルブ"
   ],
   "correctChoiceIndexes": [
-   2
+   1
   ],
   "explanation": "下ごしらえでまんべんなくまぶすには粒度の小さいパウダーが向き、マリネなど液体とともに漬け込む場合はホールなど粒度の大きいものが向く。"
  },
@@ -2067,36 +1737,6 @@
   "sectionId": "basic-timing",
   "difficulty": 1,
   "knowledgeUnitIds": [
-   "u-timing-finish-herb"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9597",
-    "bookPage": 22,
-    "locationNote": "本書 p.22（原本画像 IMG_9597.PNG）。原文照合 batch25 で照合済みの知識単位 u-timing-finish-herb から生成"
-   }
-  ],
-  "id": "q4-u-timing-finish-herb",
-  "format": "single-choice",
-  "prompt": "料理の仕上げに向くフレッシュハーブの特徴は?",
-  "choices": [
-   "素材",
-   "フライパン",
-   "少量ずつ味をみながら加える",
-   "葉がやわらかく香りがマイルド"
-  ],
-  "correctChoiceIndexes": [
-   3
-  ],
-  "explanation": "仕上げに使うフレッシュハーブは、ディル・チャービル・チャイブ・パセリなど葉がやわらかく香りがマイルドなものがおすすめ。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch1",
-  "sectionId": "basic-timing",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
    "u-overspice"
   ],
   "sourceRefs": [
@@ -2270,9 +1910,9 @@
   "prompt": "乾燥でも体積があまり変化しないため、ドライとほぼ同量でよいハーブの例は?",
   "choices": [
    "ディル",
-   "パクチー",
+   "クローブとシナモン",
    "ローズマリー",
-   "ナツメッグ"
+   "パクチー"
   ],
   "correctChoiceIndexes": [
    2
@@ -2336,27 +1976,153 @@
   "sectionId": "basic-compat",
   "difficulty": 1,
   "knowledgeUnitIds": [
-   "u-knife"
+   "u-pairing"
   ],
   "sourceRefs": [
    {
     "manifestImageId": "IMG_9598",
     "bookPage": 23,
-    "locationNote": "本書 p.23（原本画像 IMG_9598.PNG）。原文照合 batch26 で照合済みの知識単位 u-knife から生成"
+    "locationNote": "本書 p.23（原本画像 IMG_9598.PNG）。原文照合 batch26 で照合済みの知識単位 u-pairing から生成"
    }
   ],
-  "id": "q4-u-knife",
+  "id": "q1-u-pairing",
+  "format": "one-answer",
+  "prompt": "スパイスの相性はメニューと素材のどちらとの相性で覚えるのがよい?",
+  "acceptedAnswers": [
+   "素材"
+  ],
+  "explanation": "相性は料理メニューとではなく、各素材との相性で覚えるのがポイント。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch1",
+  "sectionId": "basic-compat",
+  "difficulty": 1,
+  "knowledgeUnitIds": [
+   "u-pair-beef"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9598",
+    "bookPage": 23,
+    "locationNote": "本書 p.23（原本画像 IMG_9598.PNG）。原文照合 batch26 で照合済みの知識単位 u-pair-beef から生成"
+   }
+  ],
+  "id": "q1-u-pair-beef",
+  "format": "one-answer",
+  "prompt": "ブーケガルニ・クローブ・オレガノなどと相性がよいとされる素材は?",
+  "acceptedAnswers": [
+   "牛肉"
+  ],
+  "explanation": "牛肉と相性のよい例:ブーケガルニ、クローブ、オレガノ、ブラックペッパー、ガーリックなど。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch1",
+  "sectionId": "basic-compat",
+  "difficulty": 1,
+  "knowledgeUnitIds": [
+   "u-pair-beef"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9598",
+    "bookPage": 23,
+    "locationNote": "本書 p.23（原本画像 IMG_9598.PNG）。原文照合 batch26 で照合済みの知識単位 u-pair-beef から生成"
+   }
+  ],
+  "id": "q4-u-pair-beef",
   "format": "single-choice",
-  "prompt": "ハーブの変色を防ぐために使うとよい包丁の材質は?",
+  "prompt": "ブーケガルニ・クローブ・オレガノなどと相性がよいとされる素材は?",
   "choices": [
-   "少量ずつ味をみながら加える",
-   "ステンレスやセラミック",
-   "素材",
-   "必要"
+   "豚肉",
+   "白身魚",
+   "赤身魚",
+   "牛肉"
   ],
   "correctChoiceIndexes": [
-   1
+   3
   ],
-  "explanation": "鉄製など金けのある包丁はハーブを変色させることがあるため、手でちぎるかステンレスやセラミック製の包丁を使う。"
+  "explanation": "牛肉と相性のよい例:ブーケガルニ、クローブ、オレガノ、ブラックペッパー、ガーリックなど。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch1",
+  "sectionId": "basic-compat",
+  "difficulty": 1,
+  "knowledgeUnitIds": [
+   "u-pair-pork"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9598",
+    "bookPage": 23,
+    "locationNote": "本書 p.23（原本画像 IMG_9598.PNG）。原文照合 batch26 で照合済みの知識単位 u-pair-pork から生成"
+   }
+  ],
+  "id": "q1-u-pair-pork",
+  "format": "one-answer",
+  "prompt": "ジンジャー・ナツメッグ・スターアニス・五香粉などと相性がよいとされる素材は?",
+  "acceptedAnswers": [
+   "豚肉"
+  ],
+  "explanation": "豚肉と相性のよい例:ジンジャー、ナツメッグ、スターアニス、山椒、五香粉など。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch1",
+  "sectionId": "basic-compat",
+  "difficulty": 1,
+  "knowledgeUnitIds": [
+   "u-pair-pork"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9598",
+    "bookPage": 23,
+    "locationNote": "本書 p.23（原本画像 IMG_9598.PNG）。原文照合 batch26 で照合済みの知識単位 u-pair-pork から生成"
+   }
+  ],
+  "id": "q4-u-pair-pork",
+  "format": "single-choice",
+  "prompt": "ジンジャー・ナツメッグ・スターアニス・五香粉などと相性がよいとされる素材は?",
+  "choices": [
+   "牛肉",
+   "赤身魚",
+   "白身魚",
+   "豚肉"
+  ],
+  "correctChoiceIndexes": [
+   3
+  ],
+  "explanation": "豚肉と相性のよい例:ジンジャー、ナツメッグ、スターアニス、山椒、五香粉など。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch1",
+  "sectionId": "basic-compat",
+  "difficulty": 1,
+  "knowledgeUnitIds": [
+   "u-pair-redfish"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9598",
+    "bookPage": 23,
+    "locationNote": "本書 p.23（原本画像 IMG_9598.PNG）。原文照合 batch26 で照合済みの知識単位 u-pair-redfish から生成"
+   }
+  ],
+  "id": "q1-u-pair-redfish",
+  "format": "one-answer",
+  "prompt": "チリペッパー・ディル・ガーリックなどと相性がよいとされる魚は(赤身魚・白身魚)?",
+  "acceptedAnswers": [
+   "赤身魚"
+  ],
+  "explanation": "赤身魚と相性のよい例:ジンジャー、チリペッパー、タイム、フェンネル、ディル、ガーリックなど。"
  }
 ]

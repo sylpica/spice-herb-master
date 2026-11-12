@@ -6,162 +6,6 @@
   "sectionId": "basic-compat",
   "difficulty": 1,
   "knowledgeUnitIds": [
-   "u-pairing"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9598",
-    "bookPage": 23,
-    "locationNote": "本書 p.23（原本画像 IMG_9598.PNG）。原文照合 batch26 で照合済みの知識単位 u-pairing から生成"
-   }
-  ],
-  "id": "q1-u-pairing",
-  "format": "one-answer",
-  "prompt": "スパイスの相性はメニューと素材のどちらとの相性で覚えるのがよい?",
-  "acceptedAnswers": [
-   "素材"
-  ],
-  "explanation": "相性は料理メニューとではなく、各素材との相性で覚えるのがポイント。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch1",
-  "sectionId": "basic-compat",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "u-pair-beef"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9598",
-    "bookPage": 23,
-    "locationNote": "本書 p.23（原本画像 IMG_9598.PNG）。原文照合 batch26 で照合済みの知識単位 u-pair-beef から生成"
-   }
-  ],
-  "id": "q1-u-pair-beef",
-  "format": "one-answer",
-  "prompt": "ブーケガルニ・クローブ・オレガノなどと相性がよいとされる素材は?",
-  "acceptedAnswers": [
-   "牛肉"
-  ],
-  "explanation": "牛肉と相性のよい例:ブーケガルニ、クローブ、オレガノ、ブラックペッパー、ガーリックなど。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch1",
-  "sectionId": "basic-compat",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "u-pair-beef"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9598",
-    "bookPage": 23,
-    "locationNote": "本書 p.23（原本画像 IMG_9598.PNG）。原文照合 batch26 で照合済みの知識単位 u-pair-beef から生成"
-   }
-  ],
-  "id": "q4-u-pair-beef",
-  "format": "single-choice",
-  "prompt": "ブーケガルニ・クローブ・オレガノなどと相性がよいとされる素材は?",
-  "choices": [
-   "豚肉",
-   "白身魚",
-   "赤身魚",
-   "牛肉"
-  ],
-  "correctChoiceIndexes": [
-   3
-  ],
-  "explanation": "牛肉と相性のよい例:ブーケガルニ、クローブ、オレガノ、ブラックペッパー、ガーリックなど。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch1",
-  "sectionId": "basic-compat",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "u-pair-pork"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9598",
-    "bookPage": 23,
-    "locationNote": "本書 p.23（原本画像 IMG_9598.PNG）。原文照合 batch26 で照合済みの知識単位 u-pair-pork から生成"
-   }
-  ],
-  "id": "q1-u-pair-pork",
-  "format": "one-answer",
-  "prompt": "ジンジャー・ナツメッグ・スターアニス・五香粉などと相性がよいとされる素材は?",
-  "acceptedAnswers": [
-   "豚肉"
-  ],
-  "explanation": "豚肉と相性のよい例:ジンジャー、ナツメッグ、スターアニス、山椒、五香粉など。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch1",
-  "sectionId": "basic-compat",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "u-pair-pork"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9598",
-    "bookPage": 23,
-    "locationNote": "本書 p.23（原本画像 IMG_9598.PNG）。原文照合 batch26 で照合済みの知識単位 u-pair-pork から生成"
-   }
-  ],
-  "id": "q4-u-pair-pork",
-  "format": "single-choice",
-  "prompt": "ジンジャー・ナツメッグ・スターアニス・五香粉などと相性がよいとされる素材は?",
-  "choices": [
-   "牛肉",
-   "赤身魚",
-   "白身魚",
-   "豚肉"
-  ],
-  "correctChoiceIndexes": [
-   3
-  ],
-  "explanation": "豚肉と相性のよい例:ジンジャー、ナツメッグ、スターアニス、山椒、五香粉など。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch1",
-  "sectionId": "basic-compat",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "u-pair-redfish"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9598",
-    "bookPage": 23,
-    "locationNote": "本書 p.23（原本画像 IMG_9598.PNG）。原文照合 batch26 で照合済みの知識単位 u-pair-redfish から生成"
-   }
-  ],
-  "id": "q1-u-pair-redfish",
-  "format": "one-answer",
-  "prompt": "チリペッパー・ディル・ガーリックなどと相性がよいとされる魚は(赤身魚・白身魚)?",
-  "acceptedAnswers": [
-   "赤身魚"
-  ],
-  "explanation": "赤身魚と相性のよい例:ジンジャー、チリペッパー、タイム、フェンネル、ディル、ガーリックなど。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch1",
-  "sectionId": "basic-compat",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
    "u-pair-redfish"
   ],
   "sourceRefs": [
@@ -292,7 +136,7 @@
    "パセリ",
    "クミン",
    "バジル",
-   "パクチー"
+   "ブラックペッパー"
   ],
   "correctChoiceIndexes": [
    1
@@ -344,9 +188,9 @@
   "prompt": "クスクスに添えられることが多い唐辛子ペーストの名は?",
   "choices": [
    "ハリッサ",
-   "サブジ",
-   "テクス・メクス",
-   "羊肉"
+   "サンバル",
+   "ナンプラー",
+   "ウスターソース"
   ],
   "correctChoiceIndexes": [
    0
@@ -567,13 +411,13 @@
   "format": "single-choice",
   "prompt": "地中海沿岸地域で魚と相性がよくよく使われるスパイスを1つ挙げよ。",
   "choices": [
-   "パクチー",
    "パセリ",
    "サフラン",
+   "ブラックペッパー",
    "バジル"
   ],
   "correctChoiceIndexes": [
-   2
+   1
   ],
   "explanation": "ヨーロッパ・ロシアでは肉類と加工品が中心で、ナツメッグ・オールスパイス・マスタード・ローズマリー・セージが多用される。地中海沿岸では魚と相性のよいサフラン・タイム・フェンネルが使われる。"
  },
@@ -623,13 +467,13 @@
   "format": "single-choice",
   "prompt": "カプレーゼの決め手のハーブは?",
   "choices": [
-   "パクチー",
+   "ブラックペッパー",
+   "セージ",
    "サフラン",
-   "バジル",
-   "セージ"
+   "バジル"
   ],
   "correctChoiceIndexes": [
-   2
+   3
   ],
   "explanation": "イタリア・カプリ島のカプレーゼは、トマト・バジル・チーズのサラダで決め手はバジル。"
  },
@@ -680,13 +524,13 @@
   "format": "single-choice",
   "prompt": "ミラノ風リゾットの決め手のスパイスは?",
   "choices": [
-   "ディル",
    "セージ",
-   "サフラン",
-   "バジル"
+   "ブラックペッパー",
+   "バジル",
+   "サフラン"
   ],
   "correctChoiceIndexes": [
-   2
+   3
   ],
   "explanation": "リゾット・アッラ・ミラネーゼ(ミラノ風リゾット)は黄金色のリゾットで決め手はサフラン。"
  },
@@ -737,7 +581,7 @@
   "prompt": "サルティンボッカの決め手のハーブは?",
   "choices": [
    "バジル",
-   "パクチー",
+   "ブラックペッパー",
    "セージ",
    "サフラン"
   ],
@@ -790,13 +634,13 @@
   "format": "single-choice",
   "prompt": "「サルティンボッカ」の意味は?",
   "choices": [
-   "香りの消失が早い",
+   "釘",
+   "小さな竜",
    "口に飛び込む",
-   "フライパン",
-   "少量ずつ味をみながら加える"
+   "フライパン"
   ],
   "correctChoiceIndexes": [
-   1
+   2
   ],
   "explanation": "「サルティンボッカ」はイタリア語で「口に飛び込む」という意味である。"
  },
@@ -847,9 +691,9 @@
   "prompt": "ジェノベーゼソースの決め手のハーブは?",
   "choices": [
    "バジル",
-   "セージ",
+   "ブラックペッパー",
    "サフラン",
-   "ディル"
+   "セージ"
   ],
   "correctChoiceIndexes": [
    0
@@ -900,13 +744,13 @@
   "format": "single-choice",
   "prompt": "カルボナーラの仕上げに欠かせないスパイスは?",
   "choices": [
-   "シナモン・カルダモン・クローブ",
-   "クローブとシナモン",
+   "サフラン",
    "ブラックペッパー",
-   "イタリアンパセリ"
+   "セージ",
+   "バジル"
   ],
   "correctChoiceIndexes": [
-   2
+   1
   ],
   "explanation": "ローマ発祥のカルボナーラは仕上げのブラックペッパーが欠かせない。"
  },
@@ -954,13 +798,13 @@
   "format": "single-choice",
   "prompt": "サフランを使った魚介のスープ「ブイヤベース」はどこの国の料理?",
   "choices": [
-   "ドイツ",
    "フランス",
+   "ウクライナ",
    "タイ",
    "中国"
   ],
   "correctChoiceIndexes": [
-   1
+   0
   ],
   "explanation": "ブイヤベースはフランスの郷土料理で、魚介をトマトやサフランで色と香りをつけて煮込んだスープ。"
  },
@@ -1065,13 +909,13 @@
   "format": "single-choice",
   "prompt": "「パエリア」はバレンシア語で何を意味する?",
   "choices": [
-   "必要",
    "口に飛び込む",
    "フライパン",
-   "ステンレスやセラミック"
+   "マリア様のバラ",
+   "なだめる"
   ],
   "correctChoiceIndexes": [
-   2
+   1
   ],
   "explanation": "「パエリア」はバレンシア語で「フライパン」を意味する。"
  },
@@ -1180,9 +1024,9 @@
   "format": "single-choice",
   "prompt": "ボルシチの決め手のハーブは?",
   "choices": [
-   "サフラン",
    "セージ",
    "パセリ",
+   "ブラックペッパー",
    "ディル"
   ],
   "correctChoiceIndexes": [
@@ -1234,13 +1078,13 @@
   "format": "single-choice",
   "prompt": "ボルシチ発祥の国は?",
   "choices": [
-   "ブラックペッパー",
-   "ウクライナ",
-   "羊肉",
-   "フライパン"
+   "中国",
+   "タイ",
+   "フランス",
+   "ウクライナ"
   ],
   "correctChoiceIndexes": [
-   1
+   3
   ],
   "explanation": "ボルシチの発祥国はウクライナである。"
  },
@@ -1265,36 +1109,6 @@
   "prompt": "東アジア・東南アジアの味つけで広く使われる調味料の種類は?",
   "acceptedAnswers": [
    "発酵調味料"
-  ],
-  "explanation": "東アジア・東南アジアではみそ・しょうゆ・魚醤などの発酵調味料が広く用いられ、スパイスやハーブの重要な産地でもある。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch1",
-  "sectionId": "world-asia",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "w-asia"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9603",
-    "bookPage": 28,
-    "locationNote": "本書 p.28（原本画像 IMG_9603.PNG）。原文照合 batch27 で照合済みの知識単位 w-asia から生成"
-   }
-  ],
-  "id": "q4-w-asia",
-  "format": "single-choice",
-  "prompt": "東アジア・東南アジアの味つけで広く使われる調味料の種類は?",
-  "choices": [
-   "香りづけ・辛みづけ・色づけ",
-   "発酵調味料",
-   "フュージョン料理",
-   "スタータースパイス"
-  ],
-  "correctChoiceIndexes": [
-   1
   ],
   "explanation": "東アジア・東南アジアではみそ・しょうゆ・魚醤などの発酵調味料が広く用いられ、スパイスやハーブの重要な産地でもある。"
  },
@@ -1407,7 +1221,7 @@
    "フランス",
    "中国",
    "タイ",
-   "ドイツ"
+   "ウクライナ"
   ],
   "correctChoiceIndexes": [
    1
@@ -1458,10 +1272,10 @@
   "format": "single-choice",
   "prompt": "トムヤムクンはどこの国の料理?",
   "choices": [
-   "中国",
    "フランス",
+   "中国",
    "タイ",
-   "ドイツ"
+   "ウクライナ"
   ],
   "correctChoiceIndexes": [
    2
@@ -1516,12 +1330,12 @@
   "prompt": "ベトナムの料理「バインセオ」の決め手のスパイスは?",
   "choices": [
    "パセリ",
-   "バジル",
-   "パクチー",
-   "ターメリック"
+   "ターメリック",
+   "ブラックペッパー",
+   "パクチー"
   ],
   "correctChoiceIndexes": [
-   3
+   1
   ],
   "explanation": "ベトナムのバインセオは、ターメリック入りの米粉の生地で具材をはさんだお好み焼き風料理。"
  },
@@ -1569,13 +1383,13 @@
   "format": "single-choice",
   "prompt": "多様な食文化が混ざり合って生まれる料理を何と呼ぶ?",
   "choices": [
-   "香りづけ・辛みづけ・色づけ",
-   "発酵調味料",
-   "パウダー",
-   "フュージョン料理"
+   "スタータースパイス",
+   "ホール",
+   "フュージョン料理",
+   "パウダー"
   ],
   "correctChoiceIndexes": [
-   3
+   2
   ],
   "explanation": "アメリカでは移民大国ならではのフュージョン料理と呼ぶべき食文化も生まれた。"
  },
@@ -1623,13 +1437,13 @@
   "format": "single-choice",
   "prompt": "チリコンカンは何と呼ばれる料理ジャンルの代表的メニュー?",
   "choices": [
-   "フュージョン料理",
-   "ハリッサ",
-   "サブジ",
-   "テクス・メクス"
+   "ナンヨウザンショウ",
+   "ハルディ",
+   "テクス・メクス",
+   "ローゼル"
   ],
   "correctChoiceIndexes": [
-   3
+   2
   ],
   "explanation": "チリコンカンはテクス・メクス(テキサス生まれのメキシコ風アメリカ料理)の代表的な豆と肉の煮込みで、チリパウダー・クミン・オレガノが決め手。"
  },
@@ -1709,36 +1523,6 @@
   "acceptedAnswers": [
    "モロッコティー",
    "モロカンティー"
-  ],
-  "explanation": "モロッコティー(モロカンティー)は、ガンパウダーと呼ばれる中国緑茶とミント、たっぷりの角砂糖で入れるお茶。"
- },
- {
-  "version": 1,
-  "status": "verified",
-  "chapterId": "ch1",
-  "sectionId": "world-drink",
-  "difficulty": 1,
-  "knowledgeUnitIds": [
-   "d-moroccan-tea"
-  ],
-  "sourceRefs": [
-   {
-    "manifestImageId": "IMG_9604",
-    "bookPage": 29,
-    "locationNote": "本書 p.29（原本画像 IMG_9604.PNG）。原文照合 batch27 で照合済みの知識単位 d-moroccan-tea から生成"
-   }
-  ],
-  "id": "q4-d-moroccan-tea",
-  "format": "single-choice",
-  "prompt": "「ガンパウダー」と呼ばれる中国緑茶とミントで入れるお茶は?",
-  "choices": [
-   "モロッコティー",
-   "フュージョン料理",
-   "赤身魚",
-   "テクス・メクス"
-  ],
-  "correctChoiceIndexes": [
-   0
   ],
   "explanation": "モロッコティー(モロカンティー)は、ガンパウダーと呼ばれる中国緑茶とミント、たっぷりの角砂糖で入れるお茶。"
  },
@@ -1936,6 +1720,36 @@
   "prompt": "モヒートを愛した作家として知られるのは?",
   "acceptedAnswers": [
    "ヘミングウェイ"
+  ],
+  "explanation": "キューバのモヒートはラム酒にミントとライムで風味づけしたドリンクで、ヘミングウェイが愛したことで有名。"
+ },
+ {
+  "version": 1,
+  "status": "verified",
+  "chapterId": "ch1",
+  "sectionId": "world-drink",
+  "difficulty": 1,
+  "knowledgeUnitIds": [
+   "d-mojito"
+  ],
+  "sourceRefs": [
+   {
+    "manifestImageId": "IMG_9604",
+    "bookPage": 29,
+    "locationNote": "本書 p.29（原本画像 IMG_9604.PNG）。原文照合 batch27 で照合済みの知識単位 d-mojito から生成"
+   }
+  ],
+  "id": "q4-d-mojito",
+  "format": "single-choice",
+  "prompt": "モヒートを愛した作家として知られるのは?",
+  "choices": [
+   "イサベル女王",
+   "ヘミングウェイ",
+   "聖武天皇",
+   "ディオスコリデス"
+  ],
+  "correctChoiceIndexes": [
+   1
   ],
   "explanation": "キューバのモヒートはラム酒にミントとライムで風味づけしたドリンクで、ヘミングウェイが愛したことで有名。"
  },
